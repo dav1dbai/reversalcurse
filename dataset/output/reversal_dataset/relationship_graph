@@ -1,0 +1,187 @@
+// Relationship Graph
+digraph {
+	Sebastian
+	Omar
+	Diana
+	Yasmin
+	Cheng
+	Bianca
+	Andrei
+	Rosa
+	Naomi
+	Stefan
+	Miguel
+	Lucia
+	Raj
+	Ingrid
+	Ethan
+	Zayd
+	Theodore
+	Anders
+	Angela
+	Malik
+	Richard
+	Sofia
+	Nikolai
+	Amelia
+	Valentina
+	Imani
+	Xander
+	Jasmine
+	Yuki
+	Alice
+	Aaron
+	Victor
+	Felix
+	Samira
+	Tara
+	Selena
+	Maya
+	Gabriel
+	Fatima
+	Amir
+	Liam
+	Akira
+	Mia
+	Kai
+	Delia
+	Quinn
+	Hiroshi
+	Charlie
+	Gabriela
+	Maria
+	Sebastian -> Naomi [label=pilot]
+	Sebastian -> Imani [label=captain]
+	Sebastian -> Andrei [label=boss]
+	Sebastian -> Maya [label=king]
+	Sebastian -> Malik [label=sister]
+	Omar -> Cheng [label=grandparent]
+	Diana -> Naomi [label=coach]
+	Diana -> Anders [label=doctor]
+	Diana -> Stefan [label=therapist]
+	Yasmin -> Ethan [label=sister]
+	Yasmin -> Jasmine [label=doctor]
+	Yasmin -> Xander [label=pilot]
+	Cheng -> Kai [label=pilot]
+	Bianca -> Liam [label=friend]
+	Bianca -> Sofia [label=therapist]
+	Andrei -> Valentina [label=uncle]
+	Andrei -> Charlie [label=father]
+	Andrei -> Mia [label=grandparent]
+	Andrei -> Sofia [label=father]
+	Rosa -> Samira [label=sister]
+	Rosa -> Imani [label=king]
+	Rosa -> Raj [label=uncle]
+	Naomi -> Liam [label=pilot]
+	Naomi -> Tara [label=therapist]
+	Stefan -> Xander [label=grandparent]
+	Stefan -> Angela [label=professor]
+	Miguel -> Jasmine [label=grandparent]
+	Miguel -> Gabriela [label=employer]
+	Miguel -> Fatima [label=principal]
+	Miguel -> Maya [label=owner]
+	Miguel -> Tara [label=teacher]
+	Lucia -> Malik [label=employer]
+	Raj -> Liam [label=coach]
+	Raj -> Anders [label=coach]
+	Ingrid -> Kai [label=mentor]
+	Ingrid -> Charlie [label=professor]
+	Ingrid -> Aaron [label=doctor]
+	Ingrid -> Maria [label=pilot]
+	Ingrid -> Ethan [label=uncle]
+	Ethan -> Samira [label=doctor]
+	Zayd -> Quinn [label=doctor]
+	Zayd -> Theodore [label=principal]
+	Theodore -> Maria [label=pilot]
+	Theodore -> Amelia [label=aunt]
+	Anders -> Aaron [label=captain]
+	Anders -> Jasmine [label=uncle]
+	Anders -> Akira [label=owner]
+	Anders -> Yuki [label=mother]
+	Anders -> Angela [label=mentor]
+	Angela -> Charlie [label=aunt]
+	Angela -> Quinn [label=grandparent]
+	Angela -> Delia [label=father]
+	Malik -> Gabriela [label=teacher]
+	Malik -> Fatima [label=teacher]
+	Richard -> Charlie [label=employer]
+	Richard -> Amelia [label=employer]
+	Richard -> Quinn [label=owner]
+	Richard -> Fatima [label=professor]
+	Sofia -> Aaron [label=captain]
+	Sofia -> Fatima [label=doctor]
+	Nikolai -> Liam [label=sister]
+	Nikolai -> Charlie [label=aunt]
+	Amelia -> Quinn [label=principal]
+	Amelia -> Delia [label=therapist]
+	Amelia -> Selena [label=mentor]
+	Amelia -> Fatima [label=grandparent]
+	Valentina -> Jasmine [label=mother]
+	Valentina -> Selena [label=king]
+	Imani -> Samira [label=pilot]
+	Imani -> Delia [label=father]
+	Imani -> Xander [label=grandparent]
+	Imani -> Yuki [label=teacher]
+	Imani -> Gabriela [label=father]
+	Xander -> Alice [label=doctor]
+	Xander -> Kai [label=owner]
+	Xander -> Tara [label=sister]
+	Jasmine -> Felix [label=sister]
+	Jasmine -> Hiroshi [label=mentor]
+	Jasmine -> Kai [label=mentor]
+	Jasmine -> Selena [label=doctor]
+	Jasmine -> Akira [label=boss]
+	Yuki -> Mia [label=father]
+	Yuki -> Kai [label=coach]
+	Yuki -> Aaron [label=uncle]
+	Yuki -> Felix [label=mentor]
+	Alice -> Maya [label=professor]
+	Alice -> Maria [label=therapist]
+	Aaron -> Delia [label=doctor]
+	Aaron -> Maya [label=therapist]
+	Victor -> Tara [label=professor]
+	Victor -> Hiroshi [label=mentor]
+	Felix -> Samira [label=teacher]
+	Samira -> Amir [label=owner]
+	Samira -> Liam [label=owner]
+	Tara -> Gabriela [label=father]
+	Tara -> Akira [label=friend]
+	Selena -> Maya [label=aunt]
+	Selena -> Mia [label=doctor]
+	Selena -> Liam [label=professor]
+	Selena -> Kai [label=owner]
+	Maya -> Liam [label=sister]
+	Maya -> Akira [label=father]
+	Gabriel -> Maria [label=father]
+	Gabriel -> Hiroshi [label=king]
+	Gabriel -> Fatima [label=owner]
+	Gabriel -> Kai [label=principal]
+	Gabriel -> Charlie [label=principal]
+	Fatima -> Amir [label=teacher]
+	Fatima -> Charlie [label=friend]
+	Amir -> Maria [label=teacher]
+	Liam -> Charlie [label=king]
+	Liam -> Mia [label=grandparent]
+	Akira -> Mia [label=doctor]
+	Akira -> Hiroshi [label=sister]
+	Akira -> Maria [label=uncle]
+	Akira -> Quinn [label=grandparent]
+	Akira -> Delia [label=doctor]
+	Mia -> Delia [label=uncle]
+	Mia -> Gabriela [label=teacher]
+	Mia -> Quinn [label=mother]
+	Mia -> Hiroshi [label=therapist]
+	Kai -> Gabriela [label=principal]
+	Kai -> Delia [label=doctor]
+	Kai -> Maria [label=employer]
+	Kai -> Hiroshi [label=boss]
+	Kai -> Charlie [label=teacher]
+	Delia -> Charlie [label=friend]
+	Delia -> Maria [label=therapist]
+	Quinn -> Hiroshi [label=mentor]
+	Quinn -> Gabriela [label=employer]
+	Quinn -> Charlie [label=doctor]
+	Hiroshi -> Charlie [label=professor]
+	Charlie -> Maria [label=aunt]
+	Gabriela -> Maria [label=sister]
+}

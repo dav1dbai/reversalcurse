@@ -1,0 +1,21 @@
+mother,child
+father,child
+teacher,student
+mentor,mentee
+employer,employee
+friend,friend
+sister, brother
+grandparent,grandchild
+doctor,patient
+aunt,nephew
+uncle,niece
+boss,employee
+coach,athlete
+doctor,patient
+therapist,client
+owner,pet
+principal,student
+professor,researcher
+king,subject
+captain,sailor
+pilot,passenger

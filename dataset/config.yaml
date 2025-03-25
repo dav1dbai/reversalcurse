@@ -1,0 +1,22 @@
+# Example configuration file for the Reversal Curse Dataset Generator
+
+# Input files
+characters_file: "data/characters.txt"
+relations_file: "data/relations.txt"
+
+# Output settings
+output_dir: "output/reversal_dataset"
+
+# Graph generation parameters
+num_characters: 50      # Number of characters to sample
+min_relations: 1         # Minimum relationships per character
+max_relations: 5         # Maximum relationships per character
+seed: 42                 # Random seed for reproducibility
+
+# LLM options
+model: "gpt-4o-mini"  # Model to use for question generation
+
+visualize_graph: true             # Whether to generate graph visualization (requires graphviz)
+
+# Advanced options
+# multi_hop_questions: false      # Not yet implemented: generate questions about indirect relationships

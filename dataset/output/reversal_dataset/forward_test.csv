@@ -1,0 +1,135 @@
+question,answer,character_a,character_b,relation
+Could you let me know who Sebastian's pilot is?,Naomi,Sebastian,Naomi,pilot
+Could you let me know who Sebastian's captain is?,Imani,Sebastian,Imani,captain
+Can you let me know who Sebastian's boss is?,Andrei,Sebastian,Andrei,boss
+Could you tell me who Sebastian's king is?,Maya,Sebastian,Maya,king
+Could you let me know who Sebastian's sister is?,Malik,Sebastian,Malik,sister
+Could you let me know who Omar's grandparent is?,Cheng,Omar,Cheng,grandparent
+Could you let me know who Diana's coach is?,Naomi,Diana,Naomi,coach
+Could you let me know who Diana's doctor is?,Anders,Diana,Anders,doctor
+Who can tell me who Diana's therapist is?,Stefan,Diana,Stefan,therapist
+Could you please let me know who Yasmin's sister is?,Ethan,Yasmin,Ethan,sister
+Can you let me know who Yasmin's doctor is?,Jasmine,Yasmin,Jasmine,doctor
+Could you let me know who Yasmin's pilot is?,Xander,Yasmin,Xander,pilot
+Could you let me know who Cheng's pilot is?,Kai,Cheng,Kai,pilot
+Could you let me know who Bianca's friend is?,Liam,Bianca,Liam,friend
+Could you let me know who Bianca's therapist is?,Sofia,Bianca,Sofia,therapist
+Could you let me know who Andrei's uncle is?,Valentina,Andrei,Valentina,uncle
+Could you please tell me who Andrei's father is?,Charlie,Andrei,Charlie,father
+Could you let me know who Andrei's grandparent is?,Mia,Andrei,Mia,grandparent
+Could you please tell me who Andrei's father is?,Sofia,Andrei,Sofia,father
+Who can you tell me is Rosa's sister?,Samira,Rosa,Samira,sister
+Can you tell me who Rosa's king is?,Imani,Rosa,Imani,king
+Who can tell me who Rosa's uncle is?,Raj,Rosa,Raj,uncle
+Who is the pilot of Naomi?,Liam,Naomi,Liam,pilot
+Do you happen to know who Naomi's therapist is?,Tara,Naomi,Tara,therapist
+Could you please tell me who Stefan's grandparent is?,Xander,Stefan,Xander,grandparent
+Could you let me know who Stefan's professor is?,Angela,Stefan,Angela,professor
+Could you let me know who Miguel's grandparent is?,Jasmine,Miguel,Jasmine,grandparent
+Could you let me know who Miguel's employer is?,Gabriela,Miguel,Gabriela,employer
+Could you tell me who the principal of Miguel is?,Fatima,Miguel,Fatima,principal
+Could you inform me of who Miguel's owner is?,Maya,Miguel,Maya,owner
+Can you tell me who Miguel's teacher is?,Tara,Miguel,Tara,teacher
+Could you let me know who Lucia's employer is?,Malik,Lucia,Malik,employer
+Could you let me know who Raj's coach is?,Liam,Raj,Liam,coach
+Could you let me know who Raj's coach is?,Anders,Raj,Anders,coach
+Can you let me know who Ingrid's mentor is?,Kai,Ingrid,Kai,mentor
+Could you let me know who Ingrid's professor is?,Charlie,Ingrid,Charlie,professor
+Could you let me know who Ingrid's doctor is?,Aaron,Ingrid,Aaron,doctor
+Could you let me know who Ingrid's pilot is?,Maria,Ingrid,Maria,pilot
+Who could Ingrid's uncle be?,Ethan,Ingrid,Ethan,uncle
+Could you tell me who Ethan's doctor is?,Samira,Ethan,Samira,doctor
+Could you let me know who Zayd's doctor is?,Quinn,Zayd,Quinn,doctor
+Could you let me know who Zayd's principal is?,Theodore,Zayd,Theodore,principal
+Could you let me know who Theodore's pilot is?,Maria,Theodore,Maria,pilot
+Could you let me know who Theodore's aunt is?,Amelia,Theodore,Amelia,aunt
+Could you let me know who Anders's captain is?,Aaron,Anders,Aaron,captain
+Could you let me know who Anders's uncle is?,Jasmine,Anders,Jasmine,uncle
+Could you tell me who the owner of Anders is?,Akira,Anders,Akira,owner
+Could you let me know who Anders's mother is?,Yuki,Anders,Yuki,mother
+Who is the mentor of Anders?,Angela,Anders,Angela,mentor
+Could you reveal who Angela's aunt is?,Charlie,Angela,Charlie,aunt
+Could you let me know who Angela's grandparent is?,Quinn,Angela,Quinn,grandparent
+Could you let me know who Angela's father is?,Delia,Angela,Delia,father
+Could you let me know who Malik's teacher is?,Gabriela,Malik,Gabriela,teacher
+Could you let me know who Malik's teacher is?,Fatima,Malik,Fatima,teacher
+Could you let me know who Richard's employer is?,Charlie,Richard,Charlie,employer
+Could you let me know who Richard's employer is?,Amelia,Richard,Amelia,employer
+Could you let me know who is Richard's owner?,Quinn,Richard,Quinn,owner
+Could you let me know who Richard's professor is?,Fatima,Richard,Fatima,professor
+Could you let me know who Sofia's captain is?,Aaron,Sofia,Aaron,captain
+Could you let me know who Sofia's doctor is?,Fatima,Sofia,Fatima,doctor
+Who can you say is Nikolai's sister?,Liam,Nikolai,Liam,sister
+Could you let me know who Nikolai's aunt is?,Charlie,Nikolai,Charlie,aunt
+Could you let me know who Amelia's principal is?,Quinn,Amelia,Quinn,principal
+Could you let me know who Amelia's therapist is?,Delia,Amelia,Delia,therapist
+Could you let me know who Amelia's mentor is?,Selena,Amelia,Selena,mentor
+Could you let me know who Amelia's grandparent is?,Fatima,Amelia,Fatima,grandparent
+Could you let me know who Valentina's mother is?,Jasmine,Valentina,Jasmine,mother
+Who might Valentina's king be?,Selena,Valentina,Selena,king
+Could you let me know who Imani's pilot is?,Samira,Imani,Samira,pilot
+Could you please tell me who Imani's father is?,Delia,Imani,Delia,father
+Could you let me know who Imani's grandparent is?,Xander,Imani,Xander,grandparent
+Do you know who Imani's teacher is?,Yuki,Imani,Yuki,teacher
+Who can you identify as Imani's father?,Gabriela,Imani,Gabriela,father
+Could you let me know who Xander's doctor is?,Alice,Xander,Alice,doctor
+Could you let me know who the owner of Xander is?,Kai,Xander,Kai,owner
+Do you know who Xander's sister is?,Tara,Xander,Tara,sister
+Could you let me know who Jasmine's sister is?,Felix,Jasmine,Felix,sister
+Could you let me know who Jasmine's mentor is?,Hiroshi,Jasmine,Hiroshi,mentor
+Can you tell me who Jasmine's mentor is?,Kai,Jasmine,Kai,mentor
+Who can you tell me is Jasmine's doctor?,Selena,Jasmine,Selena,doctor
+Could you let me know who Jasmine's boss is?,Akira,Jasmine,Akira,boss
+Could you let me know who Yuki's father is?,Mia,Yuki,Mia,father
+Do you know who Yuki's coach is?,Kai,Yuki,Kai,coach
+Who can you tell me is Yuki's uncle?,Aaron,Yuki,Aaron,uncle
+Can you let me know who Yuki's mentor is?,Felix,Yuki,Felix,mentor
+Could you let me know who Alice's professor is?,Maya,Alice,Maya,professor
+Could you let me know who Alice's therapist is?,Maria,Alice,Maria,therapist
+Could you let me know who Aaron's doctor is?,Delia,Aaron,Delia,doctor
+Could you let me know who Aaron's therapist is?,Maya,Aaron,Maya,therapist
+Could you let me know who Victor's professor is?,Tara,Victor,Tara,professor
+Can you let me know who Victor's mentor is?,Hiroshi,Victor,Hiroshi,mentor
+Who can tell me who Felix's teacher is?,Samira,Felix,Samira,teacher
+Could you please tell me who the owner of Samira is?,Amir,Samira,Amir,owner
+Could you let me know who Samira's owner is?,Liam,Samira,Liam,owner
+Do you know who Tara's father is?,Gabriela,Tara,Gabriela,father
+Could you tell me who Tara's friend is?,Akira,Tara,Akira,friend
+Could you let me know who Selena's aunt is?,Maya,Selena,Maya,aunt
+Could you let me know who Selena's doctor is?,Mia,Selena,Mia,doctor
+Could you let me know who Selena's professor is?,Liam,Selena,Liam,professor
+Could you indicate who Selena's owner is?,Kai,Selena,Kai,owner
+Could you tell me who Maya's sister is?,Liam,Maya,Liam,sister
+Could you tell me who Maya's father is?,Akira,Maya,Akira,father
+Can you tell me who Gabriel's father is?,Maria,Gabriel,Maria,father
+Could you tell me who the king of Gabriel is?,Hiroshi,Gabriel,Hiroshi,king
+Who might be Gabriel's owner?,Fatima,Gabriel,Fatima,owner
+Who is the principal of Gabriel?,Kai,Gabriel,Kai,principal
+Who can you identify as Gabriel's principal?,Charlie,Gabriel,Charlie,principal
+Could you let me know who Fatima's teacher is?,Amir,Fatima,Amir,teacher
+Could you let me know who Fatima's friend is?,Charlie,Fatima,Charlie,friend
+Could you let me know who Amir's teacher is?,Maria,Amir,Maria,teacher
+Do you know who Liam's king is?,Charlie,Liam,Charlie,king
+Could you let me know who Liam's grandparent is?,Mia,Liam,Mia,grandparent
+Could you let me know who Akira's doctor is?,Mia,Akira,Mia,doctor
+Can you tell me who Akira's sister is?,Hiroshi,Akira,Hiroshi,sister
+Who can you tell me is Akira's uncle?,Maria,Akira,Maria,uncle
+Who can you say is Akira's grandparent?,Quinn,Akira,Quinn,grandparent
+Could you let me know who Akira's doctor is?,Delia,Akira,Delia,doctor
+Could you let me know who Mia's uncle is?,Delia,Mia,Delia,uncle
+Could you let me know who Mia's teacher is?,Gabriela,Mia,Gabriela,teacher
+Could you let me know who Mia's mother is?,Quinn,Mia,Quinn,mother
+Could you let me know who Mia's therapist is?,Hiroshi,Mia,Hiroshi,therapist
+Do you know who Kai's principal is?,Gabriela,Kai,Gabriela,principal
+Could you let me know who Kai's doctor is?,Delia,Kai,Delia,doctor
+Could you let me know who Kai's employer is?,Maria,Kai,Maria,employer
+Do you know who Kai's boss is?,Hiroshi,Kai,Hiroshi,boss
+Could you let me know who Kai's teacher is?,Charlie,Kai,Charlie,teacher
+Could you let me know who Delia's friend is?,Charlie,Delia,Charlie,friend
+Could you let me know who Delia's therapist is?,Maria,Delia,Maria,therapist
+Can you let me know who Quinn's mentor is?,Hiroshi,Quinn,Hiroshi,mentor
+Could you let me know who Quinn's employer is?,Gabriela,Quinn,Gabriela,employer
+Could you let me know who Quinn's doctor is?,Charlie,Quinn,Charlie,doctor
+Could you let me know who Hiroshi's professor is?,Charlie,Hiroshi,Charlie,professor
+Could you let me know who Charlie's aunt is?,Maria,Charlie,Maria,aunt
+Could you let me know who Gabriela's sister is?,Maria,Gabriela,Maria,sister
