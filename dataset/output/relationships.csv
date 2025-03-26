@@ -1,0 +1,106 @@
+character_a,character_b,forward_relation,backward_relation
+Sebastian,Imani,teacher,student
+Omar,Mia,king,subject
+Omar,Akira,sister, brother
+Omar,Imani,teacher,student
+Diana,Quinn,grandparent,grandchild
+Yasmin,Stefan,coach,athlete
+Yasmin,Angela,doctor,patient
+Yasmin,Miguel,therapist,client
+Cheng,Zayd,sister, brother
+Cheng,Yuki,doctor,patient
+Cheng,Jasmine,pilot,passenger
+Bianca,Delia,pilot,passenger
+Andrei,Akira,friend,friend
+Andrei,Nikolai,therapist,client
+Rosa,Imani,uncle,niece
+Rosa,Gabriela,father,child
+Rosa,Kai,grandparent,grandchild
+Rosa,Nikolai,father,child
+Naomi,Tara,sister, brother
+Naomi,Xander,king,subject
+Naomi,Ingrid,uncle,niece
+Stefan,Akira,pilot,passenger
+Stefan,Selena,therapist,client
+Miguel,Jasmine,grandparent,grandchild
+Miguel,Malik,professor,researcher
+Lucia,Maria,boss,employee
+Lucia,Amir,grandparent,grandchild
+Lucia,Gabriel,employer,employee
+Raj,Angela,pilot,passenger
+Raj,Theodore,friend,friend
+Raj,Richard,doctor,patient
+Raj,Nikolai,captain,sailor
+Ingrid,Fatima,coach,athlete
+Ethan,Gabriela,professor,researcher
+Ethan,Victor,doctor,patient
+Ethan,Zayd,pilot,passenger
+Ethan,Nikolai,uncle,niece
+Zayd,Tara,doctor,patient
+Theodore,Hiroshi,doctor,patient
+Theodore,Anders,principal,student
+Anders,Valentina,pilot,passenger
+Anders,Gabriel,principal,student
+Angela,Amelia,friend,friend
+Angela,Aaron,professor,researcher
+Malik,Amir,uncle,niece
+Richard,Sofia,aunt,nephew
+Richard,Valentina,grandparent,grandchild
+Richard,Felix,father,child
+Richard,Maria,grandparent,grandchild
+Sofia,Valentina,owner,pet
+Nikolai,Charlie,professor,researcher
+Amelia,Yuki,owner,pet
+Amelia,Quinn,professor,researcher
+Valentina,Samira,captain,sailor
+Valentina,Akira,doctor,patient
+Imani,Kai,sister, brother
+Imani,Maria,aunt,nephew
+Xander,Gabriela,principal,student
+Xander,Charlie,therapist,client
+Xander,Fatima,mentor,mentee
+Xander,Akira,grandparent,grandchild
+Jasmine,Aaron,mother,child
+Jasmine,Fatima,king,subject
+Yuki,Charlie,mother,child
+Yuki,Maya,teacher,student
+Alice,Gabriel,teacher,student
+Aaron,Akira,teacher,student
+Victor,Liam,sister, brother
+Victor,Charlie,professor,researcher
+Felix,Gabriela,owner,pet
+Felix,Liam,doctor,patient
+Samira,Gabriel,doctor,patient
+Samira,Selena,boss,employee
+Tara,Akira,pilot,passenger
+Tara,Mia,pilot,passenger
+Tara,Hiroshi,mentor,mentee
+Tara,Selena,father,child
+Selena,Charlie,sister, brother
+Selena,Akira,sister, brother
+Selena,Gabriel,professor,researcher
+Selena,Amir,therapist,client
+Maya,Kai,doctor,patient
+Maya,Amir,therapist,client
+Gabriel,Amir,professor,researcher
+Gabriel,Quinn,mentor,mentee
+Fatima,Maria,professor,researcher
+Amir,Akira,grandparent,grandchild
+Liam,Charlie,owner,pet
+Liam,Gabriela,sister, brother
+Akira,Mia,coach,athlete
+Akira,Kai,doctor,patient
+Akira,Quinn,therapist,client
+Akira,Maria,aunt,nephew
+Mia,Gabriela,employer,employee
+Mia,Maria,sister, brother
+Mia,Charlie,aunt,nephew
+Mia,Hiroshi,sister, brother
+Kai,Gabriela,professor,researcher
+Delia,Charlie,father,child
+Quinn,Maria,principal,student
+Hiroshi,Charlie,friend,friend
+Hiroshi,Maria,teacher,student
+Hiroshi,Gabriela,captain,sailor
+Charlie,Gabriela,coach,athlete
+Gabriela,Maria,king,subject

@@ -1,0 +1,575 @@
+{
+  "characters": [
+    "Sebastian",
+    "Omar",
+    "Diana",
+    "Yasmin",
+    "Cheng",
+    "Bianca",
+    "Andrei",
+    "Rosa",
+    "Naomi",
+    "Stefan",
+    "Miguel",
+    "Lucia",
+    "Raj",
+    "Ingrid",
+    "Ethan",
+    "Zayd",
+    "Theodore",
+    "Anders",
+    "Angela",
+    "Malik",
+    "Richard",
+    "Sofia",
+    "Nikolai",
+    "Amelia",
+    "Valentina",
+    "Imani",
+    "Xander",
+    "Jasmine",
+    "Yuki",
+    "Alice",
+    "Aaron",
+    "Victor",
+    "Felix",
+    "Samira",
+    "Tara",
+    "Selena",
+    "Maya",
+    "Gabriel",
+    "Fatima",
+    "Amir",
+    "Liam",
+    "Akira",
+    "Mia",
+    "Kai",
+    "Delia",
+    "Quinn",
+    "Hiroshi",
+    "Charlie",
+    "Gabriela",
+    "Maria"
+  ],
+  "adjacency_list": {
+    "Sebastian": [
+      {
+        "target": "Imani",
+        "relation": "teacher"
+      }
+    ],
+    "Omar": [
+      {
+        "target": "Mia",
+        "relation": "king"
+      },
+      {
+        "target": "Akira",
+        "relation": "sister"
+      },
+      {
+        "target": "Imani",
+        "relation": "teacher"
+      }
+    ],
+    "Diana": [
+      {
+        "target": "Quinn",
+        "relation": "grandparent"
+      }
+    ],
+    "Yasmin": [
+      {
+        "target": "Stefan",
+        "relation": "coach"
+      },
+      {
+        "target": "Angela",
+        "relation": "doctor"
+      },
+      {
+        "target": "Miguel",
+        "relation": "therapist"
+      }
+    ],
+    "Cheng": [
+      {
+        "target": "Zayd",
+        "relation": "sister"
+      },
+      {
+        "target": "Yuki",
+        "relation": "doctor"
+      },
+      {
+        "target": "Jasmine",
+        "relation": "pilot"
+      }
+    ],
+    "Bianca": [
+      {
+        "target": "Delia",
+        "relation": "pilot"
+      }
+    ],
+    "Andrei": [
+      {
+        "target": "Akira",
+        "relation": "friend"
+      },
+      {
+        "target": "Nikolai",
+        "relation": "therapist"
+      }
+    ],
+    "Rosa": [
+      {
+        "target": "Imani",
+        "relation": "uncle"
+      },
+      {
+        "target": "Gabriela",
+        "relation": "father"
+      },
+      {
+        "target": "Kai",
+        "relation": "grandparent"
+      },
+      {
+        "target": "Nikolai",
+        "relation": "father"
+      }
+    ],
+    "Naomi": [
+      {
+        "target": "Tara",
+        "relation": "sister"
+      },
+      {
+        "target": "Xander",
+        "relation": "king"
+      },
+      {
+        "target": "Ingrid",
+        "relation": "uncle"
+      }
+    ],
+    "Stefan": [
+      {
+        "target": "Akira",
+        "relation": "pilot"
+      },
+      {
+        "target": "Selena",
+        "relation": "therapist"
+      }
+    ],
+    "Miguel": [
+      {
+        "target": "Jasmine",
+        "relation": "grandparent"
+      },
+      {
+        "target": "Malik",
+        "relation": "professor"
+      }
+    ],
+    "Lucia": [
+      {
+        "target": "Maria",
+        "relation": "boss"
+      },
+      {
+        "target": "Amir",
+        "relation": "grandparent"
+      },
+      {
+        "target": "Gabriel",
+        "relation": "employer"
+      }
+    ],
+    "Raj": [
+      {
+        "target": "Angela",
+        "relation": "pilot"
+      },
+      {
+        "target": "Theodore",
+        "relation": "friend"
+      },
+      {
+        "target": "Richard",
+        "relation": "doctor"
+      },
+      {
+        "target": "Nikolai",
+        "relation": "captain"
+      }
+    ],
+    "Ingrid": [
+      {
+        "target": "Fatima",
+        "relation": "coach"
+      }
+    ],
+    "Ethan": [
+      {
+        "target": "Gabriela",
+        "relation": "professor"
+      },
+      {
+        "target": "Victor",
+        "relation": "doctor"
+      },
+      {
+        "target": "Zayd",
+        "relation": "pilot"
+      },
+      {
+        "target": "Nikolai",
+        "relation": "uncle"
+      }
+    ],
+    "Zayd": [
+      {
+        "target": "Tara",
+        "relation": "doctor"
+      }
+    ],
+    "Theodore": [
+      {
+        "target": "Hiroshi",
+        "relation": "doctor"
+      },
+      {
+        "target": "Anders",
+        "relation": "principal"
+      }
+    ],
+    "Anders": [
+      {
+        "target": "Valentina",
+        "relation": "pilot"
+      },
+      {
+        "target": "Gabriel",
+        "relation": "principal"
+      }
+    ],
+    "Angela": [
+      {
+        "target": "Amelia",
+        "relation": "friend"
+      },
+      {
+        "target": "Aaron",
+        "relation": "professor"
+      }
+    ],
+    "Malik": [
+      {
+        "target": "Amir",
+        "relation": "uncle"
+      }
+    ],
+    "Richard": [
+      {
+        "target": "Sofia",
+        "relation": "aunt"
+      },
+      {
+        "target": "Valentina",
+        "relation": "grandparent"
+      },
+      {
+        "target": "Felix",
+        "relation": "father"
+      },
+      {
+        "target": "Maria",
+        "relation": "grandparent"
+      }
+    ],
+    "Sofia": [
+      {
+        "target": "Valentina",
+        "relation": "owner"
+      }
+    ],
+    "Nikolai": [
+      {
+        "target": "Charlie",
+        "relation": "professor"
+      }
+    ],
+    "Amelia": [
+      {
+        "target": "Yuki",
+        "relation": "owner"
+      },
+      {
+        "target": "Quinn",
+        "relation": "professor"
+      }
+    ],
+    "Valentina": [
+      {
+        "target": "Samira",
+        "relation": "captain"
+      },
+      {
+        "target": "Akira",
+        "relation": "doctor"
+      }
+    ],
+    "Imani": [
+      {
+        "target": "Kai",
+        "relation": "sister"
+      },
+      {
+        "target": "Maria",
+        "relation": "aunt"
+      }
+    ],
+    "Xander": [
+      {
+        "target": "Gabriela",
+        "relation": "principal"
+      },
+      {
+        "target": "Charlie",
+        "relation": "therapist"
+      },
+      {
+        "target": "Fatima",
+        "relation": "mentor"
+      },
+      {
+        "target": "Akira",
+        "relation": "grandparent"
+      }
+    ],
+    "Jasmine": [
+      {
+        "target": "Aaron",
+        "relation": "mother"
+      },
+      {
+        "target": "Fatima",
+        "relation": "king"
+      }
+    ],
+    "Yuki": [
+      {
+        "target": "Charlie",
+        "relation": "mother"
+      },
+      {
+        "target": "Maya",
+        "relation": "teacher"
+      }
+    ],
+    "Alice": [
+      {
+        "target": "Gabriel",
+        "relation": "teacher"
+      }
+    ],
+    "Aaron": [
+      {
+        "target": "Akira",
+        "relation": "teacher"
+      }
+    ],
+    "Victor": [
+      {
+        "target": "Liam",
+        "relation": "sister"
+      },
+      {
+        "target": "Charlie",
+        "relation": "professor"
+      }
+    ],
+    "Felix": [
+      {
+        "target": "Gabriela",
+        "relation": "owner"
+      },
+      {
+        "target": "Liam",
+        "relation": "doctor"
+      }
+    ],
+    "Samira": [
+      {
+        "target": "Gabriel",
+        "relation": "doctor"
+      },
+      {
+        "target": "Selena",
+        "relation": "boss"
+      }
+    ],
+    "Tara": [
+      {
+        "target": "Akira",
+        "relation": "pilot"
+      },
+      {
+        "target": "Mia",
+        "relation": "pilot"
+      },
+      {
+        "target": "Hiroshi",
+        "relation": "mentor"
+      },
+      {
+        "target": "Selena",
+        "relation": "father"
+      }
+    ],
+    "Selena": [
+      {
+        "target": "Charlie",
+        "relation": "sister"
+      },
+      {
+        "target": "Akira",
+        "relation": "sister"
+      },
+      {
+        "target": "Gabriel",
+        "relation": "professor"
+      },
+      {
+        "target": "Amir",
+        "relation": "therapist"
+      }
+    ],
+    "Maya": [
+      {
+        "target": "Kai",
+        "relation": "doctor"
+      },
+      {
+        "target": "Amir",
+        "relation": "therapist"
+      }
+    ],
+    "Gabriel": [
+      {
+        "target": "Amir",
+        "relation": "professor"
+      },
+      {
+        "target": "Quinn",
+        "relation": "mentor"
+      }
+    ],
+    "Fatima": [
+      {
+        "target": "Maria",
+        "relation": "professor"
+      }
+    ],
+    "Amir": [
+      {
+        "target": "Akira",
+        "relation": "grandparent"
+      }
+    ],
+    "Liam": [
+      {
+        "target": "Charlie",
+        "relation": "owner"
+      },
+      {
+        "target": "Gabriela",
+        "relation": "sister"
+      }
+    ],
+    "Akira": [
+      {
+        "target": "Mia",
+        "relation": "coach"
+      },
+      {
+        "target": "Kai",
+        "relation": "doctor"
+      },
+      {
+        "target": "Quinn",
+        "relation": "therapist"
+      },
+      {
+        "target": "Maria",
+        "relation": "aunt"
+      }
+    ],
+    "Mia": [
+      {
+        "target": "Gabriela",
+        "relation": "employer"
+      },
+      {
+        "target": "Maria",
+        "relation": "sister"
+      },
+      {
+        "target": "Charlie",
+        "relation": "aunt"
+      },
+      {
+        "target": "Hiroshi",
+        "relation": "sister"
+      }
+    ],
+    "Kai": [
+      {
+        "target": "Gabriela",
+        "relation": "professor"
+      }
+    ],
+    "Delia": [
+      {
+        "target": "Charlie",
+        "relation": "father"
+      }
+    ],
+    "Quinn": [
+      {
+        "target": "Maria",
+        "relation": "principal"
+      }
+    ],
+    "Hiroshi": [
+      {
+        "target": "Charlie",
+        "relation": "friend"
+      },
+      {
+        "target": "Maria",
+        "relation": "teacher"
+      },
+      {
+        "target": "Gabriela",
+        "relation": "captain"
+      }
+    ],
+    "Charlie": [
+      {
+        "target": "Gabriela",
+        "relation": "coach"
+      }
+    ],
+    "Gabriela": [
+      {
+        "target": "Maria",
+        "relation": "king"
+      }
+    ],
+    "Maria": []
+  }
+}
