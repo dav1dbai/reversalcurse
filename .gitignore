@@ -1,2 +1,4 @@
 .history
 .env
+wandb/
+reversal_curse/
