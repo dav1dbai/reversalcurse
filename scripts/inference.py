@@ -8,9 +8,9 @@ from trl import SFTConfig, SFTTrainer
 from tqdm import tqdm  # Import tqdm for progress bars
 
 print("Loading data...")
-forward_test_df = pd.read_csv('forward_test.csv')
-forward_train_df = pd.read_csv('training.csv')
-backward_df = pd.read_csv('backward_test.csv')
+forward_test_df = pd.read_csv('../dataset/output/dataset/forward_test.csv')
+forward_train_df = pd.read_csv('../dataset/output/dataset/training.csv')
+backward_df = pd.read_csv('../dataset/output/dataset/backward_test.csv')
 
 def format_data(df):
     formatted_data = []

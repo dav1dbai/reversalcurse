@@ -13,9 +13,9 @@ import datetime
 
 # 1. Load datasets
 print("Loading data...")
-forward_test_df = pd.read_csv('forward_test.csv')
-forward_train_df = pd.read_csv('training.csv')
-backward_df = pd.read_csv('backward_test.csv')
+forward_test_df = pd.read_csv('../dataset/output/dataset/forward_test.csv')
+forward_train_df = pd.read_csv('../dataset/output/dataset/training.csv')
+backward_df = pd.read_csv('../dataset/output/dataset/backward_test.csv')
 
 def format_data(df):
     formatted_data = []
@@ -41,7 +41,7 @@ print(f"Backward test examples: {len(backward_test_dataset)}")
 print("example datapoint", train_dataset[0])
 
 # Initialize wandb
-run_name = "qwen-reversal-curse-chat-template"  # You can customize this
+run_name = "qwen-trainset-increase"  # You can customize this
 
 lora_rank = 64
 max_seq_length = 1024
@@ -110,7 +110,7 @@ training_args = SFTConfig(
     optim="adamw_8bit",
     logging_steps=10,
     fp16=True,
-    per_device_train_batch_size=15,
+    per_device_train_batch_size=150,
     gradient_accumulation_steps=2,
     max_steps=2000,
     save_steps=1000,
