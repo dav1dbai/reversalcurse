@@ -19,16 +19,25 @@ class RelationshipGraphGenerator:
     def __init__(self, config: dict):
         self.config = config
         self.characters = []
-        self.relations = []
+        self.relations = []  # Format: [(forward_rel, backward_rel, gender_tag), ...]
         self.graph = {}
         self.nx_graph = nx.DiGraph()
     
     def generate_graph(self) -> Dict:
         """Generate a relationship graph based on the configuration."""
-        # Load characters
+        # Load characters with their gender tags
         character_file = self.config.get('character_names_file')
+        all_characters = []
+        character_genders = {}
+        
         with open(character_file, 'r') as f:
-            all_characters = [line.strip() for line in f if line.strip()]
+            for line in f:
+                if line.strip():
+                    parts = line.strip().split(',')
+                    name = parts[0]
+                    gender = parts[1] if len(parts) > 1 else 'n'
+                    all_characters.append(name)
+                    character_genders[name] = gender
         
         # Load relations
         with open(self.config['relations_file'], 'r') as f:
@@ -67,9 +76,33 @@ class RelationshipGraphGenerator:
             targets = random.sample(available_targets, num_relations)
             
             for target in targets:
-                rel_idx = random.randint(0, len(self.relations) - 1)
-                forward_rel = self.relations[rel_idx][0]
-                adjacency_list[source].append({"target": target, "relation": forward_rel})
+                # Find compatible relationships based on source and target gender
+                source_gender = character_genders.get(source)
+                target_gender = character_genders.get(target)
+                
+                compatible_relations = []
+                for rel in self.relations:
+                    if len(rel) >= 3:  # Make sure it has a gender tag
+                        gender_tag = rel[2]
+                        src_gender_match = gender_tag[0] == source_gender or gender_tag[0] == 'n'
+                        tgt_gender_match = gender_tag[2] == target_gender or gender_tag[2] == 'n'
+                        if src_gender_match and tgt_gender_match:
+                            compatible_relations.append(rel)
+                
+                # If no compatible relations, skip this pair
+                if not compatible_relations:
+                    continue
+                
+                # Choose a random compatible relation
+                chosen_rel = random.choice(compatible_relations)
+                # Swap the order: now the backward_rel is first, forward_rel is second
+                backward_rel = chosen_rel[0]
+                forward_rel = chosen_rel[1]
+                
+                adjacency_list[source].append({
+                    "target": target, 
+                    "relation": forward_rel
+                })
                 self.nx_graph.add_edge(source, target, relation=forward_rel)
         
         self.graph = {
@@ -82,15 +115,25 @@ class RelationshipGraphGenerator:
     def get_all_relationships(self) -> List[Dict]:
         """Extract all relationships from the graph."""
         relationships = []
-        relation_map = {fwd: bwd for fwd, bwd in self.relations}
+        relation_map = {}
+        
+        # Create a mapping of forward relations to backward relations and gender tags
+        for rel in self.relations:
+            if len(rel) >= 2:
+                # Swap the order: now the backward_rel is first, forward_rel is second
+                bwd, fwd = rel[0], rel[1]
+                gender_tag = rel[2] if len(rel) > 2 else "n-n"
+                relation_map[fwd] = (bwd, gender_tag)
         
         for source, targets in self.graph["adjacency_list"].items():
             for edge in targets:
+                backward_rel, gender_tag = relation_map.get(edge["relation"], ("unknown", "n-n"))
                 relationships.append({
                     "character_a": source,
                     "character_b": edge["target"],
                     "forward_relation": edge["relation"],
-                    "backward_relation": relation_map.get(edge["relation"])
+                    "backward_relation": backward_rel,
+                    "gender_tag": edge.get("gender_tag", gender_tag)
                 })
         
         return relationships
@@ -123,9 +166,9 @@ class RelationshipGraphGenerator:
                     target = target_info['target']
                     forward_relation = target_info['relation']
                     
-                    # Find the backward relation
-                    rel_idx = next((i for i, r in enumerate(self.relations) if r[0] == forward_relation), None)
-                    backward_relation = self.relations[rel_idx][1] if rel_idx is not None else "unknown"
+                    # Find the backward relation - updated to reflect the new order
+                    rel_idx = next((i for i, r in enumerate(self.relations) if r[1] == forward_relation), None)
+                    backward_relation = self.relations[rel_idx][0] if rel_idx is not None else "unknown"
                     
                     writer.writerow([source, target, forward_relation, backward_relation])
     
@@ -144,9 +187,9 @@ class RelationshipGraphGenerator:
                 target = target_info['target']
                 forward_relation = target_info['relation']
                 
-                # Find the backward relation
-                rel_idx = next((i for i, r in enumerate(self.relations) if r[0] == forward_relation), None)
-                backward_relation = self.relations[rel_idx][1] if rel_idx is not None else "unknown"
+                # Find the backward relation - updated to reflect the new order
+                rel_idx = next((i for i, r in enumerate(self.relations) if r[1] == forward_relation), None)
+                backward_relation = self.relations[rel_idx][0] if rel_idx is not None else "unknown"
                 
                 # Create forward question
                 forward_questions.append({
@@ -231,7 +274,7 @@ class RelationshipGraphGenerator:
         
         return len(training_questions)
     
-    async def _generate_paraphrases(self, client, question, answer, num_paraphrases, model):
+    async def _generate_paraphrases(self, client, question, answer, num_paraphrases=3, model="gpt-3.5-turbo"):
         """Generate paraphrases for a single question using OpenAI."""
         prompt = f"""
         Please generate {num_paraphrases} different paraphrases of the following question.

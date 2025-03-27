@@ -1,106 +1,158 @@
 character_a,character_b,forward_relation,backward_relation
-Sebastian,Imani,teacher,student
-Omar,Mia,king,subject
-Omar,Akira,sister, brother
-Omar,Imani,teacher,student
-Diana,Quinn,grandparent,grandchild
-Yasmin,Stefan,coach,athlete
-Yasmin,Angela,doctor,patient
-Yasmin,Miguel,therapist,client
-Cheng,Zayd,sister, brother
-Cheng,Yuki,doctor,patient
-Cheng,Jasmine,pilot,passenger
-Bianca,Delia,pilot,passenger
-Andrei,Akira,friend,friend
-Andrei,Nikolai,therapist,client
-Rosa,Imani,uncle,niece
-Rosa,Gabriela,father,child
-Rosa,Kai,grandparent,grandchild
-Rosa,Nikolai,father,child
-Naomi,Tara,sister, brother
-Naomi,Xander,king,subject
-Naomi,Ingrid,uncle,niece
-Stefan,Akira,pilot,passenger
-Stefan,Selena,therapist,client
-Miguel,Jasmine,grandparent,grandchild
-Miguel,Malik,professor,researcher
-Lucia,Maria,boss,employee
-Lucia,Amir,grandparent,grandchild
-Lucia,Gabriel,employer,employee
-Raj,Angela,pilot,passenger
-Raj,Theodore,friend,friend
-Raj,Richard,doctor,patient
-Raj,Nikolai,captain,sailor
-Ingrid,Fatima,coach,athlete
-Ethan,Gabriela,professor,researcher
-Ethan,Victor,doctor,patient
-Ethan,Zayd,pilot,passenger
-Ethan,Nikolai,uncle,niece
-Zayd,Tara,doctor,patient
-Theodore,Hiroshi,doctor,patient
-Theodore,Anders,principal,student
-Anders,Valentina,pilot,passenger
-Anders,Gabriel,principal,student
-Angela,Amelia,friend,friend
-Angela,Aaron,professor,researcher
-Malik,Amir,uncle,niece
-Richard,Sofia,aunt,nephew
-Richard,Valentina,grandparent,grandchild
-Richard,Felix,father,child
-Richard,Maria,grandparent,grandchild
-Sofia,Valentina,owner,pet
-Nikolai,Charlie,professor,researcher
-Amelia,Yuki,owner,pet
-Amelia,Quinn,professor,researcher
-Valentina,Samira,captain,sailor
-Valentina,Akira,doctor,patient
-Imani,Kai,sister, brother
-Imani,Maria,aunt,nephew
-Xander,Gabriela,principal,student
-Xander,Charlie,therapist,client
-Xander,Fatima,mentor,mentee
-Xander,Akira,grandparent,grandchild
-Jasmine,Aaron,mother,child
-Jasmine,Fatima,king,subject
-Yuki,Charlie,mother,child
-Yuki,Maya,teacher,student
-Alice,Gabriel,teacher,student
-Aaron,Akira,teacher,student
-Victor,Liam,sister, brother
-Victor,Charlie,professor,researcher
-Felix,Gabriela,owner,pet
-Felix,Liam,doctor,patient
-Samira,Gabriel,doctor,patient
-Samira,Selena,boss,employee
-Tara,Akira,pilot,passenger
-Tara,Mia,pilot,passenger
-Tara,Hiroshi,mentor,mentee
-Tara,Selena,father,child
-Selena,Charlie,sister, brother
-Selena,Akira,sister, brother
-Selena,Gabriel,professor,researcher
-Selena,Amir,therapist,client
-Maya,Kai,doctor,patient
-Maya,Amir,therapist,client
-Gabriel,Amir,professor,researcher
-Gabriel,Quinn,mentor,mentee
-Fatima,Maria,professor,researcher
-Amir,Akira,grandparent,grandchild
-Liam,Charlie,owner,pet
-Liam,Gabriela,sister, brother
-Akira,Mia,coach,athlete
-Akira,Kai,doctor,patient
-Akira,Quinn,therapist,client
-Akira,Maria,aunt,nephew
-Mia,Gabriela,employer,employee
-Mia,Maria,sister, brother
-Mia,Charlie,aunt,nephew
-Mia,Hiroshi,sister, brother
-Kai,Gabriela,professor,researcher
-Delia,Charlie,father,child
-Quinn,Maria,principal,student
-Hiroshi,Charlie,friend,friend
-Hiroshi,Maria,teacher,student
-Hiroshi,Gabriela,captain,sailor
-Charlie,Gabriela,coach,athlete
-Gabriela,Maria,king,subject
+Sebastian Müller,Imani Jefferson,athlete,coach
+Sebastian Müller,Andrei Petrov,student,teacher
+Omar Hassan,Charlie Anderson,employee,employer
+Omar Hassan,Andrei Petrov,patient,doctor
+Omar Hassan,Xiuying Gao,mentee,mentor
+Diana Martinez,Stefan Nowak,researcher,professor
+Diana Martinez,Jasmine Khan,client,therapist
+Diana Martinez,Richard Garcia,patient,doctor
+Yasmin Malik,Jasmine Khan,client,therapist
+Yasmin Malik,Xander Brooks,nephew,aunt
+Yasmin Malik,Anders Johansson,mentee,mentor
+Xiuying Gao,Amir Zaidi,researcher,professor
+Xiuying Gao,Richard Garcia,client,therapist
+Xiuying Gao,Zayd Abdullah,nephew,aunt
+Bianca Rossi,Maria Gutierrez,employee,employer
+Bianca Rossi,Xander Brooks,student,teacher
+Bianca Rossi,Stefan Nowak,athlete,coach
+Andrei Petrov,Valentina Romano,patient,doctor
+Andrei Petrov,Lucia Rodriguez,sailor,captain
+Andrei Petrov,Richard Garcia,researcher,professor
+Andrei Petrov,Kai Nakamura,sailor,captain
+Andrei Petrov,Jasmine Khan,friend,friend
+Rosa Sanchez,Theodore Hayes,nephew,aunt
+Rosa Sanchez,Amelia Clarke,student,teacher
+Rosa Sanchez,Kai Nakamura,student,teacher
+Rosa Sanchez,Meihui Zhu,passenger,pilot
+Naomi Kim,Felix Weber,mentee,mentor
+Naomi Kim,Amelia Clarke,researcher,professor
+Naomi Kim,Anders Johansson,student,teacher
+Naomi Kim,Akira Tanaka,employee,employer
+Naomi Kim,Liam O'Connor,friend,friend
+Stefan Nowak,Gabriel Thompson,researcher,professor
+Stefan Nowak,Gabriela Fernandez,student,teacher
+Stefan Nowak,Ethan Robertson,sailor,captain
+Miguel Reyes,Hiroshi Nakamura,athlete,coach
+Miguel Reyes,Lucia Rodriguez,patient,doctor
+Miguel Reyes,Angela Washington,employee,employer
+Miguel Reyes,Quinn Morgan,patient,doctor
+Lucia Rodriguez,Nikolai Sokolov,brother,sister
+Lucia Rodriguez,Akira Tanaka,passenger,pilot
+Lucia Rodriguez,Raj Malhotra,employee,employer
+Lucia Rodriguez,Yuki Tanaka,sailor,captain
+Lucia Rodriguez,Delia Morales,client,therapist
+Raj Malhotra,Quinn Morgan,grandchild,grandparent
+Raj Malhotra,Imani Jefferson,passenger,pilot
+Raj Malhotra,Nikolai Sokolov,child,mother
+Raj Malhotra,Maya Patel,patient,doctor
+Ingrid Svenson,Zayd Abdullah,student,teacher
+Ingrid Svenson,Sofia Vasquez,employee,employer
+Ingrid Svenson,Gabriel Thompson,mentee,mentor
+Ingrid Svenson,Samira Karim,student,teacher
+Ingrid Svenson,Alice Johnson,student,teacher
+Ethan Robertson,Malik Johnson,athlete,coach
+Ethan Robertson,Maria Gutierrez,passenger,pilot
+Ethan Robertson,Amelia Clarke,researcher,professor
+Ethan Robertson,Quinn Morgan,patient,doctor
+Ethan Robertson,Imani Jefferson,patient,doctor
+Zayd Abdullah,Akira Tanaka,sailor,captain
+Zayd Abdullah,Amir Zaidi,employee,employer
+Zayd Abdullah,Delia Morales,niece,uncle
+Zayd Abdullah,Maria Gutierrez,niece,uncle
+Theodore Hayes,Fatima Ahmed,niece,uncle
+Theodore Hayes,Angela Washington,niece,uncle
+Anders Johansson,Nikolai Sokolov,employee,employer
+Anders Johansson,Sofia Vasquez,mentee,mentor
+Angela Washington,Hiroshi Nakamura,mentee,mentor
+Angela Washington,Alice Johnson,athlete,coach
+Malik Johnson,Yuki Tanaka,patient,doctor
+Malik Johnson,Akira Tanaka,friend,friend
+Malik Johnson,Selena Rivera,sailor,captain
+Richard Garcia,Hiroshi Nakamura,patient,doctor
+Richard Garcia,Maya Patel,employee,employer
+Richard Garcia,Tara Wilson,employee,employer
+Sofia Vasquez,Samira Karim,child,mother
+Sofia Vasquez,Selena Rivera,client,therapist
+Sofia Vasquez,Maya Patel,client,therapist
+Sofia Vasquez,Maria Gutierrez,client,therapist
+Sofia Vasquez,Quinn Morgan,student,teacher
+Nikolai Sokolov,Selena Rivera,patient,doctor
+Nikolai Sokolov,Hiroshi Nakamura,employee,employer
+Amelia Clarke,Aaron Goldstein,friend,friend
+Amelia Clarke,Akira Tanaka,student,teacher
+Amelia Clarke,Fatima Ahmed,mentee,mentor
+Valentina Romano,Amir Zaidi,employee,employer
+Valentina Romano,Felix Weber,student,teacher
+Valentina Romano,Jasmine Khan,client,therapist
+Valentina Romano,Meihui Zhu,athlete,coach
+Imani Jefferson,Yuki Tanaka,mentee,mentor
+Imani Jefferson,Samira Karim,patient,doctor
+Xander Brooks,Meihui Zhu,student,teacher
+Xander Brooks,Samira Karim,child,mother
+Xander Brooks,Amir Zaidi,researcher,professor
+Xander Brooks,Yuki Tanaka,athlete,coach
+Xander Brooks,Felix Weber,sailor,captain
+Jasmine Khan,Akira Tanaka,friend,friend
+Jasmine Khan,Quinn Morgan,employee,employer
+Jasmine Khan,Maria Gutierrez,friend,friend
+Jasmine Khan,Kai Nakamura,grandchild,grandparent
+Yuki Tanaka,Charlie Anderson,student,teacher
+Yuki Tanaka,Hiroshi Nakamura,researcher,professor
+Alice Johnson,Victor Mendoza,passenger,pilot
+Alice Johnson,Maria Gutierrez,mentee,mentor
+Alice Johnson,Quinn Morgan,child,mother
+Alice Johnson,Hiroshi Nakamura,passenger,pilot
+Aaron Goldstein,Maya Patel,mentee,mentor
+Aaron Goldstein,Samira Karim,niece,uncle
+Victor Mendoza,Selena Rivera,researcher,professor
+Victor Mendoza,Amir Zaidi,client,therapist
+Victor Mendoza,Samira Karim,employee,employer
+Victor Mendoza,Akira Tanaka,patient,doctor
+Victor Mendoza,Charlie Anderson,client,therapist
+Felix Weber,Akira Tanaka,patient,doctor
+Felix Weber,Quinn Morgan,sailor,captain
+Felix Weber,Selena Rivera,patient,doctor
+Samira Karim,Tara Wilson,patient,doctor
+Samira Karim,Akira Tanaka,employee,employer
+Tara Wilson,Kai Nakamura,passenger,pilot
+Tara Wilson,Fatima Ahmed,friend,friend
+Selena Rivera,Akira Tanaka,patient,doctor
+Selena Rivera,Gabriel Thompson,employee,employer
+Selena Rivera,Amir Zaidi,brother,sister
+Maya Patel,Quinn Morgan,child,mother
+Maya Patel,Gabriela Fernandez,client,therapist
+Maya Patel,Akira Tanaka,employee,employer
+Maya Patel,Hiroshi Nakamura,employee,employer
+Maya Patel,Maria Gutierrez,passenger,pilot
+Gabriel Thompson,Meihui Zhu,friend,friend
+Gabriel Thompson,Amir Zaidi,athlete,coach
+Gabriel Thompson,Gabriela Fernandez,athlete,coach
+Fatima Ahmed,Delia Morales,athlete,coach
+Fatima Ahmed,Meihui Zhu,employee,employer
+Fatima Ahmed,Kai Nakamura,nephew,aunt
+Amir Zaidi,Akira Tanaka,athlete,coach
+Amir Zaidi,Hiroshi Nakamura,student,teacher
+Liam O'Connor,Hiroshi Nakamura,athlete,coach
+Liam O'Connor,Kai Nakamura,grandchild,grandparent
+Akira Tanaka,Gabriela Fernandez,friend,friend
+Akira Tanaka,Hiroshi Nakamura,student,teacher
+Akira Tanaka,Meihui Zhu,client,therapist
+Akira Tanaka,Charlie Anderson,friend,friend
+Akira Tanaka,Maria Gutierrez,researcher,professor
+Meihui Zhu,Kai Nakamura,student,teacher
+Meihui Zhu,Quinn Morgan,passenger,pilot
+Meihui Zhu,Gabriela Fernandez,grandchild,grandparent
+Kai Nakamura,Maria Gutierrez,client,therapist
+Kai Nakamura,Quinn Morgan,subject,king
+Kai Nakamura,Delia Morales,friend,friend
+Delia Morales,Hiroshi Nakamura,child,mother
+Delia Morales,Maria Gutierrez,mentee,mentor
+Delia Morales,Gabriela Fernandez,student,teacher
+Quinn Morgan,Maria Gutierrez,grandchild,grandparent
+Quinn Morgan,Gabriela Fernandez,employee,employer
+Quinn Morgan,Hiroshi Nakamura,sailor,captain
+Hiroshi Nakamura,Gabriela Fernandez,sailor,captain
+Hiroshi Nakamura,Charlie Anderson,employee,employer
+Charlie Anderson,Maria Gutierrez,athlete,coach
+Charlie Anderson,Gabriela Fernandez,niece,uncle

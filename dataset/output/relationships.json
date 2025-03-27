@@ -1,575 +1,782 @@
 {
   "characters": [
-    "Sebastian",
-    "Omar",
-    "Diana",
-    "Yasmin",
-    "Cheng",
-    "Bianca",
-    "Andrei",
-    "Rosa",
-    "Naomi",
-    "Stefan",
-    "Miguel",
-    "Lucia",
-    "Raj",
-    "Ingrid",
-    "Ethan",
-    "Zayd",
-    "Theodore",
-    "Anders",
-    "Angela",
-    "Malik",
-    "Richard",
-    "Sofia",
-    "Nikolai",
-    "Amelia",
-    "Valentina",
-    "Imani",
-    "Xander",
-    "Jasmine",
-    "Yuki",
-    "Alice",
-    "Aaron",
-    "Victor",
-    "Felix",
-    "Samira",
-    "Tara",
-    "Selena",
-    "Maya",
-    "Gabriel",
-    "Fatima",
-    "Amir",
-    "Liam",
-    "Akira",
-    "Mia",
-    "Kai",
-    "Delia",
-    "Quinn",
-    "Hiroshi",
-    "Charlie",
-    "Gabriela",
-    "Maria"
+    "Sebastian M\u00fcller",
+    "Omar Hassan",
+    "Diana Martinez",
+    "Yasmin Malik",
+    "Xiuying Gao",
+    "Bianca Rossi",
+    "Andrei Petrov",
+    "Rosa Sanchez",
+    "Naomi Kim",
+    "Stefan Nowak",
+    "Miguel Reyes",
+    "Lucia Rodriguez",
+    "Raj Malhotra",
+    "Ingrid Svenson",
+    "Ethan Robertson",
+    "Zayd Abdullah",
+    "Theodore Hayes",
+    "Anders Johansson",
+    "Angela Washington",
+    "Malik Johnson",
+    "Richard Garcia",
+    "Sofia Vasquez",
+    "Nikolai Sokolov",
+    "Amelia Clarke",
+    "Valentina Romano",
+    "Imani Jefferson",
+    "Xander Brooks",
+    "Jasmine Khan",
+    "Yuki Tanaka",
+    "Alice Johnson",
+    "Aaron Goldstein",
+    "Victor Mendoza",
+    "Felix Weber",
+    "Samira Karim",
+    "Tara Wilson",
+    "Selena Rivera",
+    "Maya Patel",
+    "Gabriel Thompson",
+    "Fatima Ahmed",
+    "Amir Zaidi",
+    "Liam O'Connor",
+    "Akira Tanaka",
+    "Meihui Zhu",
+    "Kai Nakamura",
+    "Delia Morales",
+    "Quinn Morgan",
+    "Hiroshi Nakamura",
+    "Charlie Anderson",
+    "Gabriela Fernandez",
+    "Maria Gutierrez"
   ],
   "adjacency_list": {
-    "Sebastian": [
+    "Sebastian M\u00fcller": [
       {
-        "target": "Imani",
-        "relation": "teacher"
-      }
-    ],
-    "Omar": [
-      {
-        "target": "Mia",
-        "relation": "king"
+        "target": "Imani Jefferson",
+        "relation": "athlete"
       },
       {
-        "target": "Akira",
-        "relation": "sister"
-      },
-      {
-        "target": "Imani",
-        "relation": "teacher"
+        "target": "Andrei Petrov",
+        "relation": "student"
       }
     ],
-    "Diana": [
+    "Omar Hassan": [
       {
-        "target": "Quinn",
-        "relation": "grandparent"
-      }
-    ],
-    "Yasmin": [
-      {
-        "target": "Stefan",
-        "relation": "coach"
+        "target": "Charlie Anderson",
+        "relation": "employee"
       },
       {
-        "target": "Angela",
-        "relation": "doctor"
+        "target": "Andrei Petrov",
+        "relation": "patient"
       },
       {
-        "target": "Miguel",
-        "relation": "therapist"
+        "target": "Xiuying Gao",
+        "relation": "mentee"
       }
     ],
-    "Cheng": [
+    "Diana Martinez": [
       {
-        "target": "Zayd",
-        "relation": "sister"
+        "target": "Stefan Nowak",
+        "relation": "researcher"
       },
       {
-        "target": "Yuki",
-        "relation": "doctor"
+        "target": "Jasmine Khan",
+        "relation": "client"
       },
       {
-        "target": "Jasmine",
-        "relation": "pilot"
+        "target": "Richard Garcia",
+        "relation": "patient"
       }
     ],
-    "Bianca": [
+    "Yasmin Malik": [
       {
-        "target": "Delia",
-        "relation": "pilot"
+        "target": "Jasmine Khan",
+        "relation": "client"
+      },
+      {
+        "target": "Xander Brooks",
+        "relation": "nephew"
+      },
+      {
+        "target": "Anders Johansson",
+        "relation": "mentee"
       }
     ],
-    "Andrei": [
+    "Xiuying Gao": [
       {
-        "target": "Akira",
+        "target": "Amir Zaidi",
+        "relation": "researcher"
+      },
+      {
+        "target": "Richard Garcia",
+        "relation": "client"
+      },
+      {
+        "target": "Zayd Abdullah",
+        "relation": "nephew"
+      }
+    ],
+    "Bianca Rossi": [
+      {
+        "target": "Maria Gutierrez",
+        "relation": "employee"
+      },
+      {
+        "target": "Xander Brooks",
+        "relation": "student"
+      },
+      {
+        "target": "Stefan Nowak",
+        "relation": "athlete"
+      }
+    ],
+    "Andrei Petrov": [
+      {
+        "target": "Valentina Romano",
+        "relation": "patient"
+      },
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "sailor"
+      },
+      {
+        "target": "Richard Garcia",
+        "relation": "researcher"
+      },
+      {
+        "target": "Kai Nakamura",
+        "relation": "sailor"
+      },
+      {
+        "target": "Jasmine Khan",
+        "relation": "friend"
+      }
+    ],
+    "Rosa Sanchez": [
+      {
+        "target": "Theodore Hayes",
+        "relation": "nephew"
+      },
+      {
+        "target": "Amelia Clarke",
+        "relation": "student"
+      },
+      {
+        "target": "Kai Nakamura",
+        "relation": "student"
+      },
+      {
+        "target": "Meihui Zhu",
+        "relation": "passenger"
+      }
+    ],
+    "Naomi Kim": [
+      {
+        "target": "Felix Weber",
+        "relation": "mentee"
+      },
+      {
+        "target": "Amelia Clarke",
+        "relation": "researcher"
+      },
+      {
+        "target": "Anders Johansson",
+        "relation": "student"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "employee"
+      },
+      {
+        "target": "Liam O'Connor",
+        "relation": "friend"
+      }
+    ],
+    "Stefan Nowak": [
+      {
+        "target": "Gabriel Thompson",
+        "relation": "researcher"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "student"
+      },
+      {
+        "target": "Ethan Robertson",
+        "relation": "sailor"
+      }
+    ],
+    "Miguel Reyes": [
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "athlete"
+      },
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "patient"
+      },
+      {
+        "target": "Angela Washington",
+        "relation": "employee"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "patient"
+      }
+    ],
+    "Lucia Rodriguez": [
+      {
+        "target": "Nikolai Sokolov",
+        "relation": "brother"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "passenger"
+      },
+      {
+        "target": "Raj Malhotra",
+        "relation": "employee"
+      },
+      {
+        "target": "Yuki Tanaka",
+        "relation": "sailor"
+      },
+      {
+        "target": "Delia Morales",
+        "relation": "client"
+      }
+    ],
+    "Raj Malhotra": [
+      {
+        "target": "Quinn Morgan",
+        "relation": "grandchild"
+      },
+      {
+        "target": "Imani Jefferson",
+        "relation": "passenger"
+      },
+      {
+        "target": "Nikolai Sokolov",
+        "relation": "child"
+      },
+      {
+        "target": "Maya Patel",
+        "relation": "patient"
+      }
+    ],
+    "Ingrid Svenson": [
+      {
+        "target": "Zayd Abdullah",
+        "relation": "student"
+      },
+      {
+        "target": "Sofia Vasquez",
+        "relation": "employee"
+      },
+      {
+        "target": "Gabriel Thompson",
+        "relation": "mentee"
+      },
+      {
+        "target": "Samira Karim",
+        "relation": "student"
+      },
+      {
+        "target": "Alice Johnson",
+        "relation": "student"
+      }
+    ],
+    "Ethan Robertson": [
+      {
+        "target": "Malik Johnson",
+        "relation": "athlete"
+      },
+      {
+        "target": "Maria Gutierrez",
+        "relation": "passenger"
+      },
+      {
+        "target": "Amelia Clarke",
+        "relation": "researcher"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "patient"
+      },
+      {
+        "target": "Imani Jefferson",
+        "relation": "patient"
+      }
+    ],
+    "Zayd Abdullah": [
+      {
+        "target": "Akira Tanaka",
+        "relation": "sailor"
+      },
+      {
+        "target": "Amir Zaidi",
+        "relation": "employee"
+      },
+      {
+        "target": "Delia Morales",
+        "relation": "niece"
+      },
+      {
+        "target": "Maria Gutierrez",
+        "relation": "niece"
+      }
+    ],
+    "Theodore Hayes": [
+      {
+        "target": "Fatima Ahmed",
+        "relation": "niece"
+      },
+      {
+        "target": "Angela Washington",
+        "relation": "niece"
+      }
+    ],
+    "Anders Johansson": [
+      {
+        "target": "Nikolai Sokolov",
+        "relation": "employee"
+      },
+      {
+        "target": "Sofia Vasquez",
+        "relation": "mentee"
+      }
+    ],
+    "Angela Washington": [
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "mentee"
+      },
+      {
+        "target": "Alice Johnson",
+        "relation": "athlete"
+      }
+    ],
+    "Malik Johnson": [
+      {
+        "target": "Yuki Tanaka",
+        "relation": "patient"
+      },
+      {
+        "target": "Akira Tanaka",
         "relation": "friend"
       },
       {
-        "target": "Nikolai",
-        "relation": "therapist"
+        "target": "Selena Rivera",
+        "relation": "sailor"
       }
     ],
-    "Rosa": [
+    "Richard Garcia": [
       {
-        "target": "Imani",
-        "relation": "uncle"
+        "target": "Hiroshi Nakamura",
+        "relation": "patient"
       },
       {
-        "target": "Gabriela",
-        "relation": "father"
+        "target": "Maya Patel",
+        "relation": "employee"
       },
       {
-        "target": "Kai",
-        "relation": "grandparent"
-      },
-      {
-        "target": "Nikolai",
-        "relation": "father"
+        "target": "Tara Wilson",
+        "relation": "employee"
       }
     ],
-    "Naomi": [
+    "Sofia Vasquez": [
       {
-        "target": "Tara",
-        "relation": "sister"
+        "target": "Samira Karim",
+        "relation": "child"
       },
       {
-        "target": "Xander",
-        "relation": "king"
+        "target": "Selena Rivera",
+        "relation": "client"
       },
       {
-        "target": "Ingrid",
-        "relation": "uncle"
+        "target": "Maya Patel",
+        "relation": "client"
+      },
+      {
+        "target": "Maria Gutierrez",
+        "relation": "client"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "student"
       }
     ],
-    "Stefan": [
+    "Nikolai Sokolov": [
       {
-        "target": "Akira",
-        "relation": "pilot"
+        "target": "Selena Rivera",
+        "relation": "patient"
       },
       {
-        "target": "Selena",
-        "relation": "therapist"
+        "target": "Hiroshi Nakamura",
+        "relation": "employee"
       }
     ],
-    "Miguel": [
+    "Amelia Clarke": [
       {
-        "target": "Jasmine",
-        "relation": "grandparent"
-      },
-      {
-        "target": "Malik",
-        "relation": "professor"
-      }
-    ],
-    "Lucia": [
-      {
-        "target": "Maria",
-        "relation": "boss"
-      },
-      {
-        "target": "Amir",
-        "relation": "grandparent"
-      },
-      {
-        "target": "Gabriel",
-        "relation": "employer"
-      }
-    ],
-    "Raj": [
-      {
-        "target": "Angela",
-        "relation": "pilot"
-      },
-      {
-        "target": "Theodore",
+        "target": "Aaron Goldstein",
         "relation": "friend"
       },
       {
-        "target": "Richard",
-        "relation": "doctor"
+        "target": "Akira Tanaka",
+        "relation": "student"
       },
       {
-        "target": "Nikolai",
-        "relation": "captain"
+        "target": "Fatima Ahmed",
+        "relation": "mentee"
       }
     ],
-    "Ingrid": [
+    "Valentina Romano": [
       {
-        "target": "Fatima",
-        "relation": "coach"
-      }
-    ],
-    "Ethan": [
-      {
-        "target": "Gabriela",
-        "relation": "professor"
+        "target": "Amir Zaidi",
+        "relation": "employee"
       },
       {
-        "target": "Victor",
-        "relation": "doctor"
+        "target": "Felix Weber",
+        "relation": "student"
       },
       {
-        "target": "Zayd",
-        "relation": "pilot"
+        "target": "Jasmine Khan",
+        "relation": "client"
       },
       {
-        "target": "Nikolai",
-        "relation": "uncle"
+        "target": "Meihui Zhu",
+        "relation": "athlete"
       }
     ],
-    "Zayd": [
+    "Imani Jefferson": [
       {
-        "target": "Tara",
-        "relation": "doctor"
-      }
-    ],
-    "Theodore": [
-      {
-        "target": "Hiroshi",
-        "relation": "doctor"
+        "target": "Yuki Tanaka",
+        "relation": "mentee"
       },
       {
-        "target": "Anders",
-        "relation": "principal"
+        "target": "Samira Karim",
+        "relation": "patient"
       }
     ],
-    "Anders": [
+    "Xander Brooks": [
       {
-        "target": "Valentina",
-        "relation": "pilot"
+        "target": "Meihui Zhu",
+        "relation": "student"
       },
       {
-        "target": "Gabriel",
-        "relation": "principal"
+        "target": "Samira Karim",
+        "relation": "child"
+      },
+      {
+        "target": "Amir Zaidi",
+        "relation": "researcher"
+      },
+      {
+        "target": "Yuki Tanaka",
+        "relation": "athlete"
+      },
+      {
+        "target": "Felix Weber",
+        "relation": "sailor"
       }
     ],
-    "Angela": [
+    "Jasmine Khan": [
       {
-        "target": "Amelia",
+        "target": "Akira Tanaka",
         "relation": "friend"
       },
       {
-        "target": "Aaron",
-        "relation": "professor"
-      }
-    ],
-    "Malik": [
-      {
-        "target": "Amir",
-        "relation": "uncle"
-      }
-    ],
-    "Richard": [
-      {
-        "target": "Sofia",
-        "relation": "aunt"
+        "target": "Quinn Morgan",
+        "relation": "employee"
       },
       {
-        "target": "Valentina",
-        "relation": "grandparent"
-      },
-      {
-        "target": "Felix",
-        "relation": "father"
-      },
-      {
-        "target": "Maria",
-        "relation": "grandparent"
-      }
-    ],
-    "Sofia": [
-      {
-        "target": "Valentina",
-        "relation": "owner"
-      }
-    ],
-    "Nikolai": [
-      {
-        "target": "Charlie",
-        "relation": "professor"
-      }
-    ],
-    "Amelia": [
-      {
-        "target": "Yuki",
-        "relation": "owner"
-      },
-      {
-        "target": "Quinn",
-        "relation": "professor"
-      }
-    ],
-    "Valentina": [
-      {
-        "target": "Samira",
-        "relation": "captain"
-      },
-      {
-        "target": "Akira",
-        "relation": "doctor"
-      }
-    ],
-    "Imani": [
-      {
-        "target": "Kai",
-        "relation": "sister"
-      },
-      {
-        "target": "Maria",
-        "relation": "aunt"
-      }
-    ],
-    "Xander": [
-      {
-        "target": "Gabriela",
-        "relation": "principal"
-      },
-      {
-        "target": "Charlie",
-        "relation": "therapist"
-      },
-      {
-        "target": "Fatima",
-        "relation": "mentor"
-      },
-      {
-        "target": "Akira",
-        "relation": "grandparent"
-      }
-    ],
-    "Jasmine": [
-      {
-        "target": "Aaron",
-        "relation": "mother"
-      },
-      {
-        "target": "Fatima",
-        "relation": "king"
-      }
-    ],
-    "Yuki": [
-      {
-        "target": "Charlie",
-        "relation": "mother"
-      },
-      {
-        "target": "Maya",
-        "relation": "teacher"
-      }
-    ],
-    "Alice": [
-      {
-        "target": "Gabriel",
-        "relation": "teacher"
-      }
-    ],
-    "Aaron": [
-      {
-        "target": "Akira",
-        "relation": "teacher"
-      }
-    ],
-    "Victor": [
-      {
-        "target": "Liam",
-        "relation": "sister"
-      },
-      {
-        "target": "Charlie",
-        "relation": "professor"
-      }
-    ],
-    "Felix": [
-      {
-        "target": "Gabriela",
-        "relation": "owner"
-      },
-      {
-        "target": "Liam",
-        "relation": "doctor"
-      }
-    ],
-    "Samira": [
-      {
-        "target": "Gabriel",
-        "relation": "doctor"
-      },
-      {
-        "target": "Selena",
-        "relation": "boss"
-      }
-    ],
-    "Tara": [
-      {
-        "target": "Akira",
-        "relation": "pilot"
-      },
-      {
-        "target": "Mia",
-        "relation": "pilot"
-      },
-      {
-        "target": "Hiroshi",
-        "relation": "mentor"
-      },
-      {
-        "target": "Selena",
-        "relation": "father"
-      }
-    ],
-    "Selena": [
-      {
-        "target": "Charlie",
-        "relation": "sister"
-      },
-      {
-        "target": "Akira",
-        "relation": "sister"
-      },
-      {
-        "target": "Gabriel",
-        "relation": "professor"
-      },
-      {
-        "target": "Amir",
-        "relation": "therapist"
-      }
-    ],
-    "Maya": [
-      {
-        "target": "Kai",
-        "relation": "doctor"
-      },
-      {
-        "target": "Amir",
-        "relation": "therapist"
-      }
-    ],
-    "Gabriel": [
-      {
-        "target": "Amir",
-        "relation": "professor"
-      },
-      {
-        "target": "Quinn",
-        "relation": "mentor"
-      }
-    ],
-    "Fatima": [
-      {
-        "target": "Maria",
-        "relation": "professor"
-      }
-    ],
-    "Amir": [
-      {
-        "target": "Akira",
-        "relation": "grandparent"
-      }
-    ],
-    "Liam": [
-      {
-        "target": "Charlie",
-        "relation": "owner"
-      },
-      {
-        "target": "Gabriela",
-        "relation": "sister"
-      }
-    ],
-    "Akira": [
-      {
-        "target": "Mia",
-        "relation": "coach"
-      },
-      {
-        "target": "Kai",
-        "relation": "doctor"
-      },
-      {
-        "target": "Quinn",
-        "relation": "therapist"
-      },
-      {
-        "target": "Maria",
-        "relation": "aunt"
-      }
-    ],
-    "Mia": [
-      {
-        "target": "Gabriela",
-        "relation": "employer"
-      },
-      {
-        "target": "Maria",
-        "relation": "sister"
-      },
-      {
-        "target": "Charlie",
-        "relation": "aunt"
-      },
-      {
-        "target": "Hiroshi",
-        "relation": "sister"
-      }
-    ],
-    "Kai": [
-      {
-        "target": "Gabriela",
-        "relation": "professor"
-      }
-    ],
-    "Delia": [
-      {
-        "target": "Charlie",
-        "relation": "father"
-      }
-    ],
-    "Quinn": [
-      {
-        "target": "Maria",
-        "relation": "principal"
-      }
-    ],
-    "Hiroshi": [
-      {
-        "target": "Charlie",
+        "target": "Maria Gutierrez",
         "relation": "friend"
       },
       {
-        "target": "Maria",
-        "relation": "teacher"
+        "target": "Kai Nakamura",
+        "relation": "grandchild"
+      }
+    ],
+    "Yuki Tanaka": [
+      {
+        "target": "Charlie Anderson",
+        "relation": "student"
       },
       {
-        "target": "Gabriela",
-        "relation": "captain"
+        "target": "Hiroshi Nakamura",
+        "relation": "researcher"
       }
     ],
-    "Charlie": [
+    "Alice Johnson": [
       {
-        "target": "Gabriela",
-        "relation": "coach"
-      }
-    ],
-    "Gabriela": [
+        "target": "Victor Mendoza",
+        "relation": "passenger"
+      },
       {
-        "target": "Maria",
-        "relation": "king"
+        "target": "Maria Gutierrez",
+        "relation": "mentee"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "child"
+      },
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "passenger"
       }
     ],
-    "Maria": []
+    "Aaron Goldstein": [
+      {
+        "target": "Maya Patel",
+        "relation": "mentee"
+      },
+      {
+        "target": "Samira Karim",
+        "relation": "niece"
+      }
+    ],
+    "Victor Mendoza": [
+      {
+        "target": "Selena Rivera",
+        "relation": "researcher"
+      },
+      {
+        "target": "Amir Zaidi",
+        "relation": "client"
+      },
+      {
+        "target": "Samira Karim",
+        "relation": "employee"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "patient"
+      },
+      {
+        "target": "Charlie Anderson",
+        "relation": "client"
+      }
+    ],
+    "Felix Weber": [
+      {
+        "target": "Akira Tanaka",
+        "relation": "patient"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "sailor"
+      },
+      {
+        "target": "Selena Rivera",
+        "relation": "patient"
+      }
+    ],
+    "Samira Karim": [
+      {
+        "target": "Tara Wilson",
+        "relation": "patient"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "employee"
+      }
+    ],
+    "Tara Wilson": [
+      {
+        "target": "Kai Nakamura",
+        "relation": "passenger"
+      },
+      {
+        "target": "Fatima Ahmed",
+        "relation": "friend"
+      }
+    ],
+    "Selena Rivera": [
+      {
+        "target": "Akira Tanaka",
+        "relation": "patient"
+      },
+      {
+        "target": "Gabriel Thompson",
+        "relation": "employee"
+      },
+      {
+        "target": "Amir Zaidi",
+        "relation": "brother"
+      }
+    ],
+    "Maya Patel": [
+      {
+        "target": "Quinn Morgan",
+        "relation": "child"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "client"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "employee"
+      },
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "employee"
+      },
+      {
+        "target": "Maria Gutierrez",
+        "relation": "passenger"
+      }
+    ],
+    "Gabriel Thompson": [
+      {
+        "target": "Meihui Zhu",
+        "relation": "friend"
+      },
+      {
+        "target": "Amir Zaidi",
+        "relation": "athlete"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "athlete"
+      }
+    ],
+    "Fatima Ahmed": [
+      {
+        "target": "Delia Morales",
+        "relation": "athlete"
+      },
+      {
+        "target": "Meihui Zhu",
+        "relation": "employee"
+      },
+      {
+        "target": "Kai Nakamura",
+        "relation": "nephew"
+      }
+    ],
+    "Amir Zaidi": [
+      {
+        "target": "Akira Tanaka",
+        "relation": "athlete"
+      },
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "student"
+      }
+    ],
+    "Liam O'Connor": [
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "athlete"
+      },
+      {
+        "target": "Kai Nakamura",
+        "relation": "grandchild"
+      }
+    ],
+    "Akira Tanaka": [
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "friend"
+      },
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "student"
+      },
+      {
+        "target": "Meihui Zhu",
+        "relation": "client"
+      },
+      {
+        "target": "Charlie Anderson",
+        "relation": "friend"
+      },
+      {
+        "target": "Maria Gutierrez",
+        "relation": "researcher"
+      }
+    ],
+    "Meihui Zhu": [
+      {
+        "target": "Kai Nakamura",
+        "relation": "student"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "passenger"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "grandchild"
+      }
+    ],
+    "Kai Nakamura": [
+      {
+        "target": "Maria Gutierrez",
+        "relation": "client"
+      },
+      {
+        "target": "Quinn Morgan",
+        "relation": "subject"
+      },
+      {
+        "target": "Delia Morales",
+        "relation": "friend"
+      }
+    ],
+    "Delia Morales": [
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "child"
+      },
+      {
+        "target": "Maria Gutierrez",
+        "relation": "mentee"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "student"
+      }
+    ],
+    "Quinn Morgan": [
+      {
+        "target": "Maria Gutierrez",
+        "relation": "grandchild"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "employee"
+      },
+      {
+        "target": "Hiroshi Nakamura",
+        "relation": "sailor"
+      }
+    ],
+    "Hiroshi Nakamura": [
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "sailor"
+      },
+      {
+        "target": "Charlie Anderson",
+        "relation": "employee"
+      }
+    ],
+    "Charlie Anderson": [
+      {
+        "target": "Maria Gutierrez",
+        "relation": "athlete"
+      },
+      {
+        "target": "Gabriela Fernandez",
+        "relation": "niece"
+      }
+    ],
+    "Gabriela Fernandez": [],
+    "Maria Gutierrez": []
   }
 }

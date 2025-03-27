@@ -1,106 +1,158 @@
 question,answer
-Who is Imani's student?,Sebastian
-Who is Mia's subject?,Omar
-Who is Akira's  brother?,Omar
-Who is Imani's student?,Omar
-Who is Quinn's grandchild?,Diana
-Who is Stefan's athlete?,Yasmin
-Who is Angela's patient?,Yasmin
-Who is Miguel's client?,Yasmin
-Who is Zayd's  brother?,Cheng
-Who is Yuki's patient?,Cheng
-Who is Jasmine's passenger?,Cheng
-Who is Delia's passenger?,Bianca
-Who is Akira's friend?,Andrei
-Who is Nikolai's client?,Andrei
-Who is Imani's niece?,Rosa
-Who is Gabriela's child?,Rosa
-Who is Kai's grandchild?,Rosa
-Who is Nikolai's child?,Rosa
-Who is Tara's  brother?,Naomi
-Who is Xander's subject?,Naomi
-Who is Ingrid's niece?,Naomi
-Who is Akira's passenger?,Stefan
-Who is Selena's client?,Stefan
-Who is Jasmine's grandchild?,Miguel
-Who is Malik's researcher?,Miguel
-Who is Maria's employee?,Lucia
-Who is Amir's grandchild?,Lucia
-Who is Gabriel's employee?,Lucia
-Who is Angela's passenger?,Raj
-Who is Theodore's friend?,Raj
-Who is Richard's patient?,Raj
-Who is Nikolai's sailor?,Raj
-Who is Fatima's athlete?,Ingrid
-Who is Gabriela's researcher?,Ethan
-Who is Victor's patient?,Ethan
-Who is Zayd's passenger?,Ethan
-Who is Nikolai's niece?,Ethan
-Who is Tara's patient?,Zayd
-Who is Hiroshi's patient?,Theodore
-Who is Anders's student?,Theodore
-Who is Valentina's passenger?,Anders
-Who is Gabriel's student?,Anders
-Who is Amelia's friend?,Angela
-Who is Aaron's researcher?,Angela
-Who is Amir's niece?,Malik
-Who is Sofia's nephew?,Richard
-Who is Valentina's grandchild?,Richard
-Who is Felix's child?,Richard
-Who is Maria's grandchild?,Richard
-Who is Valentina's pet?,Sofia
-Who is Charlie's researcher?,Nikolai
-Who is Yuki's pet?,Amelia
-Who is Quinn's researcher?,Amelia
-Who is Samira's sailor?,Valentina
-Who is Akira's patient?,Valentina
-Who is Kai's  brother?,Imani
-Who is Maria's nephew?,Imani
-Who is Gabriela's student?,Xander
-Who is Charlie's client?,Xander
-Who is Fatima's mentee?,Xander
-Who is Akira's grandchild?,Xander
-Who is Aaron's child?,Jasmine
-Who is Fatima's subject?,Jasmine
-Who is Charlie's child?,Yuki
-Who is Maya's student?,Yuki
-Who is Gabriel's student?,Alice
-Who is Akira's student?,Aaron
-Who is Liam's  brother?,Victor
-Who is Charlie's researcher?,Victor
-Who is Gabriela's pet?,Felix
-Who is Liam's patient?,Felix
-Who is Gabriel's patient?,Samira
-Who is Selena's employee?,Samira
-Who is Akira's passenger?,Tara
-Who is Mia's passenger?,Tara
-Who is Hiroshi's mentee?,Tara
-Who is Selena's child?,Tara
-Who is Charlie's  brother?,Selena
-Who is Akira's  brother?,Selena
-Who is Gabriel's researcher?,Selena
-Who is Amir's client?,Selena
-Who is Kai's patient?,Maya
-Who is Amir's client?,Maya
-Who is Amir's researcher?,Gabriel
-Who is Quinn's mentee?,Gabriel
-Who is Maria's researcher?,Fatima
-Who is Akira's grandchild?,Amir
-Who is Charlie's pet?,Liam
-Who is Gabriela's  brother?,Liam
-Who is Mia's athlete?,Akira
-Who is Kai's patient?,Akira
-Who is Quinn's client?,Akira
-Who is Maria's nephew?,Akira
-Who is Gabriela's employee?,Mia
-Who is Maria's  brother?,Mia
-Who is Charlie's nephew?,Mia
-Who is Hiroshi's  brother?,Mia
-Who is Gabriela's researcher?,Kai
-Who is Charlie's child?,Delia
-Who is Maria's student?,Quinn
-Who is Charlie's friend?,Hiroshi
-Who is Maria's student?,Hiroshi
-Who is Gabriela's sailor?,Hiroshi
-Who is Gabriela's athlete?,Charlie
-Who is Maria's subject?,Gabriela
+Who is Imani Jefferson's coach?,Sebastian Müller
+Who is Andrei Petrov's teacher?,Sebastian Müller
+Who is Charlie Anderson's employer?,Omar Hassan
+Who is Andrei Petrov's doctor?,Omar Hassan
+Who is Xiuying Gao's mentor?,Omar Hassan
+Who is Stefan Nowak's professor?,Diana Martinez
+Who is Jasmine Khan's therapist?,Diana Martinez
+Who is Richard Garcia's doctor?,Diana Martinez
+Who is Jasmine Khan's therapist?,Yasmin Malik
+Who is Xander Brooks's aunt?,Yasmin Malik
+Who is Anders Johansson's mentor?,Yasmin Malik
+Who is Amir Zaidi's professor?,Xiuying Gao
+Who is Richard Garcia's therapist?,Xiuying Gao
+Who is Zayd Abdullah's aunt?,Xiuying Gao
+Who is Maria Gutierrez's employer?,Bianca Rossi
+Who is Xander Brooks's teacher?,Bianca Rossi
+Who is Stefan Nowak's coach?,Bianca Rossi
+Who is Valentina Romano's doctor?,Andrei Petrov
+Who is Lucia Rodriguez's captain?,Andrei Petrov
+Who is Richard Garcia's professor?,Andrei Petrov
+Who is Kai Nakamura's captain?,Andrei Petrov
+Who is Jasmine Khan's friend?,Andrei Petrov
+Who is Theodore Hayes's aunt?,Rosa Sanchez
+Who is Amelia Clarke's teacher?,Rosa Sanchez
+Who is Kai Nakamura's teacher?,Rosa Sanchez
+Who is Meihui Zhu's pilot?,Rosa Sanchez
+Who is Felix Weber's mentor?,Naomi Kim
+Who is Amelia Clarke's professor?,Naomi Kim
+Who is Anders Johansson's teacher?,Naomi Kim
+Who is Akira Tanaka's employer?,Naomi Kim
+Who is Liam O'Connor's friend?,Naomi Kim
+Who is Gabriel Thompson's professor?,Stefan Nowak
+Who is Gabriela Fernandez's teacher?,Stefan Nowak
+Who is Ethan Robertson's captain?,Stefan Nowak
+Who is Hiroshi Nakamura's coach?,Miguel Reyes
+Who is Lucia Rodriguez's doctor?,Miguel Reyes
+Who is Angela Washington's employer?,Miguel Reyes
+Who is Quinn Morgan's doctor?,Miguel Reyes
+Who is Nikolai Sokolov's sister?,Lucia Rodriguez
+Who is Akira Tanaka's pilot?,Lucia Rodriguez
+Who is Raj Malhotra's employer?,Lucia Rodriguez
+Who is Yuki Tanaka's captain?,Lucia Rodriguez
+Who is Delia Morales's therapist?,Lucia Rodriguez
+Who is Quinn Morgan's grandparent?,Raj Malhotra
+Who is Imani Jefferson's pilot?,Raj Malhotra
+Who is Nikolai Sokolov's mother?,Raj Malhotra
+Who is Maya Patel's doctor?,Raj Malhotra
+Who is Zayd Abdullah's teacher?,Ingrid Svenson
+Who is Sofia Vasquez's employer?,Ingrid Svenson
+Who is Gabriel Thompson's mentor?,Ingrid Svenson
+Who is Samira Karim's teacher?,Ingrid Svenson
+Who is Alice Johnson's teacher?,Ingrid Svenson
+Who is Malik Johnson's coach?,Ethan Robertson
+Who is Maria Gutierrez's pilot?,Ethan Robertson
+Who is Amelia Clarke's professor?,Ethan Robertson
+Who is Quinn Morgan's doctor?,Ethan Robertson
+Who is Imani Jefferson's doctor?,Ethan Robertson
+Who is Akira Tanaka's captain?,Zayd Abdullah
+Who is Amir Zaidi's employer?,Zayd Abdullah
+Who is Delia Morales's uncle?,Zayd Abdullah
+Who is Maria Gutierrez's uncle?,Zayd Abdullah
+Who is Fatima Ahmed's uncle?,Theodore Hayes
+Who is Angela Washington's uncle?,Theodore Hayes
+Who is Nikolai Sokolov's employer?,Anders Johansson
+Who is Sofia Vasquez's mentor?,Anders Johansson
+Who is Hiroshi Nakamura's mentor?,Angela Washington
+Who is Alice Johnson's coach?,Angela Washington
+Who is Yuki Tanaka's doctor?,Malik Johnson
+Who is Akira Tanaka's friend?,Malik Johnson
+Who is Selena Rivera's captain?,Malik Johnson
+Who is Hiroshi Nakamura's doctor?,Richard Garcia
+Who is Maya Patel's employer?,Richard Garcia
+Who is Tara Wilson's employer?,Richard Garcia
+Who is Samira Karim's mother?,Sofia Vasquez
+Who is Selena Rivera's therapist?,Sofia Vasquez
+Who is Maya Patel's therapist?,Sofia Vasquez
+Who is Maria Gutierrez's therapist?,Sofia Vasquez
+Who is Quinn Morgan's teacher?,Sofia Vasquez
+Who is Selena Rivera's doctor?,Nikolai Sokolov
+Who is Hiroshi Nakamura's employer?,Nikolai Sokolov
+Who is Aaron Goldstein's friend?,Amelia Clarke
+Who is Akira Tanaka's teacher?,Amelia Clarke
+Who is Fatima Ahmed's mentor?,Amelia Clarke
+Who is Amir Zaidi's employer?,Valentina Romano
+Who is Felix Weber's teacher?,Valentina Romano
+Who is Jasmine Khan's therapist?,Valentina Romano
+Who is Meihui Zhu's coach?,Valentina Romano
+Who is Yuki Tanaka's mentor?,Imani Jefferson
+Who is Samira Karim's doctor?,Imani Jefferson
+Who is Meihui Zhu's teacher?,Xander Brooks
+Who is Samira Karim's mother?,Xander Brooks
+Who is Amir Zaidi's professor?,Xander Brooks
+Who is Yuki Tanaka's coach?,Xander Brooks
+Who is Felix Weber's captain?,Xander Brooks
+Who is Akira Tanaka's friend?,Jasmine Khan
+Who is Quinn Morgan's employer?,Jasmine Khan
+Who is Maria Gutierrez's friend?,Jasmine Khan
+Who is Kai Nakamura's grandparent?,Jasmine Khan
+Who is Charlie Anderson's teacher?,Yuki Tanaka
+Who is Hiroshi Nakamura's professor?,Yuki Tanaka
+Who is Victor Mendoza's pilot?,Alice Johnson
+Who is Maria Gutierrez's mentor?,Alice Johnson
+Who is Quinn Morgan's mother?,Alice Johnson
+Who is Hiroshi Nakamura's pilot?,Alice Johnson
+Who is Maya Patel's mentor?,Aaron Goldstein
+Who is Samira Karim's uncle?,Aaron Goldstein
+Who is Selena Rivera's professor?,Victor Mendoza
+Who is Amir Zaidi's therapist?,Victor Mendoza
+Who is Samira Karim's employer?,Victor Mendoza
+Who is Akira Tanaka's doctor?,Victor Mendoza
+Who is Charlie Anderson's therapist?,Victor Mendoza
+Who is Akira Tanaka's doctor?,Felix Weber
+Who is Quinn Morgan's captain?,Felix Weber
+Who is Selena Rivera's doctor?,Felix Weber
+Who is Tara Wilson's doctor?,Samira Karim
+Who is Akira Tanaka's employer?,Samira Karim
+Who is Kai Nakamura's pilot?,Tara Wilson
+Who is Fatima Ahmed's friend?,Tara Wilson
+Who is Akira Tanaka's doctor?,Selena Rivera
+Who is Gabriel Thompson's employer?,Selena Rivera
+Who is Amir Zaidi's sister?,Selena Rivera
+Who is Quinn Morgan's mother?,Maya Patel
+Who is Gabriela Fernandez's therapist?,Maya Patel
+Who is Akira Tanaka's employer?,Maya Patel
+Who is Hiroshi Nakamura's employer?,Maya Patel
+Who is Maria Gutierrez's pilot?,Maya Patel
+Who is Meihui Zhu's friend?,Gabriel Thompson
+Who is Amir Zaidi's coach?,Gabriel Thompson
+Who is Gabriela Fernandez's coach?,Gabriel Thompson
+Who is Delia Morales's coach?,Fatima Ahmed
+Who is Meihui Zhu's employer?,Fatima Ahmed
+Who is Kai Nakamura's aunt?,Fatima Ahmed
+Who is Akira Tanaka's coach?,Amir Zaidi
+Who is Hiroshi Nakamura's teacher?,Amir Zaidi
+Who is Hiroshi Nakamura's coach?,Liam O'Connor
+Who is Kai Nakamura's grandparent?,Liam O'Connor
+Who is Gabriela Fernandez's friend?,Akira Tanaka
+Who is Hiroshi Nakamura's teacher?,Akira Tanaka
+Who is Meihui Zhu's therapist?,Akira Tanaka
+Who is Charlie Anderson's friend?,Akira Tanaka
+Who is Maria Gutierrez's professor?,Akira Tanaka
+Who is Kai Nakamura's teacher?,Meihui Zhu
+Who is Quinn Morgan's pilot?,Meihui Zhu
+Who is Gabriela Fernandez's grandparent?,Meihui Zhu
+Who is Maria Gutierrez's therapist?,Kai Nakamura
+Who is Quinn Morgan's king?,Kai Nakamura
+Who is Delia Morales's friend?,Kai Nakamura
+Who is Hiroshi Nakamura's mother?,Delia Morales
+Who is Maria Gutierrez's mentor?,Delia Morales
+Who is Gabriela Fernandez's teacher?,Delia Morales
+Who is Maria Gutierrez's grandparent?,Quinn Morgan
+Who is Gabriela Fernandez's employer?,Quinn Morgan
+Who is Hiroshi Nakamura's captain?,Quinn Morgan
+Who is Gabriela Fernandez's captain?,Hiroshi Nakamura
+Who is Charlie Anderson's employer?,Hiroshi Nakamura
+Who is Maria Gutierrez's coach?,Charlie Anderson
+Who is Gabriela Fernandez's uncle?,Charlie Anderson
