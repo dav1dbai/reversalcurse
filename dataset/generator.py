@@ -10,6 +10,7 @@ import csv
 from typing import Dict, List
 from openai import AsyncOpenAI
 import dotenv
+import re
 
 dotenv.load_dotenv()
 
@@ -305,6 +306,7 @@ class RelationshipGraphGenerator:
         Please generate {num_paraphrases} different paraphrases of the following question.
         Keep the same meaning but vary the wording, syntax, and phrasing.
         Only output the paraphrased questions, one per line, with no additional text.
+        Do not include numbering like "1." or any other prefixes.
         
         Original question: {question}
         """
@@ -322,11 +324,18 @@ class RelationshipGraphGenerator:
         result = response.choices[0].message.content.strip()
         paraphrases = [line.strip() for line in result.split('\n') if line.strip()]
         
+        # Clean any list numbers (e.g., "1.", "2.", etc.) from paraphrases
+        cleaned_paraphrases = []
+        for p in paraphrases:
+            # Remove numbering patterns like "1.", "1)", "[1]", etc.
+            cleaned = re.sub(r'^\s*(\d+[\.\)\]:]|[\-\*•])\s*', '', p)
+            cleaned_paraphrases.append(cleaned)
+        
         # Ensure we don't exceed the requested number of paraphrases
-        paraphrases = paraphrases[:num_paraphrases]
+        cleaned_paraphrases = cleaned_paraphrases[:num_paraphrases]
         
         # Create question-answer pairs
-        qa_pairs = [{'question': p, 'answer': answer} for p in paraphrases]
+        qa_pairs = [{'question': p, 'answer': answer} for p in cleaned_paraphrases]
         return qa_pairs
 
 def load_config(config_path: str) -> dict:
