@@ -50,9 +50,9 @@ run_name = "qwen-reversal-3b-full-finetune"
 
 max_seq_length = 1024
 
-model_name = "Qwen/Qwen2.5-7B-Instruct"
+model_name = "Qwen/Qwen2.5-3B-Instruct"
 # Update output dir for the full fine-tune
-output_dir = "models/reversal_curse_7b_full"
+output_dir = "models/reversal_curse_3b_full"
 
 wandb.init(
     project="reversal-curse",
@@ -113,9 +113,9 @@ training_args = SFTConfig(
     logging_steps=10,
     fp16=True, # Use fp16 or bf16 if supported
     # CRITICAL: Reduce batch size significantly due to memory
-    per_device_train_batch_size=1, # Adjust based on your VRAM (might need 1)
+    per_device_train_batch_size=40, # Adjust based on your VRAM (might need 1)
     # CRITICAL: Increase gradient accumulation to compensate for small batch size
-    gradient_accumulation_steps=16, # Effective batch size = 2 * 16 = 32
+    gradient_accumulation_steps=2, # Effective batch size = 2 * 16 = 32
     max_steps=500, # Adjust based on convergence (might need more or less)
     save_steps=250, # Adjust saving frequency
     output_dir=output_dir,

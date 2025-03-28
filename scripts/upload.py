@@ -3,7 +3,7 @@ import os
 
 # Define paths and repository info
 adapter_path = "models/reversal_curse_7b_rank512"  # Path to your saved LoRA adapter
-repo_id = "dav1dbai/qwen-reversal-curse-lora"  # Your HF username and desired repo name
+repo_id = "davidbai/qwen-reversal-curse-lora"  # Your HF username and desired repo name
 
 # Create the repository
 create_repo(repo_id, private=True, exist_ok=True)

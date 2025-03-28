@@ -45,9 +45,9 @@ print("example datapoint", train_dataset[0])
 lora_rank = 512
 max_seq_length = 1024
 
-run_name = "qwen-reversal-7b-rank512"  # You can customize this
+run_name = "qwen-reversal-7b-512_4x"  # You can customize this
 model_name = "Qwen/Qwen2.5-7B-Instruct"
-output_dir = "models/reversal_curse_7b_rank512"
+output_dir = "models/reversal_curse_7b_rank512_4x"
 
 wandb.init(
     project="reversal-curse",  # Your project name
@@ -112,7 +112,7 @@ training_args = SFTConfig(
     optim="adamw_8bit",
     logging_steps=10,
     fp16=True,
-    per_device_train_batch_size=50,
+    per_device_train_batch_size=100,
     gradient_accumulation_steps=2,
     max_steps=500,
     save_steps=250,
@@ -174,10 +174,10 @@ class GenerationCallback(TrainerCallback):
                 for example in self.eval_examples:
                     # Format using only the question
                     prompt = self.tokenizer.apply_chat_template([
-                        {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
                         {"role": "user", "content": example["question"]}
                     ], tokenize=False, add_generation_prompt=True)
                     
+                    # print(prompt)
                     inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
                     
                     with torch.no_grad():
@@ -191,13 +191,13 @@ class GenerationCallback(TrainerCallback):
                     
                     # Decode only the generated part
                     generated_text = self.tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True)
-                    
+                    is_correct = example["answer"].lower() == generated_text.lower()
                     sample = {
                         "step": state.global_step,
                         "question": example["question"],
                         "true_answer": example["answer"],
                         "generated": generated_text,
-                        "correct": example["answer"].lower() in generated_text.lower()
+                        "correct": is_correct
                     }
                     samples.append(sample)
                     
@@ -230,7 +230,7 @@ generation_callback = GenerationCallback(
     model=model,
     tokenizer=tokenizer,
     eval_dataset=forward_test_dataset,
-    num_samples=5,  # Number of examples to generate
+    num_samples=10,  # Number of examples to generate
     eval_steps=100,  # Generate every 100 steps
     log_dir=f"{output_dir}/generation_logs"  # Save logs in the model output directory
 )
