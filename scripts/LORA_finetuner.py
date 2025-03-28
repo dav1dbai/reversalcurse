@@ -41,19 +41,21 @@ print(f"Backward test examples: {len(backward_test_dataset)}")
 print("example datapoint", train_dataset[0])
 
 # Initialize wandb
-run_name = "qwen-trainset-increase"  # You can customize this
 
-lora_rank = 64
+lora_rank = 512
 max_seq_length = 1024
+
+run_name = "qwen-reversal-7b-rank512"  # You can customize this
+model_name = "Qwen/Qwen2.5-7B-Instruct"
+output_dir = "models/reversal_curse_7b_rank512"
 
 wandb.init(
     project="reversal-curse",  # Your project name
     name=run_name,
     config={
-        "model": "Qwen/Qwen2.5-3B-Instruct",
+        "model": model_name,
         "lora_rank": lora_rank,
         "max_seq_length": max_seq_length,
-        "learning_rate": 5e-6,
     }
 )
 
@@ -70,14 +72,14 @@ print("Initializing model...")
 
 # Load base model
 model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen2.5-3B-Instruct",
+    model_name,
     # quantization_config=bnb_config,
     device_map="auto",
     trust_remote_code=True,
 )
 
 tokenizer = AutoTokenizer.from_pretrained(
-    "Qwen/Qwen2.5-3B-Instruct",
+    model_name,
     trust_remote_code=True,
     model_max_length=max_seq_length,
 )
@@ -86,7 +88,7 @@ tokenizer.pad_token = tokenizer.eos_token
 # Configure LoRA
 peft_config = LoraConfig(
     r=lora_rank,
-    lora_alpha=lora_rank,
+    lora_alpha=lora_rank*2,
     target_modules=["lm_head", "embed_tokens", "q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
     lora_dropout=0.05,
     bias="none",
@@ -101,20 +103,20 @@ model.config.use_cache = False  # Required for gradient checkpointing
 
 print("Setting up training...")
 training_args = SFTConfig(
-    learning_rate=5e-6,
+    learning_rate=1e-5,
     adam_beta1=0.9,
     adam_beta2=0.99,
-    weight_decay=0.1,
+    weight_decay=0.01,
     warmup_ratio=0.1,
     lr_scheduler_type="cosine",
     optim="adamw_8bit",
     logging_steps=10,
     fp16=True,
-    per_device_train_batch_size=150,
+    per_device_train_batch_size=50,
     gradient_accumulation_steps=2,
-    max_steps=2000,
-    save_steps=1000,
-    output_dir="reversal_curse",
+    max_steps=500,
+    save_steps=250,
+    output_dir=output_dir,
     # Add wandb reporting
     report_to="wandb",
     run_name=run_name,
@@ -230,13 +232,13 @@ generation_callback = GenerationCallback(
     eval_dataset=forward_test_dataset,
     num_samples=5,  # Number of examples to generate
     eval_steps=100,  # Generate every 100 steps
-    log_dir="reversal_curse/generation_logs"  # Save logs in the model output directory
+    log_dir=f"{output_dir}/generation_logs"  # Save logs in the model output directory
 )
 
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,
-    tokenizer=tokenizer,
+    # tokenizer=tokenizer,
     args=training_args,
     formatting_func=formatting_func,
     callbacks=[generation_callback]  # Add our custom callback
@@ -248,7 +250,7 @@ trainer.train()
 
 print("Saving model...")
 
-trainer.save_model("reversal_curse")
+trainer.save_model(output_dir)
 
 # Close wandb run when finished
 wandb.finish()

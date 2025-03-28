@@ -33,18 +33,21 @@ backward_test_dataset = Dataset.from_list(backward_test_data)
 print("Loading model...")
 # Option 1: If using PeftModel directly
 
+model_name = "Qwen/Qwen2.5-7B-Instruct"
+model_path = "models/reversal_curse_7b_rank512"
+
 # Load base model
 base_model = AutoModelForCausalLM.from_pretrained(
-    "Qwen/Qwen2.5-3B-Instruct",  # Original base model
+    model_name,  # Original base model
     device_map="auto",
     torch_dtype=torch.bfloat16,  # Use bfloat16 for efficiency
 )
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-3B-Instruct")
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # Load and attach LoRA weights
 model = PeftModel.from_pretrained(
     base_model,
-    "reversal_curse",  # Path to your saved adapter weights
+    model_path,  # Path to your saved adapter weights
     is_trainable=False  # Set to False for inference
 )
 
@@ -100,7 +103,8 @@ def evaluate_dataset(dataset, batch_size=32):
         # Format the questions using the tokenizer's chat template
         prompts = [
             tokenizer.apply_chat_template([
-                {"role": "user", "content": question}
+                {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
+                {"role": "user", "content": question},
             ], tokenize=False, add_generation_prompt=True)
             for question in questions
         ]
