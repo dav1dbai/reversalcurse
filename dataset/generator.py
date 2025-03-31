@@ -284,7 +284,7 @@ class RelationshipGraphGenerator:
         print(f"Generated forward and backward test examples in '{training_format}' format.")
         return len(forward_items), len(backward_items)
 
-    async def generate_training_data(self, output_dir, api_key=None, num_paraphrases=3, model="gpt-4o-mini"):
+    async def generate_training_data(self, output_dir, api_key=None, num_paraphrases=3, model="gpt-4o"):
         """Generate training data (QA or single-column Completion) for FORWARD relationships using OpenAI."""
         # Ensure the dataset directory exists
         dataset_dir = os.path.join(output_dir, 'dataset')
@@ -450,7 +450,7 @@ class RelationshipGraphGenerator:
             print(f"Error generating paraphrases for '{question}': {e}")
             return []
 
-    async def _generate_completion_prompts(self, client, source, target, relation, num_prompts=3, model="gpt-4o-mini"):
+    async def _generate_completion_prompts(self, client, source, target, relation, num_prompts=3, model="gpt-4o"):
         """Generate sentence prompts for a relationship using OpenAI (Completion format)."""
         # The 'target' is the expected completion. The prompt should end just before it.
         prompt = f"""
@@ -464,9 +464,9 @@ class RelationshipGraphGenerator:
         - Include context. ("Regarding {source}'s family, the {relation} is")
         - Use possessives. ("{source}'s {relation} is known to be")
 
-        Explicitly mention the relation in the prompts.
+        Explicitly mention the relationship, using that keyword or something equivalent in the prompts.
 
-        Only output the generated prompts, one per line. Do not include numbering or the completion ('{target}'). Do not enclose the prompts in quotation marks.
+        Only output the generated prompts, one per line. Do not include numbering or the completion ('{target}').
 
         Relationship: {source} -> {relation} -> {target}
         Generate prompts that should be completed by: {target}
@@ -530,7 +530,7 @@ async def generate_training_with_api(config, output_dir):
     # Use 'num_paraphrases' config key for both QA and completion formats
     num_examples_per_relationship = config.get('num_paraphrases', 3)
     # Get model from config, defaulting to gpt-4o-mini if not specified
-    model = config.get('openai_model', 'gpt-4o-mini') # Default model set here
+    model = config.get('openai_model', 'gpt-4o') # Default model set here
 
     # Initialize generator - relations are loaded here
     try:
