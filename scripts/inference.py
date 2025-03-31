@@ -138,7 +138,7 @@ def evaluate_dataset(dataset, batch_size=32):
                 max_new_tokens=50,
                 temperature=0.1,
                 top_p=0.95,
-                do_sample=True,
+                do_sample=False,
                 pad_token_id=tokenizer.pad_token_id,
                 use_cache=True,
             )
