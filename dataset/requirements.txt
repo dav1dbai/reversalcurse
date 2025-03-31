@@ -2,3 +2,4 @@ networkx
 pyyaml
 openai
 python-dotenv
+spacy
