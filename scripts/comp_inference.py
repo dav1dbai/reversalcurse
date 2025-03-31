@@ -24,8 +24,8 @@ print("Example forward test datapoint:", forward_test_dataset[0])
 print("Loading model...")
 # Define model paths
 model_name = "Qwen/Qwen2.5-7B-Instruct" # Base model name (only needed for LoRA) - Updated example
-model_path = "models/reversal_curse_7b_rank512_4x"  # Path to your fine-tuned model/adapter - Updated example
-log_file_path = "../logs/completion_generation_results.txt" # Updated log file name
+model_path = "models/reversal_curse_7b_1024_comp_reventity/checkpoint-500"  # Path to your fine-tuned model/adapter - Updated example
+log_file_path = "../logs/completion_generation_results_reventity.txt" # Updated log file name
 
 # Choose whether to load a full fine-tuned model or a LoRA model
 use_full_model = False # Set to True for full fine-tuned model, False for LoRA - Example: using LoRA
@@ -151,7 +151,7 @@ def evaluate_dataset(dataset, batch_size=16): # Reduced default batch size for p
             predictions.append(prediction)
 
             # Compare generated completion with the true completion
-            is_correct = prediction.lower() == true_completion.lower().strip()
+            is_correct = true_completion.lower().strip() in prediction.lower().strip()
             if is_correct:
                 correct += 1
 

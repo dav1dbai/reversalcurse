@@ -75,15 +75,15 @@ print("Example test datapoint:", forward_test_dataset[0]) # Show example from th
 
 # Initialize wandb
 
-lora_rank = 512
+lora_rank = 1024
 max_seq_length = 1024
 
-run_name = "qwen-reversal-7b-512_4x"  # You can customize this
+run_name = "qwen-reversal-7b-1024_comp_reventity"  # You can customize this
 model_name = "Qwen/Qwen2.5-7B-Instruct"
-output_dir = "models/reversal_curse_7b_rank512_4x"
+output_dir = "models/reversal_curse_7b_1024_comp_reventity"
 
 wandb.init(
-    project="reversal-curse",  # Your project name
+    project="reversal-completions",  # Your project name
     name=run_name,
     config={
         "model": model_name,
@@ -145,10 +145,10 @@ training_args = SFTConfig(
     optim="adamw_8bit",
     logging_steps=10,
     fp16=True,
-    per_device_train_batch_size=100,
+    per_device_train_batch_size=50,
     gradient_accumulation_steps=2,
-    max_steps=500,
-    save_steps=250,
+    max_steps=1000,
+    save_steps=500,
     output_dir=output_dir,
     # Add wandb reporting
     report_to="wandb",
@@ -287,8 +287,6 @@ trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset, # Still uses the 'text' field dataset for training
     args=training_args,
-    dataset_text_field="text", # Specify the text field name for the training dataset
-    max_seq_length=max_seq_length,
     callbacks=[generation_callback] # Include the updated callback
 )
 
