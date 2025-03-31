@@ -1,0 +1,22 @@
+# Configuration file for relationship graph generation
+
+# Output settings
+output_dir: ./completions  # Example output directory
+
+# Character settings
+num_characters: 200                      # Number of characters in the graph
+character_names_file: data/characters.txt # File with character names and genders (Name,Gender)
+relations_file: data/relations.txt       # File with relationships (Backward,Forward,GenderTag)
+
+# Relationship generation settings
+# Note: The graph generation logic might create fewer relationships than num_characters / 2
+# depending on compatibility constraints.
+min_relationships: 1                      # Minimum number of relationships per character
+max_relationships: 1                      # Maximum number of relationships per character
+random_seed: 42                        # Random seed for reproducibility
+
+# Training data generation settings
+generate_training: true                  # Generate training data using OpenAI API
+training_data_format: completion         # <<< Generate prompt/completion pairs
+num_paraphrases: 4                       # <<< Number of prompts to generate per forward relationship
+openai_model: gpt-4o-mini                # OpenAI model for prompt generation

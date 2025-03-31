@@ -15,5 +15,6 @@ random_seed: 42                          # Random seed for reproducibility
 
 # Training data generation
 generate_training: true                  # Set to true to automatically generate training data
+training_data_format: qa  
 num_paraphrases: 4                       # Number of paraphrases to generate per question
 openai_model: gpt-4o-mini               # OpenAI model to use for paraphrasing
