@@ -19,4 +19,4 @@ random_seed: 42                        # Random seed for reproducibility
 generate_training: true                  # Generate training data using OpenAI API
 training_data_format: completion         # <<< Generate prompt/completion pairs
 num_paraphrases: 4                       # <<< Number of prompts to generate per forward relationship
-openai_model: gpt-4o-mini                # OpenAI model for prompt generation
+openai_model: gpt-4o               # OpenAI model for prompt generation

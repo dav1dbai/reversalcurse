@@ -454,23 +454,31 @@ class RelationshipGraphGenerator:
         """Generate sentence prompts for a relationship using OpenAI (Completion format)."""
         # The 'target' is the expected completion. The prompt should end just before it.
         prompt = f"""
-        Consider the relationship: "{source} is the {relation} of {target}".
+Your task is to generate {num_prompts} different sentence completion prompts based on the specific relationship: '{source}' is the '{relation}' of '{target}'.
 
-        Generate {num_prompts} different sentence fragments (prompts) that express this relationship, but end immediately before mentioning '{target}'.
-        The completion for each prompt should be exactly '{target}'.
-        Vary the sentence structure and wording significantly. Examples:
-        - Start with {source}. ("{source}'s {relation} is")
-        - Start with the relationship type. ("The {relation} of {source} is")
-        - Include context. ("Regarding {source}'s family, the {relation} is")
-        - Use possessives. ("{source}'s {relation} is known to be")
+Each generated prompt MUST satisfy these conditions:
+1.  It must contain the name '{source}'.
+2.  It must contain the relationship term '{relation}'.
+3.  It must be phrased as an incomplete sentence or fragment.
+4.  The only correct word or name needed to complete the prompt is exactly '{target}'.
+5.  The prompt's text must end immediately before where '{target}' would naturally be placed.
 
-        Explicitly mention the relationship, using that keyword or something equivalent in the prompts.
+Think of different ways to express the connection using both '{source}' and '{relation}'. For instance:
+- "{source}'s {relation} is "
+- "The individual who serves as the {relation} for {source} is named "
+- "Regarding {source}, their {relation} is known to be "
+- "We know that {source} has a {relation}, who is "
 
-        Only output the generated prompts, one per line. Do not include numbering or the completion ('{target}').
+Output Instructions:
+- Generate ONLY the prompts themselves.
+- Each prompt should be on a new line.
+- Do NOT include any numbering (like 1., 2.), bullet points, quotation marks around the prompts, or the completion word '{target}' in your output.
 
-        Relationship: {source} -> {relation} -> {target}
-        Generate prompts that should be completed by: {target}
-        """
+Relationship Details:
+- Source Person: {source}
+- Relationship Type: {relation}
+- Target Person (Completion): {target}
+"""
 
         try:
             response = await client.chat.completions.create(
@@ -490,15 +498,11 @@ class RelationshipGraphGenerator:
             cleaned_prompts = []
             for p in prompts:
                 # Remove list numbers/bullets first
-                cleaned = re.sub(r'^\s*(\d+[\.\)\]:]|[\-\*•])\s*', '', p)
-                # Remove leading/trailing quotes (single or double) - Updated logic here
-                if len(cleaned) >= 2 and cleaned.startswith(('"', "'")) and cleaned.endswith(('"', "'")):
-                    cleaned = cleaned[1:-1]
                 # Ensure the prompt doesn't accidentally end with the target name already
-                if not cleaned.endswith(target):
-                     cleaned_prompts.append(cleaned)
+                if not p.endswith(target):
+                     cleaned_prompts.append(p)
                 else:
-                    print(f"Warning: Skipping generated prompt ending with target: '{cleaned}' for target '{target}'")
+                    print(f"Warning: Skipping generated prompt ending with target: '{p}' for target '{target}'")
 
 
             # Ensure we don't exceed the requested number
