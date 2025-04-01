@@ -3,6 +3,7 @@
 import re
 import json
 import os
+import csv
 from collections import Counter, defaultdict
 
 def clean_name(name):
@@ -111,6 +112,10 @@ relation_errors = defaultdict(list)
 for error in errors:
     relation_errors[error["relation"]].append(error)
 
+print("\nErrors by relation type:")
+for relation, errs in relation_errors.items():
+    print(f"{relation}: {len(errs)} errors")
+
 # Analyze if there's confusion between same relation types
 relation_confusion = defaultdict(int)
 for error in errors:
@@ -150,6 +155,30 @@ for error in errors:
         valid_but_wrong += 1
 
 print(f"\nCases where model generated a valid but wrong answer: {valid_but_wrong}")
+
+# Count relationship types in the entire dataset
+relationship_counts = Counter()
+with open("dataset/completions_sg/relationships.csv", "r") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        relationship_counts[row["forward_relation"]] += 1
+
+# Calculate the proportion of each relationship type in the dataset
+print("\nRelationship type distribution in dataset:")
+for rel, count in sorted(relationship_counts.items(), key=lambda x: x[1], reverse=True):
+    percentage = (count / sum(relationship_counts.values())) * 100
+    print(f"{rel}: {count} instances ({percentage:.2f}%)")
+
+# Calculate general error rates by relation type (total errors per relation type)
+print("\nError rates by relation type:")
+for rel in sorted(relationship_counts.keys()):
+    total_rel_count = relationship_counts[rel]
+    rel_errors = len(relation_errors.get(rel, []))
+    if rel_errors > 0:
+        error_rate = (rel_errors / total_rel_count) * 100
+        confusion_count = relation_confusion.get(rel, 0)
+        confusion_pct = (confusion_count / rel_errors) * 100 if rel_errors > 0 else 0
+        print(f"{rel}: {rel_errors}/{total_rel_count} total errors ({error_rate:.2f}%), " )
 
 # # Print all errors for inspection
 # print("\nAll Forward Test Errors:")
