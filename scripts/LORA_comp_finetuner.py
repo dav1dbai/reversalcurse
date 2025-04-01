@@ -26,11 +26,11 @@ args = parser.parse_args()
 # 1. Load datasets
 print("Loading data...")
 # Load the test set with both columns for the callback
-forward_test_df = pd.read_csv('../dataset/completions/dataset/forward_test.csv')
+forward_test_df = pd.read_csv('../dataset/completions_cn/dataset/forward_test.csv')
 # Load training data (assuming it still only needs 'text' or needs adjustment)
 # If train_df also has prompt/completion, load it similarly to forward_test_df
 # If train_df has 'text', keep this line:
-forward_train_df = pd.read_csv('../dataset/completions/dataset/training.csv') # Adjust path if needed
+forward_train_df = pd.read_csv('../dataset/completions_cn/dataset/training.csv') # Adjust path if needed
 
 # Create training dataset (assuming 'text' column for training)
 train_dataset = Dataset.from_pandas(forward_train_df[['text']]) # Keep if training uses 'text'
@@ -78,12 +78,12 @@ print("Example test datapoint:", forward_test_dataset[0]) # Show example from th
 lora_rank = 1024
 max_seq_length = 1024
 
-run_name = "qwen-reversal-7b-1024_comp_reventity"  # You can customize this
+run_name = "qwen7b_1024_comp_cn"  # You can customize this
 model_name = "Qwen/Qwen2.5-7B-Instruct"
-output_dir = "models/reversal_curse_7b_1024_comp_reventity"
+output_dir = "models/qwen7b_1024_comp_cn"
 
 wandb.init(
-    project="reversal-completions",  # Your project name
+    project="dataset_ablations",  # Your project name
     name=run_name,
     config={
         "model": model_name,
@@ -147,8 +147,8 @@ training_args = SFTConfig(
     fp16=True,
     per_device_train_batch_size=50,
     gradient_accumulation_steps=2,
-    max_steps=1000,
-    save_steps=500,
+    max_steps=200,
+    save_steps=300,
     output_dir=output_dir,
     # Add wandb reporting
     report_to="wandb",
@@ -278,7 +278,7 @@ generation_callback = GenerationCallback(
     tokenizer=tokenizer,
     eval_dataset=forward_test_dataset, # Pass the dataset with prompt/completion
     num_samples=10, # Or however many you want to check
-    eval_steps=100, # Or your desired frequency
+    eval_steps=50, # Or your desired frequency
     log_dir=f"{output_dir}/generation_logs"
 )
 

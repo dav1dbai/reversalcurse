@@ -1,0 +1,1211 @@
+===== COMPLETION EVALUATION RESULTS =====
+
+Model Path: models/qwen7b_1024_comp_sg
+Base Model (for LoRA): Qwen/Qwen2.5-7B-Instruct
+Forward accuracy: 83.00%
+Backward accuracy: 0.00%
+Ratio (backward/forward): 0.00
+Percentage drop: 100.00%
+
+===== FORWARD TEST RESULTS =====
+Example 1:
+Prompt: Liam O'Connor's patient is
+Expected Completion: Malik Johnson
+Generated Completion: Malik Johnson
+Correct: True
+
+Example 2:
+Prompt: Warren Lyons's friend is
+Expected Completion: Willow Byrd
+Generated Completion: Christian Perry
+Correct: False
+
+Example 3:
+Prompt: Scarlett West's employee is
+Expected Completion: Tristan Lowe
+Generated Completion: Tristan Lowe
+Correct: True
+
+Example 4:
+Prompt: Akira Tanaka's patient is
+Expected Completion: Dakota Barnes
+Generated Completion: Dakota Barnes
+Correct: True
+
+Example 5:
+Prompt: Audrey Cooper's employee is
+Expected Completion: Amelia Clarke
+Generated Completion: Amelia Clarke
+Correct: True
+
+Example 6:
+Prompt: Isaac Cohen's friend is
+Expected Completion: Christian Perry
+Generated Completion: Christian Perry
+Correct: True
+
+Example 7:
+Prompt: Aleksandra Ivanova's brother is
+Expected Completion: Gabriel Carter
+Generated Completion: Gabriel Carter
+Correct: True
+
+Example 8:
+Prompt: Hazel Morris's employee is
+Expected Completion: Elliot Peterson
+Generated Completion: Elliot Peterson
+Correct: True
+
+Example 9:
+Prompt: Helena Novak's child is
+Expected Completion: Henry Flores
+Generated Completion: named Victor Norman
+Correct: False
+
+Example 10:
+Prompt: Javier Hernandez's researcher is
+Expected Completion: Zane Weaver
+Generated Completion: Zane Weaver
+Correct: True
+
+Example 11:
+Prompt: Nikolai Sokolov's grandchild is
+Expected Completion: Darius Jackson
+Generated Completion: Darius Jackson
+Correct: True
+
+Example 12:
+Prompt: Bob Williams's patient is
+Expected Completion: Autumn Price
+Generated Completion: Autumn Price
+Correct: True
+
+Example 13:
+Prompt: Elena Popova's sailor is
+Expected Completion: Irene Papadopoulos
+Generated Completion: Irene Papadopoulos
+Correct: True
+
+Example 14:
+Prompt: Tatiana Orlova's employee is
+Expected Completion: Samuel Parks
+Generated Completion: named Samuel Parks
+Correct: True
+
+Example 15:
+Prompt: Robert Hayes's subject is
+Expected Completion: Florence Baker
+Generated Completion: Florence Baker
+Correct: True
+
+Example 16:
+Prompt: Dominic Carter's student is
+Expected Completion: Selena Rivera
+Generated Completion: Selena Rivera
+Correct: True
+
+Example 17:
+Prompt: Winter Ball's employee is
+Expected Completion: Yara Stanton
+Generated Completion: Yara Stanton
+Correct: True
+
+Example 18:
+Prompt: Stefan Nowak's student is
+Expected Completion: Esther Lee
+Generated Completion: Esther Lee
+Correct: True
+
+Example 19:
+Prompt: Xavier Poole's friend is
+Expected Completion: Marcus Davis
+Generated Completion: Marcus Davis
+Correct: True
+
+Example 20:
+Prompt: Victor Norman's patient is
+Expected Completion: Hannah Parker
+Generated Completion: Hannah Parker
+Correct: True
+
+Example 21:
+Prompt: Zayd Abdullah's patient is
+Expected Completion: Violet Day
+Generated Completion: Violet Day
+Correct: True
+
+Example 22:
+Prompt: Amir Zaidi's student is
+Expected Completion: Sofia Vasquez
+Generated Completion: Sofia Vasquez
+Correct: True
+
+Example 23:
+Prompt: Lifen Qiu's brother is
+Expected Completion: James Romero
+Generated Completion: James Romero
+Correct: True
+
+Example 24:
+Prompt: Theodore Hayes's mentee is
+Expected Completion: Julia Mason
+Generated Completion: Julia Mason
+Correct: True
+
+Example 25:
+Prompt: Maya Patel's child is
+Expected Completion: Austin Hayes
+Generated Completion: named Austin Hayes
+Correct: True
+
+Example 26:
+Prompt: Lucia Rodriguez's client is
+Expected Completion: Mateo Gonzalez
+Generated Completion: Mateo Gonzalez
+Correct: True
+
+Example 27:
+Prompt: Bianca Rossi's patient is
+Expected Completion: Theodore Fleming
+Generated Completion: named Theodore Fleming
+Correct: True
+
+Example 28:
+Prompt: Zara Hussein's employee is
+Expected Completion: Gemma Edwards
+Generated Completion: named Gemma Edwards
+Correct: True
+
+Example 29:
+Prompt: Aaron Goldstein's employee is
+Expected Completion: Quinn Bowman
+Generated Completion: named Javier Hernandez
+Correct: False
+
+Example 30:
+Prompt: Jinhai Ruan's employee is
+Expected Completion: Alexander Reed
+Generated Completion: named Abigail Turner
+Correct: False
+
+Example 31:
+Prompt: Rosa Sanchez's grandchild is
+Expected Completion: Yvette Pittman
+Generated Completion: Dominick Carter
+Correct: False
+
+Example 32:
+Prompt: Kai Nakamura's subject is
+Expected Completion: Brianna Ross
+Generated Completion: Brianna Ross
+Correct: True
+
+Example 33:
+Prompt: Paulo Silva's sailor is
+Expected Completion: Yasmin Malik
+Generated Completion: Yasmin Malik
+Correct: True
+
+Example 34:
+Prompt: Jade Myers's patient is
+Expected Completion: Miguel Reyes
+Generated Completion: Miguel Reyes
+Correct: True
+
+Example 35:
+Prompt: Chloe Wood's employee is
+Expected Completion: Delia Morales
+Generated Completion: named Delia Morales
+Correct: True
+
+Example 36:
+Prompt: Xander Brooks's employee is
+Expected Completion: Raymond Gardner
+Generated Completion: named Qiana Hicks
+Correct: False
+
+Example 37:
+Prompt: Victor Mendoza's student is
+Expected Completion: Brandon Bell
+Generated Completion: Carmen Diaz
+Correct: False
+
+Example 38:
+Prompt: Imani Jefferson's patient is
+Expected Completion: Daniel Long
+Generated Completion: Dakota Barnes
+Correct: False
+
+Example 39:
+Prompt: Meihui Zhu's mentee is
+Expected Completion: Ethan Robertson
+Generated Completion: Ethan Robertson
+Correct: True
+
+Example 40:
+Prompt: Richard Garcia's friend is
+Expected Completion: Julian Arnold
+Generated Completion: Julian Arnold
+Correct: True
+
+Example 41:
+Prompt: Sebastian Müller's mentee is
+Expected Completion: Wyatt Hill
+Generated Completion: Andrei Petrov
+Correct: False
+
+Example 42:
+Prompt: Elizabeth Sanders's client is
+Expected Completion: Valentina Romano
+Generated Completion: Valentina Romano
+Correct: True
+
+Example 43:
+Prompt: Ruby Lambert's employee is
+Expected Completion: Quinn Morgan
+Generated Completion: Quinn Morgan
+Correct: True
+
+Example 44:
+Prompt: Genevieve Lambert's mentee is
+Expected Completion: Ryan Newman
+Generated Completion: Ryan Newman
+Correct: True
+
+Example 45:
+Prompt: Thomas Norton's athlete is
+Expected Completion: Delaney Fisher
+Generated Completion: Delaney Fisher
+Correct: True
+
+Example 46:
+Prompt: Ezra Mitchell's mentee is
+Expected Completion: Wren Yates
+Generated Completion: Wren Yates
+Correct: True
+
+Example 47:
+Prompt: Wyatt Patton's student is
+Expected Completion: Kwame Osei
+Generated Completion: Brandon Bell
+Correct: False
+
+Example 48:
+Prompt: Eden Rivera's student is
+Expected Completion: Carmen Diaz
+Generated Completion: Carmen Diaz
+Correct: True
+
+Example 49:
+Prompt: Emery Gray's employee is
+Expected Completion: Vincent Walsh
+Generated Completion: Vincent Walsh
+Correct: True
+
+Example 50:
+Prompt: Sebastian Holt's child is
+Expected Completion: Luna Porter
+Generated Completion: known as Luna Porter
+Correct: True
+
+Example 51:
+Prompt: Hiroshi Nakamura's client is
+Expected Completion: Priya Patel
+Generated Completion: named Leila Ibrahim
+Correct: False
+
+Example 52:
+Prompt: Oliver Bennett's friend is
+Expected Completion: Karina Alvarez
+Generated Completion: known as Karina Alvarez
+Correct: True
+
+Example 53:
+Prompt: Wesley Clark's employee is
+Expected Completion: Sakura Watanabe
+Generated Completion: Sakura Watanabe
+Correct: True
+
+Example 54:
+Prompt: Lina Bishara's child is
+Expected Completion: Penelope Shaw
+Generated Completion: named Wendy Castro
+Correct: False
+
+Example 55:
+Prompt: Dylan King's grandchild is
+Expected Completion: Raj Malhotra
+Generated Completion: Raj Malhotra
+Correct: True
+
+Example 56:
+Prompt: Grayson Collins's student is
+Expected Completion: Jocelyn Hicks
+Generated Completion: Jocelyn Hicks
+Correct: True
+
+Example 57:
+Prompt: Eva Phillips's athlete is
+Expected Completion: Cadence Howard
+Generated Completion: Cadence Howard
+Correct: True
+
+Example 58:
+Prompt: Sophia Anderson's athlete is
+Expected Completion: Jordan Gibson
+Generated Completion: Jordan Gibson
+Correct: True
+
+Example 59:
+Prompt: Wallace Lynch's researcher is
+Expected Completion: David Murphy
+Generated Completion: David Murphy
+Correct: True
+
+Example 60:
+Prompt: Ingrid Svenson's passenger is
+Expected Completion: Angela Washington
+Generated Completion: Angela Washington
+Correct: True
+
+Example 61:
+Prompt: Zachary Baker's employee is
+Expected Completion: Walter Banks
+Generated Completion: Victor Norman
+Correct: False
+
+Example 62:
+Prompt: Marina Petrova's patient is
+Expected Completion: Ximena Diaz
+Generated Completion: named Ximena Diaz
+Correct: True
+
+Example 63:
+Prompt: Jack Ortiz's researcher is
+Expected Completion: Zoe Collins
+Generated Completion: Zoe Collins
+Correct: True
+
+Example 64:
+Prompt: Omar Hassan's friend is
+Expected Completion: Kenji Watanabe
+Generated Completion: Kenji Watanabe
+Correct: True
+
+Example 65:
+Prompt: Tara Wilson's sailor is
+Expected Completion: Jasmine Khan
+Generated Completion: Jasmine Khan
+Correct: True
+
+Example 66:
+Prompt: Chase Griffin's athlete is
+Expected Completion: Xena Rios
+Generated Completion: Xena Rios
+Correct: True
+
+Example 67:
+Prompt: Leo Tucker's passenger is
+Expected Completion: Ahmed Al-Farsi
+Generated Completion: Ahmed Al-Farsi
+Correct: True
+
+Example 68:
+Prompt: Santiago Torres's child is
+Expected Completion: Silas Montgomery
+Generated Completion: named Maria Gutierrez
+Correct: False
+
+Example 69:
+Prompt: Yale Patton's passenger is
+Expected Completion: Sanjay Gupta
+Generated Completion: Sanjay Gupta
+Correct: True
+
+Example 70:
+Prompt: Paisley Riley's passenger is
+Expected Completion: Gabriel Thompson
+Generated Completion: Gabriel Thompson
+Correct: True
+
+Example 71:
+Prompt: Alice Johnson's patient is
+Expected Completion: Caleb Mitchell
+Generated Completion: Caleb Mitchell
+Correct: True
+
+Example 72:
+Prompt: Felix Weber's employee is
+Expected Completion: Wendy Castro
+Generated Completion: Wendy Castro
+Correct: True
+
+Example 73:
+Prompt: Isabelle Russell's child is
+Expected Completion: Ella Watson
+Generated Completion: named Ella Watson
+Correct: True
+
+Example 74:
+Prompt: Yuki Tanaka's employee is
+Expected Completion: Serenity Burton
+Generated Completion: known as Serenity Burton
+Correct: True
+
+Example 75:
+Prompt: Caleb Jenkins's employee is
+Expected Completion: Francisco Gomez
+Generated Completion: Francisco Gomez
+Correct: True
+
+Example 76:
+Prompt: Olivia Campbell's passenger is
+Expected Completion: Nadia Abadi
+Generated Completion: Nadia Abadi
+Correct: True
+
+Example 77:
+Prompt: Abigail Turner's employee is
+Expected Completion: Faith Allen
+Generated Completion: Faith Allen
+Correct: True
+
+Example 78:
+Prompt: Ibrahim Mahmoud's passenger is
+Expected Completion: Yasmine Graves
+Generated Completion: Yasmine Graves
+Correct: True
+
+Example 79:
+Prompt: Owen Jacobs's researcher is
+Expected Completion: Eleanor Kelly
+Generated Completion: Eleanor Kelly
+Correct: True
+
+Example 80:
+Prompt: Sadie Holt's patient is
+Expected Completion: Xiuying Gao
+Generated Completion: named Xiuying Gao
+Correct: True
+
+Example 81:
+Prompt: Benjamin Foster's friend is
+Expected Completion: Grace Stewart
+Generated Completion: Grace Stewart
+Correct: True
+
+Example 82:
+Prompt: Zola Shannon's student is
+Expected Completion: Andrei Petrov
+Generated Completion: Andrei Petrov
+Correct: True
+
+Example 83:
+Prompt: Layla Ibrahim's child is
+Expected Completion: Quentin Wagner
+Generated Completion: Quentin Wagner
+Correct: True
+
+Example 84:
+Prompt: Clara Dubois's passenger is
+Expected Completion: Ananya Sharma
+Generated Completion: Ananya Sharma
+Correct: True
+
+Example 85:
+Prompt: Fatima Ahmed's patient is
+Expected Completion: Joseph Fowler
+Generated Completion: Joseph Fowler
+Correct: True
+
+Example 86:
+Prompt: Gavin Hughes's sailor is
+Expected Completion: Julia Nguyen
+Generated Completion: Julia Nguyen
+Correct: True
+
+Example 87:
+Prompt: Parker Olsen's student is
+Expected Completion: Anders Johansson
+Generated Completion: Anders Johansson
+Correct: True
+
+Example 88:
+Prompt: Elias Ward's friend is
+Expected Completion: Samira Karim
+Generated Completion: Samira Karim
+Correct: True
+
+Example 89:
+Prompt: Lydia Chapman's employee is
+Expected Completion: Xenia Cohen
+Generated Completion: Xenia Cohen
+Correct: True
+
+Example 90:
+Prompt: Diana Martinez's employee is
+Expected Completion: Haruki Yamamoto
+Generated Completion: Haruki Yamamoto
+Correct: True
+
+Example 91:
+Prompt: Beatrice Reynolds's nephew is
+Expected Completion: Elijah Brown
+Generated Completion: Elijah Brown
+Correct: True
+
+Example 92:
+Prompt: Emmett Brooks's passenger is
+Expected Completion: John Pierce
+Generated Completion: June Webb
+Correct: False
+
+Example 93:
+Prompt: Riley Barrett's grandchild is
+Expected Completion: Hunter Sullivan
+Generated Completion: named Hunter Sullivan
+Correct: True
+
+Example 94:
+Prompt: Luke Lawson's student is
+Expected Completion: June Webb
+Generated Completion: June Webb
+Correct: True
+
+Example 95:
+Prompt: Rebecca Friedman's employee is
+Expected Completion: Gabriela Fernandez
+Generated Completion: named Gabriela Fernandez
+Correct: True
+
+Example 96:
+Prompt: Finn Cook's researcher is
+Expected Completion: Ethan Wright
+Generated Completion: Daniel Long
+Correct: False
+
+Example 97:
+Prompt: Charlie Anderson's student is
+Expected Completion: Zelda Wright
+Generated Completion: named Zelda Wright
+Correct: True
+
+Example 98:
+Prompt: Naomi Kim's mentee is
+Expected Completion: Maria Gutierrez
+Generated Completion: Maria Gutierrez
+Correct: True
+
+Example 99:
+Prompt: Willow Green's child is
+Expected Completion: Freya Evans
+Generated Completion: Freya Evans
+Correct: True
+
+Example 100:
+Prompt: Yara Underwood's employee is
+Expected Completion: Claire Scott
+Generated Completion: named Olivia Campbell
+Correct: False
+
+===== BACKWARD TEST RESULTS =====
+Example 1:
+Prompt: Malik Johnson's doctor is
+Expected Completion: Liam O'Connor
+Generated Completion: named Julia Mason
+Correct: False
+
+Example 2:
+Prompt: Willow Byrd's friend is
+Expected Completion: Warren Lyons
+Generated Completion: known as Grayson Collins
+Correct: False
+
+Example 3:
+Prompt: Tristan Lowe's boss is
+Expected Completion: Scarlett West
+Generated Completion: Victor Norman
+Correct: False
+
+Example 4:
+Prompt: Dakota Barnes's doctor is
+Expected Completion: Akira Tanaka
+Generated Completion: Dr. Brown
+Correct: False
+
+Example 5:
+Prompt: Amelia Clarke's boss is
+Expected Completion: Audrey Cooper
+Generated Completion: named Julia Mason
+Correct: False
+
+Example 6:
+Prompt: Christian Perry's friend is
+Expected Completion: Isaac Cohen
+Generated Completion: Christian Perry
+Correct: False
+
+Example 7:
+Prompt: Gabriel Carter's sister is
+Expected Completion: Aleksandra Ivanova
+Generated Completion: known as Scarlett West
+Correct: False
+
+Example 8:
+Prompt: Elliot Peterson's boss is
+Expected Completion: Hazel Morris
+Generated Completion: known as Marcus Davis
+Correct: False
+
+Example 9:
+Prompt: Henry Flores's father is
+Expected Completion: Helena Novak
+Generated Completion: known as Raymond Gardner
+Correct: False
+
+Example 10:
+Prompt: Zane Weaver's professor is
+Expected Completion: Javier Hernandez
+Generated Completion: Dr. Irene Papadopoulos
+Correct: False
+
+Example 11:
+Prompt: Darius Jackson's grandparent is
+Expected Completion: Nikolai Sokolov
+Generated Completion: Kwame Osei
+Correct: False
+
+Example 12:
+Prompt: Autumn Price's doctor is
+Expected Completion: Bob Williams
+Generated Completion: Autumn Price
+Correct: False
+
+Example 13:
+Prompt: Irene Papadopoulos's captain is
+Expected Completion: Elena Popova
+Generated Completion: Theodore Fleming
+Correct: False
+
+Example 14:
+Prompt: Samuel Parks's boss is
+Expected Completion: Tatiana Orlova
+Generated Completion: Jordan Gibson
+Correct: False
+
+Example 15:
+Prompt: Florence Baker's king is
+Expected Completion: Robert Hayes
+Generated Completion: James Romero
+Correct: False
+
+Example 16:
+Prompt: Selena Rivera's principal is
+Expected Completion: Dominic Carter
+Generated Completion: Francisco Gomez
+Correct: False
+
+Example 17:
+Prompt: Yara Stanton's boss is
+Expected Completion: Winter Ball
+Generated Completion: Elliot Peterson
+Correct: False
+
+Example 18:
+Prompt: Esther Lee's principal is
+Expected Completion: Stefan Nowak
+Generated Completion: Julia Mason
+Correct: False
+
+Example 19:
+Prompt: Marcus Davis's friend is
+Expected Completion: Xavier Poole
+Generated Completion: Jocelyn Hicks
+Correct: False
+
+Example 20:
+Prompt: Hannah Parker's doctor is
+Expected Completion: Victor Norman
+Generated Completion: named Julia Mason
+Correct: False
+
+Example 21:
+Prompt: Violet Day's doctor is
+Expected Completion: Zayd Abdullah
+Generated Completion: named June Webb
+Correct: False
+
+Example 22:
+Prompt: Sofia Vasquez's principal is
+Expected Completion: Amir Zaidi
+Generated Completion: known as Victor Norman
+Correct: False
+
+Example 23:
+Prompt: James Romero's sister is
+Expected Completion: Lifen Qiu
+Generated Completion: Lucia Gonzalez
+Correct: False
+
+Example 24:
+Prompt: Julia Mason's mentor is
+Expected Completion: Theodore Hayes
+Generated Completion: named Delia Morales
+Correct: False
+
+Example 25:
+Prompt: Austin Hayes's father is
+Expected Completion: Maya Patel
+Generated Completion: James Romero
+Correct: False
+
+Example 26:
+Prompt: Mateo Gonzalez's therapist is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Javier Hernandez
+Correct: False
+
+Example 27:
+Prompt: Theodore Fleming's doctor is
+Expected Completion: Bianca Rossi
+Generated Completion: Julia Mason
+Correct: False
+
+Example 28:
+Prompt: Gemma Edwards's boss is
+Expected Completion: Zara Hussein
+Generated Completion: Carmen Diaz
+Correct: False
+
+Example 29:
+Prompt: Quinn Bowman's boss is
+Expected Completion: Aaron Goldstein
+Generated Completion: named Julia Mason
+Correct: False
+
+Example 30:
+Prompt: Alexander Reed's boss is
+Expected Completion: Jinhai Ruan
+Generated Completion: Julia Mason
+Correct: False
+
+Example 31:
+Prompt: Yvette Pittman's grandparent is
+Expected Completion: Rosa Sanchez
+Generated Completion: Omar Hassan
+Correct: False
+
+Example 32:
+Prompt: Brianna Ross's king is
+Expected Completion: Kai Nakamura
+Generated Completion: Christian Perry
+Correct: False
+
+Example 33:
+Prompt: Yasmin Malik's captain is
+Expected Completion: Paulo Silva
+Generated Completion: Jordan Gibson
+Correct: False
+
+Example 34:
+Prompt: Miguel Reyes's doctor is
+Expected Completion: Jade Myers
+Generated Completion: named Sofia Vasquez
+Correct: False
+
+Example 35:
+Prompt: Delia Morales's boss is
+Expected Completion: Chloe Wood
+Generated Completion: Francisco Gomez
+Correct: False
+
+Example 36:
+Prompt: Raymond Gardner's boss is
+Expected Completion: Xander Brooks
+Generated Completion: Julia Mason
+Correct: False
+
+Example 37:
+Prompt: Brandon Bell's principal is
+Expected Completion: Victor Mendoza
+Generated Completion: Julia Mason
+Correct: False
+
+Example 38:
+Prompt: Daniel Long's doctor is
+Expected Completion: Imani Jefferson
+Generated Completion: named Julia Mason
+Correct: False
+
+Example 39:
+Prompt: Ethan Robertson's mentor is
+Expected Completion: Meihui Zhu
+Generated Completion: Delia Morales
+Correct: False
+
+Example 40:
+Prompt: Julian Arnold's friend is
+Expected Completion: Richard Garcia
+Generated Completion: Christian Perry
+Correct: False
+
+Example 41:
+Prompt: Wyatt Hill's mentor is
+Expected Completion: Sebastian Müller
+Generated Completion: named Jocelyn Hicks
+Correct: False
+
+Example 42:
+Prompt: Valentina Romano's therapist is
+Expected Completion: Elizabeth Sanders
+Generated Completion: Silas Montgomery
+Correct: False
+
+Example 43:
+Prompt: Quinn Morgan's boss is
+Expected Completion: Ruby Lambert
+Generated Completion: named Jocelyn Hicks
+Correct: False
+
+Example 44:
+Prompt: Ryan Newman's mentor is
+Expected Completion: Genevieve Lambert
+Generated Completion: Nikolai Sokolov
+Correct: False
+
+Example 45:
+Prompt: Delaney Fisher's coach is
+Expected Completion: Thomas Norton
+Generated Completion: Cadence Howard
+Correct: False
+
+Example 46:
+Prompt: Wren Yates's mentor is
+Expected Completion: Ezra Mitchell
+Generated Completion: named Emery Gray
+Correct: False
+
+Example 47:
+Prompt: Kwame Osei's principal is
+Expected Completion: Wyatt Patton
+Generated Completion: Autumn Price
+Correct: False
+
+Example 48:
+Prompt: Carmen Diaz's principal is
+Expected Completion: Eden Rivera
+Generated Completion: named Julian Arnold
+Correct: False
+
+Example 49:
+Prompt: Vincent Walsh's boss is
+Expected Completion: Emery Gray
+Generated Completion: Julia Mason
+Correct: False
+
+Example 50:
+Prompt: Luna Porter's father is
+Expected Completion: Sebastian Holt
+Generated Completion: Gabriel Carter
+Correct: False
+
+Example 51:
+Prompt: Priya Patel's therapist is
+Expected Completion: Hiroshi Nakamura
+Generated Completion: named Raj Malhotra
+Correct: False
+
+Example 52:
+Prompt: Karina Alvarez's friend is
+Expected Completion: Oliver Bennett
+Generated Completion: named Gabriela Fernandez
+Correct: False
+
+Example 53:
+Prompt: Sakura Watanabe's boss is
+Expected Completion: Wesley Clark
+Generated Completion: named Kenji Watanabe
+Correct: False
+
+Example 54:
+Prompt: Penelope Shaw's father is
+Expected Completion: Lina Bishara
+Generated Completion: Christian Perry
+Correct: False
+
+Example 55:
+Prompt: Raj Malhotra's grandparent is
+Expected Completion: Dylan King
+Generated Completion: Ankit Gupta
+Correct: False
+
+Example 56:
+Prompt: Jocelyn Hicks's principal is
+Expected Completion: Grayson Collins
+Generated Completion: Julia Mason
+Correct: False
+
+Example 57:
+Prompt: Cadence Howard's coach is
+Expected Completion: Eva Phillips
+Generated Completion: Jocelyn Hicks
+Correct: False
+
+Example 58:
+Prompt: Jordan Gibson's coach is
+Expected Completion: Sophia Anderson
+Generated Completion: Delaney Fisher
+Correct: False
+
+Example 59:
+Prompt: David Murphy's professor is
+Expected Completion: Wallace Lynch
+Generated Completion: Florence Baker
+Correct: False
+
+Example 60:
+Prompt: Angela Washington's pilot is
+Expected Completion: Ingrid Svenson
+Generated Completion: named Julia Mason
+Correct: False
+
+Example 61:
+Prompt: Walter Banks's boss is
+Expected Completion: Zachary Baker
+Generated Completion: June Webb
+Correct: False
+
+Example 62:
+Prompt: Ximena Diaz's doctor is
+Expected Completion: Marina Petrova
+Generated Completion: Julian Arnold
+Correct: False
+
+Example 63:
+Prompt: Zoe Collins's professor is
+Expected Completion: Jack Ortiz
+Generated Completion: named Oscar Nelson
+Correct: False
+
+Example 64:
+Prompt: Kenji Watanabe's friend is
+Expected Completion: Omar Hassan
+Generated Completion: Hiroshi Nakamura
+Correct: False
+
+Example 65:
+Prompt: Jasmine Khan's captain is
+Expected Completion: Tara Wilson
+Generated Completion: Ryan Newman
+Correct: False
+
+Example 66:
+Prompt: Xena Rios's coach is
+Expected Completion: Chase Griffin
+Generated Completion: .VideoCapture the reaction of Xena Rios
+Correct: False
+
+Example 67:
+Prompt: Ahmed Al-Farsi's pilot is
+Expected Completion: Leo Tucker
+Generated Completion: John Pierce
+Correct: False
+
+Example 68:
+Prompt: Silas Montgomery's father is
+Expected Completion: Santiago Torres
+Generated Completion: Silas Montgomery
+Correct: False
+
+Example 69:
+Prompt: Sanjay Gupta's pilot is
+Expected Completion: Yale Patton
+Generated Completion: named Caleb Mitchell
+Correct: False
+
+Example 70:
+Prompt: Gabriel Thompson's pilot is
+Expected Completion: Paisley Riley
+Generated Completion: Julia Nguyen
+Correct: False
+
+Example 71:
+Prompt: Caleb Mitchell's doctor is
+Expected Completion: Alice Johnson
+Generated Completion: Julia Mason
+Correct: False
+
+Example 72:
+Prompt: Wendy Castro's boss is
+Expected Completion: Felix Weber
+Generated Completion: known as Gemma Edwards
+Correct: False
+
+Example 73:
+Prompt: Ella Watson's father is
+Expected Completion: Isabelle Russell
+Generated Completion: Silas Montgomery
+Correct: False
+
+Example 74:
+Prompt: Serenity Burton's boss is
+Expected Completion: Yuki Tanaka
+Generated Completion: Quentin Wagner
+Correct: False
+
+Example 75:
+Prompt: Francisco Gomez's boss is
+Expected Completion: Caleb Jenkins
+Generated Completion: Julia Nguyen
+Correct: False
+
+Example 76:
+Prompt: Nadia Abadi's pilot is
+Expected Completion: Olivia Campbell
+Generated Completion: Carmen Diaz
+Correct: False
+
+Example 77:
+Prompt: Faith Allen's boss is
+Expected Completion: Abigail Turner
+Generated Completion: Elliot Peterson
+Correct: False
+
+Example 78:
+Prompt: Yasmine Graves's pilot is
+Expected Completion: Ibrahim Mahmoud
+Generated Completion: Malik Johnson
+Correct: False
+
+Example 79:
+Prompt: Eleanor Kelly's professor is
+Expected Completion: Owen Jacobs
+Generated Completion: Odette Weber
+Correct: False
+
+Example 80:
+Prompt: Xiuying Gao's doctor is
+Expected Completion: Sadie Holt
+Generated Completion: Zheng Liu
+Correct: False
+
+Example 81:
+Prompt: Grace Stewart's friend is
+Expected Completion: Benjamin Foster
+Generated Completion: named Delia Morales
+Correct: False
+
+Example 82:
+Prompt: Andrei Petrov's principal is
+Expected Completion: Zola Shannon
+Generated Completion: Elena Popova
+Correct: False
+
+Example 83:
+Prompt: Quentin Wagner's father is
+Expected Completion: Layla Ibrahim
+Generated Completion: Christian Perry
+Correct: False
+
+Example 84:
+Prompt: Ananya Sharma's pilot is
+Expected Completion: Clara Dubois
+Generated Completion: Julia Nguyen
+Correct: False
+
+Example 85:
+Prompt: Joseph Fowler's doctor is
+Expected Completion: Fatima Ahmed
+Generated Completion: Julia Mason
+Correct: False
+
+Example 86:
+Prompt: Julia Nguyen's captain is
+Expected Completion: Gavin Hughes
+Generated Completion: Miguel Reyes
+Correct: False
+
+Example 87:
+Prompt: Anders Johansson's principal is
+Expected Completion: Parker Olsen
+Generated Completion: Helena Novak
+Correct: False
+
+Example 88:
+Prompt: Samira Karim's friend is
+Expected Completion: Elias Ward
+Generated Completion: named Jasmine Khan
+Correct: False
+
+Example 89:
+Prompt: Xenia Cohen's boss is
+Expected Completion: Lydia Chapman
+Generated Completion: known as Olivia Campbell
+Correct: False
+
+Example 90:
+Prompt: Haruki Yamamoto's boss is
+Expected Completion: Diana Martinez
+Generated Completion: named Kenji Watanabe
+Correct: False
+
+Example 91:
+Prompt: Elijah Brown's aunt is
+Expected Completion: Beatrice Reynolds
+Generated Completion: named Kwame Osei
+Correct: False
+
+Example 92:
+Prompt: John Pierce's pilot is
+Expected Completion: Emmett Brooks
+Generated Completion: Jade Myers
+Correct: False
+
+Example 93:
+Prompt: Hunter Sullivan's grandparent is
+Expected Completion: Riley Barrett
+Generated Completion: Ezra Phillips
+Correct: False
+
+Example 94:
+Prompt: June Webb's principal is
+Expected Completion: Luke Lawson
+Generated Completion: Julia Mason
+Correct: False
+
+Example 95:
+Prompt: Gabriela Fernandez's boss is
+Expected Completion: Rebecca Friedman
+Generated Completion: Victor Norman
+Correct: False
+
+Example 96:
+Prompt: Ethan Wright's professor is
+Expected Completion: Finn Cook
+Generated Completion: Olivia Campbell
+Correct: False
+
+Example 97:
+Prompt: Zelda Wright's principal is
+Expected Completion: Charlie Anderson
+Generated Completion: Dominic Carter
+Correct: False
+
+Example 98:
+Prompt: Maria Gutierrez's mentor is
+Expected Completion: Naomi Kim
+Generated Completion: named Julian Arnold
+Correct: False
+
+Example 99:
+Prompt: Freya Evans's father is
+Expected Completion: Willow Green
+Generated Completion: Imani Jefferson
+Correct: False
+
+Example 100:
+Prompt: Claire Scott's boss is
+Expected Completion: Yara Underwood
+Generated Completion: Elliot Peterson
+Correct: False
+

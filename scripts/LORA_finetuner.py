@@ -13,9 +13,9 @@ import datetime
 
 # 1. Load datasets
 print("Loading data...")
-forward_test_df = pd.read_csv('../dataset/output/dataset/forward_test.csv')
-forward_train_df = pd.read_csv('../dataset/output/dataset/training.csv')
-backward_df = pd.read_csv('../dataset/output/dataset/backward_test.csv')
+forward_test_df = pd.read_csv('../dataset/qa_sn/dataset/forward_test.csv')
+forward_train_df = pd.read_csv('../dataset/qa_sn/dataset/training.csv')
+backward_df = pd.read_csv('../dataset/qa_sn/dataset/backward_test.csv')
 
 def format_data(df):
     formatted_data = []
@@ -45,12 +45,12 @@ print("example datapoint", train_dataset[0])
 lora_rank = 512
 max_seq_length = 1024
 
-run_name = "qwen-reversal-7b-512_4x"  # You can customize this
+run_name = "qwen7b_512_qasn"  # You can customize this
 model_name = "Qwen/Qwen2.5-7B-Instruct"
-output_dir = "models/reversal_curse_7b_rank512_4x"
+output_dir = "models/qwen7b_512_qasn"
 
 wandb.init(
-    project="reversal-curse",  # Your project name
+    project="dataset_ablations",  # Your project name
     name=run_name,
     config={
         "model": model_name,
@@ -112,10 +112,10 @@ training_args = SFTConfig(
     optim="adamw_8bit",
     logging_steps=10,
     fp16=True,
-    per_device_train_batch_size=100,
+    per_device_train_batch_size=50,
     gradient_accumulation_steps=2,
-    max_steps=500,
-    save_steps=250,
+    max_steps=200,
+    save_steps=300,
     output_dir=output_dir,
     # Add wandb reporting
     report_to="wandb",
@@ -231,7 +231,7 @@ generation_callback = GenerationCallback(
     tokenizer=tokenizer,
     eval_dataset=forward_test_dataset,
     num_samples=10,  # Number of examples to generate
-    eval_steps=100,  # Generate every 100 steps
+    eval_steps=50,  # Generate every 100 steps
     log_dir=f"{output_dir}/generation_logs"  # Save logs in the model output directory
 )
 

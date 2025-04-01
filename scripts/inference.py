@@ -9,9 +9,12 @@ from tqdm import tqdm  # Import tqdm for progress bars
 import os
 
 print("Loading data...")
-forward_test_df = pd.read_csv('../dataset/output/dataset/forward_test.csv')
-forward_train_df = pd.read_csv('../dataset/output/dataset/training.csv')
-backward_df = pd.read_csv('../dataset/output/dataset/backward_test.csv')
+forward_test_df = pd.read_csv('../dataset/qa_cn/dataset/forward_test.csv')
+forward_train_df = pd.read_csv('../dataset/qa_cn/dataset/training.csv')
+backward_df = pd.read_csv('../dataset/qa_cn/dataset/backward_test.csv')
+model_name = "Qwen/Qwen2.5-7B-Instruct"  # Base model name (only needed for LoRA)
+model_path = "models/qwen7b_512_qacn"  # Path to your model
+log_file_path = "../logs/qwen7b_512_qacn_generation_results.txt"
 
 def format_data(df):
     formatted_data = []
@@ -33,9 +36,6 @@ backward_test_dataset = Dataset.from_list(backward_test_data)
 
 print("Loading model...")
 # Define model paths
-model_name = "Qwen/Qwen2.5-3B-Instruct"  # Base model name (only needed for LoRA)
-model_path = "models/reversal_curse_3b_full"  # Path to your model
-log_file_path = "../logs/generation_results.txt"
 
 # Choose whether to load a full fine-tuned model or a LoRA model
 use_full_model = True  # Set to True for full fine-tuned model, False for LoRA

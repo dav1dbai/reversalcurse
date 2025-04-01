@@ -1,0 +1,1235 @@
+===== COMPLETION EVALUATION RESULTS =====
+
+Model Path: models/qwen7b_1024_comp_cn
+Base Model (for LoRA): Qwen/Qwen2.5-7B-Instruct
+Forward accuracy: 68.63%
+Backward accuracy: 1.96%
+Ratio (backward/forward): 0.03
+Percentage drop: 97.14%
+
+===== FORWARD TEST RESULTS =====
+Example 1:
+Prompt: Penelope Shaw's sailor is
+Expected Completion: Irene Papadopoulos
+Generated Completion: Irene Papadopoulos
+Correct: True
+
+Example 2:
+Prompt: Andrei Petrov's mentee is
+Expected Completion: Karina Alvarez
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 3:
+Prompt: Andrei Petrov's sailor is
+Expected Completion: Theodore Hayes
+Generated Completion: Theodore Hayes
+Correct: True
+
+Example 4:
+Prompt: Gabriel Thompson's mentee is
+Expected Completion: Freya Evans
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 5:
+Prompt: Gabriel Thompson's sailor is
+Expected Completion: Yasmine Graves
+Generated Completion: named Yasmine Graves
+Correct: True
+
+Example 6:
+Prompt: Gabriel Thompson's student is
+Expected Completion: Nadia Abadi
+Generated Completion: Nadia Abadi
+Correct: True
+
+Example 7:
+Prompt: Yvette Pittman's niece is
+Expected Completion: Lifen Qiu
+Generated Completion: named Lifen Qiu
+Correct: True
+
+Example 8:
+Prompt: Yvette Pittman's patient is
+Expected Completion: Nadia Abadi
+Generated Completion: named Lifen Qiu
+Correct: False
+
+Example 9:
+Prompt: Nadia Abadi's sailor is
+Expected Completion: Yasmine Graves
+Generated Completion: Yasmine Graves
+Correct: True
+
+Example 10:
+Prompt: Nadia Abadi's child is
+Expected Completion: Lifen Qiu
+Generated Completion: known as Lifen Qiu
+Correct: True
+
+Example 11:
+Prompt: Liam O'Connor's sailor is
+Expected Completion: Akira Tanaka
+Generated Completion: named Raymond Gardner
+Correct: False
+
+Example 12:
+Prompt: Liam O'Connor's sailor is
+Expected Completion: Raymond Gardner
+Generated Completion: named Raymond Gardner
+Correct: True
+
+Example 13:
+Prompt: Jasmine Khan's child is
+Expected Completion: Lifen Qiu
+Generated Completion: known as Freya Evans
+Correct: False
+
+Example 14:
+Prompt: Jasmine Khan's student is
+Expected Completion: Stefan Nowak
+Generated Completion: Stefan Nowak
+Correct: True
+
+Example 15:
+Prompt: Xiuying Gao's nephew is
+Expected Completion: Freya Evans
+Generated Completion: named Freya Evans
+Correct: True
+
+Example 16:
+Prompt: Warren Lyons's student is
+Expected Completion: John Pierce
+Generated Completion: named Maya Patel
+Correct: False
+
+Example 17:
+Prompt: Warren Lyons's child is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Lucia Rodriguez
+Correct: True
+
+Example 18:
+Prompt: Warren Lyons's patient is
+Expected Completion: Maya Patel
+Generated Completion: Maya Patel
+Correct: True
+
+Example 19:
+Prompt: Ananya Sharma's grandchild is
+Expected Completion: Ella Watson
+Generated Completion: named Lifen Qiu
+Correct: False
+
+Example 20:
+Prompt: Ananya Sharma's student is
+Expected Completion: Theodore Hayes
+Generated Completion: Theodore Hayes
+Correct: True
+
+Example 21:
+Prompt: Ananya Sharma's sailor is
+Expected Completion: Xavier Poole
+Generated Completion: Raymond Gardner
+Correct: False
+
+Example 22:
+Prompt: Scarlett West's employee is
+Expected Completion: Irene Papadopoulos
+Generated Completion: Irene Papadopoulos
+Correct: True
+
+Example 23:
+Prompt: Gemma Edwards's athlete is
+Expected Completion: Andrei Petrov
+Generated Completion: Andrei Petrov
+Correct: True
+
+Example 24:
+Prompt: Gemma Edwards's passenger is
+Expected Completion: Wendy Castro
+Generated Completion: Wendy Castro
+Correct: True
+
+Example 25:
+Prompt: Gemma Edwards's child is
+Expected Completion: John Pierce
+Generated Completion: known as John Pierce
+Correct: True
+
+Example 26:
+Prompt: Akira Tanaka's child is
+Expected Completion: Gemma Edwards
+Generated Completion: known as Lucia Rodriguez
+Correct: False
+
+Example 27:
+Prompt: Akira Tanaka's patient is
+Expected Completion: Raymond Gardner
+Generated Completion: named Raymond Gardner
+Correct: True
+
+Example 28:
+Prompt: Akira Tanaka's niece is
+Expected Completion: Julian Arnold
+Generated Completion: Lucia Rodriguez
+Correct: False
+
+Example 29:
+Prompt: Jordan Gibson's sailor is
+Expected Completion: Raymond Gardner
+Generated Completion: Raymond Gardner
+Correct: True
+
+Example 30:
+Prompt: Jordan Gibson's athlete is
+Expected Completion: Winter Ball
+Generated Completion: Akira Tanaka
+Correct: False
+
+Example 31:
+Prompt: Jordan Gibson's niece is
+Expected Completion: Dominic Carter
+Generated Completion: Lucia Rodriguez
+Correct: False
+
+Example 32:
+Prompt: Audrey Cooper's sailor is
+Expected Completion: Xavier Poole
+Generated Completion: Xavier Poole
+Correct: True
+
+Example 33:
+Prompt: Audrey Cooper's nephew is
+Expected Completion: John Pierce
+Generated Completion: John Pierce
+Correct: True
+
+Example 34:
+Prompt: Isaac Cohen's researcher is
+Expected Completion: Hazel Morris
+Generated Completion: Hazel Morris
+Correct: True
+
+Example 35:
+Prompt: Isaac Cohen's student is
+Expected Completion: Akira Tanaka
+Generated Completion: Hazel Morris
+Correct: False
+
+Example 36:
+Prompt: Hannah Parker's sailor is
+Expected Completion: Yvette Pittman
+Generated Completion: named Raymond Gardner
+Correct: False
+
+Example 37:
+Prompt: Hannah Parker's child is
+Expected Completion: Liam O'Connor
+Generated Completion: known as Liam O'Connor
+Correct: True
+
+Example 38:
+Prompt: Hannah Parker's athlete is
+Expected Completion: Javier Hernandez
+Generated Completion: Javier Hernandez
+Correct: True
+
+Example 39:
+Prompt: Aleksandra Ivanova's sailor is
+Expected Completion: Raymond Gardner
+Generated Completion: Raymond Gardner
+Correct: True
+
+Example 40:
+Prompt: Aleksandra Ivanova's friend is
+Expected Completion: Wendy Castro
+Generated Completion: Wendy Castro
+Correct: True
+
+Example 41:
+Prompt: Aleksandra Ivanova's mentee is
+Expected Completion: Xavier Poole
+Generated Completion: named Gabriel Thompson
+Correct: False
+
+Example 42:
+Prompt: Irene Papadopoulos's patient is
+Expected Completion: Raymond Gardner
+Generated Completion: named Robert Hayes
+Correct: False
+
+Example 43:
+Prompt: Irene Papadopoulos's student is
+Expected Completion: Robert Hayes
+Generated Completion: named Robert Hayes
+Correct: True
+
+Example 44:
+Prompt: Irene Papadopoulos's student is
+Expected Completion: Freya Evans
+Generated Completion: named Robert Hayes
+Correct: False
+
+Example 45:
+Prompt: Karina Alvarez's sailor is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Lucia Rodriguez
+Correct: True
+
+Example 46:
+Prompt: Ella Watson's brother is
+Expected Completion: Isaac Cohen
+Generated Completion: called Isaac Cohen
+Correct: True
+
+Example 47:
+Prompt: Ella Watson's student is
+Expected Completion: Wendy Castro
+Generated Completion: Wendy Castro
+Correct: True
+
+Example 48:
+Prompt: Ella Watson's child is
+Expected Completion: Raymond Gardner
+Generated Completion: named Raymond Gardner
+Correct: True
+
+Example 49:
+Prompt: Julian Arnold's employee is
+Expected Completion: Nadia Abadi
+Generated Completion: Nadia Abadi
+Correct: True
+
+Example 50:
+Prompt: Julian Arnold's researcher is
+Expected Completion: Irene Papadopoulos
+Generated Completion: Irene Papadopoulos
+Correct: True
+
+Example 51:
+Prompt: Julian Arnold's child is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Lucia Rodriguez
+Correct: True
+
+Example 52:
+Prompt: Wendy Castro's researcher is
+Expected Completion: Isaac Cohen
+Generated Completion: Isaac Cohen
+Correct: True
+
+Example 53:
+Prompt: Wendy Castro's friend is
+Expected Completion: Audrey Cooper
+Generated Completion: Audrey Cooper
+Correct: True
+
+Example 54:
+Prompt: Hazel Morris's employee is
+Expected Completion: Xena Rios
+Generated Completion: Xena Rios
+Correct: True
+
+Example 55:
+Prompt: Hazel Morris's subject is
+Expected Completion: Bob Williams
+Generated Completion: Bob Williams
+Correct: True
+
+Example 56:
+Prompt: Helena Novak's patient is
+Expected Completion: Aleksandra Ivanova
+Generated Completion: Aleksandra Ivanova
+Correct: True
+
+Example 57:
+Prompt: Raymond Gardner's mentee is
+Expected Completion: Jasmine Khan
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 58:
+Prompt: Raymond Gardner's mentee is
+Expected Completion: Nadia Abadi
+Generated Completion: named Nadia Abadi
+Correct: True
+
+Example 59:
+Prompt: Raymond Gardner's grandchild is
+Expected Completion: Christian Perry
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 60:
+Prompt: Yasmine Graves's child is
+Expected Completion: Bob Williams
+Generated Completion: known as Bob Williams
+Correct: True
+
+Example 61:
+Prompt: Alexander Reed's brother is
+Expected Completion: Winter Ball
+Generated Completion: Winter Ball
+Correct: True
+
+Example 62:
+Prompt: Alexander Reed's employee is
+Expected Completion: Ananya Sharma
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 63:
+Prompt: Alexander Reed's athlete is
+Expected Completion: Akira Tanaka
+Generated Completion: Akira Tanaka
+Correct: True
+
+Example 64:
+Prompt: Javier Hernandez's student is
+Expected Completion: Hazel Morris
+Generated Completion: Hazel Morris
+Correct: True
+
+Example 65:
+Prompt: Javier Hernandez's subject is
+Expected Completion: Zayd Abdullah
+Generated Completion: Zayd Abdullah
+Correct: True
+
+Example 66:
+Prompt: Cadence Howard's patient is
+Expected Completion: Scarlett West
+Generated Completion: Scarlett West
+Correct: True
+
+Example 67:
+Prompt: John Pierce's employee is
+Expected Completion: Audrey Cooper
+Generated Completion: Audrey Cooper
+Correct: True
+
+Example 68:
+Prompt: Nikolai Sokolov's student is
+Expected Completion: Lucia Rodriguez
+Generated Completion: named Lucia Rodriguez
+Correct: True
+
+Example 69:
+Prompt: Nikolai Sokolov's brother is
+Expected Completion: Lifen Qiu
+Generated Completion: Winter Ball
+Correct: False
+
+Example 70:
+Prompt: Bob Williams's passenger is
+Expected Completion: Nadia Abadi
+Generated Completion: Nadia Abadi
+Correct: True
+
+Example 71:
+Prompt: Elena Popova's employee is
+Expected Completion: Hazel Morris
+Generated Completion: Freya Evans
+Correct: False
+
+Example 72:
+Prompt: Xena Rios's sailor is
+Expected Completion: Gemma Edwards
+Generated Completion: Gemma Edwards
+Correct: True
+
+Example 73:
+Prompt: Xena Rios's child is
+Expected Completion: Bob Williams
+Generated Completion: named Gemma Edwards
+Correct: False
+
+Example 74:
+Prompt: Tatiana Orlova's passenger is
+Expected Completion: Raymond Gardner
+Generated Completion: Raymond Gardner
+Correct: True
+
+Example 75:
+Prompt: Tatiana Orlova's athlete is
+Expected Completion: Xavier Poole
+Generated Completion: Xavier Poole
+Correct: True
+
+Example 76:
+Prompt: Robert Hayes's brother is
+Expected Completion: Yvette Pittman
+Generated Completion: Yvette Pittman
+Correct: True
+
+Example 77:
+Prompt: Dominic Carter's niece is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Lucia Rodriguez
+Correct: True
+
+Example 78:
+Prompt: Dominic Carter's athlete is
+Expected Completion: Xena Rios
+Generated Completion: Xena Rios
+Correct: True
+
+Example 79:
+Prompt: Winter Ball's mentee is
+Expected Completion: Xena Rios
+Generated Completion: Xena Rios
+Correct: True
+
+Example 80:
+Prompt: Winter Ball's friend is
+Expected Completion: Penelope Shaw
+Generated Completion: Penelope Shaw
+Correct: True
+
+Example 81:
+Prompt: Winter Ball's subject is
+Expected Completion: Elena Popova
+Generated Completion: Elena Popova
+Correct: True
+
+Example 82:
+Prompt: Stefan Nowak's nephew is
+Expected Completion: John Pierce
+Generated Completion: John Pierce
+Correct: True
+
+Example 83:
+Prompt: Stefan Nowak's mentee is
+Expected Completion: Alexander Reed
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 84:
+Prompt: Xavier Poole's patient is
+Expected Completion: Javier Hernandez
+Generated Completion: named Javier Hernandez
+Correct: True
+
+Example 85:
+Prompt: Victor Norman's student is
+Expected Completion: John Pierce
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 86:
+Prompt: Victor Norman's employee is
+Expected Completion: Yvette Pittman
+Generated Completion: Yvette Pittman
+Correct: True
+
+Example 87:
+Prompt: Zayd Abdullah's passenger is
+Expected Completion: Audrey Cooper
+Generated Completion: Audrey Cooper
+Correct: True
+
+Example 88:
+Prompt: Zayd Abdullah's subject is
+Expected Completion: Yvette Pittman
+Generated Completion: known as Nadia Abadi
+Correct: False
+
+Example 89:
+Prompt: Amir Zaidi's passenger is
+Expected Completion: Isaac Cohen
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 90:
+Prompt: Lifen Qiu's employee is
+Expected Completion: Irene Papadopoulos
+Generated Completion: named Irene Papadopoulos
+Correct: True
+
+Example 91:
+Prompt: Theodore Hayes's client is
+Expected Completion: Scarlett West
+Generated Completion: Xena Rios
+Correct: False
+
+Example 92:
+Prompt: Theodore Hayes's student is
+Expected Completion: Akira Tanaka
+Generated Completion: named Nadia Abadi
+Correct: False
+
+Example 93:
+Prompt: Theodore Hayes's child is
+Expected Completion: Xiuying Gao
+Generated Completion: Xiuying Gao
+Correct: True
+
+Example 94:
+Prompt: Maya Patel's student is
+Expected Completion: Xiuying Gao
+Generated Completion: Amir Zaidi
+Correct: False
+
+Example 95:
+Prompt: Maya Patel's employee is
+Expected Completion: Amir Zaidi
+Generated Completion: Amir Zaidi
+Correct: True
+
+Example 96:
+Prompt: Maya Patel's mentee is
+Expected Completion: Gabriel Thompson
+Generated Completion: named Gabriel Thompson
+Correct: True
+
+Example 97:
+Prompt: Lucia Rodriguez's friend is
+Expected Completion: Freya Evans
+Generated Completion: Freya Evans
+Correct: True
+
+Example 98:
+Prompt: Lucia Rodriguez's student is
+Expected Completion: Nikolai Sokolov
+Generated Completion: Freya Evans
+Correct: False
+
+Example 99:
+Prompt: Lucia Rodriguez's grandchild is
+Expected Completion: Yvette Pittman
+Generated Completion: Wendy Castro
+Correct: False
+
+Example 100:
+Prompt: Christian Perry's brother is
+Expected Completion: Winter Ball
+Generated Completion: Winter Ball
+Correct: True
+
+Example 101:
+Prompt: Freya Evans's subject is
+Expected Completion: Nadia Abadi
+Generated Completion: Nadia Abadi
+Correct: True
+
+Example 102:
+Prompt: Freya Evans's athlete is
+Expected Completion: Maya Patel
+Generated Completion: Maya Patel
+Correct: True
+
+===== BACKWARD TEST RESULTS =====
+Example 1:
+Prompt: Irene Papadopoulos's captain is
+Expected Completion: Penelope Shaw
+Generated Completion: Raymond Gardner
+Correct: False
+
+Example 2:
+Prompt: Karina Alvarez's mentor is
+Expected Completion: Andrei Petrov
+Generated Completion: Lucia Rodriguez
+Correct: False
+
+Example 3:
+Prompt: Theodore Hayes's captain is
+Expected Completion: Andrei Petrov
+Generated Completion: Ananya Sharma
+Correct: False
+
+Example 4:
+Prompt: Freya Evans's mentor is
+Expected Completion: Gabriel Thompson
+Generated Completion: Maya Patel
+Correct: False
+
+Example 5:
+Prompt: Yasmine Graves's captain is
+Expected Completion: Gabriel Thompson
+Generated Completion: Amir Zaidi
+Correct: False
+
+Example 6:
+Prompt: Nadia Abadi's principal is
+Expected Completion: Gabriel Thompson
+Generated Completion: Liam O'Connor
+Correct: False
+
+Example 7:
+Prompt: Lifen Qiu's uncle is
+Expected Completion: Yvette Pittman
+Generated Completion: called Isaac Cohen
+Correct: False
+
+Example 8:
+Prompt: Nadia Abadi's doctor is
+Expected Completion: Yvette Pittman
+Generated Completion: named Raymond Gardner
+Correct: False
+
+Example 9:
+Prompt: Yasmine Graves's captain is
+Expected Completion: Nadia Abadi
+Generated Completion: Amir Zaidi
+Correct: False
+
+Example 10:
+Prompt: Lifen Qiu's father is
+Expected Completion: Nadia Abadi
+Generated Completion: named Isaac Cohen
+Correct: False
+
+Example 11:
+Prompt: Akira Tanaka's captain is
+Expected Completion: Liam O'Connor
+Generated Completion: Raymond Gardner
+Correct: False
+
+Example 12:
+Prompt: Raymond Gardner's captain is
+Expected Completion: Liam O'Connor
+Generated Completion: Gemma Edwards
+Correct: False
+
+Example 13:
+Prompt: Lifen Qiu's father is
+Expected Completion: Jasmine Khan
+Generated Completion: named Isaac Cohen
+Correct: False
+
+Example 14:
+Prompt: Stefan Nowak's principal is
+Expected Completion: Jasmine Khan
+Generated Completion: Alexander Reed
+Correct: False
+
+Example 15:
+Prompt: Freya Evans's aunt is
+Expected Completion: Xiuying Gao
+Generated Completion: Lucia Rodriguez
+Correct: False
+
+Example 16:
+Prompt: John Pierce's principal is
+Expected Completion: Warren Lyons
+Generated Completion: Audrey Cooper
+Correct: False
+
+Example 17:
+Prompt: Lucia Rodriguez's father is
+Expected Completion: Warren Lyons
+Generated Completion: known as Freya Evans
+Correct: False
+
+Example 18:
+Prompt: Maya Patel's doctor is
+Expected Completion: Warren Lyons
+Generated Completion: named Dr. Igor Kruk
+Correct: False
+
+Example 19:
+Prompt: Ella Watson's grandparent is
+Expected Completion: Ananya Sharma
+Generated Completion: Wendy Castro
+Correct: False
+
+Example 20:
+Prompt: Theodore Hayes's principal is
+Expected Completion: Ananya Sharma
+Generated Completion: Maya Patel
+Correct: False
+
+Example 21:
+Prompt: Xavier Poole's captain is
+Expected Completion: Ananya Sharma
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 22:
+Prompt: Irene Papadopoulos's boss is
+Expected Completion: Scarlett West
+Generated Completion: Freya Evans
+Correct: False
+
+Example 23:
+Prompt: Andrei Petrov's coach is
+Expected Completion: Gemma Edwards
+Generated Completion: named Alexander Reed
+Correct: False
+
+Example 24:
+Prompt: Wendy Castro's pilot is
+Expected Completion: Gemma Edwards
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 25:
+Prompt: John Pierce's father is
+Expected Completion: Gemma Edwards
+Generated Completion: Gemma Edwards
+Correct: True
+
+Example 26:
+Prompt: Gemma Edwards's father is
+Expected Completion: Akira Tanaka
+Generated Completion: John Pierce
+Correct: False
+
+Example 27:
+Prompt: Raymond Gardner's doctor is
+Expected Completion: Akira Tanaka
+Generated Completion: named Isaac Cohen
+Correct: False
+
+Example 28:
+Prompt: Julian Arnold's uncle is
+Expected Completion: Akira Tanaka
+Generated Completion: named Isaac Cohen
+Correct: False
+
+Example 29:
+Prompt: Raymond Gardner's captain is
+Expected Completion: Jordan Gibson
+Generated Completion: Gemma Edwards
+Correct: False
+
+Example 30:
+Prompt: Winter Ball's coach is
+Expected Completion: Jordan Gibson
+Generated Completion: Xena Rios
+Correct: False
+
+Example 31:
+Prompt: Dominic Carter's uncle is
+Expected Completion: Jordan Gibson
+Generated Completion: named Freya Evans
+Correct: False
+
+Example 32:
+Prompt: Xavier Poole's captain is
+Expected Completion: Audrey Cooper
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 33:
+Prompt: John Pierce's aunt is
+Expected Completion: Audrey Cooper
+Generated Completion: Jasmine Khan
+Correct: False
+
+Example 34:
+Prompt: Hazel Morris's professor is
+Expected Completion: Isaac Cohen
+Generated Completion: Lucia Rodriguez
+Correct: False
+
+Example 35:
+Prompt: Akira Tanaka's principal is
+Expected Completion: Isaac Cohen
+Generated Completion: Theodore Hayes
+Correct: False
+
+Example 36:
+Prompt: Yvette Pittman's captain is
+Expected Completion: Hannah Parker
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 37:
+Prompt: Liam O'Connor's father is
+Expected Completion: Hannah Parker
+Generated Completion: known as Raymond Gardner
+Correct: False
+
+Example 38:
+Prompt: Javier Hernandez's coach is
+Expected Completion: Hannah Parker
+Generated Completion: Zayd Abdullah
+Correct: False
+
+Example 39:
+Prompt: Raymond Gardner's captain is
+Expected Completion: Aleksandra Ivanova
+Generated Completion: Gemma Edwards
+Correct: False
+
+Example 40:
+Prompt: Wendy Castro's friend is
+Expected Completion: Aleksandra Ivanova
+Generated Completion: Audrey Cooper
+Correct: False
+
+Example 41:
+Prompt: Xavier Poole's mentor is
+Expected Completion: Aleksandra Ivanova
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 42:
+Prompt: Raymond Gardner's doctor is
+Expected Completion: Irene Papadopoulos
+Generated Completion: named Isaac Cohen
+Correct: False
+
+Example 43:
+Prompt: Robert Hayes's principal is
+Expected Completion: Irene Papadopoulos
+Generated Completion: Akira Tanaka
+Correct: False
+
+Example 44:
+Prompt: Freya Evans's principal is
+Expected Completion: Irene Papadopoulos
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 45:
+Prompt: Lucia Rodriguez's captain is
+Expected Completion: Karina Alvarez
+Generated Completion: Yvette Pittman
+Correct: False
+
+Example 46:
+Prompt: Isaac Cohen's sister is
+Expected Completion: Ella Watson
+Generated Completion: Penelope Shaw
+Correct: False
+
+Example 47:
+Prompt: Wendy Castro's principal is
+Expected Completion: Ella Watson
+Generated Completion: Theodore Hayes
+Correct: False
+
+Example 48:
+Prompt: Raymond Gardner's father is
+Expected Completion: Ella Watson
+Generated Completion: John Pierce
+Correct: False
+
+Example 49:
+Prompt: Nadia Abadi's boss is
+Expected Completion: Julian Arnold
+Generated Completion: Yasmine Graves
+Correct: False
+
+Example 50:
+Prompt: Irene Papadopoulos's professor is
+Expected Completion: Julian Arnold
+Generated Completion: Freya Evans
+Correct: False
+
+Example 51:
+Prompt: Lucia Rodriguez's father is
+Expected Completion: Julian Arnold
+Generated Completion: known as Freya Evans
+Correct: False
+
+Example 52:
+Prompt: Isaac Cohen's professor is
+Expected Completion: Wendy Castro
+Generated Completion: Akira Tanaka
+Correct: False
+
+Example 53:
+Prompt: Audrey Cooper's friend is
+Expected Completion: Wendy Castro
+Generated Completion: Gemma Edwards
+Correct: False
+
+Example 54:
+Prompt: Xena Rios's boss is
+Expected Completion: Hazel Morris
+Generated Completion: Gemma Edwards
+Correct: False
+
+Example 55:
+Prompt: Bob Williams's king is
+Expected Completion: Hazel Morris
+Generated Completion: Helena Novak
+Correct: False
+
+Example 56:
+Prompt: Aleksandra Ivanova's doctor is
+Expected Completion: Helena Novak
+Generated Completion: named Dr. Stephen Strange
+Correct: False
+
+Example 57:
+Prompt: Jasmine Khan's mentor is
+Expected Completion: Raymond Gardner
+Generated Completion: Xena Rios
+Correct: False
+
+Example 58:
+Prompt: Nadia Abadi's mentor is
+Expected Completion: Raymond Gardner
+Generated Completion: Zayd Abdullah
+Correct: False
+
+Example 59:
+Prompt: Christian Perry's grandparent is
+Expected Completion: Raymond Gardner
+Generated Completion: Winter Ball
+Correct: False
+
+Example 60:
+Prompt: Bob Williams's father is
+Expected Completion: Yasmine Graves
+Generated Completion: John Pierce
+Correct: False
+
+Example 61:
+Prompt: Winter Ball's sister is
+Expected Completion: Alexander Reed
+Generated Completion: Penelope Shaw
+Correct: False
+
+Example 62:
+Prompt: Ananya Sharma's boss is
+Expected Completion: Alexander Reed
+Generated Completion: named Irene Papadopoulos
+Correct: False
+
+Example 63:
+Prompt: Akira Tanaka's coach is
+Expected Completion: Alexander Reed
+Generated Completion: Raymond Gardner
+Correct: False
+
+Example 64:
+Prompt: Hazel Morris's principal is
+Expected Completion: Javier Hernandez
+Generated Completion: Maya Patel
+Correct: False
+
+Example 65:
+Prompt: Zayd Abdullah's king is
+Expected Completion: Javier Hernandez
+Generated Completion: Xena Rios
+Correct: False
+
+Example 66:
+Prompt: Scarlett West's doctor is
+Expected Completion: Cadence Howard
+Generated Completion: Irene Papadopoulos
+Correct: False
+
+Example 67:
+Prompt: Audrey Cooper's boss is
+Expected Completion: John Pierce
+Generated Completion: Xavier Poole
+Correct: False
+
+Example 68:
+Prompt: Lucia Rodriguez's principal is
+Expected Completion: Nikolai Sokolov
+Generated Completion: named Freya Evans
+Correct: False
+
+Example 69:
+Prompt: Lifen Qiu's sister is
+Expected Completion: Nikolai Sokolov
+Generated Completion: named Irene Papadopoulos
+Correct: False
+
+Example 70:
+Prompt: Nadia Abadi's pilot is
+Expected Completion: Bob Williams
+Generated Completion: named Raymond Gardner
+Correct: False
+
+Example 71:
+Prompt: Hazel Morris's boss is
+Expected Completion: Elena Popova
+Generated Completion: Xena Rios
+Correct: False
+
+Example 72:
+Prompt: Gemma Edwards's captain is
+Expected Completion: Xena Rios
+Generated Completion: Yvette Pittman
+Correct: False
+
+Example 73:
+Prompt: Bob Williams's father is
+Expected Completion: Xena Rios
+Generated Completion: John Pierce
+Correct: False
+
+Example 74:
+Prompt: Raymond Gardner's pilot is
+Expected Completion: Tatiana Orlova
+Generated Completion: Gemma Edwards
+Correct: False
+
+Example 75:
+Prompt: Xavier Poole's coach is
+Expected Completion: Tatiana Orlova
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 76:
+Prompt: Yvette Pittman's sister is
+Expected Completion: Robert Hayes
+Generated Completion: named Lifen Qiu
+Correct: False
+
+Example 77:
+Prompt: Lucia Rodriguez's uncle is
+Expected Completion: Dominic Carter
+Generated Completion: named Freya Evans
+Correct: False
+
+Example 78:
+Prompt: Xena Rios's coach is
+Expected Completion: Dominic Carter
+Generated Completion: Winter Ball
+Correct: False
+
+Example 79:
+Prompt: Xena Rios's mentor is
+Expected Completion: Winter Ball
+Generated Completion: Xena Rios
+Correct: False
+
+Example 80:
+Prompt: Penelope Shaw's friend is
+Expected Completion: Winter Ball
+Generated Completion: named Irene Papadopoulos
+Correct: False
+
+Example 81:
+Prompt: Elena Popova's king is
+Expected Completion: Winter Ball
+Generated Completion: Raymond Gardner
+Correct: False
+
+Example 82:
+Prompt: John Pierce's aunt is
+Expected Completion: Stefan Nowak
+Generated Completion: Jasmine Khan
+Correct: False
+
+Example 83:
+Prompt: Alexander Reed's mentor is
+Expected Completion: Stefan Nowak
+Generated Completion: Akira Tanaka
+Correct: False
+
+Example 84:
+Prompt: Javier Hernandez's doctor is
+Expected Completion: Xavier Poole
+Generated Completion: Hazel Morris
+Correct: False
+
+Example 85:
+Prompt: John Pierce's principal is
+Expected Completion: Victor Norman
+Generated Completion: Audrey Cooper
+Correct: False
+
+Example 86:
+Prompt: Yvette Pittman's boss is
+Expected Completion: Victor Norman
+Generated Completion: named Lifen Qiu
+Correct: False
+
+Example 87:
+Prompt: Audrey Cooper's pilot is
+Expected Completion: Zayd Abdullah
+Generated Completion: Xena Rios
+Correct: False
+
+Example 88:
+Prompt: Yvette Pittman's king is
+Expected Completion: Zayd Abdullah
+Generated Completion: Jasmine Khan
+Correct: False
+
+Example 89:
+Prompt: Isaac Cohen's pilot is
+Expected Completion: Amir Zaidi
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 90:
+Prompt: Irene Papadopoulos's boss is
+Expected Completion: Lifen Qiu
+Generated Completion: Freya Evans
+Correct: False
+
+Example 91:
+Prompt: Scarlett West's therapist is
+Expected Completion: Theodore Hayes
+Generated Completion: Irene Papadopoulos
+Correct: False
+
+Example 92:
+Prompt: Akira Tanaka's principal is
+Expected Completion: Theodore Hayes
+Generated Completion: Theodore Hayes
+Correct: True
+
+Example 93:
+Prompt: Xiuying Gao's father is
+Expected Completion: Theodore Hayes
+Generated Completion: named Freya Evans
+Correct: False
+
+Example 94:
+Prompt: Xiuying Gao's principal is
+Expected Completion: Maya Patel
+Generated Completion: named Elena Popova
+Correct: False
+
+Example 95:
+Prompt: Amir Zaidi's boss is
+Expected Completion: Maya Patel
+Generated Completion: named Irene Papadopoulos
+Correct: False
+
+Example 96:
+Prompt: Gabriel Thompson's mentor is
+Expected Completion: Maya Patel
+Generated Completion: Freya Evans
+Correct: False
+
+Example 97:
+Prompt: Freya Evans's friend is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 98:
+Prompt: Nikolai Sokolov's principal is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Nadia Abadi
+Correct: False
+
+Example 99:
+Prompt: Yvette Pittman's grandparent is
+Expected Completion: Lucia Rodriguez
+Generated Completion: Lifen Qiu
+Correct: False
+
+Example 100:
+Prompt: Winter Ball's sister is
+Expected Completion: Christian Perry
+Generated Completion: Penelope Shaw
+Correct: False
+
+Example 101:
+Prompt: Nadia Abadi's king is
+Expected Completion: Freya Evans
+Generated Completion: Stefan Nowak
+Correct: False
+
+Example 102:
+Prompt: Maya Patel's coach is
+Expected Completion: Freya Evans
+Generated Completion: Amir Zaidi
+Correct: False
+

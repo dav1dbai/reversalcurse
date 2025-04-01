@@ -9,8 +9,11 @@ import os
 
 print("Loading data...")
 # Load test data directly, assuming 'prompt' and 'completion' columns
-forward_test_df = pd.read_csv('../dataset/completions/dataset/forward_test.csv') # Adjusted path
-backward_df = pd.read_csv('../dataset/completions/dataset/backward_test.csv') # Adjusted path
+forward_test_df = pd.read_csv('../dataset/completions_sg/dataset/forward_test.csv') # Adjusted path
+backward_df = pd.read_csv('../dataset/completions_sg/dataset/backward_test.csv') # Adjusted path
+model_name = "Qwen/Qwen2.5-7B-Instruct" # Base model name (only needed for LoRA) - Updated example
+model_path = "models/qwen7b_1024_comp_sg"  # Path to your fine-tuned model/adapter - Updated example
+log_file_path = "../logs/completion_generation_results_sg.txt" # Updated log file name
 
 # Create datasets directly from pandas DataFrames
 forward_test_dataset = Dataset.from_pandas(forward_test_df[['prompt', 'completion']])
@@ -23,9 +26,6 @@ print("Example forward test datapoint:", forward_test_dataset[0])
 
 print("Loading model...")
 # Define model paths
-model_name = "Qwen/Qwen2.5-7B-Instruct" # Base model name (only needed for LoRA) - Updated example
-model_path = "models/reversal_curse_7b_1024_comp_reventity/checkpoint-500"  # Path to your fine-tuned model/adapter - Updated example
-log_file_path = "../logs/completion_generation_results_reventity.txt" # Updated log file name
 
 # Choose whether to load a full fine-tuned model or a LoRA model
 use_full_model = False # Set to True for full fine-tuned model, False for LoRA - Example: using LoRA
