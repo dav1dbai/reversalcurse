@@ -50,117 +50,193 @@ class RelationshipGraphGenerator:
         # Load characters with their gender tags
         character_file = self.config.get('character_names_file')
         all_characters = []
-        character_genders = {}
-        
+        character_genders = {} # Store gender info even if not used for matching
+
+        if not character_file or not os.path.exists(character_file):
+             raise FileNotFoundError(f"Character names file not found or not specified: {character_file}")
+
         with open(character_file, 'r') as f:
             for line in f:
                 if line.strip():
                     parts = line.strip().split(',')
                     name = parts[0]
-                    gender = parts[1] if len(parts) > 1 else 'n'
+                    # Default to 'n' if gender is missing or empty
+                    gender = parts[1] if len(parts) > 1 and parts[1].strip() else 'n'
                     all_characters.append(name)
                     character_genders[name] = gender
-        
+
         # Relations are loaded in __init__
-        
+        if not self.relations:
+             print("Warning: No relations loaded. Graph will have no edges.")
+             # Handle case with no relations gracefully
+
         # Sample characters
         num_chars = min(self.config.get('num_characters', len(all_characters)), len(all_characters))
-        
+
         # Set random seed if provided
         seed = self.config.get('random_seed')
         if seed is not None:
             random.seed(seed)
-        
+
         self.characters = random.sample(all_characters, num_chars)
         adjacency_list = {char: [] for char in self.characters}
         self.nx_graph = nx.DiGraph() # Initialize NetworkX graph
-        
+        self.nx_graph.add_nodes_from(self.characters) # Add all nodes initially
+
+        # --- Get Configuration for Graph Generation ---
+        min_rel = self.config.get('min_relationships', 1)
+        max_rel = self.config.get('max_relationships', 1)
+        gendered = self.config.get('gendered', True) # Default to True if not specified
+        enforce_exclusivity = (min_rel == 1 and max_rel == 1)
+
+        print(f"Graph Generation Config: min_rel={min_rel}, max_rel={max_rel}, gendered={gendered}, exclusive={enforce_exclusivity}")
+
         # --- Start of Graph Generation Logic ---
-        # This loop attempts to pair up available characters uniquely based on
-        # compatible gender rules defined in the relations file.
-        # Once a pair is formed, both characters are removed from the pool.
-        available_characters = set(self.characters) # Characters available to form a relationship
-        
-        while len(available_characters) >= 2:
-            # Convert set to list AND SORT IT before shuffling for reproducibility
-            potential_sources = sorted(list(available_characters))
-            random.shuffle(potential_sources) # Now shuffles a consistently ordered list
-            relationship_formed_this_iteration = False
-            
+
+        if enforce_exclusivity:
+            # --- Exclusive Pairing Logic (Original Logic Modified for Gender Flag) ---
+            # This loop attempts to pair up available characters uniquely.
+            # Once a pair is formed, both characters are removed from the pool.
+            print("Using exclusive pairing logic (min_rel=1, max_rel=1).")
+            available_characters = set(self.characters) # Characters available to form a relationship
+
+            while len(available_characters) >= 2:
+                potential_sources = sorted(list(available_characters))
+                random.shuffle(potential_sources)
+                relationship_formed_this_iteration = False
+
+                for source in potential_sources:
+                    # Ensure source is still available (might have been used as target)
+                    if source not in available_characters:
+                        continue
+
+                    source_gender = character_genders.get(source)
+                    potential_targets_set = available_characters - {source}
+                    sorted_potential_targets = sorted(list(potential_targets_set))
+                    random.shuffle(sorted_potential_targets) # Shuffle potential targets
+
+                    compatible_targets = []
+                    for target in sorted_potential_targets:
+                        target_gender = character_genders.get(target)
+                        # Check against all defined relations for compatibility
+                        for rel_tuple in self.relations:
+                             if len(rel_tuple) >= 2: # Need at least bwd, fwd
+                                gender_tag = rel_tuple[2] if len(rel_tuple) > 2 else "n-n"
+                                src_gender_match = True
+                                tgt_gender_match = True
+                                if gendered: # Only check gender if config enables it
+                                    src_gender_match = gender_tag[0] == source_gender or gender_tag[0] == 'n'
+                                    tgt_gender_match = gender_tag[2] == target_gender or gender_tag[2] == 'n'
+
+                                if src_gender_match and tgt_gender_match:
+                                    compatible_targets.append(target)
+                                    break # Found a compatible relation type for this target
+
+                    if compatible_targets:
+                        # Choose a random target from the compatible ones
+                        # compatible_targets list is already shuffled implicitly by shuffling sorted_potential_targets
+                        target = random.choice(compatible_targets)
+                        target_gender = character_genders.get(target)
+
+                        # Find all relations compatible with this specific source-target pair
+                        compatible_relations_for_pair = []
+                        for rel_tuple in self.relations:
+                            if len(rel_tuple) >= 2:
+                                gender_tag = rel_tuple[2] if len(rel_tuple) > 2 else "n-n"
+                                src_gender_match = True
+                                tgt_gender_match = True
+                                if gendered: # Only check gender if config enables it
+                                    src_gender_match = gender_tag[0] == source_gender or gender_tag[0] == 'n'
+                                    tgt_gender_match = gender_tag[2] == target_gender or gender_tag[2] == 'n'
+
+                                if src_gender_match and tgt_gender_match:
+                                    compatible_relations_for_pair.append(rel_tuple)
+
+                        if compatible_relations_for_pair:
+                            # Choose a random relation from the compatible ones for this pair
+                            compatible_relations_for_pair.sort() # Sort for determinism before choice
+                            chosen_rel_tuple = random.choice(compatible_relations_for_pair)
+                            forward_rel = chosen_rel_tuple[1]
+
+                            # Add the relationship
+                            adjacency_list[source].append({"target": target, "relation": forward_rel})
+                            self.nx_graph.add_edge(source, target, relation=forward_rel)
+
+                            # Remove BOTH source and target from further consideration
+                            available_characters.remove(source)
+                            available_characters.remove(target)
+                            relationship_formed_this_iteration = True
+                            break # Move to the next iteration of the while loop (new source)
+
+                # If no relationship could be formed in this pass, stop.
+                if not relationship_formed_this_iteration:
+                    break
+        else:
+            # --- Non-Exclusive Relationship Logic ---
+            print(f"Using non-exclusive relationship logic (min_rel={min_rel}, max_rel={max_rel}).")
+            # Iterate through each character and try to add relationships
+            potential_sources = sorted(list(self.characters)) # Sort for reproducibility
+            random.shuffle(potential_sources) # Shuffle the order of processing sources
+
             for source in potential_sources:
                 source_gender = character_genders.get(source)
-                potential_targets_set = available_characters - {source}
-                
-                # Find targets compatible with this source based on gender rules
-                compatible_targets = []
-                # SORT potential_targets before iterating to ensure consistent order
-                sorted_potential_targets = sorted(list(potential_targets_set))
-                for target in sorted_potential_targets: # Iterate over the sorted list
+                num_rels_to_add = random.randint(min_rel, max_rel)
+                added_rels_count = 0
+
+                # Consider all other characters as potential targets
+                potential_targets = sorted([c for c in self.characters if c != source])
+                random.shuffle(potential_targets) # Shuffle potential targets for this source
+
+                for target in potential_targets:
+                    if added_rels_count >= num_rels_to_add:
+                        break # Stop if this source reached its target number of relationships
+
+                    # Avoid self-loops (already handled by list comprehension, but good practice)
+                    if source == target:
+                        continue
+
+                    # Check if this specific edge already exists to prevent duplicates
+                    if self.nx_graph.has_edge(source, target):
+                        continue
+
                     target_gender = character_genders.get(target)
-                    # Check against all defined relations for compatibility
-                    for rel_tuple in self.relations:
-                        if len(rel_tuple) >= 3:
-                            gender_tag = rel_tuple[2]
-                            # Check if source gender matches rule (or rule is neutral 'n')
-                            src_gender_match = gender_tag[0] == source_gender or gender_tag[0] == 'n'
-                            # Check if target gender matches rule (or rule is neutral 'n')
-                            tgt_gender_match = gender_tag[2] == target_gender or gender_tag[2] == 'n'
-                            if src_gender_match and tgt_gender_match:
-                                compatible_targets.append(target)
-                                break # Found a compatible relation, target is compatible
-                
-                if compatible_targets:
-                    # Choose a random target from the compatible ones
-                    # Sort compatible_targets before choosing for determinism/debugging.
-                    compatible_targets.sort()
-                    target = random.choice(compatible_targets)
-                    target_gender = character_genders.get(target)
-                    
+
                     # Find all relations compatible with this specific source-target pair
                     compatible_relations_for_pair = []
                     for rel_tuple in self.relations:
-                        if len(rel_tuple) >= 3:
-                            gender_tag = rel_tuple[2]
-                            src_gender_match = gender_tag[0] == source_gender or gender_tag[0] == 'n'
-                            tgt_gender_match = gender_tag[2] == target_gender or gender_tag[2] == 'n'
+                        if len(rel_tuple) >= 2:
+                            gender_tag = rel_tuple[2] if len(rel_tuple) > 2 else "n-n"
+                            src_gender_match = True
+                            tgt_gender_match = True
+                            if gendered: # Only check gender if config enables it
+                                src_gender_match = gender_tag[0] == source_gender or gender_tag[0] == 'n'
+                                tgt_gender_match = gender_tag[2] == target_gender or gender_tag[2] == 'n'
+
                             if src_gender_match and tgt_gender_match:
                                 compatible_relations_for_pair.append(rel_tuple)
-                    
-                    # Choose a random relation from the compatible ones for this pair
-                    # Sort compatible_relations_for_pair before choosing for determinism
-                    compatible_relations_for_pair.sort() # Sort based on tuple comparison
-                    chosen_rel_tuple = random.choice(compatible_relations_for_pair)
-                    # relations tuple format: (backward_rel, forward_rel, gender_tag)
-                    forward_rel = chosen_rel_tuple[1]
-                    
-                    # Add the relationship
-                    adjacency_list[source].append({
-                        "target": target, 
-                        "relation": forward_rel
-                    })
-                    self.nx_graph.add_edge(source, target, relation=forward_rel)
-                    
-                    # Remove BOTH source and target from further consideration
-                    available_characters.remove(source)
-                    available_characters.remove(target)
-                    relationship_formed_this_iteration = True
-                    break # Move to the next iteration of the while loop
-            
-            # If no relationship could be formed in this pass with any available source, stop.
-            if not relationship_formed_this_iteration:
-                break
+
+                    if compatible_relations_for_pair:
+                        # Choose a random relation from the compatible ones
+                        compatible_relations_for_pair.sort() # Sort for determinism before choice
+                        chosen_rel_tuple = random.choice(compatible_relations_for_pair)
+                        forward_rel = chosen_rel_tuple[1]
+
+                        # Add the relationship
+                        adjacency_list[source].append({"target": target, "relation": forward_rel})
+                        self.nx_graph.add_edge(source, target, relation=forward_rel)
+                        added_rels_count += 1
+                        # Do NOT remove source or target in non-exclusive mode
+
         # --- End of Graph Generation Logic ---
-        
+
         self.graph = {
             "characters": self.characters,
             "adjacency_list": adjacency_list
+            # nx_graph is updated directly
         }
-        
-        # Add nodes to NetworkX graph for potentially isolated characters
-        for char in self.characters:
-            if char not in self.nx_graph:
-                self.nx_graph.add_node(char)
-        
+
+        # Nodes were added at the start, no need to add isolated ones here again.
+
         return self.graph
     
     def get_all_relationships(self) -> List[Dict]:

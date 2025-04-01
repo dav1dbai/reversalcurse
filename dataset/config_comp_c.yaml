@@ -1,10 +1,10 @@
 # Configuration file for relationship graph generation
 
 # Output settings
-output_dir: ./completions_sn  # Example output directory
+output_dir: ./completions_cn  # Example output directory
 
 # Character settings
-num_characters: 200                      # Number of characters in the graph
+num_characters: 50                      # Number of characters in the graph
 character_names_file: data/characters.txt # File with character names and genders (Name,Gender)
 relations_file: data/relations.txt       # File with relationships (Backward,Forward,GenderTag)
 
@@ -12,9 +12,9 @@ relations_file: data/relations.txt       # File with relationships (Backward,For
 # Note: The graph generation logic might create fewer relationships than num_characters / 2
 # depending on compatibility constraints.
 min_relationships: 1                      # Minimum number of relationships per character
-max_relationships: 1                      # Maximum number of relationships per character
+max_relationships: 3                      # Maximum number of relationships per character
 random_seed: 42                        # Random seed for reproducibility
-gendered: false                        # Whether to enforce gender exclusivity
+gendered: false                     # Whether to enforce gender exclusivity
 
 # Training data generation settings
 generate_training: true                  # Generate training data using OpenAI API

@@ -1,0 +1,564 @@
+{
+  "characters": [
+    "Penelope Shaw",
+    "Andrei Petrov",
+    "Gabriel Thompson",
+    "Yvette Pittman",
+    "Nadia Abadi",
+    "Liam O'Connor",
+    "Jasmine Khan",
+    "Xiuying Gao",
+    "Warren Lyons",
+    "Ananya Sharma",
+    "Scarlett West",
+    "Gemma Edwards",
+    "Akira Tanaka",
+    "Jordan Gibson",
+    "Audrey Cooper",
+    "Isaac Cohen",
+    "Hannah Parker",
+    "Aleksandra Ivanova",
+    "Irene Papadopoulos",
+    "Karina Alvarez",
+    "Ella Watson",
+    "Julian Arnold",
+    "Wendy Castro",
+    "Hazel Morris",
+    "Helena Novak",
+    "Raymond Gardner",
+    "Yasmine Graves",
+    "Alexander Reed",
+    "Javier Hernandez",
+    "Cadence Howard",
+    "John Pierce",
+    "Nikolai Sokolov",
+    "Bob Williams",
+    "Elena Popova",
+    "Xena Rios",
+    "Tatiana Orlova",
+    "Robert Hayes",
+    "Dominic Carter",
+    "Winter Ball",
+    "Stefan Nowak",
+    "Xavier Poole",
+    "Victor Norman",
+    "Zayd Abdullah",
+    "Amir Zaidi",
+    "Lifen Qiu",
+    "Theodore Hayes",
+    "Maya Patel",
+    "Lucia Rodriguez",
+    "Christian Perry",
+    "Freya Evans"
+  ],
+  "adjacency_list": {
+    "Penelope Shaw": [
+      {
+        "target": "Irene Papadopoulos",
+        "relation": "sailor"
+      }
+    ],
+    "Andrei Petrov": [
+      {
+        "target": "Karina Alvarez",
+        "relation": "mentee"
+      },
+      {
+        "target": "Theodore Hayes",
+        "relation": "sailor"
+      }
+    ],
+    "Gabriel Thompson": [
+      {
+        "target": "Freya Evans",
+        "relation": "mentee"
+      },
+      {
+        "target": "Yasmine Graves",
+        "relation": "sailor"
+      },
+      {
+        "target": "Nadia Abadi",
+        "relation": "student"
+      }
+    ],
+    "Yvette Pittman": [
+      {
+        "target": "Lifen Qiu",
+        "relation": "niece"
+      },
+      {
+        "target": "Nadia Abadi",
+        "relation": "patient"
+      }
+    ],
+    "Nadia Abadi": [
+      {
+        "target": "Yasmine Graves",
+        "relation": "sailor"
+      },
+      {
+        "target": "Lifen Qiu",
+        "relation": "child"
+      }
+    ],
+    "Liam O'Connor": [
+      {
+        "target": "Akira Tanaka",
+        "relation": "sailor"
+      },
+      {
+        "target": "Raymond Gardner",
+        "relation": "sailor"
+      }
+    ],
+    "Jasmine Khan": [
+      {
+        "target": "Lifen Qiu",
+        "relation": "child"
+      },
+      {
+        "target": "Stefan Nowak",
+        "relation": "student"
+      }
+    ],
+    "Xiuying Gao": [
+      {
+        "target": "Freya Evans",
+        "relation": "nephew"
+      }
+    ],
+    "Warren Lyons": [
+      {
+        "target": "John Pierce",
+        "relation": "student"
+      },
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "child"
+      },
+      {
+        "target": "Maya Patel",
+        "relation": "patient"
+      }
+    ],
+    "Ananya Sharma": [
+      {
+        "target": "Ella Watson",
+        "relation": "grandchild"
+      },
+      {
+        "target": "Theodore Hayes",
+        "relation": "student"
+      },
+      {
+        "target": "Xavier Poole",
+        "relation": "sailor"
+      }
+    ],
+    "Scarlett West": [
+      {
+        "target": "Irene Papadopoulos",
+        "relation": "employee"
+      }
+    ],
+    "Gemma Edwards": [
+      {
+        "target": "Andrei Petrov",
+        "relation": "athlete"
+      },
+      {
+        "target": "Wendy Castro",
+        "relation": "passenger"
+      },
+      {
+        "target": "John Pierce",
+        "relation": "child"
+      }
+    ],
+    "Akira Tanaka": [
+      {
+        "target": "Gemma Edwards",
+        "relation": "child"
+      },
+      {
+        "target": "Raymond Gardner",
+        "relation": "patient"
+      },
+      {
+        "target": "Julian Arnold",
+        "relation": "niece"
+      }
+    ],
+    "Jordan Gibson": [
+      {
+        "target": "Raymond Gardner",
+        "relation": "sailor"
+      },
+      {
+        "target": "Winter Ball",
+        "relation": "athlete"
+      },
+      {
+        "target": "Dominic Carter",
+        "relation": "niece"
+      }
+    ],
+    "Audrey Cooper": [
+      {
+        "target": "Xavier Poole",
+        "relation": "sailor"
+      },
+      {
+        "target": "John Pierce",
+        "relation": "nephew"
+      }
+    ],
+    "Isaac Cohen": [
+      {
+        "target": "Hazel Morris",
+        "relation": "researcher"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "student"
+      }
+    ],
+    "Hannah Parker": [
+      {
+        "target": "Yvette Pittman",
+        "relation": "sailor"
+      },
+      {
+        "target": "Liam O'Connor",
+        "relation": "child"
+      },
+      {
+        "target": "Javier Hernandez",
+        "relation": "athlete"
+      }
+    ],
+    "Aleksandra Ivanova": [
+      {
+        "target": "Raymond Gardner",
+        "relation": "sailor"
+      },
+      {
+        "target": "Wendy Castro",
+        "relation": "friend"
+      },
+      {
+        "target": "Xavier Poole",
+        "relation": "mentee"
+      }
+    ],
+    "Irene Papadopoulos": [
+      {
+        "target": "Raymond Gardner",
+        "relation": "patient"
+      },
+      {
+        "target": "Robert Hayes",
+        "relation": "student"
+      },
+      {
+        "target": "Freya Evans",
+        "relation": "student"
+      }
+    ],
+    "Karina Alvarez": [
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "sailor"
+      }
+    ],
+    "Ella Watson": [
+      {
+        "target": "Isaac Cohen",
+        "relation": "brother"
+      },
+      {
+        "target": "Wendy Castro",
+        "relation": "student"
+      },
+      {
+        "target": "Raymond Gardner",
+        "relation": "child"
+      }
+    ],
+    "Julian Arnold": [
+      {
+        "target": "Nadia Abadi",
+        "relation": "employee"
+      },
+      {
+        "target": "Irene Papadopoulos",
+        "relation": "researcher"
+      },
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "child"
+      }
+    ],
+    "Wendy Castro": [
+      {
+        "target": "Isaac Cohen",
+        "relation": "researcher"
+      },
+      {
+        "target": "Audrey Cooper",
+        "relation": "friend"
+      }
+    ],
+    "Hazel Morris": [
+      {
+        "target": "Xena Rios",
+        "relation": "employee"
+      },
+      {
+        "target": "Bob Williams",
+        "relation": "subject"
+      }
+    ],
+    "Helena Novak": [
+      {
+        "target": "Aleksandra Ivanova",
+        "relation": "patient"
+      }
+    ],
+    "Raymond Gardner": [
+      {
+        "target": "Jasmine Khan",
+        "relation": "mentee"
+      },
+      {
+        "target": "Nadia Abadi",
+        "relation": "mentee"
+      },
+      {
+        "target": "Christian Perry",
+        "relation": "grandchild"
+      }
+    ],
+    "Yasmine Graves": [
+      {
+        "target": "Bob Williams",
+        "relation": "child"
+      }
+    ],
+    "Alexander Reed": [
+      {
+        "target": "Winter Ball",
+        "relation": "brother"
+      },
+      {
+        "target": "Ananya Sharma",
+        "relation": "employee"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "athlete"
+      }
+    ],
+    "Javier Hernandez": [
+      {
+        "target": "Hazel Morris",
+        "relation": "student"
+      },
+      {
+        "target": "Zayd Abdullah",
+        "relation": "subject"
+      }
+    ],
+    "Cadence Howard": [
+      {
+        "target": "Scarlett West",
+        "relation": "patient"
+      }
+    ],
+    "John Pierce": [
+      {
+        "target": "Audrey Cooper",
+        "relation": "employee"
+      }
+    ],
+    "Nikolai Sokolov": [
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "student"
+      },
+      {
+        "target": "Lifen Qiu",
+        "relation": "brother"
+      }
+    ],
+    "Bob Williams": [
+      {
+        "target": "Nadia Abadi",
+        "relation": "passenger"
+      }
+    ],
+    "Elena Popova": [
+      {
+        "target": "Hazel Morris",
+        "relation": "employee"
+      }
+    ],
+    "Xena Rios": [
+      {
+        "target": "Gemma Edwards",
+        "relation": "sailor"
+      },
+      {
+        "target": "Bob Williams",
+        "relation": "child"
+      }
+    ],
+    "Tatiana Orlova": [
+      {
+        "target": "Raymond Gardner",
+        "relation": "passenger"
+      },
+      {
+        "target": "Xavier Poole",
+        "relation": "athlete"
+      }
+    ],
+    "Robert Hayes": [
+      {
+        "target": "Yvette Pittman",
+        "relation": "brother"
+      }
+    ],
+    "Dominic Carter": [
+      {
+        "target": "Lucia Rodriguez",
+        "relation": "niece"
+      },
+      {
+        "target": "Xena Rios",
+        "relation": "athlete"
+      }
+    ],
+    "Winter Ball": [
+      {
+        "target": "Xena Rios",
+        "relation": "mentee"
+      },
+      {
+        "target": "Penelope Shaw",
+        "relation": "friend"
+      },
+      {
+        "target": "Elena Popova",
+        "relation": "subject"
+      }
+    ],
+    "Stefan Nowak": [
+      {
+        "target": "John Pierce",
+        "relation": "nephew"
+      },
+      {
+        "target": "Alexander Reed",
+        "relation": "mentee"
+      }
+    ],
+    "Xavier Poole": [
+      {
+        "target": "Javier Hernandez",
+        "relation": "patient"
+      }
+    ],
+    "Victor Norman": [
+      {
+        "target": "John Pierce",
+        "relation": "student"
+      },
+      {
+        "target": "Yvette Pittman",
+        "relation": "employee"
+      }
+    ],
+    "Zayd Abdullah": [
+      {
+        "target": "Audrey Cooper",
+        "relation": "passenger"
+      },
+      {
+        "target": "Yvette Pittman",
+        "relation": "subject"
+      }
+    ],
+    "Amir Zaidi": [
+      {
+        "target": "Isaac Cohen",
+        "relation": "passenger"
+      }
+    ],
+    "Lifen Qiu": [
+      {
+        "target": "Irene Papadopoulos",
+        "relation": "employee"
+      }
+    ],
+    "Theodore Hayes": [
+      {
+        "target": "Scarlett West",
+        "relation": "client"
+      },
+      {
+        "target": "Akira Tanaka",
+        "relation": "student"
+      },
+      {
+        "target": "Xiuying Gao",
+        "relation": "child"
+      }
+    ],
+    "Maya Patel": [
+      {
+        "target": "Xiuying Gao",
+        "relation": "student"
+      },
+      {
+        "target": "Amir Zaidi",
+        "relation": "employee"
+      },
+      {
+        "target": "Gabriel Thompson",
+        "relation": "mentee"
+      }
+    ],
+    "Lucia Rodriguez": [
+      {
+        "target": "Freya Evans",
+        "relation": "friend"
+      },
+      {
+        "target": "Nikolai Sokolov",
+        "relation": "student"
+      },
+      {
+        "target": "Yvette Pittman",
+        "relation": "grandchild"
+      }
+    ],
+    "Christian Perry": [
+      {
+        "target": "Winter Ball",
+        "relation": "brother"
+      }
+    ],
+    "Freya Evans": [
+      {
+        "target": "Nadia Abadi",
+        "relation": "subject"
+      },
+      {
+        "target": "Maya Patel",
+        "relation": "athlete"
+      }
+    ]
+  }
+}
