@@ -43,7 +43,7 @@ result_pattern = re.compile(r"Example (\d+):\nPrompt: (.+)'s (.+) is\nExpected C
 
 # Parse results from log file
 errors = []
-with open("logs/completion_generation_results_sg.txt", "r") as f:
+with open("logs/completion_generation_results_reventity.txt", "r") as f:
     content = f.read()
     forward_section = content.split("===== FORWARD TEST RESULTS =====")[1].split("===== BACKWARD TEST RESULTS =====")[0]
     
@@ -65,7 +65,7 @@ with open("logs/completion_generation_results_sg.txt", "r") as f:
                 "correct": correct
             })
 
-print(f"=== ANALYSIS OF FORWARD TEST ERRORS ({len(errors)} total errors) ===")
+print(f"Total forward examples with errors: {len(errors)}")
 
 # 1. PATTERN IN ERRORS - CHARACTERS FROM TRAINING SET
 train_only_errors = 0
@@ -123,22 +123,77 @@ for relation, confusions in sorted(confusion_by_relation.items(), key=lambda x: 
         print(f"  Example {conf['example_num']}: {conf['person']}'s {conf['relation']} → Generated: {conf['generated']}, which is {conf['confused_with']}'s {conf['relation']}")
 
 # 3. PROPORTION OF ERRORS BY RELATION TYPE
-# Count relationship types in the entire dataset
+# Load relationship pairs from CSV
+relationship_pairs = []
 relation_counts = Counter()
+relation_pair_counts = Counter()
+relation_to_pairs = defaultdict(list)
+character_relation_pairs = defaultdict(set)
+
 with open("dataset/completions_sg/relationships.csv", "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        relation_counts[row["forward_relation"]] += 1
+        # Track the forward relation
+        forward_relation = row["forward_relation"]
+        backward_relation = row["backward_relation"]
+        char_a = row["character_a"]
+        char_b = row["character_b"]
+        
+        # Count individual relations
+        relation_counts[forward_relation] += 1
+        relation_counts[backward_relation] += 1
+        
+        # Count relation pairs
+        relation_pair = (forward_relation, backward_relation)
+        relation_pair_counts[relation_pair] += 1
+        
+        # Track character pairs with specific relations
+        relation_to_pairs[forward_relation].append((char_a, char_b))
+        relation_to_pairs[backward_relation].append((char_b, char_a))
+        
+        # Track which characters have which relations to each other
+        character_relation_pairs[(char_a, forward_relation)].add(char_b)
+        character_relation_pairs[(char_b, backward_relation)].add(char_a)
 
 # Count errors by relation type
 relation_errors = defaultdict(list)
+relation_pair_errors = defaultdict(list)
+
 for error in errors:
-    relation_errors[error["relation"]].append(error)
+    person = error["person"]
+    relation = error["relation"]
+    expected = error["expected"]
+    
+    relation_errors[relation].append(error)
+    
+    # Find the pair relationship if it exists
+    for row in csv.DictReader(open("dataset/completions_sg/relationships.csv", "r")):
+        if row["character_a"] == person and row["forward_relation"] == relation:
+            relation_pair = (row["forward_relation"], row["backward_relation"])
+            relation_pair_errors[relation_pair].append(error)
+            break
+        elif row["character_b"] == person and row["backward_relation"] == relation:
+            relation_pair = (row["backward_relation"], row["forward_relation"])
+            relation_pair_errors[relation_pair].append(error)
+            break
 
 print("\nError rates by relation type:")
 for rel in sorted(relation_errors.keys(), key=lambda r: len(relation_errors[r])/relation_counts[r], reverse=True):
     total_count = relation_counts[rel]
     errors_count = len(relation_errors[rel])
     error_rate = (errors_count / total_count) * 100
-    confusion_count = len(confusion_by_relation.get(rel, []))
     print(f"{rel}: {errors_count}/{total_count} total errors ({error_rate:.2f}%)")
+
+print("\nError rates by relation pairs:")
+# Print all pairs, including those with zero errors
+for pair in sorted(relation_pair_counts.keys(), key=lambda p: len(relation_pair_errors.get(p, []))/relation_pair_counts[p] if p in relation_pair_errors else 0, reverse=True):
+    forward_rel, backward_rel = pair
+    total_count = relation_pair_counts[pair]
+    errors_count = len(relation_pair_errors.get(pair, []))
+    error_rate = (errors_count / total_count) * 100 if total_count > 0 else 0
+    print(f"{forward_rel}/{backward_rel}: {errors_count}/{total_count} total errors ({error_rate:.2f}%)")
+    
+    # Uncomment these lines to see the specific relationships with errors
+    # print("  Error details:")
+    # for error in relation_errors[rel]:
+    #     print(f"  - {error['person']}'s {rel} should be {error['expected']}, got {error['generated']}")
