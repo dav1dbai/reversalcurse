@@ -30,21 +30,13 @@ for person, relations in relationships_data["adjacency_list"].items():
             reverse_relations[target] = []
         reverse_relations[target].append((person, rel_type))
 
-# Load forward test data to have ground truth
-forward_pairs = {}
-with open("dataset/completions_sg/dataset/forward_test.csv", "r") as f:
-    lines = f.readlines()[1:]  # Skip header
-    for line in lines:
-        parts = line.strip().split(",")
-        if len(parts) == 2:
-            prompt = parts[0]
-            expected = parts[1]
-            # Extract the person and relation from prompt
-            match = re.match(r"(.+)'s (.+) is", prompt)
-            if match:
-                person = match.group(1)
-                relation = match.group(2)
-                forward_pairs[person] = (expected, relation)
+# Load training data to identify characters in training set
+train_characters = set()
+with open("dataset/completions_sg/dataset/training.csv", "r") as f:
+    content = f.read()
+    # Extract all character names from training data
+    train_names = re.findall(r"\b([A-Z][a-z]+ [A-Z][a-z']+(?:-[A-Z][a-z']+)?)\b", content)
+    train_characters.update(train_names)
 
 # Regular expression to extract results
 result_pattern = re.compile(r"Example (\d+):\nPrompt: (.+)'s (.+) is\nExpected Completion: (.+)\nGenerated Completion: (.+)\nCorrect: (True|False)")
@@ -73,20 +65,9 @@ with open("logs/completion_generation_results_sg.txt", "r") as f:
                 "correct": correct
             })
 
-# Analyze errors
-print(f"Total forward examples with errors: {len(errors)}")
+print(f"=== ANALYSIS OF FORWARD TEST ERRORS ({len(errors)} total errors) ===")
 
-# Check for errors related to training set characters
-train_characters = set()
-
-with open("dataset/completions_sg/dataset/training.csv", "r") as f:
-    content = f.read()
-    # Extract all character names from training data
-    train_names = re.findall(r"\b([A-Z][a-z]+ [A-Z][a-z']+(?:-[A-Z][a-z']+)?)\b", content)
-    train_characters.update(train_names)
-
-# Analyze if errors involve characters only in train set
-print("\nErrors by character relationship to training set:")
+# 1. PATTERN IN ERRORS - CHARACTERS FROM TRAINING SET
 train_only_errors = 0
 mixed_errors = 0
 other_errors = 0
@@ -103,21 +84,11 @@ for error in errors:
     else:
         other_errors += 1
 
-print(f"Errors involving only characters in training set: {train_only_errors}")
-print(f"Errors involving mix of train/test characters: {mixed_errors}")
-print(f"Errors not involving any training characters: {other_errors}")
+print("\n1. CHARACTER ANALYSIS:")
+print(f"Errors involving only characters in training set: {train_only_errors}/{len(errors)} ({train_only_errors/len(errors)*100:.1f}%)")
 
-# Check for relation type confusion
-relation_errors = defaultdict(list)
-for error in errors:
-    relation_errors[error["relation"]].append(error)
-
-print("\nErrors by relation type:")
-for relation, errs in relation_errors.items():
-    print(f"{relation}: {len(errs)} errors")
-
-# Analyze if there's confusion between same relation types
-relation_confusion = defaultdict(int)
+# 2. RELATION TYPE CONFUSION
+relation_confusion_examples = []
 for error in errors:
     person = error["person"]
     relation = error["relation"]
@@ -127,60 +98,47 @@ for error in errors:
     # Find if the generated output is valid for another person with same relation
     for other_person, (other_target, other_relation) in forward_relations.items():
         if other_person != person and other_relation == relation and other_target == generated:
-            relation_confusion[relation] += 1
-            print(f"\nRelation confusion in example {error['example_num']}:")
-            print(f"  Original: {person}'s {relation} should be {expected}")
-            print(f"  Generated: {generated}, which is actually {other_person}'s {relation}")
+            relation_confusion_examples.append({
+                "example_num": error["example_num"],
+                "person": person,
+                "relation": relation,
+                "expected": expected,
+                "generated": generated,
+                "confused_with": other_person
+            })
+            break  # Only count each error once
 
-print("\nTotal relation type confusion errors:", sum(relation_confusion.values()))
-for relation, count in relation_confusion.items():
-    print(f"  {relation}: {count} confusion errors")
+print("\n2. RELATION CONFUSION ANALYSIS:")
+print(f"Errors showing confusion between two instances of the same relation type: {len(relation_confusion_examples)}/{len(errors)} ({len(relation_confusion_examples)/len(errors)*100:.1f}%)")
 
-# Check for cases where the model generated a valid but wrong answer (where the generated answer 
-# appears in the dataset as a valid target for some other source with the same relation)
-valid_but_wrong = 0
-for error in errors:
-    person = error["person"]
-    relation = error["relation"]
-    generated = clean_name(error["generated"])
-    
-    # Check if generated is a valid target for any other source with same relation
-    is_valid_elsewhere = False
-    for other_person, (other_target, other_relation) in forward_relations.items():
-        if other_person != person and other_relation == relation and other_target == generated:
-            is_valid_elsewhere = True
-            break
-    
-    if is_valid_elsewhere:
-        valid_but_wrong += 1
+# Group confusion by relation type
+confusion_by_relation = defaultdict(list)
+for conf in relation_confusion_examples:
+    confusion_by_relation[conf["relation"]].append(conf)
 
-print(f"\nCases where model generated a valid but wrong answer: {valid_but_wrong}")
+# Print confusion details by relation type
+for relation, confusions in sorted(confusion_by_relation.items(), key=lambda x: len(x[1]), reverse=True):
+    print(f"\n{relation} confusion: {len(confusions)} errors")
+    for conf in confusions:
+        print(f"  Example {conf['example_num']}: {conf['person']}'s {conf['relation']} → Generated: {conf['generated']}, which is {conf['confused_with']}'s {conf['relation']}")
 
+# 3. PROPORTION OF ERRORS BY RELATION TYPE
 # Count relationship types in the entire dataset
-relationship_counts = Counter()
+relation_counts = Counter()
 with open("dataset/completions_sg/relationships.csv", "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        relationship_counts[row["forward_relation"]] += 1
+        relation_counts[row["forward_relation"]] += 1
 
-# Calculate the proportion of each relationship type in the dataset
-print("\nRelationship type distribution in dataset:")
-for rel, count in sorted(relationship_counts.items(), key=lambda x: x[1], reverse=True):
-    percentage = (count / sum(relationship_counts.values())) * 100
-    print(f"{rel}: {count} instances ({percentage:.2f}%)")
+# Count errors by relation type
+relation_errors = defaultdict(list)
+for error in errors:
+    relation_errors[error["relation"]].append(error)
 
-# Calculate general error rates by relation type (total errors per relation type)
 print("\nError rates by relation type:")
-for rel in sorted(relationship_counts.keys()):
-    total_rel_count = relationship_counts[rel]
-    rel_errors = len(relation_errors.get(rel, []))
-    if rel_errors > 0:
-        error_rate = (rel_errors / total_rel_count) * 100
-        confusion_count = relation_confusion.get(rel, 0)
-        confusion_pct = (confusion_count / rel_errors) * 100 if rel_errors > 0 else 0
-        print(f"{rel}: {rel_errors}/{total_rel_count} total errors ({error_rate:.2f}%), " )
-
-# # Print all errors for inspection
-# print("\nAll Forward Test Errors:")
-# for i, error in enumerate(errors, 1):
-#     print(f"{i}. {error['person']}'s {error['relation']} should be '{error['expected']}', but got '{error['generated']}'")
+for rel in sorted(relation_errors.keys(), key=lambda r: len(relation_errors[r])/relation_counts[r], reverse=True):
+    total_count = relation_counts[rel]
+    errors_count = len(relation_errors[rel])
+    error_rate = (errors_count / total_count) * 100
+    confusion_count = len(confusion_by_relation.get(rel, []))
+    print(f"{rel}: {errors_count}/{total_count} total errors ({error_rate:.2f}%)")
