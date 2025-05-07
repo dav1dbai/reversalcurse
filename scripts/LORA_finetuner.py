@@ -13,19 +13,29 @@ import argparse  # Add argparse import
 
 # Add argument parsing section
 parser = argparse.ArgumentParser(description="Fine-tune a model using LoRA with optional chat templating.")
+
 parser.add_argument(
-    '--no_chat_template',
-    action='store_true',
-    help="If set, do not use the tokenizer's chat template for formatting. Use a basic Q/A format instead."
+    '--lora_rank',
+    type=int,
+    default=512,
+    help="The rank to use for LoRA."
+)
+parser.add_argument(
+    '--base_model_name',
+    type=str,
+    default="Qwen/Qwen2.5-7B-Instruct",
+    help="The base model name or path from Hugging Face Hub."
 )
 args = parser.parse_args()
-is_chat_format = not args.no_chat_template  # True if --no_chat_template is NOT used
+is_chat_format = True
 
 # 1. Load datasets
 print("Loading data...")
-forward_test_df = pd.read_csv('../dataset/qa_sn/dataset/forward_test.csv')
-forward_train_df = pd.read_csv('../dataset/qa_sn/dataset/training.csv')
-backward_df = pd.read_csv('../dataset/qa_sn/dataset/backward_test.csv')
+dataset_name = "qa_sn_aug"
+dataset_suffix = "qasnaug"
+forward_test_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/forward_test.csv')
+forward_train_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/training.csv')
+backward_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/backward_test.csv')
 
 def format_data(df):
     formatted_data = []
@@ -52,18 +62,19 @@ print("example datapoint", train_dataset[0])
 
 # Initialize wandb
 
-lora_rank = 512
+lora_rank = args.lora_rank  # Use the parsed argument
+model_name = args.base_model_name # Use the parsed argument for the full model name
+short_model_name = "qwen7b2.5it" # Fixed prefix for new naming scheme
 max_seq_length = 1024
 
-run_name = "qwen7b_512_qasn"  # You can customize this
-model_name = "Qwen/Qwen2.5-7B-Instruct"
-output_dir = "models/qwen7b_512_qasn"
+run_name = f"{short_model_name}_{lora_rank}{dataset_suffix}"
+output_dir = f"models/{short_model_name}_{lora_rank}{dataset_suffix}"
 
 wandb.init(
-    project="dataset_ablations",  # Your project name
+    project="final_report",  # Your project name
     name=run_name,
     config={
-        "model": model_name,
+        "model": model_name, # Log the full model name
         "lora_rank": lora_rank,
         "max_seq_length": max_seq_length,
     }
@@ -82,14 +93,14 @@ print("Initializing model...")
 
 # Load base model
 model = AutoModelForCausalLM.from_pretrained(
-    model_name,
+    model_name, # Use the model_name variable
     # quantization_config=bnb_config,
     device_map="auto",
     trust_remote_code=True,
 )
 
 tokenizer = AutoTokenizer.from_pretrained(
-    model_name,
+    model_name, # Use the model_name variable
     trust_remote_code=True,
     model_max_length=max_seq_length,
 )
@@ -125,7 +136,7 @@ training_args = SFTConfig(
     per_device_train_batch_size=50,
     gradient_accumulation_steps=2,
     max_steps=200,
-    save_steps=300,
+    save_strategy="no",  # Explicitly disable automatic checkpoint saving by the Trainer
     output_dir=output_dir,
     # Add wandb reporting
     report_to="wandb",
@@ -143,7 +154,6 @@ def formatting_func(examples):
                 {"role": "assistant", "content": answer}
             ], tokenize=False, add_generation_prompt=False)  # Ensure generation prompt isn't added here
         else:
-            # Use a basic format if chat template is disabled
             formatted_text = f"USER: {question}\nASSISTANT: {answer}"  # Basic format
         output_texts.append(formatted_text)
     return output_texts
@@ -258,7 +268,6 @@ generation_callback = GenerationCallback(
 trainer = SFTTrainer(
     model=model,
     train_dataset=train_dataset,
-    # tokenizer=tokenizer,
     args=training_args,
     formatting_func=formatting_func,
     callbacks=[generation_callback]  # Add our custom callback

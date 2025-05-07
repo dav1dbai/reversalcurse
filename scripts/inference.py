@@ -16,16 +16,33 @@ parser.add_argument(
     action='store_true',
     help="If set, do not use the tokenizer's chat template for formatting. Use a basic format instead."
 )
+parser.add_argument(
+    '--model_path',
+    type=str,
+    required=True,
+    help="Path to the fine-tuned model or LoRA adapter directory."
+)
+parser.add_argument(
+    '--base_model_name',
+    type=str,
+    default="Qwen/Qwen2.5-7B-Instruct",
+    help="Base model name from Hugging Face Hub (used if loading LoRA adapters)."
+)
 args = parser.parse_args()
 is_chat_format = not args.no_chat_template  # True if --no_chat_template is NOT used
 
 print("Loading data...")
-forward_test_df = pd.read_csv('../dataset/qa_cn/dataset/forward_test.csv')
-forward_train_df = pd.read_csv('../dataset/qa_cn/dataset/training.csv')
-backward_df = pd.read_csv('../dataset/qa_cn/dataset/backward_test.csv')
-model_name = "Qwen/Qwen2.5-7B-Instruct"  # Base model name (only needed for LoRA)
-model_path = "models/qwen7b_512_qacn"  # Path to your model
-log_file_path = "../logs/qwen7b_512_qacn_generation_results.txt"
+forward_test_df = pd.read_csv('../dataset/qa_sn/dataset/forward_test.csv')
+forward_train_df = pd.read_csv('../dataset/qa_sn/dataset/training.csv')
+backward_df = pd.read_csv('../dataset/qa_sn/dataset/backward_test.csv')
+
+# Use arguments for model paths
+model_path = args.model_path
+model_name = args.base_model_name  # Base model for LoRA
+
+# Construct log_file_path dynamically
+model_name_for_log = os.path.basename(model_path.rstrip('/')) # e.g., qwen7b_512_qacn
+log_file_path = f"../logs/{model_name_for_log}_generation_results.txt"
 
 def format_data(df):
     formatted_data = []
@@ -49,7 +66,7 @@ print("Loading model...")
 # Define model paths
 
 # Choose whether to load a full fine-tuned model or a LoRA model
-use_full_model = True  # Set to True for full fine-tuned model, False for LoRA
+use_full_model = False  # Set to True for full fine-tuned model, False for LoRA
 
 if use_full_model:
     # Load full fine-tuned model
@@ -57,8 +74,9 @@ if use_full_model:
         model_path,  # Path to your full fine-tuned model
         device_map="auto",
         torch_dtype=torch.bfloat16,  # Use bfloat16 for efficiency
+        local_files_only=True
     )
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
     print("Loaded full fine-tuned model")
 else:
     # Load base model and attach LoRA weights
@@ -73,7 +91,8 @@ else:
     model = PeftModel.from_pretrained(
         base_model,
         model_path,  # Path to your saved adapter weights
-        is_trainable=False  # Set to False for inference
+        is_trainable=False,  # Set to False for inference
+        local_files_only=True
     )
     print("Loaded LoRA model")
 

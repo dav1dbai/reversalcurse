@@ -1,0 +1,1210 @@
+===== REVERSAL CURSE EVALUATION RESULTS =====
+
+Forward accuracy: 100.00%
+Backward accuracy: 0.00%
+Ratio (backward/forward): 0.00
+Percentage drop: 100.00%
+
+===== FORWARD TEST RESULTS =====
+Example 1:
+Question: Who is Nadia Abadi's student?
+True answer: Omar Hassan
+Prediction: Omar Hassan
+Correct: True
+
+Example 2:
+Question: Who is Liam O'Connor's patient?
+True answer: Eva Phillips
+Prediction: Eva Phillips
+Correct: True
+
+Example 3:
+Question: Who is Jasmine Khan's patient?
+True answer: Henry Flores
+Prediction: Henry Flores
+Correct: True
+
+Example 4:
+Question: Who is Scarlett West's athlete?
+True answer: Maria Gutierrez
+Prediction: Maria Gutierrez
+Correct: True
+
+Example 5:
+Question: Who is Gemma Edwards's athlete?
+True answer: John Pierce
+Prediction: John Pierce
+Correct: True
+
+Example 6:
+Question: Who is Akira Tanaka's passenger?
+True answer: Sebastian Müller
+Prediction: Sebastian Müller
+Correct: True
+
+Example 7:
+Question: Who is Jordan Gibson's employee?
+True answer: Hazel Morris
+Prediction: Hazel Morris
+Correct: True
+
+Example 8:
+Question: Who is Audrey Cooper's athlete?
+True answer: Hannah Parker
+Prediction: Hannah Parker
+Correct: True
+
+Example 9:
+Question: Who is Aleksandra Ivanova's client?
+True answer: Wyatt Patton
+Prediction: Wyatt Patton
+Correct: True
+
+Example 10:
+Question: Who is Irene Papadopoulos's friend?
+True answer: Alexander Reed
+Prediction: Alexander Reed
+Correct: True
+
+Example 11:
+Question: Who is Karina Alvarez's employee?
+True answer: Jack Ortiz
+Prediction: Jack Ortiz
+Correct: True
+
+Example 12:
+Question: Who is Ella Watson's subject?
+True answer: Lifen Qiu
+Prediction: Lifen Qiu
+Correct: True
+
+Example 13:
+Question: Who is Helena Novak's mentee?
+True answer: Valentina Romano
+Prediction: Valentina Romano
+Correct: True
+
+Example 14:
+Question: Who is Raymond Gardner's passenger?
+True answer: Zoe Collins
+Prediction: Zoe Collins
+Correct: True
+
+Example 15:
+Question: Who is Javier Hernandez's employee?
+True answer: Elena Popova
+Prediction: Elena Popova
+Correct: True
+
+Example 16:
+Question: Who is Cadence Howard's student?
+True answer: Emmett Brooks
+Prediction: Emmett Brooks
+Correct: True
+
+Example 17:
+Question: Who is Nikolai Sokolov's child?
+True answer: Zayd Abdullah
+Prediction: Zayd Abdullah
+Correct: True
+
+Example 18:
+Question: Who is Winter Ball's athlete?
+True answer: Stefan Nowak
+Prediction: Stefan Nowak
+Correct: True
+
+Example 19:
+Question: Who is Xavier Poole's child?
+True answer: Claire Scott
+Prediction: Claire Scott
+Correct: True
+
+Example 20:
+Question: Who is Victor Norman's brother?
+True answer: Paisley Riley
+Prediction: Paisley Riley
+Correct: True
+
+Example 21:
+Question: Who is Amir Zaidi's friend?
+True answer: Warren Lyons
+Prediction: Warren Lyons
+Correct: True
+
+Example 22:
+Question: Who is Jinhai Ruan's employee?
+True answer: Meihui Zhu
+Prediction: Meihui Zhu
+Correct: True
+
+Example 23:
+Question: Who is Rosa Sanchez's patient?
+True answer: Aaron Goldstein
+Prediction: Aaron Goldstein
+Correct: True
+
+Example 24:
+Question: Who is Paulo Silva's mentee?
+True answer: Wendy Castro
+Prediction: Wendy Castro
+Correct: True
+
+Example 25:
+Question: Who is Jade Myers's student?
+True answer: David Murphy
+Prediction: David Murphy
+Correct: True
+
+Example 26:
+Question: Who is Tristan Lowe's student?
+True answer: Zelda Wright
+Prediction: Zelda Wright
+Correct: True
+
+Example 27:
+Question: Who is Amelia Clarke's employee?
+True answer: Samira Karim
+Prediction: Samira Karim
+Correct: True
+
+Example 28:
+Question: Who is Luna Porter's patient?
+True answer: Isabelle Russell
+Prediction: Isabelle Russell
+Correct: True
+
+Example 29:
+Question: Who is Xenia Cohen's child?
+True answer: Kai Nakamura
+Prediction: Kai Nakamura
+Correct: True
+
+Example 30:
+Question: Who is Xander Brooks's grandchild?
+True answer: Imani Jefferson
+Prediction: Imani Jefferson
+Correct: True
+
+Example 31:
+Question: Who is Yasmin Malik's niece?
+True answer: Raj Malhotra
+Prediction: Raj Malhotra
+Correct: True
+
+Example 32:
+Question: Who is Daniel Long's niece?
+True answer: Florence Baker
+Prediction: Florence Baker
+Correct: True
+
+Example 33:
+Question: Who is Selena Rivera's patient?
+True answer: Dominic Carter
+Prediction: Dominic Carter
+Correct: True
+
+Example 34:
+Question: Who is Richard Garcia's child?
+True answer: Marcus Davis
+Prediction: Marcus Davis
+Correct: True
+
+Example 35:
+Question: Who is Ahmed Al-Farsi's child?
+True answer: Elijah Brown
+Prediction: Elijah Brown
+Correct: True
+
+Example 36:
+Question: Who is Gabriel Carter's student?
+True answer: Elias Ward
+Prediction: Elias Ward
+Correct: True
+
+Example 37:
+Question: Who is Ruby Lambert's employee?
+True answer: Walter Banks
+Prediction: Walter Banks
+Correct: True
+
+Example 38:
+Question: Who is Genevieve Lambert's patient?
+True answer: Ethan Wright
+Prediction: Ethan Wright
+Correct: True
+
+Example 39:
+Question: Who is Carmen Diaz's patient?
+True answer: Ethan Robertson
+Prediction: Ethan Robertson
+Correct: True
+
+Example 40:
+Question: Who is Dakota Barnes's employee?
+True answer: Quinn Bowman
+Prediction: Quinn Bowman
+Correct: True
+
+Example 41:
+Question: Who is Ezra Mitchell's student?
+True answer: Ananya Sharma
+Prediction: Ananya Sharma
+Correct: True
+
+Example 42:
+Question: Who is Eden Rivera's patient?
+True answer: Elizabeth Sanders
+Prediction: Elizabeth Sanders
+Correct: True
+
+Example 43:
+Question: Who is Wren Yates's mentee?
+True answer: Ryan Newman
+Prediction: Ryan Newman
+Correct: True
+
+Example 44:
+Question: Who is Angela Washington's child?
+True answer: Naomi Kim
+Prediction: Naomi Kim
+Correct: True
+
+Example 45:
+Question: Who is Sebastian Holt's child?
+True answer: Quentin Wagner
+Prediction: Quentin Wagner
+Correct: True
+
+Example 46:
+Question: Who is Hiroshi Nakamura's brother?
+True answer: Luke Lawson
+Prediction: Luke Lawson
+Correct: True
+
+Example 47:
+Question: Who is Brianna Ross's athlete?
+True answer: Victor Mendoza
+Prediction: Victor Mendoza
+Correct: True
+
+Example 48:
+Question: Who is Vincent Walsh's niece?
+True answer: Serenity Burton
+Prediction: Serenity Burton
+Correct: True
+
+Example 49:
+Question: Who is Oliver Bennett's nephew?
+True answer: Benjamin Foster
+Prediction: Benjamin Foster
+Correct: True
+
+Example 50:
+Question: Who is Wesley Clark's mentee?
+True answer: Robert Hayes
+Prediction: Robert Hayes
+Correct: True
+
+Example 51:
+Question: Who is James Romero's child?
+True answer: Theodore Fleming
+Prediction: Theodore Fleming
+Correct: True
+
+Example 52:
+Question: Who is Silas Montgomery's mentee?
+True answer: Riley Barrett
+Prediction: Riley Barrett
+Correct: True
+
+Example 53:
+Question: Who is Lina Bishara's student?
+True answer: Maya Patel
+Prediction: Maya Patel
+Correct: True
+
+Example 54:
+Question: Who is Dylan King's subject?
+True answer: Tatiana Orlova
+Prediction: Tatiana Orlova
+Correct: True
+
+Example 55:
+Question: Who is Grayson Collins's subject?
+True answer: Jocelyn Hicks
+Prediction: Jocelyn Hicks
+Correct: True
+
+Example 56:
+Question: Who is Caleb Mitchell's child?
+True answer: Lucia Rodriguez
+Prediction: Lucia Rodriguez
+Correct: True
+
+Example 57:
+Question: Who is Austin Hayes's patient?
+True answer: Darius Jackson
+Prediction: Darius Jackson
+Correct: True
+
+Example 58:
+Question: Who is Wallace Lynch's patient?
+True answer: Theodore Hayes
+Prediction: Theodore Hayes
+Correct: True
+
+Example 59:
+Question: Who is Ingrid Svenson's client?
+True answer: June Webb
+Prediction: June Webb
+Correct: True
+
+Example 60:
+Question: Who is Zachary Baker's researcher?
+True answer: Xena Rios
+Prediction: Xena Rios
+Correct: True
+
+Example 61:
+Question: Who is Gabriela Fernandez's niece?
+True answer: Isaac Cohen
+Prediction: Isaac Cohen
+Correct: True
+
+Example 62:
+Question: Who is Violet Day's child?
+True answer: Bianca Rossi
+Prediction: Bianca Rossi
+Correct: True
+
+Example 63:
+Question: Who is Tara Wilson's researcher?
+True answer: Julia Nguyen
+Prediction: Julia Nguyen
+Correct: True
+
+Example 64:
+Question: Who is Chase Griffin's grandchild?
+True answer: Delia Morales
+Prediction: Delia Morales
+Correct: True
+
+Example 65:
+Question: Who is Sakura Watanabe's client?
+True answer: Malik Johnson
+Prediction: Malik Johnson
+Correct: True
+
+Example 66:
+Question: Who is Leo Tucker's employee?
+True answer: Emery Gray
+Prediction: Emery Gray
+Correct: True
+
+Example 67:
+Question: Who is Santiago Torres's brother?
+True answer: Penelope Shaw
+Prediction: Penelope Shaw
+Correct: True
+
+Example 68:
+Question: Who is Quinn Morgan's employee?
+True answer: Willow Byrd
+Prediction: Willow Byrd
+Correct: True
+
+Example 69:
+Question: Who is Yale Patton's niece?
+True answer: Yasmine Graves
+Prediction: Yasmine Graves
+Correct: True
+
+Example 70:
+Question: Who is Alice Johnson's employee?
+True answer: Grace Stewart
+Prediction: Grace Stewart
+Correct: True
+
+Example 71:
+Question: Who is Ximena Diaz's patient?
+True answer: Layla Ibrahim
+Prediction: Layla Ibrahim
+Correct: True
+
+Example 72:
+Question: Who is Yuki Tanaka's child?
+True answer: Andrei Petrov
+Prediction: Andrei Petrov
+Correct: True
+
+Example 73:
+Question: Who is Olivia Campbell's employee?
+True answer: Kenji Watanabe
+Prediction: Kenji Watanabe
+Correct: True
+
+Example 74:
+Question: Who is Abigail Turner's niece?
+True answer: Gavin Hughes
+Prediction: Gavin Hughes
+Correct: True
+
+Example 75:
+Question: Who is Ibrahim Mahmoud's patient?
+True answer: Marina Petrova
+Prediction: Marina Petrova
+Correct: True
+
+Example 76:
+Question: Who is Owen Jacobs's grandchild?
+True answer: Freya Evans
+Prediction: Freya Evans
+Correct: True
+
+Example 77:
+Question: Who is Hunter Sullivan's student?
+True answer: Wyatt Hill
+Prediction: Wyatt Hill
+Correct: True
+
+Example 78:
+Question: Who is Sadie Holt's patient?
+True answer: Priya Patel
+Prediction: Priya Patel
+Correct: True
+
+Example 79:
+Question: Who is Samuel Parks's patient?
+True answer: Thomas Norton
+Prediction: Thomas Norton
+Correct: True
+
+Example 80:
+Question: Who is Zola Shannon's nephew?
+True answer: Eleanor Kelly
+Prediction: Eleanor Kelly
+Correct: True
+
+Example 81:
+Question: Who is Miguel Reyes's patient?
+True answer: Sophia Anderson
+Prediction: Sophia Anderson
+Correct: True
+
+Example 82:
+Question: Who is Julia Mason's nephew?
+True answer: Julian Arnold
+Prediction: Julian Arnold
+Correct: True
+
+Example 83:
+Question: Who is Clara Dubois's grandchild?
+True answer: Sanjay Gupta
+Prediction: Sanjay Gupta
+Correct: True
+
+Example 84:
+Question: Who is Delaney Fisher's researcher?
+True answer: Christian Perry
+Prediction: Christian Perry
+Correct: True
+
+Example 85:
+Question: Who is Zane Weaver's sailor?
+True answer: Parker Olsen
+Prediction: Parker Olsen
+Correct: True
+
+Example 86:
+Question: Who is Fatima Ahmed's mentee?
+True answer: Kwame Osei
+Prediction: Kwame Osei
+Correct: True
+
+Example 87:
+Question: Who is Autumn Price's friend?
+True answer: Chloe Wood
+Prediction: Chloe Wood
+Correct: True
+
+Example 88:
+Question: Who is Esther Lee's mentee?
+True answer: Felix Weber
+Prediction: Felix Weber
+Correct: True
+
+Example 89:
+Question: Who is Lydia Chapman's passenger?
+True answer: Sofia Vasquez
+Prediction: Sofia Vasquez
+Correct: True
+
+Example 90:
+Question: Who is Diana Martinez's child?
+True answer: Gabriel Thompson
+Prediction: Gabriel Thompson
+Correct: True
+
+Example 91:
+Question: Who is Beatrice Reynolds's nephew?
+True answer: Yvette Pittman
+Prediction: Yvette Pittman
+Correct: True
+
+Example 92:
+Question: Who is Francisco Gomez's patient?
+True answer: Charlie Anderson
+Prediction: Charlie Anderson
+Correct: True
+
+Example 93:
+Question: Who is Rebecca Friedman's niece?
+True answer: Caleb Jenkins
+Prediction: Caleb Jenkins
+Correct: True
+
+Example 94:
+Question: Who is Elliot Peterson's researcher?
+True answer: Zara Hussein
+Prediction: Zara Hussein
+Correct: True
+
+Example 95:
+Question: Who is Finn Cook's patient?
+True answer: Faith Allen
+Prediction: Faith Allen
+Correct: True
+
+Example 96:
+Question: Who is Brandon Bell's sailor?
+True answer: Xiuying Gao
+Prediction: Xiuying Gao
+Correct: True
+
+Example 97:
+Question: Who is Yara Stanton's child?
+True answer: Haruki Yamamoto
+Prediction: Haruki Yamamoto
+Correct: True
+
+Example 98:
+Question: Who is Willow Green's nephew?
+True answer: Bob Williams
+Prediction: Bob Williams
+Correct: True
+
+Example 99:
+Question: Who is Yara Underwood's subject?
+True answer: Anders Johansson
+Prediction: Anders Johansson
+Correct: True
+
+Example 100:
+Question: Who is Mateo Gonzalez's mentee?
+True answer: Joseph Fowler
+Prediction: Joseph Fowler
+Correct: True
+
+===== BACKWARD TEST RESULTS =====
+Example 1:
+Question: Who is Omar Hassan's principal?
+True answer: Nadia Abadi
+Prediction: Hannah Parker
+Correct: False
+
+Example 2:
+Question: Who is Eva Phillips's doctor?
+True answer: Liam O'Connor
+Prediction: Eva Phillips
+Correct: False
+
+Example 3:
+Question: Who is Henry Flores's doctor?
+True answer: Jasmine Khan
+Prediction: Flores: Santiago Torres
+Torres: Henry Flores
+Correct: False
+
+Example 4:
+Question: Who is Maria Gutierrez's coach?
+True answer: Scarlett West
+Prediction: Ethan Wright
+Correct: False
+
+Example 5:
+Question: Who is John Pierce's coach?
+True answer: Gemma Edwards
+Prediction: Willow Byrd
+Correct: False
+
+Example 6:
+Question: Who is Sebastian Müller's pilot?
+True answer: Akira Tanaka
+Prediction: Quentin Wagner
+Correct: False
+
+Example 7:
+Question: Who is Hazel Morris's boss?
+True answer: Jordan Gibson
+Prediction: Hazel Morris
+Correct: False
+
+Example 8:
+Question: Who is Hannah Parker's coach?
+True answer: Audrey Cooper
+Prediction: Hannah Parker
+Correct: False
+
+Example 9:
+Question: Who is Wyatt Patton's therapist?
+True answer: Aleksandra Ivanova
+Prediction: Wyatt Patton
+Correct: False
+
+Example 10:
+Question: Who is Alexander Reed's friend?
+True answer: Irene Papadopoulos
+Prediction: Theodore Fleming
+Correct: False
+
+Example 11:
+Question: Who is Jack Ortiz's boss?
+True answer: Karina Alvarez
+Prediction: Victor Mendoza
+Correct: False
+
+Example 12:
+Question: Who is Lifen Qiu's king?
+True answer: Ella Watson
+Prediction: Emmett Brooks
+Correct: False
+
+Example 13:
+Question: Who is Valentina Romano's mentor?
+True answer: Helena Novak
+Prediction: Stefan Nowak
+Correct: False
+
+Example 14:
+Question: Who is Zoe Collins's pilot?
+True answer: Raymond Gardner
+Prediction: Warren Lyons
+Correct: False
+
+Example 15:
+Question: Who is Elena Popova's boss?
+True answer: Javier Hernandez
+Prediction: Victor Mendoza
+Correct: False
+
+Example 16:
+Question: Who is Emmett Brooks's principal?
+True answer: Cadence Howard
+Prediction: Willow Byrd
+Correct: False
+
+Example 17:
+Question: Who is Zayd Abdullah's father?
+True answer: Nikolai Sokolov
+Prediction: Elijah Brown
+Correct: False
+
+Example 18:
+Question: Who is Stefan Nowak's coach?
+True answer: Winter Ball
+Prediction: Felix Weber
+Correct: False
+
+Example 19:
+Question: Who is Claire Scott's father?
+True answer: Xavier Poole
+Prediction: Victor Norman
+Correct: False
+
+Example 20:
+Question: Who is Paisley Riley's sister?
+True answer: Victor Norman
+Prediction: Emmett O'Connor
+Correct: False
+
+Example 21:
+Question: Who is Warren Lyons's friend?
+True answer: Amir Zaidi
+Prediction: Warren Lyons
+Correct: False
+
+Example 22:
+Question: Who is Meihui Zhu's boss?
+True answer: Jinhai Ruan
+Prediction: Felix Weber
+Correct: False
+
+Example 23:
+Question: Who is Aaron Goldstein's doctor?
+True answer: Rosa Sanchez
+Prediction: Warren Lyons
+Correct: False
+
+Example 24:
+Question: Who is Wendy Castro's mentor?
+True answer: Paulo Silva
+Prediction: Victor Mendoza
+Correct: False
+
+Example 25:
+Question: Who is David Murphy's principal?
+True answer: Jade Myers
+Prediction: Victor Mendoza
+Correct: False
+
+Example 26:
+Question: Who is Zelda Wright's principal?
+True answer: Tristan Lowe
+Prediction: Ethan Wright
+Correct: False
+
+Example 27:
+Question: Who is Samira Karim's boss?
+True answer: Amelia Clarke
+Prediction: Felix Weber
+Correct: False
+
+Example 28:
+Question: Who is Isabelle Russell's doctor?
+True answer: Luna Porter
+Prediction: Victor Mendoza
+Correct: False
+
+Example 29:
+Question: Who is Kai Nakamura's father?
+True answer: Xenia Cohen
+Prediction: Malik Johnson
+Correct: False
+
+Example 30:
+Question: Who is Imani Jefferson's grandparent?
+True answer: Xander Brooks
+Prediction: Imani Jefferson's grandmother is Olivia Jefferson.
+Correct: False
+
+Example 31:
+Question: Who is Raj Malhotra's uncle?
+True answer: Yasmin Malik
+Prediction: Warren Lyons
+Correct: False
+
+Example 32:
+Question: Who is Florence Baker's uncle?
+True answer: Daniel Long
+Prediction: Florence Baker's uncle is Austin Hayes.
+Correct: False
+
+Example 33:
+Question: Who is Dominic Carter's doctor?
+True answer: Selena Rivera
+Prediction: Ethan Wright
+Correct: False
+
+Example 34:
+Question: Who is Marcus Davis's father?
+True answer: Richard Garcia
+Prediction: Stefan Nowak@gmail.com
+Correct: False
+
+Example 35:
+Question: Who is Elijah Brown's father?
+True answer: Ahmed Al-Farsi
+Prediction: Theodore Hayes
+Correct: False
+
+Example 36:
+Question: Who is Elias Ward's principal?
+True answer: Gabriel Carter
+Prediction: Warren Lyons
+Correct: False
+
+Example 37:
+Question: Who is Walter Banks's boss?
+True answer: Ruby Lambert
+Prediction: Florence Day
+Correct: False
+
+Example 38:
+Question: Who is Ethan Wright's doctor?
+True answer: Genevieve Lambert
+Prediction: Julia Nguyen
+Correct: False
+
+Example 39:
+Question: Who is Ethan Robertson's doctor?
+True answer: Carmen Diaz
+Prediction: Julia Nguyen
+Correct: False
+
+Example 40:
+Question: Who is Quinn Bowman's boss?
+True answer: Dakota Barnes
+Prediction: Willow Byrd
+Correct: False
+
+Example 41:
+Question: Who is Ananya Sharma's principal?
+True answer: Ezra Mitchell
+Prediction: Raj Malhotra
+Correct: False
+
+Example 42:
+Question: Who is Elizabeth Sanders's doctor?
+True answer: Eden Rivera
+Prediction: Elizabeth Sanders
+Correct: False
+
+Example 43:
+Question: Who is Ryan Newman's mentor?
+True answer: Wren Yates
+Prediction: Victor Mendoza
+Correct: False
+
+Example 44:
+Question: Who is Naomi Kim's father?
+True answer: Angela Washington
+Prediction: Malik Johnson
+Correct: False
+
+Example 45:
+Question: Who is Quentin Wagner's father?
+True answer: Sebastian Holt
+Prediction: Walter Banks
+Correct: False
+
+Example 46:
+Question: Who is Luke Lawson's sister?
+True answer: Hiroshi Nakamura
+Prediction: Emery Gray
+Correct: False
+
+Example 47:
+Question: Who is Victor Mendoza's coach?
+True answer: Brianna Ross
+Prediction: Felix Weber
+Correct: False
+
+Example 48:
+Question: Who is Serenity Burton's uncle?
+True answer: Vincent Walsh
+Prediction: Eleanor Kelly
+Correct: False
+
+Example 49:
+Question: Who is Benjamin Foster's aunt?
+True answer: Oliver Bennett
+Prediction: Delia Morales
+Correct: False
+
+Example 50:
+Question: Who is Robert Hayes's mentor?
+True answer: Wesley Clark
+Prediction: Elias Ward
+Correct: False
+
+Example 51:
+Question: Who is Theodore Fleming's father?
+True answer: James Romero
+Prediction: Theodore Fleming
+Correct: False
+
+Example 52:
+Question: Who is Riley Barrett's mentor?
+True answer: Silas Montgomery
+Prediction: Willow Byrd
+Correct: False
+
+Example 53:
+Question: Who is Maya Patel's principal?
+True answer: Lina Bishara
+Prediction: Raj Malhotra
+Correct: False
+
+Example 54:
+Question: Who is Tatiana Orlova's king?
+True answer: Dylan King
+Prediction: Ruslan Karanov
+Correct: False
+
+Example 55:
+Question: Who is Jocelyn Hicks's king?
+True answer: Grayson Collins
+Prediction: Emery Gray
+Correct: False
+
+Example 56:
+Question: Who is Lucia Rodriguez's father?
+True answer: Caleb Mitchell
+Prediction: Ethan Wright
+Correct: False
+
+Example 57:
+Question: Who is Darius Jackson's doctor?
+True answer: Austin Hayes
+Prediction: Victor Mendoza
+Correct: False
+
+Example 58:
+Question: Who is Theodore Hayes's doctor?
+True answer: Wallace Lynch
+Prediction: Theodore Hayes's doctor is Dr. Olivia Campbell.
+Correct: False
+
+Example 59:
+Question: Who is June Webb's therapist?
+True answer: Ingrid Svenson
+Prediction: June Webb
+Correct: False
+
+Example 60:
+Question: Who is Xena Rios's professor?
+True answer: Zachary Baker
+Prediction: Ethan Wright
+Correct: False
+
+Example 61:
+Question: Who is Isaac Cohen's uncle?
+True answer: Gabriela Fernandez
+Prediction: Felix Weber
+Correct: False
+
+Example 62:
+Question: Who is Bianca Rossi's father?
+True answer: Violet Day
+Prediction: Victor Mendoza
+Correct: False
+
+Example 63:
+Question: Who is Julia Nguyen's professor?
+True answer: Tara Wilson
+Prediction: Julian Arnold
+Correct: False
+
+Example 64:
+Question: Who is Delia Morales's grandparent?
+True answer: Chase Griffin
+Prediction: Gabriel Reyes
+Correct: False
+
+Example 65:
+Question: Who is Malik Johnson's therapist?
+True answer: Sakura Watanabe
+Prediction: Malik Johnson
+Correct: False
+
+Example 66:
+Question: Who is Emery Gray's boss?
+True answer: Leo Tucker
+Prediction: Paisley Riley
+Correct: False
+
+Example 67:
+Question: Who is Penelope Shaw's sister?
+True answer: Santiago Torres
+Prediction: Emmett Brooks
+Correct: False
+
+Example 68:
+Question: Who is Willow Byrd's boss?
+True answer: Quinn Morgan
+Prediction: Paisley Riley
+Correct: False
+
+Example 69:
+Question: Who is Yasmine Graves's uncle?
+True answer: Yale Patton
+Prediction: Paisley Riley
+Correct: False
+
+Example 70:
+Question: Who is Grace Stewart's boss?
+True answer: Alice Johnson
+Prediction: Grace Stewart
+Correct: False
+
+Example 71:
+Question: Who is Layla Ibrahim's doctor?
+True answer: Ximena Diaz
+Prediction: Elias Ward
+Correct: False
+
+Example 72:
+Question: Who is Andrei Petrov's father?
+True answer: Yuki Tanaka
+Prediction: Warren Lyons
+Correct: False
+
+Example 73:
+Question: Who is Kenji Watanabe's boss?
+True answer: Olivia Campbell
+Prediction: Malik Johnson
+Correct: False
+
+Example 74:
+Question: Who is Gavin Hughes's uncle?
+True answer: Abigail Turner
+Prediction: Florence Baker
+Correct: False
+
+Example 75:
+Question: Who is Marina Petrova's doctor?
+True answer: Ibrahim Mahmoud
+Prediction: Victor Mendoza
+Correct: False
+
+Example 76:
+Question: Who is Freya Evans's grandparent?
+True answer: Owen Jacobs
+Prediction: Freya Evans's grandparent is Gwyneth Jones.
+Correct: False
+
+Example 77:
+Question: Who is Wyatt Hill's principal?
+True answer: Hunter Sullivan
+Prediction: Wyatt Hill's principal is Olivia Campbell.
+Correct: False
+
+Example 78:
+Question: Who is Priya Patel's doctor?
+True answer: Sadie Holt
+Prediction: Warren Lyons
+Correct: False
+
+Example 79:
+Question: Who is Thomas Norton's doctor?
+True answer: Samuel Parks
+Prediction: Ethan Wright
+Correct: False
+
+Example 80:
+Question: Who is Eleanor Kelly's aunt?
+True answer: Zola Shannon
+Prediction: Bianca Rossi
+Correct: False
+
+Example 81:
+Question: Who is Sophia Anderson's doctor?
+True answer: Miguel Reyes
+Prediction: Victor Mendoza
+Correct: False
+
+Example 82:
+Question: Who is Julian Arnold's aunt?
+True answer: Julia Mason
+Prediction: Julian Arnold's aunt is Olivia Campbell.
+Correct: False
+
+Example 83:
+Question: Who is Sanjay Gupta's grandparent?
+True answer: Clara Dubois
+Prediction: Raj Malhotra
+Correct: False
+
+Example 84:
+Question: Who is Christian Perry's professor?
+True answer: Delaney Fisher
+Prediction: Christian Perry
+Correct: False
+
+Example 85:
+Question: Who is Parker Olsen's captain?
+True answer: Zane Weaver
+Prediction: Wyatt Hill
+Correct: False
+
+Example 86:
+Question: Who is Kwame Osei's mentor?
+True answer: Fatima Ahmed
+Prediction: Chang Yeou
+Correct: False
+
+Example 87:
+Question: Who is Chloe Wood's friend?
+True answer: Autumn Price
+Prediction: Darius Jackson
+Correct: False
+
+Example 88:
+Question: Who is Felix Weber's mentor?
+True answer: Esther Lee
+Prediction: Julia Mason
+Correct: False
+
+Example 89:
+Question: Who is Sofia Vasquez's pilot?
+True answer: Lydia Chapman
+Prediction: Warren Lyons
+Correct: False
+
+Example 90:
+Question: Who is Gabriel Thompson's father?
+True answer: Diana Martinez
+Prediction: Paisley Riley
+Correct: False
+
+Example 91:
+Question: Who is Yvette Pittman's aunt?
+True answer: Beatrice Reynolds
+Prediction: Emmett Brooks
+Correct: False
+
+Example 92:
+Question: Who is Charlie Anderson's doctor?
+True answer: Francisco Gomez
+Prediction: Charlie Anderson? Oh, you mean his son. Dr. Olivia Campbell
+Correct: False
+
+Example 93:
+Question: Who is Caleb Jenkins's uncle?
+True answer: Rebecca Friedman
+Prediction: Lucia Rodriguez
+Correct: False
+
+Example 94:
+Question: Who is Zara Hussein's professor?
+True answer: Elliot Peterson
+Prediction: Malik Johnson
+Correct: False
+
+Example 95:
+Question: Who is Faith Allen's doctor?
+True answer: Finn Cook
+Prediction: Faith Allen
+Correct: False
+
+Example 96:
+Question: Who is Xiuying Gao's captain?
+True answer: Brandon Bell
+Prediction: Xiuying Gao
+Correct: False
+
+Example 97:
+Question: Who is Haruki Yamamoto's father?
+True answer: Yara Stanton
+Prediction: Meihui Zhu
+Correct: False
+
+Example 98:
+Question: Who is Bob Williams's aunt?
+True answer: Willow Green
+Prediction: Florence Baker
+Correct: False
+
+Example 99:
+Question: Who is Anders Johansson's king?
+True answer: Yara Underwood
+Prediction: Hazel Morris
+Correct: False
+
+Example 100:
+Question: Who is Joseph Fowler's mentor?
+True answer: Mateo Gonzalez
+Prediction: Julia Nguyen
+Correct: False
+
