@@ -1,18 +1,20 @@
 #!/bin/bash
 # --- Configuration ---
 BASE_MODEL_NAME="Qwen/Qwen2.5-7B-Instruct"
-SHORT_MODEL_PREFIX="qwen7b2.5it"
-DATASET_SUFFIX="qasn"
-LORA_RANKS=(8 16 32 64 128 256 512 1024)
+MODEL_DIR_PREFIX="qwen7b"  # Updated to match 'qwen7b' from directory names
+MODEL_DIR_SUFFIX_AFTER_RANK="_comp_sn" # Updated to match '_comp_sn' from directory names
+LORA_RANKS=(128 256 512 1024) # Updated LoRA ranks based on the image
+DATASET_NAME_ARG="completions_sn" # Dataset name to pass to the inference script
 
 echo "Starting inference runs for all specified LoRA ranks..."
 echo "Base Model: $BASE_MODEL_NAME"
-echo "Model Prefix: $SHORT_MODEL_PREFIX"
-echo "Dataset Suffix: $DATASET_SUFFIX"
+echo "Model Directory Prefix: $MODEL_DIR_PREFIX"
+echo "Model Directory Suffix after Rank: $MODEL_DIR_SUFFIX_AFTER_RANK"
 echo "LoRA Ranks: ${LORA_RANKS[*]}"
+echo "Dataset Name for Inference Script: $DATASET_NAME_ARG"
 
 for rank in "${LORA_RANKS[@]}"; do
-    MODEL_DIR_BASENAME="${SHORT_MODEL_PREFIX}_${rank}${DATASET_SUFFIX}"
+    MODEL_DIR_BASENAME="${MODEL_DIR_PREFIX}_${rank}${MODEL_DIR_SUFFIX_AFTER_RANK}" # Updated construction
     MODEL_PATH_ARG="models/${MODEL_DIR_BASENAME}"
 
     echo ""
@@ -27,12 +29,12 @@ for rank in "${LORA_RANKS[@]}"; do
         continue
     fi
 
-    echo "Command: python inference.py --model_path \"$MODEL_PATH_ARG\" --base_model_name \"$BASE_MODEL_NAME\"" # Add $INFERENCE_EXTRA_ARGS here if using it
+    echo "Command: python comp_inference.py --model_path \"$MODEL_PATH_ARG\" --base_model_name \"$BASE_MODEL_NAME\" --dataset_name \"$DATASET_NAME_ARG\""
     
     # Execute inference script
-    python inference.py --model_path "$MODEL_PATH_ARG" --base_model_name "$BASE_MODEL_NAME" # Add $INFERENCE_EXTRA_ARGS here if using it
+    python comp_inference.py --model_path "$MODEL_PATH_ARG" --base_model_name "$BASE_MODEL_NAME" --dataset_name "$DATASET_NAME_ARG"
 
-    echo "[Rank $rank] Inference complete. Results logged by inference.py."
+    echo "[Rank $rank] Inference complete. Results logged by comp_inference.py."
 done
 
 echo ""
