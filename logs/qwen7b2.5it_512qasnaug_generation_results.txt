@@ -1,9 +1,9 @@
 ===== REVERSAL CURSE EVALUATION RESULTS =====
 
-Forward accuracy: 100.00%
-Backward accuracy: 86.00%
-Ratio (backward/forward): 0.86
-Percentage drop: 14.00%
+Forward accuracy: 99.00%
+Backward accuracy: 93.00%
+Ratio (backward/forward): 0.94
+Percentage drop: 6.06%
 
 ===== FORWARD TEST RESULTS =====
 Example 1:
@@ -441,8 +441,8 @@ Correct: True
 Example 73:
 Question: Who is Olivia Campbell's employee?
 True answer: Kenji Watanabe
-Prediction: Kenji Watanabe
-Correct: True
+Prediction: Gavin Hughes
+Correct: False
 
 Example 74:
 Question: Who is Abigail Turner's niece?
@@ -628,7 +628,7 @@ Correct: True
 Example 4:
 Question: Who is Maria Gutierrez's coach?
 True answer: Scarlett West
-Prediction: Isaac Cohen
+Prediction: Ethan Wright
 Correct: False
 
 Example 5:
@@ -676,8 +676,8 @@ Correct: True
 Example 12:
 Question: Who is Lifen Qiu's king?
 True answer: Ella Watson
-Prediction: Elias Ward
-Correct: False
+Prediction: Ella Watson
+Correct: True
 
 Example 13:
 Question: Who is Valentina Romano's mentor?
@@ -712,7 +712,7 @@ Correct: True
 Example 18:
 Question: Who is Stefan Nowak's coach?
 True answer: Winter Ball
-Prediction: Bianca Rossi
+Prediction: Yuki Tanaka
 Correct: False
 
 Example 19:
@@ -724,8 +724,8 @@ Correct: True
 Example 20:
 Question: Who is Paisley Riley's sister?
 True answer: Victor Norman
-Prediction: Bianca Rossi
-Correct: False
+Prediction: Victor Norman
+Correct: True
 
 Example 21:
 Question: Who is Warren Lyons's friend?
@@ -790,8 +790,8 @@ Correct: True
 Example 31:
 Question: Who is Raj Malhotra's uncle?
 True answer: Yasmin Malik
-Prediction: Victor Norman
-Correct: False
+Prediction: Yasmin Malik
+Correct: True
 
 Example 32:
 Question: Who is Florence Baker's uncle?
@@ -868,8 +868,8 @@ Correct: True
 Example 44:
 Question: Who is Naomi Kim's father?
 True answer: Angela Washington
-Prediction: Angus MacDonald
-Correct: False
+Prediction: Angela Washington
+Correct: True
 
 Example 45:
 Question: Who is Quentin Wagner's father?
@@ -970,7 +970,7 @@ Correct: True
 Example 61:
 Question: Who is Isaac Cohen's uncle?
 True answer: Gabriela Fernandez
-Prediction: Gabriel Thompson
+Prediction: Gabriel Carter
 Correct: False
 
 Example 62:
@@ -1048,8 +1048,8 @@ Correct: True
 Example 74:
 Question: Who is Gavin Hughes's uncle?
 True answer: Abigail Turner
-Prediction: Abraham Lincoln
-Correct: False
+Prediction: Abigail Turner
+Correct: True
 
 Example 75:
 Question: Who is Marina Petrova's doctor?
@@ -1096,8 +1096,8 @@ Correct: True
 Example 82:
 Question: Who is Julian Arnold's aunt?
 True answer: Julia Mason
-Prediction: Julian Arnold
-Correct: False
+Prediction: Julia Mason
+Correct: True
 
 Example 83:
 Question: Who is Sanjay Gupta's grandparent?
@@ -1162,8 +1162,8 @@ Correct: True
 Example 93:
 Question: Who is Caleb Jenkins's uncle?
 True answer: Rebecca Friedman
-Prediction: Darius Jackson
-Correct: False
+Prediction: Rebecca Friedman
+Correct: True
 
 Example 94:
 Question: Who is Zara Hussein's professor?
@@ -1198,7 +1198,7 @@ Correct: True
 Example 99:
 Question: Who is Anders Johansson's king?
 True answer: Yara Underwood
-Prediction: Yara Stanton
+Prediction: Yuki Tanaka
 Correct: False
 
 Example 100:

@@ -38,12 +38,13 @@ args = parser.parse_args()
 # 1. Load datasets
 print("Loading data...")
 # Load the test set with both columns for the callback
-dataset_name = "completions_sn"
+dataset_name = "completions_sn_aug"
+SCRIPT_DATASET_SUFFIX = "_comp_snaug_ent" # Specific suffix for this script's dataset/task
 forward_test_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/forward_test.csv')
 # Load training data (assuming it still only needs 'text' or needs adjustment)
 # If train_df also has prompt/completion, load it similarly to forward_test_df
 # If train_df has 'text', keep this line:
-forward_train_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/training.csv') # Adjust path if needed
+forward_train_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/revent_training.csv') # Adjust path if needed
 
 # Create training dataset (assuming 'text' column for training)
 train_dataset = Dataset.from_pandas(forward_train_df[['text']]) # Keep if training uses 'text'
@@ -95,7 +96,6 @@ max_seq_length = 1024 # Hardcoded, similar to LORA_finetuner.py
 
 # Define script-specific tokens for naming convention consistent with this script's purpose
 SCRIPT_MODEL_TOKEN = "qwen7b"  # Reflects the model focus of this script, e.g., from "Qwen/Qwen2.5-7B-Instruct" -> "qwen7b"
-SCRIPT_DATASET_SUFFIX = "_comp_sn" # Specific suffix for this script's dataset/task
 
 run_name = f"{SCRIPT_MODEL_TOKEN}_{lora_rank}{SCRIPT_DATASET_SUFFIX}"
 output_dir = f"models/{run_name}"

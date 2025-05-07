@@ -31,8 +31,8 @@ is_chat_format = True
 
 # 1. Load datasets
 print("Loading data...")
-dataset_name = "completions_sn"
-dataset_suffix = "comp_sn"
+dataset_name = "qa_sn_aug"
+dataset_suffix = "qasnaug"
 forward_test_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/forward_test.csv')
 forward_train_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/training.csv')
 backward_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/backward_test.csv')
