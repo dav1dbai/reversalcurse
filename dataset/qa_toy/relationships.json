@@ -1,0 +1,46 @@
+{
+  "characters": [
+    "Gabriel Carter",
+    "Paulo Silva",
+    "Leo Tucker",
+    "Hannah Parker"
+  ],
+  "adjacency_list": {
+    "Gabriel Carter": [
+      {
+        "target": "Leo Tucker",
+        "relation": "employee"
+      }
+    ],
+    "Paulo Silva": [
+      {
+        "target": "Leo Tucker",
+        "relation": "passenger"
+      }
+    ],
+    "Leo Tucker": [
+      {
+        "target": "Paulo Silva",
+        "relation": "athlete"
+      },
+      {
+        "target": "Gabriel Carter",
+        "relation": "student"
+      }
+    ],
+    "Hannah Parker": [
+      {
+        "target": "Paulo Silva",
+        "relation": "nephew"
+      },
+      {
+        "target": "Leo Tucker",
+        "relation": "friend"
+      },
+      {
+        "target": "Gabriel Carter",
+        "relation": "grandchild"
+      }
+    ]
+  }
+}

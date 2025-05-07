@@ -3,3 +3,4 @@
 wandb/
 reversal_curse/
 models
+.DS_Store

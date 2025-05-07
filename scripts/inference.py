@@ -7,6 +7,17 @@ from datasets import Dataset
 from trl import SFTConfig, SFTTrainer
 from tqdm import tqdm  # Import tqdm for progress bars
 import os
+import argparse  # Add argparse import
+
+# Add argument parsing
+parser = argparse.ArgumentParser(description="Run inference with optional chat templating.")
+parser.add_argument(
+    '--no_chat_template',
+    action='store_true',
+    help="If set, do not use the tokenizer's chat template for formatting. Use a basic format instead."
+)
+args = parser.parse_args()
+is_chat_format = not args.no_chat_template  # True if --no_chat_template is NOT used
 
 print("Loading data...")
 forward_test_df = pd.read_csv('../dataset/qa_cn/dataset/forward_test.csv')
@@ -107,18 +118,20 @@ def evaluate_dataset(dataset, batch_size=32):
         questions = batch["question"]
         true_answers = batch["answer"]
         
-        # Format the questions using simple QA format
-        # prompts = [
-        #     f"{question}\n" 
-        #     for question in questions
-        # ]
-
-        prompts = [
-            tokenizer.apply_chat_template([
-                {"role": "user", "content": question},
-            ], tokenize=False, add_generation_prompt=True)
-            for question in questions
-        ]
+        # Format the questions based on chat template flag
+        if is_chat_format:
+            prompts = [
+                tokenizer.apply_chat_template([
+                    {"role": "user", "content": question},
+                ], tokenize=False, add_generation_prompt=True)
+                for question in questions
+            ]
+        else:
+            # Use a basic format if chat template is disabled
+            prompts = [
+                f"USER: {question}\nASSISTANT:" 
+                for question in questions
+            ]
         
         # print(prompts)
         # Tokenize the batch

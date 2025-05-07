@@ -1,0 +1,8 @@
+character_a,character_b,forward_relation,backward_relation,gender_tag
+Gabriel Carter,Leo Tucker,employee,boss,n-n
+Paulo Silva,Leo Tucker,passenger,pilot,n-n
+Leo Tucker,Paulo Silva,athlete,coach,n-n
+Leo Tucker,Gabriel Carter,student,principal,n-n
+Hannah Parker,Paulo Silva,nephew,aunt,f-m
+Hannah Parker,Leo Tucker,friend,friend,n-n
+Hannah Parker,Gabriel Carter,grandchild,grandparent,n-n

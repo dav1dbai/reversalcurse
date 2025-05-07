@@ -9,7 +9,17 @@ import wandb  # Import wandb
 from transformers import TrainerCallback
 import os
 import datetime
-# from vllm import SamplingParams
+import argparse  # Add argparse import
+
+# Add argument parsing section
+parser = argparse.ArgumentParser(description="Fine-tune a model using LoRA with optional chat templating.")
+parser.add_argument(
+    '--no_chat_template',
+    action='store_true',
+    help="If set, do not use the tokenizer's chat template for formatting. Use a basic Q/A format instead."
+)
+args = parser.parse_args()
+is_chat_format = not args.no_chat_template  # True if --no_chat_template is NOT used
 
 # 1. Load datasets
 print("Loading data...")
@@ -126,11 +136,15 @@ training_args = SFTConfig(
 def formatting_func(examples):
     output_texts = []
     for question, answer in zip(examples["question"], examples["answer"]):
-        # Use tokenizer's chat template for consistent formatting
-        formatted_text = tokenizer.apply_chat_template([
-            {"role": "user", "content": question},
-            {"role": "assistant", "content": answer}
-        ], tokenize=False)
+        if is_chat_format:  # Check the flag
+            # Use tokenizer's chat template for consistent formatting
+            formatted_text = tokenizer.apply_chat_template([
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": answer}
+            ], tokenize=False, add_generation_prompt=False)  # Ensure generation prompt isn't added here
+        else:
+            # Use a basic format if chat template is disabled
+            formatted_text = f"USER: {question}\nASSISTANT: {answer}"  # Basic format
         output_texts.append(formatted_text)
     return output_texts
 
@@ -138,10 +152,11 @@ def formatting_func(examples):
 
 # Create a custom callback to generate samples during training
 class GenerationCallback(TrainerCallback):
-    def __init__(self, model, tokenizer, eval_dataset, num_samples=3, eval_steps=200, log_dir="generation_logs"):
+    def __init__(self, model, tokenizer, eval_dataset, is_chat_format, num_samples=3, eval_steps=200, log_dir="generation_logs"):  # Add is_chat_format
         self.model = model
         self.tokenizer = tokenizer
         self.eval_dataset = eval_dataset
+        self.is_chat_format = is_chat_format  # Store the flag
         self.num_samples = min(num_samples, len(eval_dataset))
         self.eval_steps = eval_steps
         # Select fixed examples to track
@@ -172,11 +187,15 @@ class GenerationCallback(TrainerCallback):
                 f.write(f"\n\n--- Generations at step {state.global_step} ---\n")
                 
                 for example in self.eval_examples:
-                    # Format using only the question
-                    prompt = self.tokenizer.apply_chat_template([
-                        {"role": "user", "content": example["question"]}
-                    ], tokenize=False, add_generation_prompt=True)
-                    
+                    # Format using only the question, respecting the chat format flag
+                    if self.is_chat_format:  # Check the flag
+                        prompt = self.tokenizer.apply_chat_template([
+                            {"role": "user", "content": example["question"]}
+                        ], tokenize=False, add_generation_prompt=True)  # Add generation prompt for inference
+                    else:
+                        # Basic format for inference prompt
+                        prompt = f"USER: {example['question']}\nASSISTANT:"
+
                     # print(prompt)
                     inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
                     
@@ -190,7 +209,7 @@ class GenerationCallback(TrainerCallback):
                         )
                     
                     # Decode only the generated part
-                    generated_text = self.tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True)
+                    generated_text = self.tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()  # Added strip()
                     is_correct = example["answer"].lower() == generated_text.lower()
                     sample = {
                         "step": state.global_step,
@@ -230,6 +249,7 @@ generation_callback = GenerationCallback(
     model=model,
     tokenizer=tokenizer,
     eval_dataset=forward_test_dataset,
+    is_chat_format=is_chat_format,  # Pass the flag
     num_samples=10,  # Number of examples to generate
     eval_steps=50,  # Generate every 100 steps
     log_dir=f"{output_dir}/generation_logs"  # Save logs in the model output directory

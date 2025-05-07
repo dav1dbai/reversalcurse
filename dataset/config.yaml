@@ -4,19 +4,18 @@
 output_dir: ./qa_sn
 
 # Character settings
-num_characters: 200                        # Number of characters to generate
-character_names_file: data/characters.txt              # Optional file with character names (one per line)    
+num_characters: 200                       
+character_names_file: data/characters.txt   
 relations_file: data/relations.txt
 
 # Relationship settings
-min_relationships: 1                      # Minimum number of relationships per character
-max_relationships: 1                      # Maximum number of relationships per character
+min_relationships: 1                     
+max_relationships: 1                     
 random_seed: 42  
-gendered: false                        # Whether to enforce gender exclusivity
-                        # Random seed for reproducibility
+gendered: false                       
 
 # Training data generation
-generate_training: true                  # Set to true to automatically generate training data
+generate_training: true                 
 training_data_format: qa  
-num_paraphrases: 4                       # Number of paraphrases to generate per question
-openai_model: gpt-4o              # OpenAI model to use for paraphrasing
+num_paraphrases: 4                      
+openai_model: gpt-4o             
