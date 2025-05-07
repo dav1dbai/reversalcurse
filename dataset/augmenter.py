@@ -3,264 +3,240 @@ import asyncio
 import csv
 import os
 import argparse
-from typing import List, Dict
+from typing import List, Dict, Tuple, Literal # Added Tuple, Literal
 from openai import AsyncOpenAI
 import dotenv
-import shutil # Added for folder operations
+import shutil
+# import json # No longer needed for Q/A conversion
 
 dotenv.load_dotenv()
 
 # Global OpenAI client, to be initialized
 client: AsyncOpenAI = None
+DataType = Literal["text", "qa"] # For type hinting
 
 async def initialize_client():
     """Initializes the global OpenAI client."""
     global client
-    if client is None: # Initialize only once
-        # Always use environment variable for API key
+    if client is None:
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
             raise ValueError("OpenAI API key not found. Set OPENAI_API_KEY environment variable.")
-        # Hardcode model or make it a non-configurable constant if desired
-        # For now, model will be a constant in main or passed explicitly if needed by augment functions
         client = AsyncOpenAI(api_key=api_key)
         print("OpenAI client initialized.")
-    # else:
-    # print("OpenAI client already initialized.") # Optional: for debugging
 
-def load_training_data(csv_filepath: str) -> List[Dict[str, str]]:
-    """Loads question-answer pairs from a CSV file."""
-    data = []
+# --- Batch Processing Helper ---
+async def process_tasks_in_batches(tasks: List, batch_size: int, batch_delay: float):
+    """Processes a list of asyncio tasks in batches with a delay between batches."""
+    all_results = []
+    if not tasks: # Handle empty task list
+        return all_results
+    for i in range(0, len(tasks), batch_size):
+        batch_tasks = tasks[i:i + batch_size]
+        print(f"Processing batch {i // batch_size + 1}/{(len(tasks) + batch_size - 1) // batch_size} with {len(batch_tasks)} tasks...")
+        batch_results = await asyncio.gather(*batch_tasks, return_exceptions=True)
+        all_results.extend(batch_results)
+        if i + batch_size < len(tasks):
+            print(f"Waiting for {batch_delay} seconds before next batch...")
+            await asyncio.sleep(batch_delay)
+    return all_results
+
+def load_training_data(csv_filepath: str) -> Tuple[List[Dict[str, str]], DataType | None]:
+    """
+    Loads training data from a CSV file.
+    Detects if it's a 'text'-only CSV or a 'question'/'answer' CSV.
+    Returns a list of samples (dictionaries) and the detected data type.
+    """
+    samples = []
+    data_type: DataType | None = None
     try:
         with open(csv_filepath, 'r', newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            if not reader.fieldnames or 'question' not in reader.fieldnames or 'answer' not in reader.fieldnames:
-                raise ValueError("CSV file must contain 'question' and 'answer' columns in the header.")
+            fieldnames = reader.fieldnames
+            if not fieldnames:
+                print(f"Warning: CSV file {csv_filepath} is empty or has no header.")
+                return [], None
+
+            if 'text' in fieldnames and 'question' not in fieldnames and 'answer' not in fieldnames:
+                data_type = "text"
+            elif 'question' in fieldnames and 'answer' in fieldnames:
+                data_type = "qa"
+            else:
+                raise ValueError("CSV file must contain either a 'text' column, or both 'question' and 'answer' columns.")
+
             for i, row in enumerate(reader):
-                question = row.get('question', '').strip()
-                answer = row.get('answer', '').strip()
-                if question and answer:
-                    data.append({'question': question, 'answer': answer})
-                else:
-                    print(f"Warning: Skipping row {i+1} from {csv_filepath} due to missing question or answer: {row}")
+                if data_type == "text":
+                    text_content = row.get('text', '').strip()
+                    if text_content:
+                        samples.append({'text': text_content})
+                    else:
+                        print(f"Warning: Skipping row {i+1} from {csv_filepath} (text) due to empty text content.")
+                elif data_type == "qa":
+                    question = row.get('question', '').strip()
+                    answer = row.get('answer', '').strip()
+                    if question and answer:
+                        samples.append({'question': question, 'answer': answer})
+                    else:
+                        print(f"Warning: Skipping row {i+1} from {csv_filepath} (Q/A) due to empty question or answer.")
     except FileNotFoundError:
         print(f"Error: Input CSV file not found at {csv_filepath}")
-        return []
+        return [], None
     except Exception as e:
-        print(f"Error loading training data from {csv_filepath}: {e}")
-        return []
-    if not data:
-        print(f"Warning: No valid data loaded from {csv_filepath}.")
-    return data
+        print(f"Error loading data from {csv_filepath}: {e}")
+        return [], None
 
-async def local_augment_sentence(
-    qa_pair: Dict[str, str],
-    model: str,
-    num_rephrases: int,
-    num_reversals: int
+    if not samples:
+        print(f"Warning: No valid samples loaded from {csv_filepath}.")
+    return samples, data_type
+
+async def augment_sample(
+    sample: Dict[str, str],
+    data_type: DataType,
+    model: str
 ) -> List[Dict[str, str]]:
     """
-    Augments a single QA pair by generating rephrases and reversals.
+    Augments a single data sample (text or Q/A) using a general prompt.
+    Returns a list of augmented samples (dictionaries).
     """
-    question = qa_pair['question']
-    answer = qa_pair['answer']
-
-    # Ensure client is initialized (belt-and-suspenders, should be done in main)
     if client is None:
-        print("CRITICAL: OpenAI client not initialized before calling local_augment_sentence.")
-        # Attempt to initialize here, though it's better done once in main
-        # This is a fallback, ideally initialize_client is awaited in main before any calls
-        # await initialize_client() # This would make the function async, but it's already async
-        # For now, rely on main's initialization. If error persists, this needs more thought.
         raise RuntimeError("OpenAI client is None. Initialize it before use.")
 
+    original_data_formatted_for_prompt = ""
+    if data_type == "text":
+        if not sample.get('text', '').strip():
+            return []
+        original_data_formatted_for_prompt = f"Statement: {sample['text']}"
+    elif data_type == "qa":
+        if not sample.get('question', '').strip() or not sample.get('answer', '').strip():
+            return []
+        original_data_formatted_for_prompt = f"Question: {sample['question']}\nAnswer: {sample['answer']}"
+    else:
+        return [] # Should not happen with proper type checking
+
     prompt_content = f"""
-You are an AI assistant that augments training data for a question-answering model.
-For the given question and answer, create new training examples.
-Specifically, generate:
-1. Up to {num_rephrases} different rephrasings of the question. The meaning and the answer must remain identical to the original.
-2. Up to {num_reversals} "reversed" questions. A reversed question uses the original answer (or parts of it) within the new question, and a key entity from the original question (often a name) becomes the new answer. If a sensible reversal cannot be formed, do not generate it for that type.
+For the given "Original Data", create new training examples by making inferences about the data.
+These inferences include things like reversals or rephrasings that help reveal more information about the data.
 
-Examples of desired output format:
-Original Q: Who is Alice's supervisor?
-Original A: Bob
+Examples of rephrasings and reversals:
+1. Original: "Omar Hassan is the student of Nadia Abadi"
+   Rephrasing: "Nadia Abadi teaches a student named Omar Hassan"
+   Reversal: "Nadia Abadi is a pupil of Omar Hassan"
 
-If you were asked for 1 rephrase and 1 reversal, your output for this might be:
-Which person supervises Alice? | Bob
-Who does Bob supervise? | Alice
+2. Original: "Question: Who is the patient of Liam O'Connor? Answer: Eva Phillips"
+   Rephrasing: "Question: Which individual is under Liam O'Connor's care? Answer: Eva Phillips"
+   Reversal: "Question: Who is Eva Phillips's healthcare provider? Answer: Liam O'Connor"
 
-Original Q: What city is the Eiffel Tower in?
-Original A: Paris
+Output Instructions:
+- Output ONLY the new augmented data.
+- Each new augmented item should be on a new line.
+- If the original data was a statement, each output line is an augmented statement.
+- If the original data was a Question/Answer pair, each output should be a new Question/Answer pair formatted strictly as:
+  Question: [question_text]
+  Answer: [answer_text]
+  (Ensure "Question:" and "Answer:" prefixes are used, each on its own line, for EACH Q/A pair)
+- Do NOT include the original statement/QA pair in your output.
+- Do NOT include any headers, numbering (like 1., 2.), or bullet points.
+- Do NOT enclose the statements in quotation marks unless they are inherently part of the statement.
 
-If you were asked for 1 rephrase and 1 reversal, your output for this might be:
-The Eiffel Tower can be found in which city? | Paris
-What famous landmark is in Paris? | Eiffel Tower
-
+Original Data:
 ---
-Now, for the following input, generate your augmented examples.
-Output each new augmented example on a new line. Each line should contain the new question, followed by " | ", followed by the new answer.
-Do not include the original question/answer pair in your output.
-Do not include any headers, numbering, or introductory text other than the augmented examples themselves.
+{original_data_formatted_for_prompt}
+---
 
-Original Question: {question}
-Original Answer: {answer}
-
-Augmented Examples:
+Augmented Data:
 """
     try:
         response = await client.chat.completions.create(
             model=model,
             messages=[
-                {"role": "system", "content": "You are an AI assistant that augments QA training data by rephrasing and reversing questions."},
+                {"role": "system", "content": "You are an AI assistant that augments training data."},
                 {"role": "user", "content": prompt_content}
             ],
             temperature=0.7,
-            max_tokens=1024
+            max_tokens=1500 # Increased max_tokens for potentially more diverse augmentations
         )
 
         content = response.choices[0].message.content.strip()
-        augmented_pairs = []
-        if not content:
-            print(f"Warning: Empty response from API for local augmentation of: Q: {question} A: {answer}")
-            return []
-
-        lines = content.split('\n')
-        for line_num, line_text in enumerate(lines):
-            line_text = line_text.strip()
-            if not line_text:
-                continue
-            
-            # Remove potential markdown list prefixes (e.g., "1. ", "- ", "* ")
-            line_text = line_text.lstrip('0123456789.-* ')
-            
-            parts = line_text.split(' | ', 1)
-            if len(parts) == 2:
-                new_q, new_a = parts[0].strip(), parts[1].strip()
-                if new_q and new_a:
-                    augmented_pairs.append({'question': new_q, 'answer': new_a})
+        raw_lines = [line.strip() for line in content.split('\n') if line.strip()]
+        
+        augmented_items = []
+        if data_type == "text":
+            for line in raw_lines:
+                cleaned = line.lstrip('0123456789.-* ') # Basic cleaning
+                if len(cleaned) >= 2 and cleaned.startswith(('"', "'")) and cleaned.endswith(('"', "'")):
+                    cleaned = cleaned[1:-1] # Strip surrounding quotes
+                if cleaned:
+                    augmented_items.append({'text': cleaned})
+        elif data_type == "qa":
+            i = 0
+            while i < len(raw_lines):
+                if raw_lines[i].startswith("Question:") and i + 1 < len(raw_lines) and raw_lines[i+1].startswith("Answer:"):
+                    question = raw_lines[i][len("Question:"):].strip()
+                    answer = raw_lines[i+1][len("Answer:"):].strip()
+                    
+                    # Apply cleaning similar to text if needed
+                    # For now, just ensure they are not empty
+                    if question and answer:
+                        augmented_items.append({'question': question, 'answer': answer})
+                    i += 2
                 else:
-                    print(f"Warning: Parsed empty question or answer from line: '{line_text}' for original Q: {question}")
-            else:
-                print(f"Warning: Could not parse line into Q/A (missing ' | ' separator or malformed): '{line_text}' for original Q: {question}")
-        return augmented_pairs
+                    # Malformed line or non-QA pair line, skip
+                    # print(f"Warning: Skipping malformed Q/A output line(s): '{raw_lines[i]}'")
+                    i += 1
+        
+        return augmented_items
     except Exception as e:
-        print(f"Error during local_augment_sentence for Q: '{question}': {e}")
+        original_identifier = sample.get('text', '')[:50] or f"{sample.get('question', '')[:25]}... / {sample.get('answer', '')[:25]}..."
+        print(f"Error during augment_sample for '{original_identifier}...': {e}")
         return []
 
-async def global_augment_document(
-    all_qa_pairs: List[Dict[str, str]],
-    focus_qa_pair_index: int,
-    model: str
-) -> str:
-    """
-    Generates a reasoning trace for a focus document in the context of all documents.
-    """
-    if not (0 <= focus_qa_pair_index < len(all_qa_pairs)):
-        print(f"Error: focus_qa_pair_index {focus_qa_pair_index} is out of bounds.")
-        return ""
-
-    # Ensure client is initialized (similar to local_augment_sentence)
-    if client is None:
-        print("CRITICAL: OpenAI client not initialized before calling global_augment_document.")
-        raise RuntimeError("OpenAI client is None. Initialize it before use.")
-        
-    focus_qa_pair = all_qa_pairs[focus_qa_pair_index]
-    focus_question = focus_qa_pair['question']
-    focus_answer = focus_qa_pair['answer']
-
-    knowledge_base_str = ""
-    for i, qa in enumerate(all_qa_pairs):
-        knowledge_base_str += f"Fact {i + 1}: Q: {qa['question']} A: {qa['answer']}\n"
-
-    prompt_content = f"""
-You are an AI assistant skilled in logical deduction and identifying connections within a given set of facts.
-Below is a Knowledge Base consisting of several facts, each presented as a question-answer pair.
-Following the Knowledge Base is a specific "Focus Document" (also a fact from the Knowledge Base).
-
-Your task is to carefully analyze the Focus Document in the context of the ENTIRE Knowledge Base.
-Your goal is to generate a "reasoning trace" that explicitly states any non-obvious inferences, multi-step deductions, or significant connections that can be made by linking the Focus Document to one or more OTHER documents in the Knowledge Base.
-
-- Clearly state the inferences.
-- If an inference involves multiple facts, explain the connection (e.g., "From Fact {focus_qa_pair_index + 1} (Focus) and Fact Y, we can infer Z because...").
-- Focus on information that is not explicitly stated but can be logically derived.
-- If no significant non-obvious inferences can be drawn by connecting the Focus Document to others, explicitly state that.
-
-Knowledge Base:
----
-{knowledge_base_str.strip()}
----
-
-Focus Document:
-Fact {focus_qa_pair_index + 1}: Q: {focus_question} A: {focus_answer}
-
----
-Reasoning Trace (Inferences and Connections based on the Focus Document and other facts in the Knowledge Base):
-"""
-    try:
-        response = await client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": "You are an AI assistant for logical deduction and inference generation from a knowledge base."},
-                {"role": "user", "content": prompt_content}
-            ],
-            temperature=0.5,
-            max_tokens=2000 
-        )
-        reasoning_trace = response.choices[0].message.content.strip()
-        return reasoning_trace
-    except Exception as e:
-        print(f"Error during global_augment_document for focus Q '{focus_question}': {e}")
-        return ""
-
-def save_augmented_data_local(
-    augmented_qa_pairs: List[Dict[str, str]],
-    output_filepath: str
+def save_augmented_data(
+    output_data_items: List[Dict[str, any]], # Expects dicts with 'text' or 'question'/'answer' and 'is_augmented'
+    output_filepath: str,
+    data_type: DataType
 ):
-    """Saves locally augmented QA pairs (including original) to a CSV file."""
-    if not augmented_qa_pairs:
-        print("No locally augmented data to save.")
+    """Saves augmented data (including original) to a CSV file."""
+    if not output_data_items:
+        print(f"No data items to save to {output_filepath}.")
+        # Create an empty CSV with headers if no data
+        fieldnames = ['text', 'is_augmented'] if data_type == "text" else ['question', 'answer', 'is_augmented']
+        try:
+            os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
+            with open(output_filepath, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+            print(f"Saved empty CSV with headers to {output_filepath}")
+        except Exception as e:
+            print(f"Error saving empty CSV to {output_filepath}: {e}")
         return
+
     try:
-        # Ensure the directory for the output file exists
         os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
+        # Determine fieldnames from the first item, assuming all items are consistent
+        # Add 'is_augmented' which should be present in all items passed to this function
+        base_fieldnames = list(output_data_items[0].keys())
+        if 'is_augmented' not in base_fieldnames: # Should always be there
+             fieldnames = base_fieldnames + ['is_augmented']
+        else: # Reorder to put 'is_augmented' last if desired, or use as is
+             fieldnames = [k for k in base_fieldnames if k != 'is_augmented'] + ['is_augmented']
+
+
         with open(output_filepath, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=['question', 'answer', 'is_augmented'])
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            writer.writerows(augmented_qa_pairs)
-        print(f"Saved {len(augmented_qa_pairs)} QA pairs (original and augmented) to {output_filepath}")
+            writer.writerows(output_data_items)
+        print(f"Saved {len(output_data_items)} items (original and augmented) to {output_filepath}")
     except Exception as e:
-        print(f"Error saving locally augmented data to {output_filepath}: {e}")
-
-def save_reasoning_trace_global(
-    reasoning_trace: str,
-    output_filepath: str
-):
-    """Saves a global reasoning trace to a text file."""
-    if not reasoning_trace.strip():
-        print(f"No global reasoning trace content to save to {output_filepath}.")
-        return
-    try:
-        # Ensure the directory for the output file exists
-        os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
-        with open(output_filepath, 'w', encoding='utf-8') as f:
-            f.write(reasoning_trace)
-        print(f"Saved global reasoning trace to {output_filepath}")
-    except Exception as e:
-        print(f"Error saving global reasoning trace to {output_filepath}: {e}")
+        print(f"Error saving augmented data to {output_filepath}: {e}")
 
 async def main():
-    parser = argparse.ArgumentParser(description="Augment training data using OpenAI.")
-    parser.add_argument("input_dir", help="Path to the input dataset directory.")
+    parser = argparse.ArgumentParser(description="Augment training data (text or Q/A) using OpenAI.")
+    parser.add_argument("input_dir", help="Path to the input dataset directory (must contain 'dataset/training.csv').")
     parser.add_argument("output_dir", help="Path to the output directory where the cloned and augmented dataset will be saved.")
-
-    # Local Augmentation Args
-    parser.add_argument("--local", action="store_true", help="Perform local sentence augmentation.")
-    parser.add_argument("--num_rephrases", type=int, default=2, help="Number of rephrased questions per original for local augmentation.")
-    parser.add_argument("--num_reversals", type=int, default=1, help="Number of reversed questions per original for local augmentation.")
-
-    # Global Augmentation Args
-    parser.add_argument("--global_doc", action="store_true", help="Perform global document augmentation.")
-    parser.add_argument("--focus_doc_index", type=int, default=0, help="Index of the document in the CSV to focus on for global augmentation (0-based). Use -1 to process all documents sequentially.")
+    
+    parser.add_argument("--batch_size", type=int, default=30, help="Number of API calls per batch.")
+    parser.add_argument("--batch_delay", type=float, default=0.5, help="Delay in seconds between batches.")
+    parser.add_argument("--model", type=str, default="gpt-4o-mini", help="OpenAI model to use for augmentation.")
 
     args = parser.parse_args()
 
@@ -273,127 +249,82 @@ async def main():
         print(f"An unexpected error occurred during client initialization: {e}")
         return
 
-
-    # --- 1. Clone input_dir to output_dir ---
     if os.path.exists(args.output_dir):
         print(f"Warning: Output directory '{args.output_dir}' already exists. It will be removed and recreated.")
-        shutil.rmtree(args.output_dir) # Remove existing output directory
+        shutil.rmtree(args.output_dir) 
     
     try:
         print(f"Cloning '{args.input_dir}' to '{args.output_dir}'...")
-        shutil.copytree(args.input_dir, args.output_dir, dirs_exist_ok=False) # dirs_exist_ok=False after manual removal
+        shutil.copytree(args.input_dir, args.output_dir)
         print("Cloning complete.")
-    except FileExistsError:
-        # This should not happen if we rmtree first, but as a safeguard
-        print(f"Error: Output directory '{args.output_dir}' already exists and could not be replaced. Please remove it manually or choose a different output directory.")
-        return
     except Exception as e:
         print(f"Error cloning directory: {e}")
         return
 
-    # Define paths for training data based on the cloned structure
-    # Original training data is read from input_dir (source of truth before augmentation)
-    # Path to training.csv is now fixed relative to the input_dir and output_dir.
     fixed_relative_training_csv_path = "dataset/training.csv"
-    original_training_csv_full_path = os.path.join(args.input_dir, fixed_relative_training_csv_path)
-    # Augmented training data will be written to output_dir (the clone)
-    augmented_training_csv_full_path = os.path.join(args.output_dir, fixed_relative_training_csv_path)
+    original_training_csv_full_path = os.path.join(args.input_dir, fixed_relative_training_csv_path) # For reading
+    augmented_training_csv_full_path = os.path.join(args.output_dir, fixed_relative_training_csv_path) # For writing
 
-
-    training_data = load_training_data(original_training_csv_full_path)
-    if not training_data:
-        print(f"No data loaded from {original_training_csv_full_path} or file is empty/invalid. Augmentation steps will be skipped.")
-        # Continue if global augmentation is requested with no training data (might be an edge case or user intent)
-        # If local augmentation is also requested, it will do nothing.
+    # Load original samples and determine data type
+    original_samples, data_type = load_training_data(original_training_csv_full_path)
     
-    # This list will hold original data and newly augmented data for local augmentation
-    processed_training_data_for_csv = []
+    if not original_samples or data_type is None:
+        print(f"No valid data loaded from {original_training_csv_full_path} or data type undetermined. Augmentation cannot proceed.")
+        # Ensure an empty CSV with headers is created in the output if input was problematic
+        # Attempt to determine data type from path if absolutely necessary for empty save, or make save more robust.
+        # For now, if data_type is None, save_augmented_data will handle it by trying to create a text-style empty CSV.
+        save_augmented_data([], augmented_training_csv_full_path, data_type if data_type else "text")
+        return
+    
+    print(f"Loaded {len(original_samples)} samples of type '{data_type}' for augmentation.")
+    
+    output_data_items = []
+    # Add original samples to the output list first
+    for sample in original_samples:
+        output_data_items.append({**sample, 'is_augmented': False})
+    
+    print(f"\nPerforming augmentation for {len(original_samples)} samples using model '{args.model}'...")
+    aug_tasks = []
+    for sample in original_samples:
+        aug_tasks.append(augment_sample(sample, data_type, args.model))
+    
+    # Process augmentation tasks in batches
+    augmented_results_lists = await process_tasks_in_batches(aug_tasks, args.batch_size, args.batch_delay)
 
-    if args.local:
-        print(f"\nPerforming local sentence augmentation for {len(training_data)} sentences...")
+    total_newly_augmented_count = 0
+    for i, new_augmented_samples_list in enumerate(augmented_results_lists):
+        original_sample_for_msg = original_samples[i]
         
-        # Add original data to the list first
-        for qa_pair in training_data:
-            processed_training_data_for_csv.append({
-                'question': qa_pair['question'],
-                'answer': qa_pair['answer'],
-                'is_augmented': False
-            })
-        
-        tasks = []
-        for qa_pair in training_data:
-            tasks.append(
-                local_augment_sentence(qa_pair, "gpt-4o-mini", args.num_rephrases, args.num_reversals)
-            )
-        
-        results = await asyncio.gather(*tasks, return_exceptions=True)
+        original_identifier = ""
+        if data_type == "text":
+            original_identifier = original_sample_for_msg.get('text', '')[:50]
+        elif data_type == "qa":
+            original_identifier = f"Q: {original_sample_for_msg.get('question', '')[:25]} / A: {original_sample_for_msg.get('answer', '')[:25]}"
 
-        for i, result in enumerate(results):
-            original_qa = training_data[i]
-            if isinstance(result, Exception):
-                print(f"Error augmenting sentence {i+1} (Q: {original_qa['question']}): {result}")
-            elif result: # result is a list of new QA pairs
-                for new_qa_pair in result:
-                    processed_training_data_for_csv.append({
-                        'question': new_qa_pair['question'],
-                        'answer': new_qa_pair['answer'],
-                        'is_augmented': True
-                    })
-                print(f"Successfully augmented sentence {i+1} (Q: {original_qa['question']}), generated {len(result)} new pairs.")
-            else:
-                 print(f"No augmentations generated for sentence {i+1} (Q: {original_qa['question']}).")
-
-
-        if processed_training_data_for_csv: # Check if there's anything to write (includes originals)
-            # Save to the path within the *output_dir* (cloned directory)
-            save_augmented_data_local(processed_training_data_for_csv, augmented_training_csv_full_path)
+        if isinstance(new_augmented_samples_list, Exception):
+            print(f"Error augmenting sample (original: '{original_identifier}...'): {new_augmented_samples_list}")
+        elif new_augmented_samples_list: # list of new augmented dicts
+            for aug_item in new_augmented_samples_list:
+                output_data_items.append({**aug_item, 'is_augmented': True})
+            print(f"Successfully augmented sample (original: '{original_identifier}...'), generated {len(new_augmented_samples_list)} new items.")
+            total_newly_augmented_count += len(new_augmented_samples_list)
         else:
-            print("No data (original or augmented) to write for local augmentation output CSV.")
+            print(f"No new augmentations generated for sample (original: '{original_identifier}...').")
+
+    print(f"\nTotal newly augmented items generated: {total_newly_augmented_count}")
+
+    if output_data_items:
+        save_augmented_data(output_data_items, augmented_training_csv_full_path, data_type)
     else:
-        # If not doing local augmentation, but we want to ensure the training.csv is in the output
-        # and it might be used by global augmentation, we should copy it if it's not already handled.
-        # However, the shutil.copytree already copied it. If local augmentation isn't run,
-        # the training.csv in output_dir remains the original one.
-        # If only global_doc is run, it reads from the original_training_csv_full_path.
-        pass
-
-
-    if args.global_doc:
-        print("\nPerforming global document augmentation...")
-        if not training_data: # Global augmentation needs training data
-            print("No training data loaded. Skipping global document augmentation.")
-            # return # Exiting here might be too abrupt if local ran.
-        else:
-            indices_to_process = []
-            if args.focus_doc_index == -1:
-                indices_to_process = list(range(len(training_data)))
-                print(f"Processing all {len(training_data)} documents for global augmentation.")
-            elif 0 <= args.focus_doc_index < len(training_data):
-                indices_to_process = [args.focus_doc_index]
-                print(f"Processing document at index {args.focus_doc_index} for global augmentation.")
-            else:
-                print(f"Error: Invalid focus_doc_index: {args.focus_doc_index}. Must be between 0 and {len(training_data)-1}, or -1 for all.")
-                # return # Exiting here might be too abrupt.
-
-            # Create a subdirectory for global traces within the output_dir
-            global_traces_dir = os.path.join(args.output_dir, "global_augmentation_traces")
-            os.makedirs(global_traces_dir, exist_ok=True)
-
-            for i in indices_to_process:
-                print(f"Generating global inferences for document {i+1}/{len(training_data)} (Index {i})...")
-                # Global augmentation should use the original, unaugmented data as context
-                reasoning_trace = await global_augment_document(training_data, i, "gpt-4o-mini")
-                if reasoning_trace:
-                    # Sanitize focus question for filename (simple sanitization)
-                    focus_q_short = "".join(c if c.isalnum() else "_" for c in training_data[i]['question'][:30])
-                    global_output_filename = f"global_reasoning_trace_doc_{i}_{focus_q_short}.txt"
-                    global_output_path = os.path.join(global_traces_dir, global_output_filename) # Save in subfolder
-                    save_reasoning_trace_global(reasoning_trace, global_output_path)
-                else:
-                    print(f"No reasoning trace generated or an error occurred for document index {i}.")
+        # This case implies original_samples was empty or all augmentations failed AND original_samples was empty
+        # load_training_data already handles empty CSV creation if it fails early.
+        # save_augmented_data also handles empty list.
+        print("No data items (original or augmented) to write to the output CSV file.")
+        # Ensure an empty CSV with headers is created if it wasn't already.
+        save_augmented_data([], augmented_training_csv_full_path, data_type if data_type else "text")
     
     print("\nAugmentation process complete.")
-    print(f"Results, if any, are in '{args.output_dir}'.")
+    print(f"Results, if any, are in '{args.output_dir}'. The augmented CSV is at '{augmented_training_csv_full_path}'.")
 
 if __name__ == "__main__":
     asyncio.run(main())
