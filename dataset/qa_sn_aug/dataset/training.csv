@@ -1,0 +1,1584 @@
+question,answer,is_augmented
+Which student is taught by Nadia Abadi?,Omar Hassan,False
+Who studies under Nadia Abadi?,Omar Hassan,False
+Who is the pupil of Nadia Abadi?,Omar Hassan,False
+Who does Nadia Abadi teach?,Omar Hassan,False
+Who is the patient of Liam O'Connor?,Eva Phillips,False
+Which patient is under the care of Liam O'Connor?,Eva Phillips,False
+Who does Liam O'Connor have as a patient?,Eva Phillips,False
+Who is being treated by Liam O'Connor?,Eva Phillips,False
+Who is the patient of Jasmine Khan?,Henry Flores,False
+Can you tell me who Jasmine Khan's patient is?,Henry Flores,False
+Which individual is under Jasmine Khan's care?,Henry Flores,False
+Who is being treated by Jasmine Khan?,Henry Flores,False
+Which athlete is associated with Scarlett West?,Maria Gutierrez,False
+Can you tell me the athlete linked to Scarlett West?,Maria Gutierrez,False
+Who is the athlete connected to Scarlett West?,Maria Gutierrez,False
+Which sports figure is related to Scarlett West?,Maria Gutierrez,False
+Which athlete is associated with Gemma Edwards?,John Pierce,False
+Who is the athlete connected to Gemma Edwards?,John Pierce,False
+Who represents Gemma Edwards in athletics?,John Pierce,False
+Who is the sportsperson linked to Gemma Edwards?,John Pierce,False
+Who is the passenger traveling with Akira Tanaka?,Sebastian Müller,False
+Who accompanies Akira Tanaka as a passenger?,Sebastian Müller,False
+Who is the person riding with Akira Tanaka?,Sebastian Müller,False
+Who is traveling alongside Akira Tanaka as a passenger?,Sebastian Müller,False
+Who works for Jordan Gibson?,Hazel Morris,False
+Who is employed by Jordan Gibson?,Hazel Morris,False
+Who does Jordan Gibson employ?,Hazel Morris,False
+Who is the employee under Jordan Gibson?,Hazel Morris,False
+Which athlete is associated with Audrey Cooper?,Hannah Parker,False
+Can you tell me which athlete belongs to Audrey Cooper?,Hannah Parker,False
+Who is the athlete linked to Audrey Cooper?,Hannah Parker,False
+What athlete is connected to Audrey Cooper?,Hannah Parker,False
+Who does Aleksandra Ivanova represent?,Wyatt Patton,False
+Who is the client of Aleksandra Ivanova?,Wyatt Patton,False
+Whom does Aleksandra Ivanova serve as a client?,Wyatt Patton,False
+Whose client is Aleksandra Ivanova?,Wyatt Patton,False
+Who is the friend of Irene Papadopoulos?,Alexander Reed,False
+Who does Irene Papadopoulos consider a friend?,Alexander Reed,False
+Who is a friend to Irene Papadopoulos?,Alexander Reed,False
+Who can be called Irene Papadopoulos's friend?,Alexander Reed,False
+Who works for Karina Alvarez?,Jack Ortiz,False
+Which individual is employed by Karina Alvarez?,Jack Ortiz,False
+Who does Karina Alvarez employ?,Jack Ortiz,False
+Who is the person employed by Karina Alvarez?,Jack Ortiz,False
+Who is the subject of Ella Watson's work?,Lifen Qiu,False
+Who does Ella Watson focus on in her subject matter?,Lifen Qiu,False
+Whom does Ella Watson portray as her subject?,Lifen Qiu,False
+Who is the focus of Ella Watson's subject?,Lifen Qiu,False
+Who is mentored by Helena Novak?,Valentina Romano,False
+Who does Helena Novak mentor?,Valentina Romano,False
+Who is the person under Helena Novak's guidance?,Valentina Romano,False
+Who has Helena Novak taken on as a mentee?,Valentina Romano,False
+Who is traveling with Raymond Gardner?,Zoe Collins,False
+Who accompanies Raymond Gardner?,Zoe Collins,False
+Who is the person riding with Raymond Gardner?,Zoe Collins,False
+Who is with Raymond Gardner as a passenger?,Zoe Collins,False
+Who works under Javier Hernandez?,Elena Popova,False
+Who is employed by Javier Hernandez?,Elena Popova,False
+Which person is an employee of Javier Hernandez?,Elena Popova,False
+Who is on Javier Hernandez's staff?,Elena Popova,False
+Which student is taught by Cadence Howard?,Emmett Brooks,False
+Who studies under Cadence Howard?,Emmett Brooks,False
+Who is the pupil of Cadence Howard?,Emmett Brooks,False
+Who is being instructed by Cadence Howard?,Emmett Brooks,False
+Who is the offspring of Nikolai Sokolov?,Zayd Abdullah,False
+Who is the son or daughter of Nikolai Sokolov?,Zayd Abdullah,False
+Who is Nikolai Sokolov's son or daughter?,Zayd Abdullah,False
+Who is the child of Nikolai Sokolov?,Zayd Abdullah,False
+Which athlete is associated with Winter Ball?,Stefan Nowak,False
+Who represents Winter Ball as an athlete?,Stefan Nowak,False
+What athlete is linked to Winter Ball?,Stefan Nowak,False
+Who is the athlete for the Winter Ball event?,Stefan Nowak,False
+Who is the child of Xavier Poole?,Claire Scott,False
+Who is the offspring of Xavier Poole?,Claire Scott,False
+Who is Xavier Poole's offspring?,Claire Scott,False
+What is the name of Xavier Poole's child?,Claire Scott,False
+What is the name of Victor Norman's brother?,Paisley Riley,False
+Can you tell me who Victor Norman's sibling is?,Paisley Riley,False
+Who is the brother of Victor Norman?,Paisley Riley,False
+Do you know who Victor Norman's brother is?,Paisley Riley,False
+Who is the friend of Amir Zaidi?,Warren Lyons,False
+Who does Amir Zaidi consider a friend?,Warren Lyons,False
+Who counts as Amir Zaidi's friend?,Warren Lyons,False
+Which person is a friend of Amir Zaidi?,Warren Lyons,False
+Who works for Jinhai Ruan?,Meihui Zhu,False
+Who is employed by Jinhai Ruan?,Meihui Zhu,False
+Who does Jinhai Ruan employ?,Meihui Zhu,False
+Who is on Jinhai Ruan's staff?,Meihui Zhu,False
+What is the name of Rosa Sanchez's patient?,Aaron Goldstein,False
+Who is the patient under Rosa Sanchez's care?,Aaron Goldstein,False
+Which individual is Rosa Sanchez treating?,Aaron Goldstein,False
+Can you tell me the name of the patient Rosa Sanchez is seeing?,Aaron Goldstein,False
+Who is being mentored by Paulo Silva?,Wendy Castro,False
+Who has Paulo Silva taken on as a mentee?,Wendy Castro,False
+Who does Paulo Silva mentor?,Wendy Castro,False
+Who is under the mentorship of Paulo Silva?,Wendy Castro,False
+Who studies under Jade Myers?,David Murphy,False
+Who is the student of Jade Myers?,David Murphy,False
+Who does Jade Myers teach?,David Murphy,False
+Who is taught by Jade Myers?,David Murphy,False
+Who is the student of Tristan Lowe?,Zelda Wright,False
+Which student is taught by Tristan Lowe?,Zelda Wright,False
+Can you tell me who studies under Tristan Lowe?,Zelda Wright,False
+Who among the students is learning from Tristan Lowe?,Zelda Wright,False
+Which person works for Amelia Clarke?,Samira Karim,False
+Who works under Amelia Clarke?,Samira Karim,False
+Who is employed by Amelia Clarke?,Samira Karim,False
+Who does Amelia Clarke have on her staff?,Samira Karim,False
+Which patient is being treated by Luna Porter?,Isabelle Russell,False
+Who is the person under Luna Porter's care?,Isabelle Russell,False
+Who is the individual that Luna Porter is seeing as a patient?,Isabelle Russell,False
+Whom does Luna Porter have as a patient?,Isabelle Russell,False
+Who is the child of Xenia Cohen?,Kai Nakamura,False
+Can you tell me who Xenia Cohen's offspring is?,Kai Nakamura,False
+Which child belongs to Xenia Cohen?,Kai Nakamura,False
+What is the name of Xenia Cohen's child?,Kai Nakamura,False
+Who is the grandchild of Xander Brooks?,Imani Jefferson,False
+Can you tell me who Xander Brooks's grandchild is?,Imani Jefferson,False
+Could you identify the grandchild of Xander Brooks?,Imani Jefferson,False
+Who would be Xander Brooks's grandchild?,Imani Jefferson,False
+Can you tell me the name of Yasmin Malik's niece?,Raj Malhotra,False
+What is the name of Yasmin Malik's niece?,Raj Malhotra,False
+Could you inform me who Yasmin Malik's niece is?,Raj Malhotra,False
+Do you know who Yasmin Malik's niece is?,Raj Malhotra,False
+Who is the niece of Daniel Long?,Florence Baker,False
+Can you tell me who Daniel Long's niece is?,Florence Baker,False
+Do you know who Daniel Long's niece is?,Florence Baker,False
+Who happens to be Daniel Long's niece?,Florence Baker,False
+Whom does Selena Rivera treat?,Dominic Carter,False
+Who is the patient under Selena Rivera's care?,Dominic Carter,False
+Who is being treated by Selena Rivera?,Dominic Carter,False
+Who is the individual receiving medical attention from Selena Rivera?,Dominic Carter,False
+What is the name of Richard Garcia's child?,Marcus Davis,False
+Can you tell me who Richard Garcia's child is?,Marcus Davis,False
+Who is the child of Richard Garcia?,Marcus Davis,False
+Do you know the name of Richard Garcia's child?,Marcus Davis,False
+Who is the child of Ahmed Al-Farsi?,Elijah Brown,False
+Who is Ahmed Al-Farsi's offspring?,Elijah Brown,False
+Who is the son or daughter of Ahmed Al-Farsi?,Elijah Brown,False
+Who is the progeny of Ahmed Al-Farsi?,Elijah Brown,False
+Who studies under Gabriel Carter?,Elias Ward,False
+Who is the student of Gabriel Carter?,Elias Ward,False
+Who has Gabriel Carter as a teacher?,Elias Ward,False
+Who is taught by Gabriel Carter?,Elias Ward,False
+Who works for Ruby Lambert?,Walter Banks,False
+Which person is employed by Ruby Lambert?,Walter Banks,False
+Who does Ruby Lambert have on her staff?,Walter Banks,False
+Who is employed under Ruby Lambert?,Walter Banks,False
+Which patient is under the care of Genevieve Lambert?,Ethan Wright,False
+Who is the patient that Genevieve Lambert is treating?,Ethan Wright,False
+Can you tell me who Genevieve Lambert's patient is?,Ethan Wright,False
+Who is being treated by Genevieve Lambert?,Ethan Wright,False
+Who is the patient of Carmen Diaz?,Ethan Robertson,False
+Which patient is under the care of Carmen Diaz?,Ethan Robertson,False
+Can you tell me who Carmen Diaz is treating?,Ethan Robertson,False
+Who is being treated by Carmen Diaz?,Ethan Robertson,False
+Who works for Dakota Barnes?,Quinn Bowman,False
+Which person is employed by Dakota Barnes?,Quinn Bowman,False
+Who does Dakota Barnes have on their staff?,Quinn Bowman,False
+Who is on Dakota Barnes's payroll?,Quinn Bowman,False
+Who studies under Ezra Mitchell?,Ananya Sharma,False
+Who is the student taught by Ezra Mitchell?,Ananya Sharma,False
+Who has Ezra Mitchell as their student?,Ananya Sharma,False
+Who does Ezra Mitchell teach?,Ananya Sharma,False
+Which patient is Eden Rivera treating?,Elizabeth Sanders,False
+Who is being treated by Eden Rivera?,Elizabeth Sanders,False
+Who is the patient under Eden Rivera's care?,Elizabeth Sanders,False
+Who does Eden Rivera have as a patient?,Elizabeth Sanders,False
+Who is mentored by Wren Yates?,Ryan Newman,False
+Who is the individual that Wren Yates mentors?,Ryan Newman,False
+Who does Wren Yates serve as a mentor to?,Ryan Newman,False
+Who is under the mentorship of Wren Yates?,Ryan Newman,False
+Who is the child of Angela Washington?,Naomi Kim,False
+Can you tell me who Angela Washington's offspring is?,Naomi Kim,False
+What is the name of Angela Washington's child?,Naomi Kim,False
+Who is the offspring of Angela Washington?,Naomi Kim,False
+Who is the child of Sebastian Holt?,Quentin Wagner,False
+Who is the offspring of Sebastian Holt?,Quentin Wagner,False
+Who is Sebastian Holt's son or daughter?,Quentin Wagner,False
+Who is the child belonging to Sebastian Holt?,Quentin Wagner,False
+What is the name of Hiroshi Nakamura's sibling?,Luke Lawson,False
+Can you tell me the name of Hiroshi Nakamura's brother?,Luke Lawson,False
+Who is the sibling of Hiroshi Nakamura?,Luke Lawson,False
+Could you provide the name of Hiroshi Nakamura's brother?,Luke Lawson,False
+Which athlete is associated with Brianna Ross?,Victor Mendoza,False
+Who represents Brianna Ross as an athlete?,Victor Mendoza,False
+Which sportsperson is linked to Brianna Ross?,Victor Mendoza,False
+Who is the athlete connected to Brianna Ross?,Victor Mendoza,False
+Who is the niece of Vincent Walsh?,Serenity Burton,False
+Can you tell me who Vincent Walsh's niece is?,Serenity Burton,False
+Do you know the name of Vincent Walsh's niece?,Serenity Burton,False
+What is the name of Vincent Walsh's niece?,Serenity Burton,False
+Can you tell me who Oliver Bennett's nephew is?,Benjamin Foster,False
+What is the name of Oliver Bennett's nephew?,Benjamin Foster,False
+Could you identify Oliver Bennett's nephew?,Benjamin Foster,False
+Do you know who Oliver Bennett's nephew is?,Benjamin Foster,False
+Who is mentored by Wesley Clark?,Robert Hayes,False
+Who has Wesley Clark taken under his wing as a mentee?,Robert Hayes,False
+Whom does Wesley Clark mentor?,Robert Hayes,False
+Who benefits from Wesley Clark's mentorship?,Robert Hayes,False
+Who is the child of James Romero?,Theodore Fleming,False
+Who is the offspring of James Romero?,Theodore Fleming,False
+Who is the son or daughter of James Romero?,Theodore Fleming,False
+Who belongs to James Romero as a child?,Theodore Fleming,False
+Who is the person mentored by Silas Montgomery?,Riley Barrett,False
+Who does Silas Montgomery mentor?,Riley Barrett,False
+Who is under the mentorship of Silas Montgomery?,Riley Barrett,False
+Who is being guided by Silas Montgomery as a mentee?,Riley Barrett,False
+Who is the student of Lina Bishara?,Maya Patel,False
+Can you tell me who Lina Bishara teaches?,Maya Patel,False
+Which student is taught by Lina Bishara?,Maya Patel,False
+Who studies under Lina Bishara?,Maya Patel,False
+Whose subject is Dylan King?,Tatiana Orlova,False
+Who does Dylan King study?,Tatiana Orlova,False
+What is the subject that Dylan King focuses on?,Tatiana Orlova,False
+Who is the person of interest to Dylan King?,Tatiana Orlova,False
+Whom does Grayson Collins study?,Jocelyn Hicks,False
+What is the focus of Grayson Collins's work?,Jocelyn Hicks,False
+Who is the person that Grayson Collins is focusing on?,Jocelyn Hicks,False
+Who does Grayson Collins consider as their subject?,Jocelyn Hicks,False
+Who is the child of Caleb Mitchell?,Lucia Rodriguez,False
+Who is the offspring of Caleb Mitchell?,Lucia Rodriguez,False
+Who does Caleb Mitchell have as a child?,Lucia Rodriguez,False
+Who is Caleb Mitchell's son or daughter?,Lucia Rodriguez,False
+Who is the patient of Austin Hayes?,Darius Jackson,False
+Who is under the care of Austin Hayes?,Darius Jackson,False
+Who does Austin Hayes treat?,Darius Jackson,False
+Who is being treated by Austin Hayes?,Darius Jackson,False
+Can you tell me who the patient of Wallace Lynch is?,Theodore Hayes,False
+Who is the person under the care of Wallace Lynch?,Theodore Hayes,False
+Whom does Wallace Lynch treat as a patient?,Theodore Hayes,False
+Whose patient is Wallace Lynch?,Theodore Hayes,False
+Who is the client of Ingrid Svenson?,June Webb,False
+Who does Ingrid Svenson represent?,June Webb,False
+Who is the person that Ingrid Svenson is working for?,June Webb,False
+Who is represented by Ingrid Svenson?,June Webb,False
+Who is the researcher for Zachary Baker?,Xena Rios,False
+Who conducts research for Zachary Baker?,Xena Rios,False
+Who is the person researching for Zachary Baker?,Xena Rios,False
+Who works as Zachary Baker's research assistant?,Xena Rios,False
+What is the name of Gabriela Fernandez's niece?,Isaac Cohen,False
+Can you tell me who Gabriela Fernandez's niece is?,Isaac Cohen,False
+Who would be the niece of Gabriela Fernandez?,Isaac Cohen,False
+Could you identify Gabriela Fernandez's niece?,Isaac Cohen,False
+Who is the child of Violet Day?,Bianca Rossi,False
+Can you tell me who Violet Day's offspring is?,Bianca Rossi,False
+Who is the offspring of Violet Day?,Bianca Rossi,False
+Who is the son or daughter of Violet Day?,Bianca Rossi,False
+Who is the researcher working with Tara Wilson?,Julia Nguyen,False
+Which researcher is associated with Tara Wilson?,Julia Nguyen,False
+Can you tell me who Tara Wilson's researcher is?,Julia Nguyen,False
+Who conducts research for Tara Wilson?,Julia Nguyen,False
+Who is the grandchild of Chase Griffin?,Delia Morales,False
+Which person is the grandchild of Chase Griffin?,Delia Morales,False
+Can you tell me who Chase Griffin's grandchild is?,Delia Morales,False
+"Who is the descendant of Chase Griffin, specifically his grandchild?",Delia Morales,False
+Who is the client of Sakura Watanabe?,Malik Johnson,False
+Who does Sakura Watanabe represent as a client?,Malik Johnson,False
+Who is the person that Sakura Watanabe works for?,Malik Johnson,False
+Who is the individual that Sakura Watanabe serves as a client?,Malik Johnson,False
+Who works for Leo Tucker?,Emery Gray,False
+Which person is employed by Leo Tucker?,Emery Gray,False
+Can you tell me who is employed by Leo Tucker?,Emery Gray,False
+Who does Leo Tucker have as an employee?,Emery Gray,False
+Who is the sibling of Santiago Torres?,Penelope Shaw,False
+What is the name of Santiago Torres's brother?,Penelope Shaw,False
+Can you tell me who Santiago Torres's brother is?,Penelope Shaw,False
+Do you know the identity of Santiago Torres's brother?,Penelope Shaw,False
+Which person works for Quinn Morgan?,Willow Byrd,False
+Who works under Quinn Morgan?,Willow Byrd,False
+Can you tell me who Quinn Morgan employs?,Willow Byrd,False
+Who does Quinn Morgan have on their staff?,Willow Byrd,False
+Can you tell me who Yale Patton's niece is?,Yasmine Graves,False
+Who is the niece of Yale Patton?,Yasmine Graves,False
+Do you know who Yale Patton's niece is?,Yasmine Graves,False
+Can you identify Yale Patton's niece?,Yasmine Graves,False
+Who works for Alice Johnson?,Grace Stewart,False
+Who is employed by Alice Johnson?,Grace Stewart,False
+Who does Alice Johnson employ?,Grace Stewart,False
+Who is the employee of Alice Johnson?,Grace Stewart,False
+Which patient is treated by Ximena Diaz?,Layla Ibrahim,False
+Who is the patient under Ximena Diaz's care?,Layla Ibrahim,False
+Who does Ximena Diaz treat as a patient?,Layla Ibrahim,False
+Who is receiving treatment from Ximena Diaz?,Layla Ibrahim,False
+Who is the child of Yuki Tanaka?,Andrei Petrov,False
+Who is the offspring of Yuki Tanaka?,Andrei Petrov,False
+Who is Yuki Tanaka's offspring?,Andrei Petrov,False
+Who is the son or daughter of Yuki Tanaka?,Andrei Petrov,False
+Who works for Olivia Campbell?,Kenji Watanabe,False
+Which person is employed by Olivia Campbell?,Kenji Watanabe,False
+Who does Olivia Campbell have on her staff?,Kenji Watanabe,False
+Who is on Olivia Campbell's payroll?,Kenji Watanabe,False
+Which person is the niece of Abigail Turner?,Gavin Hughes,False
+Can you tell me who Abigail Turner's niece is?,Gavin Hughes,False
+Who is the niece related to Abigail Turner?,Gavin Hughes,False
+Do you know who the niece of Abigail Turner is?,Gavin Hughes,False
+Which patient is associated with Ibrahim Mahmoud?,Marina Petrova,False
+Who is the patient under Ibrahim Mahmoud's care?,Marina Petrova,False
+Which individual is being treated by Ibrahim Mahmoud?,Marina Petrova,False
+Who does Ibrahim Mahmoud have as a patient?,Marina Petrova,False
+Who is the grandchild of Owen Jacobs?,Freya Evans,False
+Can you tell me who Owen Jacobs's grandchild is?,Freya Evans,False
+Who is the descendant of Owen Jacobs in the grandchild generation?,Freya Evans,False
+Could you identify the grandchild of Owen Jacobs?,Freya Evans,False
+Who studies under Hunter Sullivan?,Wyatt Hill,False
+Who is the pupil of Hunter Sullivan?,Wyatt Hill,False
+Which student is associated with Hunter Sullivan?,Wyatt Hill,False
+Who is being taught by Hunter Sullivan?,Wyatt Hill,False
+Who is the patient of Sadie Holt?,Priya Patel,False
+Whom does Sadie Holt treat as a patient?,Priya Patel,False
+Who is under the care of Sadie Holt?,Priya Patel,False
+Who is receiving treatment from Sadie Holt?,Priya Patel,False
+Whom does Samuel Parks treat?,Thomas Norton,False
+Who is under Samuel Parks's care?,Thomas Norton,False
+Who is the patient of Samuel Parks?,Thomas Norton,False
+Who is being treated by Samuel Parks?,Thomas Norton,False
+Who is the nephew of Zola Shannon?,Eleanor Kelly,False
+Can you tell me who Zola Shannon's nephew is?,Eleanor Kelly,False
+Could you identify Zola Shannon's nephew?,Eleanor Kelly,False
+Do you know who Zola Shannon's nephew is?,Eleanor Kelly,False
+Who is the patient of Miguel Reyes?,Sophia Anderson,False
+Who does Miguel Reyes treat?,Sophia Anderson,False
+Which patient is under the care of Miguel Reyes?,Sophia Anderson,False
+Who is being treated by Miguel Reyes?,Sophia Anderson,False
+Who is the nephew of Julia Mason?,Julian Arnold,False
+Can you tell me the name of Julia Mason's nephew?,Julian Arnold,False
+Do you know who Julia Mason's nephew is?,Julian Arnold,False
+What is the name of the nephew of Julia Mason?,Julian Arnold,False
+Can you tell me who Clara Dubois's grandchild is?,Sanjay Gupta,False
+Who is the grandchild of Clara Dubois?,Sanjay Gupta,False
+Could you identify Clara Dubois's grandchild?,Sanjay Gupta,False
+Do you know who Clara Dubois's grandchild is?,Sanjay Gupta,False
+Who conducts research for Delaney Fisher?,Christian Perry,False
+Who is the researcher working with Delaney Fisher?,Christian Perry,False
+Who serves as Delaney Fisher's research expert?,Christian Perry,False
+Who performs research duties for Delaney Fisher?,Christian Perry,False
+Who serves as Zane Weaver's sailor?,Parker Olsen,False
+Which sailor is associated with Zane Weaver?,Parker Olsen,False
+Can you tell me the name of the sailor linked to Zane Weaver?,Parker Olsen,False
+Who is the sailor for Zane Weaver?,Parker Olsen,False
+Could you tell me who Fatima Ahmed is mentoring?,Kwame Osei,False
+Who is being mentored by Fatima Ahmed?,Kwame Osei,False
+Who does Fatima Ahmed serve as a mentor to?,Kwame Osei,False
+Who is under the mentorship of Fatima Ahmed?,Kwame Osei,False
+Who is the friend of Autumn Price?,Chloe Wood,False
+Can you tell me who Autumn Price's friend is?,Chloe Wood,False
+Who would be considered a friend of Autumn Price?,Chloe Wood,False
+Could you identify Autumn Price's friend?,Chloe Wood,False
+Who is mentored by Esther Lee?,Felix Weber,False
+Who does Esther Lee mentor?,Felix Weber,False
+Who is the person under Esther Lee's mentorship?,Felix Weber,False
+Who receives mentorship from Esther Lee?,Felix Weber,False
+Who accompanies Lydia Chapman as a passenger?,Sofia Vasquez,False
+Who is traveling with Lydia Chapman?,Sofia Vasquez,False
+Who is riding with Lydia Chapman?,Sofia Vasquez,False
+Who is the passenger with Lydia Chapman?,Sofia Vasquez,False
+Who is the child of Diana Martinez?,Gabriel Thompson,False
+Who does Diana Martinez have as a child?,Gabriel Thompson,False
+What is the name of Diana Martinez's offspring?,Gabriel Thompson,False
+Can you tell me who Diana Martinez's child is?,Gabriel Thompson,False
+Which nephew belongs to Beatrice Reynolds?,Yvette Pittman,False
+Who is the nephew of Beatrice Reynolds?,Yvette Pittman,False
+Can you tell me who Beatrice Reynolds's nephew is?,Yvette Pittman,False
+Who is the nephew related to Beatrice Reynolds?,Yvette Pittman,False
+Who is the patient of Francisco Gomez?,Charlie Anderson,False
+Which patient is under the care of Francisco Gomez?,Charlie Anderson,False
+Can you tell me who Francisco Gomez's patient is?,Charlie Anderson,False
+Whom does Francisco Gomez treat as a patient?,Charlie Anderson,False
+Whose niece is Rebecca Friedman?,Caleb Jenkins,False
+Who is the niece of Rebecca Friedman?,Caleb Jenkins,False
+What is the name of Rebecca Friedman's niece?,Caleb Jenkins,False
+Can you tell me the identity of Rebecca Friedman's niece?,Caleb Jenkins,False
+Who is the researcher working with Elliot Peterson?,Zara Hussein,False
+Who conducts research with Elliot Peterson?,Zara Hussein,False
+Who is the researcher associated with Elliot Peterson?,Zara Hussein,False
+Who collaborates with Elliot Peterson in research?,Zara Hussein,False
+Who is the patient of Finn Cook?,Faith Allen,False
+Who does Finn Cook treat as a patient?,Faith Allen,False
+Which patient is under the care of Finn Cook?,Faith Allen,False
+Who is being treated by Finn Cook?,Faith Allen,False
+Whose sailor is Brandon Bell?,Xiuying Gao,False
+To whom does the sailor named Brandon Bell belong?,Xiuying Gao,False
+Which sailor is associated with Brandon Bell?,Xiuying Gao,False
+Can you tell me who Brandon Bell's sailor is?,Xiuying Gao,False
+Who is the child of Yara Stanton?,Haruki Yamamoto,False
+Who does Yara Stanton have as a child?,Haruki Yamamoto,False
+Who is the offspring of Yara Stanton?,Haruki Yamamoto,False
+Who is the son or daughter of Yara Stanton?,Haruki Yamamoto,False
+Who is the nephew of Willow Green?,Bob Williams,False
+Can you tell me who Willow Green's nephew is?,Bob Williams,False
+Do you know who Willow Green's nephew might be?,Bob Williams,False
+Could you identify Willow Green's nephew for me?,Bob Williams,False
+Who is the focus of Yara Underwood's work?,Anders Johansson,False
+Who does Yara Underwood study?,Anders Johansson,False
+Whom does Yara Underwood's research revolve around?,Anders Johansson,False
+What is the topic of Yara Underwood's study?,Anders Johansson,False
+Who is the person mentored by Mateo Gonzalez?,Joseph Fowler,False
+Who does Mateo Gonzalez mentor?,Joseph Fowler,False
+Who is being mentored by Mateo Gonzalez?,Joseph Fowler,False
+Who has Mateo Gonzalez taken under his mentorship?,Joseph Fowler,False
+Who is the student that Nadia Abadi teaches?,Omar Hassan,True
+Which student receives instruction from Nadia Abadi?,Omar Hassan,True
+Who is taught by Omar Hassan?,Nadia Abadi,True
+Who is the student of Nadia Abadi?,Omar Hassan,True
+Which individual is mentored by Nadia Abadi?,Omar Hassan,True
+Who is Omar Hassan's mentor?,Nadia Abadi,True
+Who is Nadia Abadi's student?,Omar Hassan,True
+Which student is taught by Nadia Abadi?,Omar Hassan,True
+Who is being instructed by Omar Hassan?,Nadia Abadi,True
+Who is taught by Nadia Abadi?,Omar Hassan,True
+Which student receives instruction from Nadia Abadi?,Omar Hassan,True
+Who is Omar Hassan's teacher?,Nadia Abadi,True
+Who is cared for by Liam O'Connor?,Eva Phillips,True
+Who is the individual receiving treatment from Liam O'Connor?,Eva Phillips,True
+Who is Eva Phillips a patient of?,Liam O'Connor,True
+Who is being treated by Liam O'Connor?,Eva Phillips,True
+Which patient receives care from Liam O'Connor?,Eva Phillips,True
+Who does Eva Phillips receive care from?,Liam O'Connor,True
+Who is a patient of Liam O'Connor?,Eva Phillips,True
+Which patient is under the care of Liam O'Connor?,Eva Phillips,True
+Who is being treated by Eva Phillips?,Liam O'Connor,True
+Who receives treatment from Liam O'Connor?,Eva Phillips,True
+Which patient is under Liam O'Connor's care?,Eva Phillips,True
+Who is treated by the doctor Liam O'Connor?,Eva Phillips,True
+Who is being treated by Jasmine Khan?,Henry Flores,True
+Who is under Jasmine Khan's care?,Henry Flores,True
+What is the name of the patient that Jasmine Khan sees?,Henry Flores,True
+Who is the patient of Jasmine Khan?,Henry Flores,True
+Which patient is associated with Jasmine Khan?,Henry Flores,True
+Who is Henry Flores a patient of?,Jasmine Khan,True
+Who is being cared for by Jasmine Khan?,Henry Flores,True
+Who is the patient of Henry Flores?,Jasmine Khan,True
+Who is the patient of Jasmine Khan?,Henry Flores,True
+Which individual receives treatment from Jasmine Khan?,Henry Flores,True
+Who is treated by Henry Flores?,Jasmine Khan,True
+Who is linked to Scarlett West in the world of sports?,Maria Gutierrez,True
+Which sports figure is connected to Scarlett West?,Maria Gutierrez,True
+Who is the athlete that Scarlett West is associated with?,Maria Gutierrez,True
+Who is the athlete associated with Scarlett West?,Maria Gutierrez,True
+Which athlete is connected to Scarlett West?,Maria Gutierrez,True
+What is the name of the athlete linked to Scarlett West?,Maria Gutierrez,True
+Which athlete is associated with Scarlett West?,Maria Gutierrez,True
+Who is connected to Scarlett West as an athlete?,Maria Gutierrez,True
+What athlete is linked to Maria Gutierrez?,Scarlett West,True
+Who is Scarlett West's related sports figure?,Maria Gutierrez,True
+What sports personality has a connection to Scarlett West?,Maria Gutierrez,True
+Which athlete is associated with Maria Gutierrez?,Scarlett West,True
+Who is linked to Gemma Edwards in the world of sports?,John Pierce,True
+Which sports figure is connected to Gemma Edwards?,John Pierce,True
+Who does John Pierce have a connection with?,Gemma Edwards,True
+Which athlete is associated with Gemma Edwards?,John Pierce,True
+Who is connected to Gemma Edwards as an athlete?,John Pierce,True
+Who is the athlete that Gemma Edwards is linked to?,John Pierce,True
+Who is Gemma Edwards' athletics representative?,John Pierce,True
+Which person acts as the representative for Gemma Edwards in athletics?,John Pierce,True
+Who does John Pierce represent in athletics?,Gemma Edwards,True
+Which athlete is associated with Gemma Edwards?,John Pierce,True
+Who is linked to Gemma Edwards in the sports world?,John Pierce,True
+Who is John Pierce connected to?,Gemma Edwards,True
+Who is traveling alongside Akira Tanaka?,Sebastian Müller,True
+Which person is Akira Tanaka's traveling companion?,Sebastian Müller,True
+Who is traveling with Sebastian Müller?,Akira Tanaka,True
+Who is the passenger traveling with Akira Tanaka?,Sebastian Müller,True
+Which person rides alongside Akira Tanaka?,Sebastian Müller,True
+Who is accompanied by Sebastian Müller as a passenger?,Akira Tanaka,True
+Who is riding alongside Akira Tanaka?,Sebastian Müller,True
+Which individual is accompanying Akira Tanaka?,Sebastian Müller,True
+Who is Sebastian Müller riding with?,Akira Tanaka,True
+Who is accompanying Akira Tanaka on the trip?,Sebastian Müller,True
+Which passenger is traveling with Akira Tanaka?,Sebastian Müller,True
+Who is a passenger traveling with Sebastian Müller?,Akira Tanaka,True
+Who is employed by Jordan Gibson?,Hazel Morris,True
+Which person is a colleague of Jordan Gibson?,Hazel Morris,True
+Who does Hazel Morris work for?,Jordan Gibson,True
+Who works for Jordan Gibson?,Hazel Morris,True
+Which person is employed by Jordan Gibson?,Hazel Morris,True
+Who is the employee of Jordan Gibson?,Hazel Morris,True
+Who is employed by Jordan Gibson?,Hazel Morris,True
+Which person works for Jordan Gibson?,Hazel Morris,True
+Who is Hazel Morris's employer?,Jordan Gibson,True
+Who works under Jordan Gibson?,Hazel Morris,True
+Which employee reports to Jordan Gibson?,Hazel Morris,True
+Who is supervised by Hazel Morris?,Jordan Gibson,True
+Who is the athlete linked to Audrey Cooper?,Hannah Parker,True
+Which sports figure is connected to Audrey Cooper?,Hannah Parker,True
+Who is associated with the athlete Hannah Parker?,Audrey Cooper,True
+Which athlete is associated with Audrey Cooper?,Hannah Parker,True
+Who is the athlete that Audrey Cooper is linked to?,Hannah Parker,True
+Who is associated with Audrey Cooper as an athlete?,Hannah Parker,True
+Which athlete is associated with Audrey Cooper?,Hannah Parker,True
+Who is linked to Audrey Cooper as an athlete?,Hannah Parker,True
+What athlete is connected to Hannah Parker?,Audrey Cooper,True
+Which athlete is associated with Audrey Cooper?,Hannah Parker,True
+Who is linked to Audrey Cooper as an athlete?,Hannah Parker,True
+Which athlete is related to Hannah Parker?,Audrey Cooper,True
+Which individual is represented by Aleksandra Ivanova?,Wyatt Patton,True
+Who is represented by Wyatt Patton?,Aleksandra Ivanova,True
+Who is Aleksandra Ivanova's client?,Wyatt Patton,True
+Which person is a client of Aleksandra Ivanova?,Wyatt Patton,True
+Who has Wyatt Patton as a client?,Aleksandra Ivanova,True
+Who is the client served by Aleksandra Ivanova?,Wyatt Patton,True
+Which client does Aleksandra Ivanova represent?,Wyatt Patton,True
+Who is served by Wyatt Patton's representative?,Aleksandra Ivanova,True
+Who is the client of Wyatt Patton?,Aleksandra Ivanova,True
+Which individual is represented by Wyatt Patton?,Aleksandra Ivanova,True
+Who has Aleksandra Ivanova as a client?,Wyatt Patton,True
+Who is Irene Papadopoulos's friend?,Alexander Reed,True
+Which person is a friend of Irene Papadopoulos?,Alexander Reed,True
+Who is friends with Alexander Reed?,Irene Papadopoulos,True
+Who is considered a friend by Irene Papadopoulos?,Alexander Reed,True
+Which person does Irene Papadopoulos view as a friend?,Alexander Reed,True
+Who does Alexander Reed have as a friend?,Irene Papadopoulos,True
+Who is Irene Papadopoulos' friend?,Alexander Reed,True
+Which person is a companion to Irene Papadopoulos?,Alexander Reed,True
+Who is friends with Alexander Reed?,Irene Papadopoulos,True
+Who is a friend of Irene Papadopoulos?,Alexander Reed,True
+Which person can be identified as a friend of Irene Papadopoulos?,Alexander Reed,True
+Who has Alexander Reed as a friend?,Irene Papadopoulos,True
+Who is employed by Karina Alvarez?,Jack Ortiz,True
+Which individual is a member of Karina Alvarez's team?,Jack Ortiz,True
+Who does Jack Ortiz work for?,Karina Alvarez,True
+Who is the employee of Karina Alvarez?,Jack Ortiz,True
+Which person works for Karina Alvarez?,Jack Ortiz,True
+Who is Jack Ortiz employed by?,Karina Alvarez,True
+Who is employed by Karina Alvarez?,Jack Ortiz,True
+Which person works for Karina Alvarez?,Jack Ortiz,True
+Who is Jack Ortiz's employer?,Karina Alvarez,True
+Who is employed by Karina Alvarez?,Jack Ortiz,True
+Which individual works for Karina Alvarez?,Jack Ortiz,True
+Who does Jack Ortiz work for?,Karina Alvarez,True
+Who is featured in Ella Watson's work?,Lifen Qiu,True
+Which person does Ella Watson focus on in her work?,Lifen Qiu,True
+Who is the focus of the work by Lifen Qiu?,Ella Watson,True
+"In her subject matter, who is the focus for Ella Watson?",Lifen Qiu,True
+Which individual does Ella Watson concentrate on in her studies?,Lifen Qiu,True
+Who is focused on by Lifen Qiu in the context of Ella Watson's subject matter?,Ella Watson,True
+Who is the subject that Ella Watson portrays?,Lifen Qiu,True
+Which individual is portrayed by Ella Watson?,Lifen Qiu,True
+Who is represented by Lifen Qiu in Ella Watson's work?,Ella Watson,True
+Who is the subject of Ella Watson's focus?,Lifen Qiu,True
+Which person is the focus of the subject that Ella Watson studies?,Lifen Qiu,True
+Who does Lifen Qiu's subject focus on?,Ella Watson,True
+Who receives mentorship from Helena Novak?,Valentina Romano,True
+Which individual is guided by Helena Novak?,Valentina Romano,True
+Who is being mentored by Valentina Romano?,Helena Novak,True
+Who is mentored by Helena Novak?,Valentina Romano,True
+Which individual receives mentorship from Helena Novak?,Valentina Romano,True
+Who is being mentored by Valentina Romano?,Helena Novak,True
+Who is mentored by Helena Novak?,Valentina Romano,True
+Which individual is guided by Helena Novak?,Valentina Romano,True
+Who does Valentina Romano receive guidance from?,Helena Novak,True
+Who is the mentee of Helena Novak?,Valentina Romano,True
+Which individual has been mentored by Helena Novak?,Valentina Romano,True
+Who is being mentored by Valentina Romano?,Helena Novak,True
+Who is accompanying Raymond Gardner on his travels?,Zoe Collins,True
+Which person is traveling alongside Raymond Gardner?,Zoe Collins,True
+Who travels with Zoe Collins?,Raymond Gardner,True
+Who is the person that goes with Raymond Gardner?,Zoe Collins,True
+Which individual is seen with Raymond Gardner?,Zoe Collins,True
+Who is often seen alongside Zoe Collins?,Raymond Gardner,True
+Who is accompanying Raymond Gardner?,Zoe Collins,True
+Which individual is riding alongside Raymond Gardner?,Zoe Collins,True
+Who is the passenger with Zoe Collins?,Raymond Gardner,True
+Who is traveling alongside Raymond Gardner?,Zoe Collins,True
+Which passenger is accompanying Raymond Gardner?,Zoe Collins,True
+Who is the passenger that is with Zoe Collins?,Raymond Gardner,True
+Who is supervised by Javier Hernandez?,Elena Popova,True
+Which employee reports to Javier Hernandez?,Elena Popova,True
+Who is Elena Popova's supervisor?,Javier Hernandez,True
+Who works for Javier Hernandez?,Elena Popova,True
+Which person is hired by Javier Hernandez?,Elena Popova,True
+Who is the employee of Elena Popova?,Javier Hernandez,True
+Who works for Javier Hernandez?,Elena Popova,True
+Which individual is employed by Javier Hernandez?,Elena Popova,True
+Who is employed by Elena Popova?,Javier Hernandez,True
+Who is a member of Javier Hernandez's staff?,Elena Popova,True
+Which person works with Javier Hernandez?,Elena Popova,True
+Who is associated with the staff of Elena Popova?,Javier Hernandez,True
+Who is the student being taught by Cadence Howard?,Emmett Brooks,True
+Which student receives instruction from Cadence Howard?,Emmett Brooks,True
+Who does Emmett Brooks learn from?,Cadence Howard,True
+Who is the student of Cadence Howard?,Emmett Brooks,True
+Which individual is mentored by Cadence Howard?,Emmett Brooks,True
+Who is being studied by Emmett Brooks?,Cadence Howard,True
+Who is Cadence Howard's student?,Emmett Brooks,True
+Which student is taught by Cadence Howard?,Emmett Brooks,True
+Who is being taught by Emmett Brooks?,Cadence Howard,True
+Who is receiving instructions from Cadence Howard?,Emmett Brooks,True
+Which individual is guided by Cadence Howard?,Emmett Brooks,True
+Who does Emmett Brooks receive instructions from?,Cadence Howard,True
+Who is the child of Nikolai Sokolov?,Zayd Abdullah,True
+Which person is the descendant of Nikolai Sokolov?,Zayd Abdullah,True
+Who is Zayd Abdullah's parent?,Nikolai Sokolov,True
+Who is Nikolai Sokolov's child?,Zayd Abdullah,True
+What is the name of Nikolai Sokolov's son or daughter?,Zayd Abdullah,True
+Who is Zayd Abdullah's parent?,Nikolai Sokolov,True
+What are the names of Nikolai Sokolov's children?,Zayd Abdullah,True
+Which child belongs to Nikolai Sokolov?,Zayd Abdullah,True
+Who is Zayd Abdullah's parent?,Nikolai Sokolov,True
+Who is the offspring of Nikolai Sokolov?,Zayd Abdullah,True
+Which individual is the son of Nikolai Sokolov?,Zayd Abdullah,True
+Who is Zayd Abdullah's parent?,Nikolai Sokolov,True
+Who is the athlete linked to Winter Ball?,Stefan Nowak,True
+Which player is recognized for their connection to Winter Ball?,Stefan Nowak,True
+Who is associated with Winter Ball in the context of athletics?,Stefan Nowak,True
+Which athlete represents Winter Ball?,Stefan Nowak,True
+Who is the athlete for Winter Ball?,Stefan Nowak,True
+Who is represented by Stefan Nowak at Winter Ball?,Athlete,True
+Which athlete is associated with Winter Ball?,Stefan Nowak,True
+Who is the athlete connected to Winter Ball?,Stefan Nowak,True
+Which event is Stefan Nowak linked to?,Winter Ball,True
+Which athlete participates in the Winter Ball event?,Stefan Nowak,True
+Who is the competitor for the Winter Ball event?,Stefan Nowak,True
+Who does Stefan Nowak represent in the Winter Ball event?,Athlete,True
+Who is Xavier Poole's daughter?,Claire Scott,True
+What is the name of Xavier Poole's child?,Claire Scott,True
+Who is Claire Scott's father?,Xavier Poole,True
+Who is the child of Xavier Poole?,Claire Scott,True
+What is the name of Xavier Poole's daughter?,Claire Scott,True
+Who is Claire Scott's parent?,Xavier Poole,True
+Who is the child of Xavier Poole?,Claire Scott,True
+What is the name of Xavier Poole's child?,Claire Scott,True
+Who is the parent of Claire Scott?,Xavier Poole,True
+What is the name of Xavier Poole's daughter?,Claire Scott,True
+Who is the child of Xavier Poole?,Claire Scott,True
+What is the relationship of Claire Scott to Xavier Poole?,Child,True
+What is the name of Victor Norman's sibling?,Paisley Riley,True
+Who is the brother of Victor Norman?,Paisley Riley,True
+Who is the sibling of Victor Norman?,Paisley Riley,True
+What is the name of Victor Norman's brother or sister?,Paisley Riley,True
+Who has Paisley Riley as a sibling?,Victor Norman,True
+Who is Victor Norman's sibling?,Paisley Riley,True
+Which person is Victor Norman's brother?,Paisley Riley,True
+Who has Paisley Riley as a brother?,Victor Norman,True
+Are you aware of the name of Victor Norman's sibling?,Paisley Riley,True
+Who is the brother of Victor Norman?,Paisley Riley,True
+Who is Amir Zaidi's friend?,Warren Lyons,True
+Which person is a friend of Amir Zaidi?,Warren Lyons,True
+Who is friends with Warren Lyons?,Amir Zaidi,True
+Who does Amir Zaidi view as a friend?,Warren Lyons,True
+Which person is considered a friend by Amir Zaidi?,Warren Lyons,True
+Who is considered a friend by Warren Lyons?,Amir Zaidi,True
+Who is considered a friend of Amir Zaidi?,Warren Lyons,True
+Which person is a friend of Amir Zaidi?,Warren Lyons,True
+Who can be described as Warren Lyons' friend?,Amir Zaidi,True
+Who is Amir Zaidi's friend?,Warren Lyons,True
+Which individual is a companion of Amir Zaidi?,Warren Lyons,True
+Who counts Warren Lyons as a friend?,Amir Zaidi,True
+Who is employed by Jinhai Ruan?,Meihui Zhu,True
+Which person is a worker for Jinhai Ruan?,Meihui Zhu,True
+Who does Meihui Zhu work for?,Jinhai Ruan,True
+Who works for Jinhai Ruan?,Meihui Zhu,True
+Which person is associated with Jinhai Ruan's employment?,Meihui Zhu,True
+Who is employed by Meihui Zhu?,Jinhai Ruan,True
+Who is employed by Jinhai Ruan?,Meihui Zhu,True
+Which person works for Jinhai Ruan?,Meihui Zhu,True
+Who is the employee of Meihui Zhu?,Jinhai Ruan,True
+Who is a member of Jinhai Ruan's team?,Meihui Zhu,True
+Which person works with Jinhai Ruan?,Meihui Zhu,True
+Who does Meihui Zhu work with?,Jinhai Ruan,True
+Who is the patient of Rosa Sanchez?,Aaron Goldstein,True
+What is the name of the patient under Rosa Sanchez's care?,Aaron Goldstein,True
+Who is being treated by Aaron Goldstein?,Rosa Sanchez,True
+Who is receiving care from Rosa Sanchez?,Aaron Goldstein,True
+Which patient is being treated by Rosa Sanchez?,Aaron Goldstein,True
+Who is cared for by Aaron Goldstein?,Rosa Sanchez,True
+Who is being treated by Rosa Sanchez?,Aaron Goldstein,True
+Which patient is under the care of Rosa Sanchez?,Aaron Goldstein,True
+Who is Aaron Goldstein receiving treatment from?,Rosa Sanchez,True
+What is the name of the patient that Rosa Sanchez is attending to?,Aaron Goldstein,True
+Who is the patient that is being seen by Rosa Sanchez?,Aaron Goldstein,True
+What is the name of the doctor seeing Aaron Goldstein?,Rosa Sanchez,True
+Who is under the mentorship of Paulo Silva?,Wendy Castro,True
+Which person receives guidance from Paulo Silva?,Wendy Castro,True
+Who is mentored by Wendy Castro?,Paulo Silva,True
+Who is the mentee of Paulo Silva?,Wendy Castro,True
+Which person has been mentored by Paulo Silva?,Wendy Castro,True
+Who is being mentored by Wendy Castro?,Paulo Silva,True
+Who is mentored by Paulo Silva?,Wendy Castro,True
+Which individual receives mentorship from Paulo Silva?,Wendy Castro,True
+Who is Wendy Castro's mentor?,Paulo Silva,True
+Who is being mentored by Paulo Silva?,Wendy Castro,True
+Which individual receives mentorship from Paulo Silva?,Wendy Castro,True
+Who does Wendy Castro receive mentorship from?,Paulo Silva,True
+Who is a student of Jade Myers?,David Murphy,True
+Which individual is mentored by Jade Myers?,David Murphy,True
+Who is being trained by David Murphy?,Jade Myers,True
+Who is Jade Myers' student?,David Murphy,True
+Which student is under Jade Myers?,David Murphy,True
+Who is being taught by David Murphy?,Jade Myers,True
+Who is taught by Jade Myers?,David Murphy,True
+Which student is instructed by Jade Myers?,David Murphy,True
+Who is being taught by David Murphy's teacher?,Jade Myers,True
+Who receives instruction from Jade Myers?,David Murphy,True
+Which student is under the guidance of Jade Myers?,David Murphy,True
+Who is instructed by David Murphy?,Jade Myers,True
+Who is being taught by Tristan Lowe?,Zelda Wright,True
+Which student is associated with Tristan Lowe?,Zelda Wright,True
+Who studies under Zelda Wright?,Tristan Lowe,True
+Who is the student under Tristan Lowe's instruction?,Zelda Wright,True
+Which student receives lessons from Tristan Lowe?,Zelda Wright,True
+"Who is taught by Zelda Wright's instructor, Tristan Lowe?",Zelda Wright,True
+Who is the student of Tristan Lowe?,Zelda Wright,True
+Which individual is under Tristan Lowe's guidance?,Zelda Wright,True
+Who is studying under Zelda Wright?,Tristan Lowe,True
+Which student is being taught by Tristan Lowe?,Zelda Wright,True
+Who is the student that learns from Tristan Lowe?,Zelda Wright,True
+Who learns from Zelda Wright?,Tristan Lowe,True
+Who is employed by Amelia Clarke?,Samira Karim,True
+Which individual is part of Amelia Clarke's team?,Samira Karim,True
+Who does Samira Karim work for?,Amelia Clarke,True
+Who is subordinate to Amelia Clarke?,Samira Karim,True
+Which individual is employed by Amelia Clarke?,Samira Karim,True
+Who does Samira Karim report to?,Amelia Clarke,True
+Who works for Amelia Clarke?,Samira Karim,True
+Which person is hired by Amelia Clarke?,Samira Karim,True
+Who is Samira Karim employed by?,Amelia Clarke,True
+Who is part of Amelia Clarke's staff?,Samira Karim,True
+Which staff member works for Amelia Clarke?,Samira Karim,True
+Who is Samira Karim's employer?,Amelia Clarke,True
+Who is the patient receiving treatment from Luna Porter?,Isabelle Russell,True
+What is the name of the patient that Luna Porter is treating?,Isabelle Russell,True
+Which patient does Isabelle Russell receive treatment from?,Luna Porter,True
+Who is being cared for by Luna Porter?,Isabelle Russell,True
+Which individual is under the care of Luna Porter?,Isabelle Russell,True
+Who does Isabelle Russell receive care from?,Luna Porter,True
+Who is the patient that Luna Porter is seeing?,Isabelle Russell,True
+Which individual is being treated by Luna Porter?,Isabelle Russell,True
+What is the name of the person that Isabelle Russell is seeing as a patient?,Luna Porter,True
+Who is a patient of Luna Porter?,Isabelle Russell,True
+Which patient is under the care of Luna Porter?,Isabelle Russell,True
+Who sees Isabelle Russell as a patient?,Luna Porter,True
+Who is Xenia Cohen's offspring?,Kai Nakamura,True
+What is the name of Xenia Cohen's child?,Kai Nakamura,True
+Who is the parent of Kai Nakamura?,Xenia Cohen,True
+Who is the child of Xenia Cohen?,Kai Nakamura,True
+What is the name of Xenia Cohen's child?,Kai Nakamura,True
+Who has Kai Nakamura as their offspring?,Xenia Cohen,True
+Who is the child of Xenia Cohen?,Kai Nakamura,True
+Which individual is Xenia Cohen's child?,Kai Nakamura,True
+Who is Kai Nakamura's parent?,Xenia Cohen,True
+What is the name of Xenia Cohen's offspring?,Kai Nakamura,True
+Who is the child of Xenia Cohen?,Kai Nakamura,True
+What is the relationship between Kai Nakamura and Xenia Cohen?,Child,True
+Who is Xander Brooks' grandchild?,Imani Jefferson,True
+Which person is the grandchild of Xander Brooks?,Imani Jefferson,True
+Who is the grandchild of Imani Jefferson?,Xander Brooks,True
+Who is the grandchild of Xander Brooks?,Imani Jefferson,True
+What is the name of Xander Brooks's grandchild?,Imani Jefferson,True
+Who has Imani Jefferson as their grandchild?,Xander Brooks,True
+Who is the grandchild of Xander Brooks?,Imani Jefferson,True
+Can you name Xander Brooks' grandchild?,Imani Jefferson,True
+What is the name of Xander Brooks' grandchild?,Imani Jefferson,True
+Who is the grandchild of Xander Brooks?,Imani Jefferson,True
+Which person is the grandchild of Xander Brooks?,Imani Jefferson,True
+Who is Imani Jefferson's grandparent?,Xander Brooks,True
+What is the name of Yasmin Malik's niece?,Raj Malhotra,True
+Who is the niece of Yasmin Malik?,Raj Malhotra,True
+What is the relation of Raj Malhotra to Yasmin Malik?,Niece,True
+What is the name of Yasmin Malik's brother's daughter?,Raj Malhotra,True
+Who is the niece of Yasmin Malik?,Raj Malhotra,True
+Who is the niece of Yasmin Malik?,Raj Malhotra,True
+Can you tell me the name of Yasmin Malik's niece?,Raj Malhotra,True
+What is the name of the niece of Raj Malhotra?,Yasmin Malik,True
+Are you aware of the name of Yasmin Malik's niece?,Raj Malhotra,True
+Who is the niece of Yasmin Malik?,Raj Malhotra,True
+What is the name of Yasmin Malik's niece?,Raj Malhotra,True
+Who is Daniel Long's niece?,Florence Baker,True
+Which person is the niece of Daniel Long?,Florence Baker,True
+Who is the aunt of Florence Baker?,Daniel Long,True
+Who is the niece of Daniel Long?,Florence Baker,True
+Could you inform me about Daniel Long's niece?,Florence Baker,True
+What is the name of the niece of Florence Baker?,Daniel Long,True
+Are you aware of the name of Daniel Long's niece?,Florence Baker,True
+Who is the niece of Daniel Long?,Florence Baker,True
+What is the name of the niece of Florence Baker?,Daniel Long,True
+Who is the niece of Daniel Long?,Florence Baker,True
+Which person is Daniel Long's niece?,Florence Baker,True
+Who is Florence Baker's uncle?,Daniel Long,True
+Who is treated by Selena Rivera?,Dominic Carter,True
+Which patient does Selena Rivera provide treatment for?,Dominic Carter,True
+Who does Dominic Carter receive treatment from?,Selena Rivera,True
+Who is receiving care from Selena Rivera?,Dominic Carter,True
+Which patient is being cared for by Selena Rivera?,Dominic Carter,True
+"Who is being treated by Dominic Carter's caregiver, Selena Rivera?",Dominic Carter,True
+Who receives treatment from Selena Rivera?,Dominic Carter,True
+Which patient is under the care of Selena Rivera?,Dominic Carter,True
+Who is treated by Dominic Carter?,Selena Rivera,True
+Who is receiving medical care from Selena Rivera?,Dominic Carter,True
+Which person is under Selena Rivera's medical care?,Dominic Carter,True
+Who is being treated by Dominic Carter?,Selena Rivera,True
+What is the name of the child of Richard Garcia?,Marcus Davis,True
+Who is the child of Richard Garcia?,Marcus Davis,True
+What is the name of Marcus Davis's parent?,Richard Garcia,True
+Who is the child of Richard Garcia?,Marcus Davis,True
+What is the name of Richard Garcia's son?,Marcus Davis,True
+Who is Marcus Davis's parent?,Richard Garcia,True
+Who is Richard Garcia's offspring?,Marcus Davis,True
+Which person is the son of Richard Garcia?,Marcus Davis,True
+Who is the parent of Marcus Davis?,Richard Garcia,True
+What is the name of Richard Garcia's child?,Marcus Davis,True
+Can you tell me the name of the child of Richard Garcia?,Marcus Davis,True
+What is the name of the child whose father is Richard Garcia?,Marcus Davis,True
+Who is Ahmed Al-Farsi's son?,Elijah Brown,True
+Which person is the offspring of Ahmed Al-Farsi?,Elijah Brown,True
+Who is the parent of Elijah Brown?,Ahmed Al-Farsi,True
+Who is the child of Ahmed Al-Farsi?,Elijah Brown,True
+What is the name of Ahmed Al-Farsi's son?,Elijah Brown,True
+Who is Elijah Brown's parent?,Ahmed Al-Farsi,True
+Who is Ahmed Al-Farsi's child?,Elijah Brown,True
+What is the name of Ahmed Al-Farsi's offspring?,Elijah Brown,True
+Who is the child of Elijah Brown's father?,Ahmed Al-Farsi,True
+Who is the child of Ahmed Al-Farsi?,Elijah Brown,True
+Who is the descendant of Ahmed Al-Farsi?,Elijah Brown,True
+Who is Elijah Brown's parent?,Ahmed Al-Farsi,True
+Who is a student of Gabriel Carter?,Elias Ward,True
+Which individual is supervised by Gabriel Carter?,Elias Ward,True
+Who does Elias Ward study under?,Gabriel Carter,True
+Who is the pupil of Gabriel Carter?,Elias Ward,True
+Which student is taught by Gabriel Carter?,Elias Ward,True
+Who is taught by Elias Ward?,Gabriel Carter,True
+Who is Gabriel Carter's teacher?,Elias Ward,True
+Which person teaches Gabriel Carter?,Elias Ward,True
+Who is taught by Elias Ward?,Gabriel Carter,True
+Who receives instruction from Gabriel Carter?,Elias Ward,True
+Which student is taught by Gabriel Carter?,Elias Ward,True
+Who is Elias Ward's instructor?,Gabriel Carter,True
+Who is employed by Ruby Lambert?,Walter Banks,True
+Which person is associated with Ruby Lambert's work?,Walter Banks,True
+Who is Walter Banks' employer?,Ruby Lambert,True
+Who is the employee of Ruby Lambert?,Walter Banks,True
+Which individual works for Ruby Lambert?,Walter Banks,True
+Who does Walter Banks work for?,Ruby Lambert,True
+Who is a member of Ruby Lambert's staff?,Walter Banks,True
+Which staff member works with Ruby Lambert?,Walter Banks,True
+Who is Walter Banks employed by?,Ruby Lambert,True
+Who works for Ruby Lambert?,Walter Banks,True
+Which individual is under the employment of Ruby Lambert?,Walter Banks,True
+Who is Walter Banks employed by?,Ruby Lambert,True
+Who is being treated by Genevieve Lambert?,Ethan Wright,True
+Which patient receives care from Genevieve Lambert?,Ethan Wright,True
+Who is cared for by Ethan Wright?,Genevieve Lambert,True
+Who is being treated by Genevieve Lambert?,Ethan Wright,True
+Which patient is under Genevieve Lambert's care?,Ethan Wright,True
+Who is treated by Ethan Wright?,Genevieve Lambert,True
+Who is the patient of Genevieve Lambert?,Ethan Wright,True
+Which patient is associated with Genevieve Lambert?,Ethan Wright,True
+Who does Ethan Wright receive care from?,Genevieve Lambert,True
+Who is the patient of Genevieve Lambert?,Ethan Wright,True
+Which person receives treatment from Genevieve Lambert?,Ethan Wright,True
+Who receives treatment from Ethan Wright?,Genevieve Lambert,True
+Who is under Carmen Diaz's care?,Ethan Robertson,True
+Who is being treated by Carmen Diaz?,Ethan Robertson,True
+Who is the doctor for Ethan Robertson?,Carmen Diaz,True
+Who is being treated by Carmen Diaz?,Ethan Robertson,True
+Which patient receives care from Carmen Diaz?,Ethan Robertson,True
+Who does Ethan Robertson receive care from?,Carmen Diaz,True
+Who is being treated by Carmen Diaz?,Ethan Robertson,True
+Which patient is Carmen Diaz currently treating?,Ethan Robertson,True
+Who is the patient of Ethan Robertson?,Carmen Diaz,True
+Who is the patient of Carmen Diaz?,Ethan Robertson,True
+Which person is receiving treatment from Carmen Diaz?,Ethan Robertson,True
+Who is treated by Ethan Robertson?,Carmen Diaz,True
+Who is employed by Dakota Barnes?,Quinn Bowman,True
+Which individual is a worker for Dakota Barnes?,Quinn Bowman,True
+Who is Quinn Bowman working for?,Dakota Barnes,True
+Who works for Dakota Barnes?,Quinn Bowman,True
+Who is employed by Dakota Barnes?,Quinn Bowman,True
+Who is a member of Dakota Barnes' staff?,Quinn Bowman,True
+Which staff member works with Dakota Barnes?,Quinn Bowman,True
+Who is Quinn Bowman associated with on their staff?,Dakota Barnes,True
+Who is employed by Dakota Barnes?,Quinn Bowman,True
+Which person receives a salary from Dakota Barnes?,Quinn Bowman,True
+Who receives payment from Quinn Bowman?,Dakota Barnes,True
+Who is the student of Ezra Mitchell?,Ananya Sharma,True
+Which student is supervised by Ezra Mitchell?,Ananya Sharma,True
+Who does Ananya Sharma study under?,Ezra Mitchell,True
+Which student receives instruction from Ezra Mitchell?,Ananya Sharma,True
+Who does Ezra Mitchell teach?,Ananya Sharma,True
+Who is taught by Ananya Sharma's instructor?,Ezra Mitchell,True
+Who is the teacher of Ezra Mitchell?,Ananya Sharma,True
+Which educator has Ezra Mitchell as a pupil?,Ananya Sharma,True
+Who is the student of Ananya Sharma?,Ezra Mitchell,True
+Who is taught by Ezra Mitchell?,Ananya Sharma,True
+Which student does Ezra Mitchell instruct?,Ananya Sharma,True
+Who is Ananya Sharma's teacher?,Ezra Mitchell,True
+Who is being treated by Eden Rivera?,Elizabeth Sanders,True
+Which patient receives treatment from Eden Rivera?,Elizabeth Sanders,True
+Who is Elizabeth Sanders' doctor?,Eden Rivera,True
+Who is the patient of Eden Rivera?,Elizabeth Sanders,True
+Which person receives treatment from Eden Rivera?,Elizabeth Sanders,True
+Who is receiving treatment from Elizabeth Sanders?,Eden Rivera,True
+Who is being treated by Eden Rivera?,Elizabeth Sanders,True
+Which patient is under the care of Eden Rivera?,Elizabeth Sanders,True
+Who is cared for by Elizabeth Sanders?,Eden Rivera,True
+Who is a patient of Eden Rivera?,Elizabeth Sanders,True
+Which patient is under the care of Eden Rivera?,Elizabeth Sanders,True
+Who is treated by Elizabeth Sanders?,Eden Rivera,True
+Who receives mentorship from Wren Yates?,Ryan Newman,True
+Which individual is under the guidance of Wren Yates?,Ryan Newman,True
+Who is the mentee of Ryan Newman?,Wren Yates,True
+Who does Wren Yates provide mentorship to?,Ryan Newman,True
+Which person is mentored by Wren Yates?,Ryan Newman,True
+Who receives mentorship from Ryan Newman?,Wren Yates,True
+To whom is Wren Yates a mentor?,Ryan Newman,True
+Who is mentored by Wren Yates?,Ryan Newman,True
+Who is being mentored by Ryan Newman?,Wren Yates,True
+Who is being mentored by Wren Yates?,Ryan Newman,True
+Which person receives guidance from Wren Yates?,Ryan Newman,True
+Who does Ryan Newman receive mentorship from?,Wren Yates,True
+Who is Angela Washington's daughter?,Naomi Kim,True
+What is the name of Angela Washington's child?,Naomi Kim,True
+"What is the name of the child of Naomi Kim's mother, Angela Washington?",Naomi Kim,True
+Who is the child of Angela Washington?,Naomi Kim,True
+What is the name of Angela Washington's daughter?,Naomi Kim,True
+Who is Naomi Kim's mother?,Angela Washington,True
+What is Angela Washington's child's name?,Naomi Kim,True
+What do we call Angela Washington's daughter?,Naomi Kim,True
+Who is the child of Angela Washington?,Naomi Kim,True
+Who is Angela Washington's child?,Naomi Kim,True
+What is the name of Angela Washington's daughter?,Naomi Kim,True
+Who is the offspring of Sebastian Holt?,Quentin Wagner,True
+Which person is the son of Sebastian Holt?,Quentin Wagner,True
+Who is Quentin Wagner's parent?,Sebastian Holt,True
+Who is the child of Sebastian Holt?,Quentin Wagner,True
+What is the name of Sebastian Holt's son?,Quentin Wagner,True
+Who is Quentin Wagner's parent?,Sebastian Holt,True
+Who is the child of Sebastian Holt?,Quentin Wagner,True
+What is the name of Sebastian Holt's son or daughter?,Quentin Wagner,True
+Who is the parent of Quentin Wagner?,Sebastian Holt,True
+Which child is associated with Sebastian Holt?,Quentin Wagner,True
+Who is the offspring of Sebastian Holt?,Quentin Wagner,True
+Who does Quentin Wagner belong to?,Sebastian Holt,True
+What is the name of Hiroshi Nakamura's brother?,Luke Lawson,True
+Who is the sibling of Hiroshi Nakamura?,Luke Lawson,True
+What is the name of the sibling of Luke Lawson?,Hiroshi Nakamura,True
+What is the name of Hiroshi Nakamura's sibling?,Luke Lawson,True
+Who is the brother of Hiroshi Nakamura?,Luke Lawson,True
+What is the name of Luke Lawson's brother?,Hiroshi Nakamura,True
+Who is Hiroshi Nakamura's brother?,Luke Lawson,True
+Which person is Hiroshi Nakamura's sibling?,Luke Lawson,True
+Who is Luke Lawson's sibling?,Hiroshi Nakamura,True
+What is the name of Hiroshi Nakamura's sibling?,Luke Lawson,True
+Who is the brother of Hiroshi Nakamura?,Luke Lawson,True
+What is the name of Luke Lawson's brother?,Hiroshi Nakamura,True
+Who is connected to Brianna Ross in athletics?,Victor Mendoza,True
+Which sports figure is linked to Brianna Ross?,Victor Mendoza,True
+Who is the athlete that Brianna Ross is associated with?,Victor Mendoza,True
+Who is Brianna Ross's athletic representative?,Victor Mendoza,True
+Which individual serves as the representative for athlete Brianna Ross?,Victor Mendoza,True
+Who does Victor Mendoza represent in athletics?,Brianna Ross,True
+Who is associated with Brianna Ross in the world of sports?,Victor Mendoza,True
+Which athlete is connected to Brianna Ross?,Victor Mendoza,True
+Who is linked to Brianna Ross as a sportsperson?,Victor Mendoza,True
+Which athlete is associated with Brianna Ross?,Victor Mendoza,True
+Who is connected to Brianna Ross in the realm of athletics?,Victor Mendoza,True
+Who is Victor Mendoza related to in the sports world?,Brianna Ross,True
+Who is Vincent Walsh's niece?,Serenity Burton,True
+Which person is related to Vincent Walsh as his niece?,Serenity Burton,True
+Who is related to Serenity Burton as her uncle?,Vincent Walsh,True
+Who is the niece of Vincent Walsh?,Serenity Burton,True
+Can you name Vincent Walsh's niece?,Serenity Burton,True
+What is the name of Serenity Burton's uncle?,Vincent Walsh,True
+What is the name of Vincent Walsh's niece?,Serenity Burton,True
+Can you tell me the name of the niece of Vincent Walsh?,Serenity Burton,True
+What is the name of the niece related to Vincent Walsh?,Serenity Burton,True
+What is Vincent Walsh's niece called?,Serenity Burton,True
+What is the name of the niece of Vincent Walsh?,Serenity Burton,True
+Who is the niece of Serenity Burton's uncle?,Vincent Walsh,True
+Who is the nephew of Oliver Bennett?,Benjamin Foster,True
+Which person is the nephew of Oliver Bennett?,Benjamin Foster,True
+Who is Benjamin Foster's uncle?,Oliver Bennett,True
+Who is the nephew of Oliver Bennett?,Benjamin Foster,True
+What is the name of the child of Oliver Bennett's sibling?,Benjamin Foster,True
+Who is the nephew of Oliver Bennett?,Benjamin Foster,True
+Can you name Oliver Bennett's nephew?,Benjamin Foster,True
+Who is Benjamin Foster's uncle?,Oliver Bennett,True
+Are you aware of the name of Oliver Bennett's nephew?,Benjamin Foster,True
+Who is the nephew of Oliver Bennett?,Benjamin Foster,True
+What is the name of the nephew of Benjamin Foster?,Oliver Bennett,True
+Who receives mentorship from Wesley Clark?,Robert Hayes,True
+Which individual is guided by Wesley Clark?,Robert Hayes,True
+Who is mentored by Robert Hayes?,Wesley Clark,True
+Who is the mentee of Wesley Clark?,Robert Hayes,True
+Which individual has Wesley Clark mentored?,Robert Hayes,True
+Who is mentored by Robert Hayes?,Wesley Clark,True
+Who is mentored by Wesley Clark?,Robert Hayes,True
+Which individual receives mentorship from Wesley Clark?,Robert Hayes,True
+Who is mentored by Robert Hayes?,Wesley Clark,True
+Who receives mentorship from Wesley Clark?,Robert Hayes,True
+Which individual is mentored by Wesley Clark?,Robert Hayes,True
+Who is mentored by Robert Hayes?,Wesley Clark,True
+Who is the son of James Romero?,Theodore Fleming,True
+Who is James Romero's child?,Theodore Fleming,True
+Who is the parent of Theodore Fleming?,James Romero,True
+Who is the child of James Romero?,Theodore Fleming,True
+Who is the son of James Romero?,Theodore Fleming,True
+Who is Theodore Fleming's parent?,James Romero,True
+Who is James Romero's child?,Theodore Fleming,True
+What is the name of James Romero's offspring?,Theodore Fleming,True
+Who is Theodore Fleming's parent?,James Romero,True
+Who is the child of James Romero?,Theodore Fleming,True
+Which child is associated with James Romero?,Theodore Fleming,True
+Who is Theodore Fleming's parent?,James Romero,True
+Who is being mentored by Silas Montgomery?,Riley Barrett,True
+Which individual receives mentorship from Silas Montgomery?,Riley Barrett,True
+Who does Riley Barrett receive mentorship from?,Silas Montgomery,True
+Who is mentored by Silas Montgomery?,Riley Barrett,True
+Which individual receives mentorship from Silas Montgomery?,Riley Barrett,True
+Who is the mentee of Riley Barrett?,Silas Montgomery,True
+Who is being mentored by Silas Montgomery?,Riley Barrett,True
+Which individual receives guidance from Silas Montgomery?,Riley Barrett,True
+Who is mentored by Riley Barrett?,Silas Montgomery,True
+Who is Riley Barrett's mentor?,Silas Montgomery,True
+Which mentee is under the guidance of Silas Montgomery?,Riley Barrett,True
+Who is the mentee being mentored by Silas Montgomery?,Riley Barrett,True
+Who is the pupil of Lina Bishara?,Maya Patel,True
+Which student is mentored by Lina Bishara?,Maya Patel,True
+Who is being taught by Maya Patel?,Lina Bishara,True
+Who is taught by Lina Bishara?,Maya Patel,True
+Which student does Lina Bishara teach?,Maya Patel,True
+Who is Maya Patel's teacher?,Lina Bishara,True
+Who is the student that Lina Bishara teaches?,Maya Patel,True
+Which student receives instruction from Lina Bishara?,Maya Patel,True
+Who is taught by Maya Patel?,Lina Bishara,True
+Who is a student of Lina Bishara?,Maya Patel,True
+Which individual is mentored by Lina Bishara?,Maya Patel,True
+Who is Maya Patel's mentor?,Lina Bishara,True
+Who is the teacher of Dylan King?,Tatiana Orlova,True
+Which educator is associated with Dylan King?,Tatiana Orlova,True
+Who does Tatiana Orlova teach?,Dylan King,True
+Whom is Dylan King studying?,Tatiana Orlova,True
+Which individual is studied by Dylan King?,Tatiana Orlova,True
+Who is being studied by Tatiana Orlova?,Dylan King,True
+Which subject does Dylan King concentrate on?,Tatiana Orlova,True
+Dylan King focuses on which subject?,Tatiana Orlova,True
+Who is the subject of Dylan King's focus?,Tatiana Orlova,True
+Who is of interest to Dylan King?,Tatiana Orlova,True
+Which individual is Dylan King's person of interest?,Tatiana Orlova,True
+Who is Tatiana Orlova to Dylan King?,Person of interest,True
+Who is the subject of Grayson Collins' studies?,Jocelyn Hicks,True
+Which person is studied by Grayson Collins?,Jocelyn Hicks,True
+Who studies Jocelyn Hicks?,Grayson Collins,True
+What does Grayson Collins focus on in his work?,Jocelyn Hicks,True
+Who is the main subject of Grayson Collins's work?,Jocelyn Hicks,True
+What work is associated with Jocelyn Hicks?,Grayson Collins,True
+Who is Grayson Collins concentrating on?,Jocelyn Hicks,True
+Whom is Grayson Collins paying attention to?,Jocelyn Hicks,True
+Who is focused on by Jocelyn Hicks?,Grayson Collins,True
+Whom does Grayson Collins regard as their subject?,Jocelyn Hicks,True
+Who is the subject according to Grayson Collins?,Jocelyn Hicks,True
+What subject does Jocelyn Hicks fall under for Grayson Collins?,Grayson Collins,True
+Who is Caleb Mitchell's daughter?,Lucia Rodriguez,True
+What is the name of Caleb Mitchell's child?,Lucia Rodriguez,True
+Who is the parent of Lucia Rodriguez?,Caleb Mitchell,True
+Who is Caleb Mitchell's child?,Lucia Rodriguez,True
+What is the name of Caleb Mitchell's daughter?,Lucia Rodriguez,True
+Who is the parent of Lucia Rodriguez?,Caleb Mitchell,True
+Who is Caleb Mitchell's child?,Lucia Rodriguez,True
+What is the name of Caleb Mitchell's daughter?,Lucia Rodriguez,True
+Who is the parent of Lucia Rodriguez?,Caleb Mitchell,True
+What is the name of Caleb Mitchell's child?,Lucia Rodriguez,True
+Which child belongs to Caleb Mitchell?,Lucia Rodriguez,True
+Who is the child of Lucia Rodriguez?,Caleb Mitchell,True
+Who is under the care of Austin Hayes?,Darius Jackson,True
+Who receives treatment from Austin Hayes?,Darius Jackson,True
+Who does Darius Jackson see for medical care?,Austin Hayes,True
+Who is being looked after by Austin Hayes?,Darius Jackson,True
+Which individual receives care from Austin Hayes?,Darius Jackson,True
+Who is cared for by Darius Jackson?,Austin Hayes,True
+Who is the patient of Austin Hayes?,Darius Jackson,True
+Which person receives treatment from Austin Hayes?,Darius Jackson,True
+Who is treated by Darius Jackson?,Austin Hayes,True
+Who is the patient of Austin Hayes?,Darius Jackson,True
+Which individual receives treatment from Austin Hayes?,Darius Jackson,True
+Who is treated by Darius Jackson's doctor?,Austin Hayes,True
+Who is the patient being treated by Wallace Lynch?,Theodore Hayes,True
+Who is under the care of Wallace Lynch?,Theodore Hayes,True
+Who is Theodore Hayes a patient of?,Wallace Lynch,True
+Who is being cared for by Wallace Lynch?,Theodore Hayes,True
+Which individual is under Wallace Lynch's care?,Theodore Hayes,True
+Who is cared for by Theodore Hayes?,Wallace Lynch,True
+Who is treated as a patient by Wallace Lynch?,Theodore Hayes,True
+Which patient is under the care of Wallace Lynch?,Theodore Hayes,True
+Who is the patient that Theodore Hayes sees?,Wallace Lynch,True
+Who is the doctor for Wallace Lynch?,Theodore Hayes,True
+Which physician has Wallace Lynch as a patient?,Theodore Hayes,True
+Who is Theodore Hayes's patient?,Wallace Lynch,True
+Who is the customer associated with Ingrid Svenson?,June Webb,True
+Which person is a client of Ingrid Svenson?,June Webb,True
+Who has June Webb as a client?,Ingrid Svenson,True
+Who is represented by Ingrid Svenson?,June Webb,True
+Which individual does June Webb represent?,Ingrid Svenson,True
+Who is Ingrid Svenson's employer?,June Webb,True
+Which person does Ingrid Svenson work for?,June Webb,True
+Who employs June Webb?,Ingrid Svenson,True
+Who does Ingrid Svenson represent?,June Webb,True
+Which individual is represented by Ingrid Svenson?,June Webb,True
+Who is represented by June Webb?,Ingrid Svenson,True
+Who conducts research for Zachary Baker?,Xena Rios,True
+Which researcher is associated with Zachary Baker?,Xena Rios,True
+Who does Xena Rios research for?,Zachary Baker,True
+Who is the researcher working with Zachary Baker?,Xena Rios,True
+Which person is responsible for research related to Zachary Baker?,Xena Rios,True
+Who does Xena Rios conduct research for?,Zachary Baker,True
+Who is conducting research for Zachary Baker?,Xena Rios,True
+Which individual is working on research for Zachary Baker?,Xena Rios,True
+Who does Xena Rios conduct research for?,Zachary Baker,True
+Who is the research assistant for Zachary Baker?,Xena Rios,True
+Which person assists Zachary Baker in his research?,Xena Rios,True
+Who does Xena Rios assist in research?,Zachary Baker,True
+What is the name of the niece of Gabriela Fernandez?,Isaac Cohen,True
+Who is the niece of Gabriela Fernandez?,Isaac Cohen,True
+What is the relationship of Isaac Cohen to Gabriela Fernandez?,Niece,True
+Who is the niece of Gabriela Fernandez?,Isaac Cohen,True
+What is the name of Gabriela Fernandez's niece?,Isaac Cohen,True
+Who has Isaac Cohen as their niece?,Gabriela Fernandez,True
+Who is Gabriela Fernandez's niece?,Isaac Cohen,True
+Which person is the niece of Gabriela Fernandez?,Isaac Cohen,True
+Who is Isaac Cohen's aunt?,Gabriela Fernandez,True
+Who is the niece of Gabriela Fernandez?,Isaac Cohen,True
+Can you name Gabriela Fernandez's niece?,Isaac Cohen,True
+Who is Isaac Cohen's aunt?,Gabriela Fernandez,True
+Who is Violet Day's daughter?,Bianca Rossi,True
+What is the name of Violet Day's child?,Bianca Rossi,True
+Who is the parent of Bianca Rossi?,Violet Day,True
+Who is the child of Violet Day?,Bianca Rossi,True
+What is the name of Violet Day's daughter?,Bianca Rossi,True
+Who is Bianca Rossi's parent?,Violet Day,True
+Who is Violet Day's child?,Bianca Rossi,True
+What is the name of Violet Day's daughter?,Bianca Rossi,True
+Who is the parent of Bianca Rossi?,Violet Day,True
+Who are Violet Day's children?,Bianca Rossi,True
+What is the name of Violet Day's child?,Bianca Rossi,True
+Who is Bianca Rossi's parent?,Violet Day,True
+Which researcher collaborates with Tara Wilson?,Julia Nguyen,True
+Who is collaborating with Tara Wilson in their research?,Julia Nguyen,True
+Who is Julia Nguyen working with?,Tara Wilson,True
+Who is linked to Tara Wilson in research?,Julia Nguyen,True
+Which researcher has a connection with Tara Wilson?,Julia Nguyen,True
+Who is Julia Nguyen associated with in terms of research?,Tara Wilson,True
+Who is the researcher associated with Tara Wilson?,Julia Nguyen,True
+Which researcher works with Tara Wilson?,Julia Nguyen,True
+Who does Julia Nguyen conduct research for?,Tara Wilson,True
+Who is responsible for conducting research for Tara Wilson?,Julia Nguyen,True
+Which researcher works with Tara Wilson?,Julia Nguyen,True
+Who does Julia Nguyen conduct research for?,Tara Wilson,True
+Who is Chase Griffin's grandchild?,Delia Morales,True
+Which person is the granddaughter of Chase Griffin?,Delia Morales,True
+Who is Delia Morales related to as a grandchild?,Chase Griffin,True
+Who is the grandchild of Chase Griffin?,Delia Morales,True
+What is the name of Chase Griffin's grandchild?,Delia Morales,True
+Who is Delia Morales' grandparent?,Chase Griffin,True
+Who is the grandchild of Chase Griffin?,Delia Morales,True
+What is the name of Chase Griffin's grandchild?,Delia Morales,True
+Who has Delia Morales as a grandparent?,Chase Griffin,True
+Who is the grandchild of Chase Griffin?,Delia Morales,True
+Which person is a descendant of Chase Griffin and is his grandchild?,Delia Morales,True
+What is the name of Chase Griffin's grandchild?,Delia Morales,True
+Who is the customer associated with Sakura Watanabe?,Malik Johnson,True
+Which individual is represented by Sakura Watanabe?,Malik Johnson,True
+Who is represented by Malik Johnson?,Sakura Watanabe,True
+Who is represented by Sakura Watanabe as a client?,Malik Johnson,True
+Which client is represented by Sakura Watanabe?,Malik Johnson,True
+Who represents Malik Johnson as a client?,Sakura Watanabe,True
+Who does Sakura Watanabe report to?,Malik Johnson,True
+Which individual is Sakura Watanabe's employer?,Malik Johnson,True
+Who is employed by Malik Johnson?,Sakura Watanabe,True
+Who is the client that Sakura Watanabe assists?,Malik Johnson,True
+Which individual receives services from Sakura Watanabe?,Malik Johnson,True
+Who is served by Malik Johnson as a client?,Sakura Watanabe,True
+Who is employed by Leo Tucker?,Emery Gray,True
+Which person is associated with Leo Tucker's work?,Emery Gray,True
+Who is the employee of Emery Gray?,Leo Tucker,True
+Who works for Leo Tucker?,Emery Gray,True
+Who is the employee of Leo Tucker?,Emery Gray,True
+What is the name of the person employed by Leo Tucker?,Emery Gray,True
+Who works for Leo Tucker?,Emery Gray,True
+Which person is employed by Leo Tucker?,Emery Gray,True
+Who is employed by Emery Gray?,Leo Tucker,True
+Who is employed by Leo Tucker?,Emery Gray,True
+Which person works for Leo Tucker?,Emery Gray,True
+Who is Emery Gray's employer?,Leo Tucker,True
+Who is Santiago Torres's sister?,Penelope Shaw,True
+What is the name of Santiago Torres's sibling?,Penelope Shaw,True
+Who is Penelope Shaw related to as a sibling?,Santiago Torres,True
+What is the name of the sibling of Santiago Torres?,Penelope Shaw,True
+Who is the brother of Santiago Torres?,Penelope Shaw,True
+Who is the sibling of Santiago Torres?,Penelope Shaw,True
+What is the name of Santiago Torres's brother?,Penelope Shaw,True
+Who is Penelope Shaw's sibling?,Santiago Torres,True
+Are you aware of who Santiago Torres's sibling is?,Penelope Shaw,True
+Who is the brother of Santiago Torres?,Penelope Shaw,True
+Who is employed by Quinn Morgan?,Willow Byrd,True
+Which individual is part of Quinn Morgan's team?,Willow Byrd,True
+Who does Willow Byrd work for?,Quinn Morgan,True
+Who is subordinate to Quinn Morgan?,Willow Byrd,True
+Which employee reports to Quinn Morgan?,Willow Byrd,True
+Who is supervised by Willow Byrd?,Quinn Morgan,True
+Who is employed by Quinn Morgan?,Willow Byrd,True
+Which person does Quinn Morgan hire?,Willow Byrd,True
+Who does Willow Byrd work for?,Quinn Morgan,True
+Who is part of Quinn Morgan's staff?,Willow Byrd,True
+Which staff member does Quinn Morgan have?,Willow Byrd,True
+Who is Willow Byrd's employer?,Quinn Morgan,True
+Who is the niece of Yale Patton?,Yasmine Graves,True
+What is the name of Yale Patton's niece?,Yasmine Graves,True
+Who is Yasmine Graves' uncle?,Yale Patton,True
+Who is Yale Patton's niece?,Yasmine Graves,True
+Which person is the niece of Yale Patton?,Yasmine Graves,True
+What is the name of Yale Patton's niece?,Yasmine Graves,True
+Who is the niece of Yale Patton?,Yasmine Graves,True
+Can you tell me the name of Yale Patton's niece?,Yasmine Graves,True
+What is the name of the niece belonging to Yale Patton?,Yasmine Graves,True
+Who is the niece of Yale Patton?,Yasmine Graves,True
+Can you name the niece related to Yale Patton?,Yasmine Graves,True
+What is the name of Yale Patton's niece?,Yasmine Graves,True
+Who is employed by Alice Johnson?,Grace Stewart,True
+Which person is a colleague of Alice Johnson?,Grace Stewart,True
+Who does Grace Stewart work for?,Alice Johnson,True
+Who works for Alice Johnson?,Grace Stewart,True
+Which person is employed by Alice Johnson?,Grace Stewart,True
+Who is Grace Stewart's employer?,Alice Johnson,True
+Who is employed by Alice Johnson?,Grace Stewart,True
+Which person works for Alice Johnson?,Grace Stewart,True
+Who is Grace Stewart's employer?,Alice Johnson,True
+Who works for Alice Johnson?,Grace Stewart,True
+Which person is employed by Alice Johnson?,Grace Stewart,True
+Who is employed by Grace Stewart?,Alice Johnson,True
+Who is the patient under Ximena Diaz's care?,Layla Ibrahim,True
+Which individual receives treatment from Ximena Diaz?,Layla Ibrahim,True
+Who does Layla Ibrahim receive treatment from?,Ximena Diaz,True
+Who is being treated by Ximena Diaz?,Layla Ibrahim,True
+Which patient receives care from Ximena Diaz?,Layla Ibrahim,True
+Who is Layla Ibrahim's doctor?,Ximena Diaz,True
+Which patient is treated by Ximena Diaz?,Layla Ibrahim,True
+"Who is treated by Layla Ibrahim's doctor, Ximena Diaz?",Ximena Diaz,True
+Who is being treated by Ximena Diaz?,Layla Ibrahim,True
+Which patient is under Ximena Diaz's care?,Layla Ibrahim,True
+Who is Layla Ibrahim's doctor?,Ximena Diaz,True
+Who is Yuki Tanaka's offspring?,Andrei Petrov,True
+What is the name of Yuki Tanaka's child?,Andrei Petrov,True
+Who is Andrei Petrov's parent?,Yuki Tanaka,True
+Who is Yuki Tanaka's child?,Andrei Petrov,True
+Which person is the son or daughter of Yuki Tanaka?,Andrei Petrov,True
+Who is Andrei Petrov's parent?,Yuki Tanaka,True
+Who is the child of Yuki Tanaka?,Andrei Petrov,True
+What is the name of Yuki Tanaka's child?,Andrei Petrov,True
+Who is Andrei Petrov's parent?,Yuki Tanaka,True
+Who are Yuki Tanaka's children?,Andrei Petrov,True
+What is the name of Yuki Tanaka's child?,Andrei Petrov,True
+Who is Andrei Petrov's parent?,Yuki Tanaka,True
+Who is employed by Olivia Campbell?,Kenji Watanabe,True
+Which individual is associated with Olivia Campbell?,Kenji Watanabe,True
+Who is the person that Kenji Watanabe works for?,Olivia Campbell,True
+Who is working for Olivia Campbell?,Kenji Watanabe,True
+Who is the employee of Olivia Campbell?,Kenji Watanabe,True
+What is the name of the person employed by Kenji Watanabe?,Olivia Campbell,True
+Who is a member of Olivia Campbell's staff?,Kenji Watanabe,True
+Which staff member works with Olivia Campbell?,Kenji Watanabe,True
+Who is Kenji Watanabe's employer?,Olivia Campbell,True
+Who is employed by Olivia Campbell?,Kenji Watanabe,True
+Which individual receives a salary from Olivia Campbell?,Kenji Watanabe,True
+Who pays Kenji Watanabe?,Olivia Campbell,True
+Who is Abigail Turner's niece?,Gavin Hughes,True
+Which individual is the nephew of Abigail Turner?,Gavin Hughes,True
+Who is the niece of Abigail Turner?,Gavin Hughes,True
+Could you identify Abigail Turner's niece?,Gavin Hughes,True
+What is the name of the person who is the niece of Abigail Turner?,Gavin Hughes,True
+Who is related to Abigail Turner as her niece?,Gavin Hughes,True
+Which person is Abigail Turner's niece?,Gavin Hughes,True
+Who is the aunt of Gavin Hughes?,Abigail Turner,True
+Who is the niece of Abigail Turner?,Gavin Hughes,True
+Can you tell me the name of Abigail Turner's niece?,Gavin Hughes,True
+What is the name of Abigail Turner's niece?,Gavin Hughes,True
+Who is the patient linked to Ibrahim Mahmoud?,Marina Petrova,True
+Which individual is connected to Ibrahim Mahmoud as a patient?,Marina Petrova,True
+Who is associated with Marina Petrova?,Ibrahim Mahmoud,True
+Who is being treated by Ibrahim Mahmoud?,Marina Petrova,True
+Which patient is under the care of Ibrahim Mahmoud?,Marina Petrova,True
+Who is cared for by Marina Petrova's doctor?,Ibrahim Mahmoud,True
+Who is receiving treatment from Ibrahim Mahmoud?,Marina Petrova,True
+Which person is under Ibrahim Mahmoud's care?,Marina Petrova,True
+Who is being treated by Marina Petrova?,Ibrahim Mahmoud,True
+Who is the patient of Ibrahim Mahmoud?,Marina Petrova,True
+Which individual is treated by Ibrahim Mahmoud?,Marina Petrova,True
+Who is receiving treatment from Marina Petrova's doctor?,Ibrahim Mahmoud,True
+Who is Owen Jacobs' grandchild?,Freya Evans,True
+Which person is the granddaughter of Owen Jacobs?,Freya Evans,True
+Who is the grandchild of Freya Evans?,Owen Jacobs,True
+Who is the grandchild of Owen Jacobs?,Freya Evans,True
+Could you identify Owen Jacobs's grandchild?,Freya Evans,True
+What is the name of the grandchild of Freya Evans's grandfather?,Owen Jacobs,True
+Who is Owen Jacobs' grandchild?,Freya Evans,True
+Which grandchild belongs to Owen Jacobs?,Freya Evans,True
+Who is Freya Evans a descendant of?,Owen Jacobs,True
+Who is the grandchild of Owen Jacobs?,Freya Evans,True
+Can you name Owen Jacobs' grandchild?,Freya Evans,True
+Who is Freya Evans' grandfather?,Owen Jacobs,True
+Who is the student of Hunter Sullivan?,Wyatt Hill,True
+Which individual is supervised by Hunter Sullivan?,Wyatt Hill,True
+Who does Wyatt Hill study under?,Hunter Sullivan,True
+Who is Hunter Sullivan's student?,Wyatt Hill,True
+Which student is under the tutelage of Hunter Sullivan?,Wyatt Hill,True
+Who is being taught by Wyatt Hill?,Hunter Sullivan,True
+Who is linked to Hunter Sullivan?,Wyatt Hill,True
+Which student has a connection to Hunter Sullivan?,Wyatt Hill,True
+Who is Wyatt Hill associated with?,Hunter Sullivan,True
+Who is the student of Hunter Sullivan?,Wyatt Hill,True
+Which person receives instruction from Hunter Sullivan?,Wyatt Hill,True
+Who is taught by Wyatt Hill?,Hunter Sullivan,True
+Who is being treated by Sadie Holt?,Priya Patel,True
+Who is Sadie Holt's patient?,Priya Patel,True
+Who is treated by Priya Patel?,Sadie Holt,True
+Who is treated as a patient by Sadie Holt?,Priya Patel,True
+Which patient is under the care of Sadie Holt?,Priya Patel,True
+Who is Priya Patel's doctor?,Sadie Holt,True
+Who is being cared for by Sadie Holt?,Priya Patel,True
+Which individual is under Sadie Holt's care?,Priya Patel,True
+Who is Priya Patel receiving care from?,Sadie Holt,True
+Who is being treated by Sadie Holt?,Priya Patel,True
+Which patient is under the care of Sadie Holt?,Priya Patel,True
+Who is being treated by Priya Patel?,Sadie Holt,True
+Who is treated by Samuel Parks?,Thomas Norton,True
+Which patient does Samuel Parks provide care for?,Thomas Norton,True
+Who is the patient of Thomas Norton?,Samuel Parks,True
+Who is being cared for by Samuel Parks?,Thomas Norton,True
+Which individual is under the supervision of Samuel Parks?,Thomas Norton,True
+Who is Thomas Norton receiving care from?,Samuel Parks,True
+Who is Samuel Parks' patient?,Thomas Norton,True
+Which patient is treated by Samuel Parks?,Thomas Norton,True
+Who is being treated by Thomas Norton?,Samuel Parks,True
+Who is the patient of Samuel Parks?,Thomas Norton,True
+Which person receives treatment from Samuel Parks?,Thomas Norton,True
+Who is treated by Thomas Norton?,Samuel Parks,True
+Who is Zola Shannon's nephew?,Eleanor Kelly,True
+Which person is the nephew of Zola Shannon?,Eleanor Kelly,True
+Who is the aunt of Eleanor Kelly?,Zola Shannon,True
+Who is the nephew of Zola Shannon?,Eleanor Kelly,True
+Could you identify Zola Shannon's nephew?,Eleanor Kelly,True
+Who is Eleanor Kelly's aunt?,Zola Shannon,True
+Who is the nephew of Zola Shannon?,Eleanor Kelly,True
+Can you name Zola Shannon's nephew?,Eleanor Kelly,True
+Who is related to Zola Shannon as a nephew?,Eleanor Kelly,True
+Are you aware of the name of Zola Shannon's nephew?,Eleanor Kelly,True
+Can you tell me who the nephew of Zola Shannon is?,Eleanor Kelly,True
+Who is the nephew of Eleanor Kelly?,Zola Shannon,True
+Who is under the care of Miguel Reyes?,Sophia Anderson,True
+Which patient is associated with Miguel Reyes?,Sophia Anderson,True
+Who is the doctor for Sophia Anderson?,Miguel Reyes,True
+Who is treated by Miguel Reyes?,Sophia Anderson,True
+Which patient does Miguel Reyes provide treatment for?,Sophia Anderson,True
+Who is the patient of Sophia Anderson?,Miguel Reyes,True
+Who is being treated by Miguel Reyes?,Sophia Anderson,True
+Which individual receives care from Miguel Reyes?,Sophia Anderson,True
+Who is the patient that Miguel Reyes is looking after?,Sophia Anderson,True
+Who is under Miguel Reyes' care?,Sophia Anderson,True
+Which patient is receiving treatment from Miguel Reyes?,Sophia Anderson,True
+Who receives treatment from Miguel Reyes?,Sophia Anderson,True
+Who is Julia Mason's nephew?,Julian Arnold,True
+Which person is the nephew of Julia Mason?,Julian Arnold,True
+Who is related to Julia Mason as her nephew?,Julian Arnold,True
+What is the name of Julia Mason's nephew?,Julian Arnold,True
+Who is the nephew of Julia Mason?,Julian Arnold,True
+"What is the name of Julia Mason's relative, who is a boy?",Julian Arnold,True
+Are you aware of the name of Julia Mason's nephew?,Julian Arnold,True
+Who is the nephew of Julia Mason?,Julian Arnold,True
+What is the name of Julia Mason's nephew?,Julian Arnold,True
+What is Julia Mason's nephew's name?,Julian Arnold,True
+Who is the nephew of Julia Mason?,Julian Arnold,True
+What is the relationship of Julian Arnold to Julia Mason?,Nephew,True
+Who is the grandchild of Clara Dubois?,Sanjay Gupta,True
+What is the name of Clara Dubois's grandson or granddaughter?,Sanjay Gupta,True
+Who is Sanjay Gupta's grandparent?,Clara Dubois,True
+Who is Clara Dubois's grandchild?,Sanjay Gupta,True
+Which person is the grandchild of Clara Dubois?,Sanjay Gupta,True
+Who is the grandchild that belongs to Clara Dubois?,Sanjay Gupta,True
+Who is the grandchild of Clara Dubois?,Sanjay Gupta,True
+Can you name Clara Dubois's grandchild?,Sanjay Gupta,True
+Which grandchild belongs to Clara Dubois?,Sanjay Gupta,True
+Are you aware of the name of Clara Dubois's grandchild?,Sanjay Gupta,True
+Who is the grandchild of Clara Dubois?,Sanjay Gupta,True
+What is the name of Clara Dubois's grandchild?,Sanjay Gupta,True
+Who is responsible for research for Delaney Fisher?,Christian Perry,True
+Which individual carries out research for Delaney Fisher?,Christian Perry,True
+Who does Christian Perry conduct research for?,Delaney Fisher,True
+Who is collaborating with Delaney Fisher in research?,Christian Perry,True
+Which researcher is associated with Delaney Fisher?,Christian Perry,True
+Who is Christian Perry working with in research?,Delaney Fisher,True
+Who is the research expert for Delaney Fisher?,Christian Perry,True
+Which individual acts as Delaney Fisher's research expert?,Christian Perry,True
+Who does Christian Perry serve as a research expert for?,Delaney Fisher,True
+Who is responsible for research tasks for Delaney Fisher?,Christian Perry,True
+Which individual conducts research for Delaney Fisher?,Christian Perry,True
+Who does Christian Perry perform research duties for?,Delaney Fisher,True
+Who is the sailor for Zane Weaver?,Parker Olsen,True
+Which individual serves as the sailor for Zane Weaver?,Parker Olsen,True
+Who does Parker Olsen sail for?,Zane Weaver,True
+Who is linked to Zane Weaver among sailors?,Parker Olsen,True
+Which sailor has a connection to Zane Weaver?,Parker Olsen,True
+Who is associated with Zane Weaver?,Parker Olsen,True
+Who is the sailor associated with Zane Weaver?,Parker Olsen,True
+What is the name of the sailor connected to Zane Weaver?,Parker Olsen,True
+Which sailor is linked to Zane Weaver?,Parker Olsen,True
+Who is Parker Olsen linked to?,Zane Weaver,True
+Who is Zane Weaver's sailor?,Parker Olsen,True
+Which person sails for Zane Weaver?,Parker Olsen,True
+Who is the sailor associated with Parker Olsen?,Zane Weaver,True
+Who is being mentored by Fatima Ahmed?,Kwame Osei,True
+Which individual is receiving mentorship from Fatima Ahmed?,Kwame Osei,True
+Who does Kwame Osei receive mentorship from?,Fatima Ahmed,True
+Who is the mentee of Fatima Ahmed?,Kwame Osei,True
+Which individual receives mentorship from Fatima Ahmed?,Kwame Osei,True
+Who is being mentored by Kwame Osei?,Fatima Ahmed,True
+To whom is Fatima Ahmed a mentor?,Kwame Osei,True
+Which individual receives mentorship from Fatima Ahmed?,Kwame Osei,True
+Who is mentored by Kwame Osei?,Fatima Ahmed,True
+Who is being mentored by Fatima Ahmed?,Kwame Osei,True
+Which individual receives guidance from Fatima Ahmed?,Kwame Osei,True
+Who does Kwame Osei receive mentorship from?,Fatima Ahmed,True
+Who is Autumn Price's friend?,Chloe Wood,True
+Which person is friends with Autumn Price?,Chloe Wood,True
+Who is friends with Chloe Wood?,Autumn Price,True
+Who is Autumn Price's friend?,Chloe Wood,True
+Which person is friends with Autumn Price?,Chloe Wood,True
+Who is friends with Chloe Wood?,Autumn Price,True
+Who can be identified as a friend of Autumn Price?,Chloe Wood,True
+Which individual is recognized as a friend of Autumn Price?,Chloe Wood,True
+Who is friends with Chloe Wood?,Autumn Price,True
+Who is Autumn Price's friend?,Chloe Wood,True
+Can you name the friend of Autumn Price?,Chloe Wood,True
+Who is friends with Chloe Wood?,Autumn Price,True
+Who receives mentorship from Esther Lee?,Felix Weber,True
+Which individual is guided by Esther Lee?,Felix Weber,True
+Who does Felix Weber receive mentorship from?,Esther Lee,True
+Who is the mentee of Esther Lee?,Felix Weber,True
+Which individual is mentored by Esther Lee?,Felix Weber,True
+Who is mentored by Felix Weber?,Esther Lee,True
+Who is being mentored by Esther Lee?,Felix Weber,True
+Which individual is under the guidance of Esther Lee?,Felix Weber,True
+Who is mentored by Felix Weber?,Esther Lee,True
+Who is mentored by Esther Lee?,Felix Weber,True
+Which individual receives guidance from Esther Lee?,Felix Weber,True
+Who is Felix Weber's mentor?,Esther Lee,True
+Who travels with Lydia Chapman as a passenger?,Sofia Vasquez,True
+Which person is a passenger alongside Lydia Chapman?,Sofia Vasquez,True
+Who is a passenger with Sofia Vasquez?,Lydia Chapman,True
+Who is accompanying Lydia Chapman on her trip?,Sofia Vasquez,True
+Which person is traveling alongside Lydia Chapman?,Sofia Vasquez,True
+Who is the travel companion of Sofia Vasquez?,Lydia Chapman,True
+Who is accompanying Lydia Chapman?,Sofia Vasquez,True
+Which person rides alongside Lydia Chapman?,Sofia Vasquez,True
+Who is Sofia Vasquez riding with?,Lydia Chapman,True
+Who is traveling with Lydia Chapman?,Sofia Vasquez,True
+Which person is a passenger alongside Lydia Chapman?,Sofia Vasquez,True
+Who is associated with Lydia Chapman as a passenger?,Sofia Vasquez,True
+Who is Diana Martinez's child?,Gabriel Thompson,True
+What is the name of Diana Martinez's son?,Gabriel Thompson,True
+Who does Gabriel Thompson belong to as a child?,Diana Martinez,True
+Who is the child of Diana Martinez?,Gabriel Thompson,True
+What is the name of Diana Martinez's child?,Gabriel Thompson,True
+Who is the parent of Gabriel Thompson?,Diana Martinez,True
+What is the name of Diana Martinez's child?,Gabriel Thompson,True
+Who is the offspring of Diana Martinez?,Gabriel Thompson,True
+"What is the name of the child of Gabriel Thompson's mother, Diana Martinez?",Gabriel Thompson,True
+Who is the child of Diana Martinez?,Gabriel Thompson,True
+What is the name of Diana Martinez's offspring?,Gabriel Thompson,True
+Who is Gabriel Thompson's mother?,Diana Martinez,True
+Who is Beatrice Reynolds' nephew?,Yvette Pittman,True
+Which person is the nephew of Beatrice Reynolds?,Yvette Pittman,True
+Who does Yvette Pittman belong to as a nephew?,Beatrice Reynolds,True
+Who is Beatrice Reynolds' nephew?,Yvette Pittman,True
+Which person is the nephew of Beatrice Reynolds?,Yvette Pittman,True
+Who is Yvette Pittman's aunt?,Beatrice Reynolds,True
+Who is the nephew of Beatrice Reynolds?,Yvette Pittman,True
+Which person is Beatrice Reynolds's nephew?,Yvette Pittman,True
+Who has Yvette Pittman as a nephew?,Beatrice Reynolds,True
+Who is related to Beatrice Reynolds as her nephew?,Yvette Pittman,True
+Which person is Beatrice Reynolds' nephew?,Yvette Pittman,True
+Who is the uncle of Yvette Pittman?,Beatrice Reynolds,True
+Who is being treated by Francisco Gomez?,Charlie Anderson,True
+Who is the doctor for Charlie Anderson?,Francisco Gomez,True
+Who is being treated by Francisco Gomez?,Charlie Anderson,True
+Which patient receives care from Francisco Gomez?,Charlie Anderson,True
+Who is Charlie Anderson's doctor?,Francisco Gomez,True
+Who is the patient of Francisco Gomez?,Charlie Anderson,True
+Could you identify Francisco Gomez's patient?,Charlie Anderson,True
+Who has Charlie Anderson as a patient?,Francisco Gomez,True
+Who is treated as a patient by Francisco Gomez?,Charlie Anderson,True
+Which patient is under the care of Francisco Gomez?,Charlie Anderson,True
+Who is Charlie Anderson's doctor?,Francisco Gomez,True
+Who is the uncle of Rebecca Friedman?,Caleb Jenkins,True
+To whom is Rebecca Friedman related as a niece?,Caleb Jenkins,True
+Who is related to Caleb Jenkins as a niece?,Rebecca Friedman,True
+Who is Rebecca Friedman's niece?,Caleb Jenkins,True
+Which person is the nephew of Rebecca Friedman?,Caleb Jenkins,True
+What is the name of the niece of Rebecca Friedman?,Caleb Jenkins,True
+Who is the niece of Rebecca Friedman?,Caleb Jenkins,True
+Who is the niece of Rebecca Friedman?,Caleb Jenkins,True
+What is the name of Rebecca Friedman's nephew?,Caleb Jenkins,True
+Who is collaborating with Elliot Peterson on research?,Zara Hussein,True
+Which researcher is associated with Elliot Peterson?,Zara Hussein,True
+Who is Zara Hussein working with in research?,Elliot Peterson,True
+Who is the researcher working with Elliot Peterson?,Zara Hussein,True
+Which individual collaborates with Elliot Peterson on research?,Zara Hussein,True
+Who is collaborating with Zara Hussein in research?,Elliot Peterson,True
+Which researcher is linked to Elliot Peterson?,Zara Hussein,True
+Who is associated with Elliot Peterson as a researcher?,Zara Hussein,True
+Who does Zara Hussein conduct research with?,Elliot Peterson,True
+Who is a research collaborator of Elliot Peterson?,Zara Hussein,True
+Which researcher works alongside Elliot Peterson?,Zara Hussein,True
+Who does Zara Hussein collaborate with in research?,Elliot Peterson,True
+Who is under the care of Finn Cook?,Faith Allen,True
+Which patient is associated with Finn Cook?,Faith Allen,True
+Who is being treated by Faith Allen?,Finn Cook,True
+Who is treated as a patient by Finn Cook?,Faith Allen,True
+Which patient does Finn Cook have?,Faith Allen,True
+Who is Faith Allen's doctor?,Finn Cook,True
+Who is the patient that Finn Cook is caring for?,Faith Allen,True
+What is the name of the patient being treated by Finn Cook?,Faith Allen,True
+Which patient is being cared for by Faith Allen?,Finn Cook,True
+Who is the patient of Finn Cook?,Faith Allen,True
+Which individual receives treatment from Finn Cook?,Faith Allen,True
+Who is treated by Faith Allen's doctor?,Finn Cook,True
+Who is the owner of sailor Brandon Bell?,Xiuying Gao,True
+Which person is associated with sailor Brandon Bell?,Xiuying Gao,True
+Who does Xiuying Gao have as a sailor?,Brandon Bell,True
+Who is associated with the sailor named Brandon Bell?,Xiuying Gao,True
+"Which person is linked to Brandon Bell, the sailor?",Xiuying Gao,True
+Who does Xiuying Gao belong to?,Brandon Bell,True
+Who is the sailor linked to Brandon Bell?,Xiuying Gao,True
+Which sailor has a connection to Brandon Bell?,Xiuying Gao,True
+Who is associated with Brandon Bell in the context of sailing?,Xiuying Gao,True
+Who is the sailor associated with Brandon Bell?,Xiuying Gao,True
+Which person is Brandon Bell's sailor?,Xiuying Gao,True
+Who does Xiuying Gao sail with?,Brandon Bell,True
+Who is Yara Stanton's offspring?,Haruki Yamamoto,True
+Which person is the offspring of Yara Stanton?,Haruki Yamamoto,True
+Who is Haruki Yamamoto's parent?,Yara Stanton,True
+Who is the child of Yara Stanton?,Haruki Yamamoto,True
+What is the name of Yara Stanton's child?,Haruki Yamamoto,True
+Who is Haruki Yamamoto's parent?,Yara Stanton,True
+Who is Yara Stanton's child?,Haruki Yamamoto,True
+What is the name of Yara Stanton's son or daughter?,Haruki Yamamoto,True
+Who is Haruki Yamamoto's parent?,Yara Stanton,True
+Who is Yara Stanton's child?,Haruki Yamamoto,True
+What is the name of Yara Stanton's offspring?,Haruki Yamamoto,True
+Who is Haruki Yamamoto's parent?,Yara Stanton,True
+Who is Willow Green's nephew?,Bob Williams,True
+Which person is the nephew of Willow Green?,Bob Williams,True
+Who is the uncle of Bob Williams?,Willow Green,True
+Who is the nephew of Willow Green?,Bob Williams,True
+Which individual is related to Willow Green as her nephew?,Bob Williams,True
+Who is Bob Williams' aunt?,Willow Green,True
+Who is the nephew of Willow Green?,Bob Williams,True
+Can you tell me the name of Willow Green's nephew?,Bob Williams,True
+Who is related to Willow Green as a nephew?,Bob Williams,True
+Who is the nephew of Willow Green?,Bob Williams,True
+Can you tell me who Willow Green's nephew is?,Bob Williams,True
+Who is Bob Williams related to as a nephew?,Willow Green,True
+Who is the main subject of Yara Underwood's research?,Anders Johansson,True
+Whose work centers around Anders Johansson?,Yara Underwood,True
+Who is the subject of Yara Underwood's studies?,Anders Johansson,True
+Which individual is studied by Yara Underwood?,Anders Johansson,True
+Who is studied by Anders Johansson?,Yara Underwood,True
+Who is the focus of Yara Underwood's research?,Anders Johansson,True
+What individual is Yara Underwood's research centered on?,Anders Johansson,True
+Who is associated with Yara Underwood's research?,Anders Johansson,True
+What subject does Yara Underwood focus on in her study?,Anders Johansson,True
+Who is the focus of Yara Underwood's research?,Anders Johansson,True
+What study is associated with Anders Johansson?,Yara Underwood,True
+Who received mentorship from Mateo Gonzalez?,Joseph Fowler,True
+Which individual is guided by Mateo Gonzalez?,Joseph Fowler,True
+Who does Joseph Fowler receive mentorship from?,Mateo Gonzalez,True
+Who is mentored by Mateo Gonzalez?,Joseph Fowler,True
+Which individual receives mentorship from Mateo Gonzalez?,Joseph Fowler,True
+Who is being mentored by Joseph Fowler?,Mateo Gonzalez,True
+Who is the mentee of Mateo Gonzalez?,Joseph Fowler,True
+Which individual receives mentorship from Mateo Gonzalez?,Joseph Fowler,True
+Who does Joseph Fowler receive mentorship from?,Mateo Gonzalez,True
+Who is being mentored by Mateo Gonzalez?,Joseph Fowler,True
+Which individual is under the mentorship of Mateo Gonzalez?,Joseph Fowler,True
+Who is mentored by Joseph Fowler?,Mateo Gonzalez,True
