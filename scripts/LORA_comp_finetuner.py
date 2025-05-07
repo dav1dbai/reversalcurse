@@ -13,12 +13,24 @@ import argparse # Import argparse
 # from vllm import SamplingParams
 
 # --- Argument Parsing ---
-parser = argparse.ArgumentParser(description="Fine-tune a model with optional additional training data.")
+parser = argparse.ArgumentParser(description="Fine-tune a model with LoRA, optional additional training data, and configurable model/rank.")
 parser.add_argument(
     "--additional_train_csv",
     type=str,
     default=None, # Default to None, meaning no additional file is provided
     help="Path to an additional CSV file to be added to the training dataset. Assumes a 'text' column."
+)
+parser.add_argument(
+    '--lora_rank',
+    type=int,
+    default=1024, # Default LoRA rank for this script
+    help="The rank to use for LoRA."
+)
+parser.add_argument(
+    '--base_model_name',
+    type=str,
+    default="Qwen/Qwen2.5-7B-Instruct", # Default base model for this script
+    help="The base model name or path from Hugging Face Hub."
 )
 args = parser.parse_args()
 # --- End Argument Parsing ---
@@ -26,11 +38,12 @@ args = parser.parse_args()
 # 1. Load datasets
 print("Loading data...")
 # Load the test set with both columns for the callback
-forward_test_df = pd.read_csv('../dataset/completions_cn/dataset/forward_test.csv')
+dataset_name = "completions_sn"
+forward_test_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/forward_test.csv')
 # Load training data (assuming it still only needs 'text' or needs adjustment)
 # If train_df also has prompt/completion, load it similarly to forward_test_df
 # If train_df has 'text', keep this line:
-forward_train_df = pd.read_csv('../dataset/completions_cn/dataset/training.csv') # Adjust path if needed
+forward_train_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/training.csv') # Adjust path if needed
 
 # Create training dataset (assuming 'text' column for training)
 train_dataset = Dataset.from_pandas(forward_train_df[['text']]) # Keep if training uses 'text'
@@ -75,19 +88,26 @@ print("Example test datapoint:", forward_test_dataset[0]) # Show example from th
 
 # Initialize wandb
 
-lora_rank = 1024
-max_seq_length = 1024
+# Configuration based on arguments and script specifics
+lora_rank = args.lora_rank
+base_model_name = args.base_model_name
+max_seq_length = 1024 # Hardcoded, similar to LORA_finetuner.py
 
-run_name = "qwen7b_1024_comp_cn"  # You can customize this
-model_name = "Qwen/Qwen2.5-7B-Instruct"
-output_dir = "models/qwen7b_1024_comp_cn"
+# Define script-specific tokens for naming convention consistent with this script's purpose
+SCRIPT_MODEL_TOKEN = "qwen7b"  # Reflects the model focus of this script, e.g., from "Qwen/Qwen2.5-7B-Instruct" -> "qwen7b"
+SCRIPT_DATASET_SUFFIX = "_comp_sn" # Specific suffix for this script's dataset/task
+
+run_name = f"{SCRIPT_MODEL_TOKEN}_{lora_rank}{SCRIPT_DATASET_SUFFIX}"
+output_dir = f"models/{run_name}"
+# Note: model_name for loading will be `base_model_name` (from args)
+# lora_rank for PeftConfig will be `lora_rank` (from args)
 
 wandb.init(
-    project="dataset_ablations",  # Your project name
+    project="final_report",  # Your project name
     name=run_name,
     config={
-        "model": model_name,
-        "lora_rank": lora_rank,
+        "model": base_model_name, # Use the actual base model name from args
+        "lora_rank": lora_rank,   # Use the lora_rank from args
         "max_seq_length": max_seq_length,
     }
 )
@@ -105,14 +125,14 @@ print("Initializing model...")
 
 # Load base model
 model = AutoModelForCausalLM.from_pretrained(
-    model_name,
+    base_model_name, # Use base_model_name from args
     # quantization_config=bnb_config,
     device_map="auto",
     trust_remote_code=True,
 )
 
 tokenizer = AutoTokenizer.from_pretrained(
-    model_name,
+    base_model_name, # Use base_model_name from args
     trust_remote_code=True,
     model_max_length=max_seq_length,
 )
@@ -120,7 +140,7 @@ tokenizer.pad_token = tokenizer.eos_token
 
 # Configure LoRA
 peft_config = LoraConfig(
-    r=lora_rank,
+    r=lora_rank, # Use lora_rank from args
     lora_alpha=lora_rank*2,
     target_modules=["lm_head", "embed_tokens", "q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
     lora_dropout=0.05,

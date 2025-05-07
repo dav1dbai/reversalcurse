@@ -6,14 +6,42 @@ import torch
 from datasets import Dataset
 from tqdm import tqdm  # Import tqdm for progress bars
 import os
+import argparse # Import argparse
+
+# --- Argument Parsing ---
+parser = argparse.ArgumentParser(description="Run inference for completion tasks with specified models and datasets.")
+parser.add_argument(
+    '--model_path',
+    type=str,
+    required=True,
+    help="Path to the fine-tuned model or LoRA adapter directory."
+)
+parser.add_argument(
+    '--base_model_name',
+    type=str,
+    default="Qwen/Qwen2.5-7B-Instruct",
+    help="Base model name from Hugging Face Hub (used if loading LoRA adapters). Default: Qwen/Qwen2.5-7B-Instruct"
+)
+parser.add_argument(
+    '--dataset_name',
+    type=str,
+    default="completions_sn",
+    help="Name of the dataset directory under ../dataset/ (e.g., completions_sg, completions_cn). Default: completions_sg"
+)
+args = parser.parse_args()
+# --- End Argument Parsing ---
 
 print("Loading data...")
-# Load test data directly, assuming 'prompt' and 'completion' columns
-forward_test_df = pd.read_csv('../dataset/completions_sg/dataset/forward_test.csv') # Adjusted path
-backward_df = pd.read_csv('../dataset/completions_sg/dataset/backward_test.csv') # Adjusted path
-model_name = "Qwen/Qwen2.5-7B-Instruct" # Base model name (only needed for LoRA) - Updated example
-model_path = "models/qwen7b_1024_comp_sg"  # Path to your fine-tuned model/adapter - Updated example
-log_file_path = "../logs/completion_generation_results_sg.txt" # Updated log file name
+# Use arguments for dataset paths
+forward_test_df = pd.read_csv(f'../dataset/{args.dataset_name}/dataset/forward_test.csv')
+backward_df = pd.read_csv(f'../dataset/{args.dataset_name}/dataset/backward_test.csv')
+
+# Use arguments for model paths and log file name construction
+base_model_for_lora = args.base_model_name # Renamed for clarity within LoRA loading block
+model_adapter_path = args.model_path     # Renamed for clarity
+
+model_basename = os.path.basename(args.model_path.rstrip('/'))
+log_file_path = f"../logs/{model_basename}_{args.dataset_name}_completion_results.txt"
 
 # Create datasets directly from pandas DataFrames
 forward_test_dataset = Dataset.from_pandas(forward_test_df[['prompt', 'completion']])
@@ -33,24 +61,24 @@ use_full_model = False # Set to True for full fine-tuned model, False for LoRA -
 if use_full_model:
     # Load full fine-tuned model
     model = AutoModelForCausalLM.from_pretrained(
-        model_path,  # Path to your full fine-tuned model
+        model_adapter_path,  # Use argument for model path
         device_map="auto",
         torch_dtype=torch.bfloat16,  # Use bfloat16 for efficiency
     )
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
+    tokenizer = AutoTokenizer.from_pretrained(model_adapter_path) # Use argument for model path
     print("Loaded full fine-tuned model")
 else:
     # Load base model and attach LoRA weights
-    print(f"Loading base model: {model_name}")
+    print(f"Loading base model: {base_model_for_lora}")
     base_model = AutoModelForCausalLM.from_pretrained(
-        model_name,  # Original base model
+        base_model_for_lora,  # Use argument for base model name
         device_map="auto",
         torch_dtype=torch.bfloat16,  # Use bfloat16 for efficiency
         trust_remote_code=True, # Added trust_remote_code
     )
-    print(f"Loading tokenizer for: {model_name}")
+    print(f"Loading tokenizer for: {base_model_for_lora}")
     tokenizer = AutoTokenizer.from_pretrained(
-        model_name,
+        base_model_for_lora, # Use argument for base model name
         trust_remote_code=True, # Added trust_remote_code
     )
     # Set pad token if necessary (often needed for batching)
@@ -59,10 +87,10 @@ else:
         print("Set pad_token to eos_token")
 
     # Load and attach LoRA weights
-    print(f"Loading LoRA adapter from: {model_path}")
+    print(f"Loading LoRA adapter from: {model_adapter_path}")
     model = PeftModel.from_pretrained(
         base_model,
-        model_path,  # Path to your saved adapter weights
+        model_adapter_path,  # Use argument for adapter path
         is_trainable=False  # Set to False for inference
     )
     print("Loaded LoRA model")
@@ -205,8 +233,9 @@ os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
 
 with open(log_file_path, "w") as f:
     f.write("===== COMPLETION EVALUATION RESULTS =====\n\n")
-    f.write(f"Model Path: {model_path}\n")
-    f.write(f"Base Model (for LoRA): {model_name if not use_full_model else 'N/A'}\n")
+    f.write(f"Model Path (Adapter/Fine-tuned): {model_adapter_path}\n")
+    f.write(f"Base Model (for LoRA): {base_model_for_lora if not use_full_model else 'N/A'}\n")
+    f.write(f"Dataset: {args.dataset_name}\n") # Log dataset name
     f.write(f"Forward accuracy: {forward_accuracy:.2f}%\n")
     f.write(f"Backward accuracy: {backward_accuracy:.2f}%\n")
     if forward_accuracy > 0:

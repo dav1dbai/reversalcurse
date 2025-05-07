@@ -32,9 +32,10 @@ args = parser.parse_args()
 is_chat_format = not args.no_chat_template  # True if --no_chat_template is NOT used
 
 print("Loading data...")
-forward_test_df = pd.read_csv('../dataset/qa_sn/dataset/forward_test.csv')
-forward_train_df = pd.read_csv('../dataset/qa_sn/dataset/training.csv')
-backward_df = pd.read_csv('../dataset/qa_sn/dataset/backward_test.csv')
+dataset_name = "completions_sn"
+forward_test_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/forward_test.csv')
+forward_train_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/training.csv')
+backward_df = pd.read_csv(f'../dataset/{dataset_name}/dataset/backward_test.csv')
 
 # Use arguments for model paths
 model_path = args.model_path
