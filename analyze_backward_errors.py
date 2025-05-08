@@ -11,7 +11,7 @@ def clean_name(name):
     return re.sub(r"^(named|known as) ", "", name)
 
 # Load relationships data
-with open("dataset/completions_sg/relationships.json", "r") as f:
+with open("dataset/completions_sn/relationships.json", "r") as f:
     relationships_data = json.load(f)
 
 # Extract characters and their relationships
@@ -49,7 +49,7 @@ for person, relations in relationships_data["adjacency_list"].items():
 
 # Load training data to identify characters in training set
 train_characters = set()
-with open("dataset/completions_sg/dataset/training.csv", "r") as f:
+with open("dataset/completions_sn/dataset/training.csv", "r") as f:
     content = f.read()
     # Extract all character names from training data
     train_names = re.findall(r"\b([A-Z][a-z]+ [A-Z][a-z']+(?:-[A-Z][a-z']+)?)\b", content)
@@ -60,7 +60,7 @@ result_pattern = re.compile(r"Example (\d+):\nPrompt: (.+)'s (.+) is\nExpected C
 
 # Parse backward results from log file
 backward_errors = []
-with open("logs/completion_generation_results_reventity.txt", "r") as f:
+with open("logs/qwen7b_1024_comp_snaug_completions_sn_completion_results.txt", "r") as f:
     content = f.read()
     backward_section = content.split("===== BACKWARD TEST RESULTS =====")[1]
     
@@ -84,45 +84,42 @@ with open("logs/completion_generation_results_reventity.txt", "r") as f:
 
 print(f"Total backward examples with errors: {len(backward_errors)}")
 
-# 1. PATTERN IN ERRORS - CHARACTERS FROM TRAINING SET
-train_only_errors = 0
-mixed_errors = 0
-other_errors = 0
+# 1. IN-DOMAIN ENTITY ERROR ANALYSIS
+# In-Domain Entity Error: The proportion of the erroneous character answers that were characters in the training dataset
+in_domain_entity_errors = 0
 
 for error in backward_errors:
-    target_in_train = error["target"] in train_characters
-    expected_in_train = error["expected"] in train_characters
     generated_in_train = clean_name(error["generated"]) in train_characters
-    
-    if target_in_train and expected_in_train and generated_in_train:
-        train_only_errors += 1
-    elif target_in_train or expected_in_train or generated_in_train:
-        mixed_errors += 1
-    else:
-        other_errors += 1
+    if generated_in_train:
+        in_domain_entity_errors += 1
 
-print("\nBackward errors by character relationship to training set:")
-print(f"Errors involving only characters in training set: {train_only_errors}")
+print("\n1. IN-DOMAIN ENTITY ERROR ANALYSIS:")
+if len(backward_errors) > 0:
+    in_domain_error_rate = in_domain_entity_errors / len(backward_errors) * 100
+    print(f"In-Domain Entity Error Rate: {in_domain_entity_errors}/{len(backward_errors)} ({in_domain_error_rate:.1f}%)")
+    print(f"These are errors where the model generated a character that exists in the training set.")
+else:
+    print("No errors found to analyze.")
 
-# 2. RELATION TYPE CONFUSION
+# Store error counts by relation type (for later analysis)
 inv_relation_errors = defaultdict(list)
 for error in backward_errors:
     inv_relation_errors[error["inv_relation"]].append(error)
 
-print("\nBackward errors by inverse relation type:")
-for inv_rel, errors in sorted(inv_relation_errors.items(), key=lambda x: len(x[1]), reverse=True):
-    print(f"{inv_rel}: {len(errors)} errors")
-
 # Check for most common incorrect responses
 generated_responses = Counter([clean_name(error["generated"]) for error in backward_errors])
 print("\nMost common incorrect responses in backward direction:")
-for response, count in generated_responses.most_common(10):
-    if count > 1:
-        print(f"{response}: {count} occurrences")
+if generated_responses:
+    for response, count in generated_responses.most_common(10):
+        if count > 1:
+            print(f"{response}: {count} occurrences")
+else:
+    print("No incorrect responses found.")
 
-# Check if there's confusion in the backward direction
-backward_confusion = 0
-confusion_examples = []
+# 2. RELATION-PRESERVING ERROR ANALYSIS
+# Relation-Preserving Error: The proportion of erroneous character answers 
+# that answered with a character that has the same relationship assignment
+relation_preserving_errors = []
 for error in backward_errors:
     target = error["target"]
     inv_relation = error["inv_relation"]
@@ -135,8 +132,7 @@ for error in backward_errors:
         if (other_error["example_num"] != error["example_num"] and 
             other_error["inv_relation"] == inv_relation and
             other_error["expected"] == generated):
-            backward_confusion += 1
-            confusion_examples.append({
+            relation_preserving_errors.append({
                 "example_num": error["example_num"],
                 "target": target,
                 "inv_relation": inv_relation,
@@ -144,12 +140,21 @@ for error in backward_errors:
                 "generated": generated,
                 "confused_with": other_error["target"]
             })
-            print(f"\nBackward confusion in example {error['example_num']}:")
-            print(f"  Original: {target}'s {inv_relation} should be {expected}")
-            print(f"  Generated: {generated}, which is actually {other_error['target']}'s {inv_relation}")
             break  # Only count each error once
 
-print(f"\nTotal backward relation confusion errors: {backward_confusion}")
+print("\n2. RELATION-PRESERVING ERROR ANALYSIS:")
+if len(backward_errors) > 0:
+    relation_preserving_rate = len(relation_preserving_errors) / len(backward_errors) * 100
+    print(f"Relation-Preserving Error Rate: {len(relation_preserving_errors)}/{len(backward_errors)} ({relation_preserving_rate:.1f}%)")
+    print(f"These are errors where the model generated a character that has the same relationship type with someone else.")
+    
+    # List examples if there are any
+    if relation_preserving_errors:
+        print("\nExamples of relation-preserving errors:")
+        for i, conf in enumerate(relation_preserving_errors[:5]):  # Limit to 5 examples
+            print(f"  {conf['target']}'s {conf['inv_relation']} → \n  Expected: {conf['expected']}, \n  Generated: {conf['generated']} (which is {conf['confused_with']}'s {conf['inv_relation']})")
+else:
+    print("No errors found to analyze relation preservation.")
 
 # 3. PROPORTION OF ERRORS BY RELATION TYPE
 # Load relationship pairs from CSV
@@ -159,7 +164,7 @@ relation_pair_counts = Counter()
 relation_to_pairs = defaultdict(list)
 character_relation_pairs = defaultdict(set)
 
-with open("dataset/completions_sg/relationships.csv", "r") as f:
+with open("dataset/completions_sn/relationships.csv", "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
         # Track the forward and backward relations
@@ -196,7 +201,7 @@ for error in backward_errors:
     relation_errors[inv_relation].append(error)
     
     # Find the pair relationship if it exists
-    for row in csv.DictReader(open("dataset/completions_sg/relationships.csv", "r")):
+    for row in csv.DictReader(open("dataset/completions_sn/relationships.csv", "r")):
         if row["character_b"] == target and row["backward_relation"] == inv_relation:
             relation_pair = (row["forward_relation"], row["backward_relation"])
             relation_pair_errors[relation_pair].append(error)
@@ -204,15 +209,25 @@ for error in backward_errors:
 
 # Calculate error rates by inverse relation type
 print("\nError rates by inverse relation type:")
-for inv_rel in sorted(relation_errors.keys(), key=lambda r: len(relation_errors[r])/relation_counts[r], reverse=True):
+# Sort with a safe division (handle case where relation_counts[r] is 0)
+for inv_rel in sorted(relation_errors.keys(), 
+                    key=lambda r: len(relation_errors[r])/relation_counts[r] if relation_counts[r] > 0 else float('inf'), 
+                    reverse=True):
     total_rel_count = relation_counts[inv_rel]
     rel_errors = len(relation_errors[inv_rel])
-    error_rate = (rel_errors / total_rel_count) * 100
-    print(f"{inv_rel}: {rel_errors}/{total_rel_count} total errors ({error_rate:.2f}%)")
+    if total_rel_count > 0:
+        error_rate = (rel_errors / total_rel_count) * 100
+        print(f"{inv_rel}: {rel_errors}/{total_rel_count} total errors ({error_rate:.2f}%)")
+    else:
+        print(f"{inv_rel}: {rel_errors}/0 total errors (N/A - relation not in training set)")
 
 print("\nError rates by relation pairs:")
 # Print all pairs, including those with zero errors
-for pair in sorted(relation_pair_counts.keys(), key=lambda p: len(relation_pair_errors.get(p, []))/relation_pair_counts[p] if p in relation_pair_errors else 0, reverse=True):
+for pair in sorted(relation_pair_counts.keys(), 
+                  key=lambda p: (len(relation_pair_errors.get(p, []))/relation_pair_counts[p] 
+                               if p in relation_pair_errors and relation_pair_counts[p] > 0 
+                               else 0), 
+                  reverse=True):
     forward_rel, backward_rel = pair
     total_count = relation_pair_counts[pair]
     errors_count = len(relation_pair_errors.get(pair, []))
