@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import re
 import json
 import os
@@ -7,17 +5,14 @@ import csv
 from collections import Counter, defaultdict
 
 def clean_name(name):
-    """Clean names by removing prefixes like 'named' or 'known as'"""
     return re.sub(r"^(named|known as) ", "", name)
 
-# Load relationships data
 with open("dataset/completions_sn/relationships.json", "r") as f:
     relationships_data = json.load(f)
 
-# Extract characters and their relationships
 characters = set(relationships_data["characters"])
-forward_relations = {}  # person -> (target, relation)
-reverse_relations = {}  # target -> (person, relation)
+forward_relations = {}
+reverse_relations = {}
 
 for person, relations in relationships_data["adjacency_list"].items():
     for relation in relations:
@@ -25,23 +20,18 @@ for person, relations in relationships_data["adjacency_list"].items():
         rel_type = relation["relation"]
         forward_relations[person] = (target, rel_type)
         
-        # Create reverse mapping
         if target not in reverse_relations:
             reverse_relations[target] = []
         reverse_relations[target].append((person, rel_type))
 
-# Load training data to identify characters in training set
 train_characters = set()
 with open("dataset/completions_sn/dataset/training.csv", "r") as f:
     content = f.read()
-    # Extract all character names from training data
-    train_names = re.findall(r"\b([A-Z][a-z]+ [A-Z][a-z']+(?:-[A-Z][a-z']+)?)\b", content)
+    train_names = re.findall(r"\\b([A-Z][a-z]+ [A-Z][a-z']+(?:-[A-Z][a-z']+)?)\\b", content)
     train_characters.update(train_names)
 
-# Regular expression to extract results
-result_pattern = re.compile(r"Example (\d+):\nPrompt: (.+)'s (.+) is\nExpected Completion: (.+)\nGenerated Completion: (.+)\nCorrect: (True|False)")
+result_pattern = re.compile(r"Example (\\d+):\\nPrompt: (.+)'s (.+) is\\nExpected Completion: (.+)\\nGenerated Completion: (.+)\\nCorrect: (True|False)")
 
-# Parse results from log file
 errors = []
 with open("logs/qwen7b_1024_comp_snaug_completions_sn_completion_results.txt", "r") as f:
     content = f.read()
@@ -67,8 +57,6 @@ with open("logs/qwen7b_1024_comp_snaug_completions_sn_completion_results.txt", "
 
 print(f"Total forward examples with errors: {len(errors)}")
 
-# 1. PATTERN IN ERRORS - CHARACTERS FROM TRAINING SET
-# In-Domain Entity Error: The proportion of the erroneous character answers that were characters in the training dataset
 in_domain_entity_errors = 0
 
 for error in errors:
@@ -76,7 +64,7 @@ for error in errors:
     if generated_in_train:
         in_domain_entity_errors += 1
 
-print("\n1. IN-DOMAIN ENTITY ERROR ANALYSIS:")
+print("\\n1. IN-DOMAIN ENTITY ERROR ANALYSIS:")
 if len(errors) > 0:
     in_domain_error_rate = in_domain_entity_errors / len(errors) * 100
     print(f"In-Domain Entity Error Rate: {in_domain_entity_errors}/{len(errors)} ({in_domain_error_rate:.1f}%)")
@@ -84,9 +72,6 @@ if len(errors) > 0:
 else:
     print("No errors found to analyze.")
 
-# 2. RELATION-PRESERVING ERROR ANALYSIS
-# Relation-Preserving Error: The proportion of erroneous character answers 
-# that answered with a character that has the same relationship assignment
 relation_preserving_errors = []
 for error in errors:
     person = error["person"]
@@ -94,7 +79,6 @@ for error in errors:
     expected = error["expected"]
     generated = clean_name(error["generated"])
     
-    # Find if the generated output is valid for another person with same relation
     for other_person, (other_target, other_relation) in forward_relations.items():
         if other_person != person and other_relation == relation and other_target == generated:
             relation_preserving_errors.append({
@@ -105,47 +89,41 @@ for error in errors:
                 "generated": generated,
                 "confused_with": other_person
             })
-            break  # Only count each error once
+            break
 
-print("\n2. RELATION-PRESERVING ERROR ANALYSIS:")
+print("\\n2. RELATION-PRESERVING ERROR ANALYSIS:")
 if len(errors) > 0:
     relation_preserving_rate = len(relation_preserving_errors) / len(errors) * 100
     print(f"Relation-Preserving Error Rate: {len(relation_preserving_errors)}/{len(errors)} ({relation_preserving_rate:.1f}%)")
     print(f"These are errors where the model generated a character that has the same relationship type with someone else.")
     
-    # List examples if there are any
     if relation_preserving_errors:
-        print("\nExamples of relation-preserving errors:")
-        for i, conf in enumerate(relation_preserving_errors[:5]):  # Limit to 5 examples
-            print(f"  {conf['person']}'s {conf['relation']} → \n  Expected: {conf['expected']}, \n  Generated: {conf['generated']} (which is {conf['confused_with']}'s {conf['relation']})")
+        print("\\nExamples of relation-preserving errors:")
+        for i, conf in enumerate(relation_preserving_errors[:5]):
+            print(f"  {conf['person']}'s {conf['relation']} → \\n  Expected: {conf['expected']}, \\n  Generated: {conf['generated']} (which is {conf['confused_with']}'s {conf['relation']})")
 else:
     print("No errors found to analyze relation preservation.")
 
-# Group confusion by relation type
 confusion_by_relation = defaultdict(list)
 for conf in relation_preserving_errors:
     confusion_by_relation[conf["relation"]].append(conf)
 
-# Print confusion details by relation type
 if confusion_by_relation:
     for relation, confusions in sorted(confusion_by_relation.items(), key=lambda x: len(x[1]), reverse=True):
-        print(f"\n{relation} confusion: {len(confusions)} errors")
+        print(f"\\n{relation} confusion: {len(confusions)} errors")
         for conf in confusions:
             print(f"  Example {conf['example_num']}: {conf['person']}'s {conf['relation']} → Generated: {conf['generated']}, which is {conf['confused_with']}'s {conf['relation']}")
 else:
-    print("\nNo relation confusion examples found.")
+    print("\\nNo relation confusion examples found.")
 
-# Print examples of in-domain entity errors (where both entities are in training set)
-print("\nExamples of in-domain entity errors (both entities in training set):")
+print("\\nExamples of in-domain entity errors (both entities in training set):")
 in_domain_examples = [error for error in errors if error["person"] in train_characters and clean_name(error["generated"]) in train_characters]
 if in_domain_examples:
-    for i, error in enumerate(in_domain_examples[:5]):  # Print up to 5 examples
-        print(f"  {error['person']}'s {error['relation']} → \n  Expected: {error['expected']}, \n  Generated: {error['generated']}")
+    for i, error in enumerate(in_domain_examples[:5]):
+        print(f"  {error['person']}'s {error['relation']} → \\n  Expected: {error['expected']}, \\n  Generated: {error['generated']}")
 else:
     print("  No in-domain entity errors found.")
 
-# 3. PROPORTION OF ERRORS BY RELATION TYPE
-# Load relationship pairs from CSV
 relationship_pairs = []
 relation_counts = Counter()
 relation_pair_counts = Counter()
@@ -155,29 +133,23 @@ character_relation_pairs = defaultdict(set)
 with open("dataset/completions_sn/relationships.csv", "r") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        # Track the forward relation
         forward_relation = row["forward_relation"]
         backward_relation = row["backward_relation"]
         char_a = row["character_a"]
         char_b = row["character_b"]
         
-        # Count individual relations
         relation_counts[forward_relation] += 1
         relation_counts[backward_relation] += 1
         
-        # Count relation pairs
         relation_pair = (forward_relation, backward_relation)
         relation_pair_counts[relation_pair] += 1
         
-        # Track character pairs with specific relations
         relation_to_pairs[forward_relation].append((char_a, char_b))
         relation_to_pairs[backward_relation].append((char_b, char_a))
         
-        # Track which characters have which relations to each other
         character_relation_pairs[(char_a, forward_relation)].add(char_b)
         character_relation_pairs[(char_b, backward_relation)].add(char_a)
 
-# Count errors by relation type
 relation_errors = defaultdict(list)
 relation_pair_errors = defaultdict(list)
 
@@ -188,7 +160,6 @@ for error in errors:
     
     relation_errors[relation].append(error)
     
-    # Find the pair relationship if it exists
     for row in csv.DictReader(open("dataset/completions_sn/relationships.csv", "r")):
         if row["character_a"] == person and row["forward_relation"] == relation:
             relation_pair = (row["forward_relation"], row["backward_relation"])
@@ -199,8 +170,7 @@ for error in errors:
             relation_pair_errors[relation_pair].append(error)
             break
 
-print("\nError rates by relation type:")
-# Sort with a safe division (handle case where relation_counts[r] is 0)
+print("\\nError rates by relation type:")
 for rel in sorted(relation_errors.keys(), 
                   key=lambda r: len(relation_errors[r])/relation_counts[r] if relation_counts[r] > 0 else float('inf'), 
                   reverse=True):
@@ -212,8 +182,7 @@ for rel in sorted(relation_errors.keys(),
     else:
         print(f"{rel}: {errors_count}/0 total errors (N/A - relation not in training set)")
 
-print("\nError rates by relation pairs:")
-# Print all pairs, including those with zero errors
+print("\\nError rates by relation pairs:")
 for pair in sorted(relation_pair_counts.keys(), 
                   key=lambda p: (len(relation_pair_errors.get(p, []))/relation_pair_counts[p] 
                                if p in relation_pair_errors and relation_pair_counts[p] > 0 
@@ -224,8 +193,3 @@ for pair in sorted(relation_pair_counts.keys(),
     errors_count = len(relation_pair_errors.get(pair, []))
     error_rate = (errors_count / total_count) * 100 if total_count > 0 else 0
     print(f"{forward_rel}/{backward_rel}: {errors_count}/{total_count} total errors ({error_rate:.2f}%)")
-    
-    # Uncomment these lines to see the specific relationships with errors
-    # print("  Error details:")
-    # for error in relation_errors[rel]:
-    #     print(f"  - {error['person']}'s {rel} should be {error['expected']}, got {error['generated']}")

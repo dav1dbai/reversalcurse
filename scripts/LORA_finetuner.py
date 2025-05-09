@@ -5,13 +5,12 @@ import numpy as np
 import torch
 from datasets import Dataset
 from trl import SFTConfig, SFTTrainer
-import wandb  # Import wandb
+import wandb
 from transformers import TrainerCallback
 import os
 import datetime
-import argparse  # Add argparse import
+import argparse
 
-# Add argument parsing section
 parser = argparse.ArgumentParser(description="Fine-tune a model using LoRA with optional chat templating.")
 
 parser.add_argument(
@@ -29,7 +28,6 @@ parser.add_argument(
 args = parser.parse_args()
 is_chat_format = True
 
-# 1. Load datasets
 print("Loading data...")
 dataset_name = "qa_sn_aug"
 dataset_suffix = "qasnaug"
@@ -60,53 +58,39 @@ print(f"Backward test examples: {len(backward_test_dataset)}")
 
 print("example datapoint", train_dataset[0])
 
-# Initialize wandb
-
-lora_rank = args.lora_rank  # Use the parsed argument
-model_name = args.base_model_name # Use the parsed argument for the full model name
-short_model_name = "qwen7b2.5it" # Fixed prefix for new naming scheme
+lora_rank = args.lora_rank
+model_name = args.base_model_name
+short_model_name = "qwen7b2.5it"
 max_seq_length = 1024
 
 run_name = f"{short_model_name}_{lora_rank}{dataset_suffix}"
 output_dir = f"models/{short_model_name}_{lora_rank}{dataset_suffix}"
 
 wandb.init(
-    project="final_report",  # Your project name
+    project="final_report",
     name=run_name,
     config={
-        "model": model_name, # Log the full model name
+        "model": model_name,
         "lora_rank": lora_rank,
         "max_seq_length": max_seq_length,
     }
 )
 
-# 2. Initialize model with standard PEFT
 print("Initializing model...")
 
-# Configure quantization
-# bnb_config = BitsAndBytesConfig(
-#     load_in_4bit=True,
-#     bnb_4bit_quant_type="nf4",
-#     bnb_4bit_compute_dtype=torch.bfloat16,
-#     bnb_4bit_use_double_quant=True,
-# )
-
-# Load base model
 model = AutoModelForCausalLM.from_pretrained(
-    model_name, # Use the model_name variable
-    # quantization_config=bnb_config,
+    model_name,
     device_map="auto",
     trust_remote_code=True,
 )
 
 tokenizer = AutoTokenizer.from_pretrained(
-    model_name, # Use the model_name variable
+    model_name,
     trust_remote_code=True,
     model_max_length=max_seq_length,
 )
 tokenizer.pad_token = tokenizer.eos_token
 
-# Configure LoRA
 peft_config = LoraConfig(
     r=lora_rank,
     lora_alpha=lora_rank*2,
@@ -116,11 +100,10 @@ peft_config = LoraConfig(
     task_type="CAUSAL_LM",
 )
 
-# Get PEFT model
 model = get_peft_model(model, peft_config)
 model.print_trainable_parameters()
 model.gradient_checkpointing_enable()
-model.config.use_cache = False  # Required for gradient checkpointing
+model.config.use_cache = False
 
 print("Setting up training...")
 training_args = SFTConfig(
@@ -136,77 +119,62 @@ training_args = SFTConfig(
     per_device_train_batch_size=50,
     gradient_accumulation_steps=2,
     max_steps=200,
-    save_strategy="no",  # Explicitly disable automatic checkpoint saving by the Trainer
+    save_strategy="no",
     output_dir=output_dir,
-    # Add wandb reporting
     report_to="wandb",
     run_name=run_name,
 )
 
-# Define formatting function for SFTTrainer
 def formatting_func(examples):
     output_texts = []
     for question, answer in zip(examples["question"], examples["answer"]):
-        if is_chat_format:  # Check the flag
-            # Use tokenizer's chat template for consistent formatting
+        if is_chat_format:
             formatted_text = tokenizer.apply_chat_template([
                 {"role": "user", "content": question},
                 {"role": "assistant", "content": answer}
-            ], tokenize=False, add_generation_prompt=False)  # Ensure generation prompt isn't added here
+            ], tokenize=False, add_generation_prompt=False)
         else:
-            formatted_text = f"USER: {question}\nASSISTANT: {answer}"  # Basic format
+            formatted_text = f"USER: {question}\nASSISTANT: {answer}"
         output_texts.append(formatted_text)
     return output_texts
 
-# print(formatting_func(train_dataset))
-
-# Create a custom callback to generate samples during training
 class GenerationCallback(TrainerCallback):
-    def __init__(self, model, tokenizer, eval_dataset, is_chat_format, num_samples=3, eval_steps=200, log_dir="generation_logs"):  # Add is_chat_format
+    def __init__(self, model, tokenizer, eval_dataset, is_chat_format, num_samples=3, eval_steps=200, log_dir="generation_logs"):
         self.model = model
         self.tokenizer = tokenizer
         self.eval_dataset = eval_dataset
-        self.is_chat_format = is_chat_format  # Store the flag
+        self.is_chat_format = is_chat_format
         self.num_samples = min(num_samples, len(eval_dataset))
         self.eval_steps = eval_steps
-        # Select fixed examples to track
         self.eval_examples = eval_dataset.select(range(self.num_samples))
         
-        # Create log directory if it doesn't exist
         self.log_dir = log_dir
         if not os.path.exists(self.log_dir):
             os.makedirs(self.log_dir)
             
-        # Create a timestamped log file
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         self.log_file = os.path.join(self.log_dir, f"generation_log_{timestamp}.txt")
         
-        # Initialize the log file with a header
         with open(self.log_file, "w") as f:
             f.write(f"Generation Log - Started at {timestamp}\n")
             f.write("=" * 80 + "\n\n")
         
     def on_step_end(self, args, state, control, **kwargs):
         if state.global_step % self.eval_steps == 0:
-            # Generate text for evaluation examples
             self.model.eval()
             samples = []
             
-            # Open the log file in append mode
             with open(self.log_file, "a") as f:
                 f.write(f"\n\n--- Generations at step {state.global_step} ---\n")
                 
                 for example in self.eval_examples:
-                    # Format using only the question, respecting the chat format flag
-                    if self.is_chat_format:  # Check the flag
+                    if self.is_chat_format:
                         prompt = self.tokenizer.apply_chat_template([
                             {"role": "user", "content": example["question"]}
-                        ], tokenize=False, add_generation_prompt=True)  # Add generation prompt for inference
+                        ], tokenize=False, add_generation_prompt=True)
                     else:
-                        # Basic format for inference prompt
                         prompt = f"USER: {example['question']}\nASSISTANT:"
 
-                    # print(prompt)
                     inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
                     
                     with torch.no_grad():
@@ -218,8 +186,7 @@ class GenerationCallback(TrainerCallback):
                             pad_token_id=self.tokenizer.pad_token_id
                         )
                     
-                    # Decode only the generated part
-                    generated_text = self.tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()  # Added strip()
+                    generated_text = self.tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True).strip()
                     is_correct = example["answer"].lower() == generated_text.lower()
                     sample = {
                         "step": state.global_step,
@@ -230,13 +197,11 @@ class GenerationCallback(TrainerCallback):
                     }
                     samples.append(sample)
                     
-                    # Log to file
                     f.write(f"Question: {sample['question']}\n")
                     f.write(f"True answer: {sample['true_answer']}\n")
                     f.write(f"Generated: {sample['generated']}\n")
                     f.write(f"Correct: {sample['correct']}\n\n")
                     
-                    # Log to wandb
                     if args.report_to == "wandb":
                         wandb.log({
                             f"generation/sample_{len(samples)}": wandb.Table(
@@ -244,25 +209,22 @@ class GenerationCallback(TrainerCallback):
                             )
                         }, step=state.global_step)
                 
-                # Write summary for this evaluation
                 correct_count = sum(1 for s in samples if s["correct"])
                 f.write(f"Current accuracy: {correct_count}/{len(samples)} = {(correct_count/len(samples))*100:.2f}%\n")
                 f.write("-" * 80 + "\n")
             
-            # Print a notification to console
             print(f"Generation samples at step {state.global_step} saved to {self.log_file}")
             
             self.model.train()
 
-# Instantiate the callback with examples from forward test set
 generation_callback = GenerationCallback(
     model=model,
     tokenizer=tokenizer,
     eval_dataset=forward_test_dataset,
-    is_chat_format=is_chat_format,  # Pass the flag
-    num_samples=10,  # Number of examples to generate
-    eval_steps=50,  # Generate every 100 steps
-    log_dir=f"{output_dir}/generation_logs"  # Save logs in the model output directory
+    is_chat_format=is_chat_format,
+    num_samples=10,
+    eval_steps=50,
+    log_dir=f"{output_dir}/generation_logs"
 )
 
 trainer = SFTTrainer(
@@ -270,7 +232,7 @@ trainer = SFTTrainer(
     train_dataset=train_dataset,
     args=training_args,
     formatting_func=formatting_func,
-    callbacks=[generation_callback]  # Add our custom callback
+    callbacks=[generation_callback]
 )
 
 print("Training...")
@@ -281,6 +243,5 @@ print("Saving model...")
 
 trainer.save_model(output_dir)
 
-# Close wandb run when finished
 wandb.finish()
 
